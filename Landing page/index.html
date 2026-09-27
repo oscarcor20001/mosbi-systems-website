@@ -1,0 +1,4455 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOSBI Systems | Intelligent Software for Industrial Operations</title>
+  <meta name="description" content="MOSBI Systems builds next-generation Artificial Intelligence, Computer Vision, and Cloud software to identify, manage, and maintain mission-critical industrial assets." />
+  <meta name="keywords" content="MOSBI Systems, Industrial AI, Computer Vision, Machine Identifier AI, Asset Management, Maintenance Software, Industrial Operations" />
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="MOSBI Systems | Intelligent Software for Industrial Operations" />
+  <meta property="og:description" content="Software, Artificial Intelligence, Computer Vision and Digital Solutions designed to improve productivity, maintenance, and operational efficiency." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mosbisystems.com" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23060a17'/><path d='M22 72V28L50 50L78 28V72' stroke='%2300e5ff' stroke-width='9' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='50' cy='50' r='6' fill='%230066ff'/></svg>" />
+  
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <style>
+/* ==========================================================================
+   MOSBI SYSTEMS - IMPECCABLE DESIGN SYSTEM & STYLESHEET
+   Intelligent Software for Industrial Operations
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Design Tokens & CSS Custom Properties
+   -------------------------------------------------------------------------- */
+:root {
+  --bg-deep: #050814;
+  --bg-surface: #0a0f24;
+  --bg-surface-elevated: #0f1738;
+  --bg-surface-glass: rgba(12, 19, 44, 0.75);
+  --bg-card-border: rgba(0, 229, 255, 0.15);
+  --bg-card-border-hover: rgba(0, 229, 255, 0.5);
+  
+  --color-cyan: #00e5ff;
+  --color-cyan-glow: rgba(0, 229, 255, 0.35);
+  --color-blue: #0066ff;
+  --color-indigo: #4364f7;
+  --color-purple: #8b5cf6;
+  --color-emerald: #10b981;
+  --color-emerald-glow: rgba(16, 185, 129, 0.3);
+  --color-amber: #f59e0b;
+  --color-rose: #f43f5e;
+  
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-faint: #64748b;
+  --text-pure: #ffffff;
+  
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --container-width: 1240px;
+  --header-height: 80px;
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  
+  --shadow-elevation-1: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-elevation-2: 0 12px 40px -10px rgba(0, 0, 0, 0.6);
+  --shadow-cyan-glow: 0 0 35px -5px rgba(0, 229, 255, 0.3);
+  --shadow-cyan-intense: 0 0 50px 0px rgba(0, 229, 255, 0.45);
+  
+  --ease-elastic: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset & Global Base
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  line-height: 1.6;
+  min-height: 100vh;
+  background-color: var(--bg-deep);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s var(--ease-smooth);
+}
+
+ul {
+  list-style: none;
+}
+
+img, svg {
+  vertical-align: middle;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 3px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. Backgrounds: Interactive Canvas & Ambient Lights
+   -------------------------------------------------------------------------- */
+.neural-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.ambient-lights {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.light-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.18;
+  will-change: transform;
+}
+
+.orb-primary {
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, #0052d4, #00e5ff);
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.orb-secondary {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, #8b5cf6, #0066ff);
+  top: 40%;
+  right: -150px;
+}
+
+.orb-tertiary {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #00e5ff, #0052d4);
+  bottom: -150px;
+  left: -150px;
+}
+
+.cyber-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: radial-gradient(ellipse 85% 60% at 50% 0%, #000 65%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 60% at 50% 0%, #000 65%, transparent 100%);
+}
+
+/* --------------------------------------------------------------------------
+   4. Typography & Visual Accents
+   -------------------------------------------------------------------------- */
+.gradient-shimmer {
+  background: linear-gradient(135deg, #ffffff 0%, #cffafe 45%, #00e5ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.sub-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-cyan);
+  margin-bottom: 0.85rem;
+  background: rgba(0, 229, 255, 0.08);
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+}
+
+.section-heading {
+  font-size: clamp(2.1rem, 3.8vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.18;
+  margin-bottom: 1.15rem;
+  color: var(--text-pure);
+}
+
+.section-lead {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-intro {
+  margin-bottom: 4rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   5. Buttons & Interactive Controls
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.65rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.25s var(--ease-elastic);
+  border: 1px solid transparent;
+  text-align: center;
+  position: relative;
+  user-select: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0052d4 0%, #4364f7 50%, #00e5ff 100%);
+  background-size: 200% auto;
+  color: #030712;
+  font-weight: 700;
+  box-shadow: 0 4px 22px rgba(0, 229, 255, 0.35);
+}
+
+.btn-primary:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 229, 255, 0.55);
+}
+
+.btn-primary-compact {
+  background: linear-gradient(135deg, #0052d4 0%, #00e5ff 100%);
+  color: #030712;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-xs);
+  box-shadow: 0 2px 14px rgba(0, 229, 255, 0.25);
+}
+
+.btn-primary-compact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 229, 255, 0.45);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-pure);
+  border-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-cyan);
+  color: var(--color-cyan);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border-color: rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+}
+
+.btn-ghost:hover {
+  background: rgba(0, 229, 255, 0.08);
+  border-color: var(--color-cyan);
+  color: var(--color-cyan);
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.05rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   6. Header & Navigation
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  z-index: 1000;
+  background: rgba(5, 8, 20, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.35s var(--ease-smooth);
+}
+
+.site-header.scrolled {
+  background: rgba(5, 8, 20, 0.95);
+  border-bottom-color: rgba(0, 229, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  height: 72px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.logo-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s var(--ease-elastic);
+}
+
+.brand-logo:hover .logo-badge {
+  transform: scale(1.08) rotate(3deg);
+}
+
+.logo-svg {
+  width: 42px;
+  height: 42px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-name {
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: var(--text-pure);
+}
+
+.brand-sub {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: var(--color-cyan);
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.85rem;
+}
+
+.nav-item {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  position: relative;
+  padding: 0.35rem 0;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-cyan);
+  transition: width 0.25s var(--ease-smooth);
+  border-radius: 2px;
+}
+
+.nav-item:hover {
+  color: var(--text-pure);
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-toggle .line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-pure);
+  transition: all 0.25s ease;
+  border-radius: 2px;
+}
+
+.menu-toggle.active .line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.active .line:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active .line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --------------------------------------------------------------------------
+   7. Hero Section
+   -------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  z-index: 1;
+  padding-top: calc(var(--header-height) + 4rem);
+  padding-bottom: 5.5rem;
+  text-align: center;
+}
+
+.hero-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.4rem 1.15rem;
+  border-radius: 999px;
+  background: rgba(0, 229, 255, 0.08);
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  margin-bottom: 1.75rem;
+  backdrop-filter: blur(10px);
+}
+
+.live-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-cyan);
+  box-shadow: 0 0 10px var(--color-cyan);
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 229, 255, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(0, 229, 255, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 229, 255, 0); }
+}
+
+.badge-content {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-cyan);
+}
+
+.pill-chip {
+  background: rgba(0, 229, 255, 0.2);
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5.8vw, 4.4rem);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  max-width: 1000px;
+  margin-bottom: 1.6rem;
+  color: var(--text-pure);
+}
+
+.hero-desc {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: var(--text-muted);
+  max-width: 760px;
+  margin-bottom: 2.75rem;
+  line-height: 1.65;
+}
+
+.hero-cta-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+/* --------------------------------------------------------------------------
+   8. Interactive Machine Identifier AI™ Console (Scanner Demo)
+   -------------------------------------------------------------------------- */
+.product-console-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin-bottom: 4rem;
+}
+
+.console-box {
+  background: rgba(9, 14, 32, 0.88);
+  border: 1px solid rgba(0, 229, 255, 0.28);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-elevation-2), var(--shadow-cyan-glow);
+  backdrop-filter: blur(20px);
+}
+
+.console-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.5rem;
+  background: rgba(14, 21, 46, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.window-controls {
+  display: flex;
+  gap: 7px;
+}
+
+.w-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+.dot-red { background: #ef4444; }
+.dot-yellow { background: #f59e0b; }
+.dot-green { background: #10b981; }
+
+.console-title {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.tech-tag {
+  background: rgba(0, 229, 255, 0.15);
+  color: var(--color-cyan);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+
+.console-engine-status {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-emerald);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.status-indicator-active {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-emerald);
+  box-shadow: 0 0 8px var(--color-emerald);
+  animation: pulse-ring 1.8s infinite;
+}
+
+.console-body-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+/* Machine Switcher Tabs */
+.machine-switcher {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.machine-tab {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.machine-tab:hover {
+  background: rgba(0, 229, 255, 0.1);
+  color: var(--text-pure);
+  border-color: rgba(0, 229, 255, 0.25);
+}
+
+.machine-tab.active {
+  background: rgba(0, 229, 255, 0.18);
+  border-color: var(--color-cyan);
+  color: var(--color-cyan);
+  font-weight: 700;
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
+}
+
+/* Optical Stage & HUD */
+.optical-stage {
+  position: relative;
+  background: radial-gradient(circle at center, #0c1836 0%, #050917 100%);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: var(--radius-md);
+  height: 280px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.optical-laser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00e5ff, #ffffff, #00e5ff, transparent);
+  box-shadow: 0 0 16px #00e5ff;
+  animation: laserSweep 3.2s ease-in-out infinite alternate;
+  z-index: 5;
+}
+
+@keyframes laserSweep {
+  0% { top: 6%; opacity: 0.3; }
+  50% { top: 92%; opacity: 1; }
+  100% { top: 6%; opacity: 0.3; }
+}
+
+.hud-center-cross {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hud-center-cross::before, .hud-center-cross::after {
+  content: '';
+  position: absolute;
+  background: var(--color-cyan);
+}
+.hud-center-cross::before { top: 11px; left: -6px; width: 36px; height: 1px; }
+.hud-center-cross::after { left: 11px; top: -6px; width: 1px; height: 36px; }
+
+.hud-grid-marks span {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: rgba(0, 229, 255, 0.5);
+  pointer-events: none;
+}
+.hud-mark.top-l { top: 10px; left: 12px; }
+.hud-mark.top-r { top: 10px; right: 12px; }
+.hud-mark.bot-l { bottom: 10px; left: 12px; }
+.hud-mark.bot-r { bottom: 10px; right: 12px; }
+
+.machinery-visual {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.machine-schematic-svg {
+  width: 85%;
+  height: 85%;
+  transition: opacity 0.3s ease;
+}
+
+/* Dynamic Bounding Boxes */
+.dynamic-bounding-box {
+  position: absolute;
+  border: 1.5px dashed var(--color-cyan);
+  background: rgba(0, 229, 255, 0.05);
+  transition: all 0.4s var(--ease-elastic);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.box-main {
+  top: 18%;
+  left: 14%;
+  width: 58%;
+  height: 62%;
+  border-color: var(--color-cyan);
+}
+
+.box-sub {
+  top: 42%;
+  right: 10%;
+  width: 30%;
+  height: 40%;
+  border-color: var(--color-emerald);
+}
+
+.box-tag-label {
+  position: absolute;
+  top: -22px;
+  left: -1px;
+  background: var(--color-cyan);
+  color: #040816;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.box-tag-label.label-sub {
+  background: var(--color-emerald);
+}
+
+.b-corner {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-color: #ffffff;
+  border-style: solid;
+}
+.b-corner.tl { top: -2px; left: -2px; border-width: 2px 0 0 2px; }
+.b-corner.tr { top: -2px; right: -2px; border-width: 2px 2px 0 0; }
+.b-corner.bl { bottom: -2px; left: -2px; border-width: 0 0 2px 2px; }
+.b-corner.br { bottom: -2px; right: -2px; border-width: 0 2px 2px 0; }
+
+.viewport-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(5, 8, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.vf-label { color: var(--text-faint); margin-right: 4px; }
+.vf-val { color: var(--text-main); font-weight: 600; }
+.vf-val.val-green { color: var(--color-emerald); }
+.val-accent { color: var(--color-cyan); }
+
+/* Telemetry & Spec Card (Right Side) */
+.telemetry-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.telemetry-tabs {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.4rem;
+}
+
+.t-tab {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-cyan);
+}
+
+.asset-spec-card {
+  background: rgba(14, 22, 48, 0.75);
+  border: 1px solid rgba(0, 229, 255, 0.18);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.spec-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 0.75rem;
+}
+
+.spec-type-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+}
+
+.spec-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-pure);
+}
+
+.health-pill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.health-pill.good {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--color-emerald);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.spec-props-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem 1rem;
+  font-size: 0.82rem;
+  margin-bottom: 1.25rem;
+}
+
+.p-label {
+  color: var(--text-faint);
+  display: block;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+}
+
+.p-val {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* Stream Log Box */
+.live-stream-box {
+  background: rgba(5, 8, 20, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem;
+  flex-grow: 1;
+}
+
+.stream-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-faint);
+  margin-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 0.35rem;
+}
+
+.stream-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-cyan);
+  animation: pulse-ring 1.5s infinite;
+}
+
+.stream-log-container {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-height: 110px;
+  overflow-y: hidden;
+}
+
+.log-entry {
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+.log-time { color: var(--text-faint); }
+.log-cyan { color: var(--color-cyan); font-weight: 600; }
+.log-blue { color: #60a5fa; }
+.log-green { color: var(--color-emerald); }
+
+/* --------------------------------------------------------------------------
+   9. Metrics Strip
+   -------------------------------------------------------------------------- */
+.metrics-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  background: var(--bg-surface-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  backdrop-filter: blur(16px);
+}
+
+.metric-card {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.metric-number {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: var(--text-pure);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.metric-unit {
+  color: var(--color-cyan);
+  font-size: 1.5rem;
+  margin-left: 2px;
+}
+
+.metric-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-top: 0.35rem;
+}
+
+.metric-sub {
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  margin-top: 0.2rem;
+}
+
+.metric-divider {
+  width: 1px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   10. Bento Grid & Spotlight Hover Cards
+   -------------------------------------------------------------------------- */
+.section {
+  position: relative;
+  z-index: 1;
+  padding: 6.5rem 0;
+}
+
+.spotlight-card {
+  position: relative;
+  background: var(--bg-surface-glass);
+  border: 1px solid var(--bg-card-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: transform 0.35s var(--ease-elastic), border-color 0.35s ease, box-shadow 0.35s ease;
+  backdrop-filter: blur(16px);
+}
+
+.spotlight-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--bg-card-border-hover);
+  box-shadow: var(--shadow-elevation-2), 0 0 30px rgba(0, 229, 255, 0.12);
+}
+
+.bento-glow-spot {
+  position: absolute;
+  top: var(--mouse-y, -200px);
+  left: var(--mouse-x, -200px);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.15), transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 0;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2rem;
+}
+
+.bento-card {
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-md);
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cyan);
+  margin-bottom: 1.75rem;
+}
+
+.vision-icon-box {
+  background: rgba(139, 92, 246, 0.12);
+  border-color: rgba(139, 92, 246, 0.35);
+  color: #c4b5fd;
+}
+
+.card-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-cyan);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.card-headline {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+  color: var(--text-pure);
+}
+
+.card-paragraph {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.card-paragraph.muted {
+  font-size: 0.95rem;
+  color: var(--text-faint);
+}
+
+.card-paragraph strong {
+  color: var(--text-pure);
+}
+
+.pillar-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.p-tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+}
+
+.vision-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.v-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.v-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-purple);
+  box-shadow: 0 0 8px var(--color-purple);
+  margin-top: 0.45rem;
+  flex-shrink: 0;
+}
+
+.v-feature strong {
+  color: var(--text-pure);
+  font-size: 0.95rem;
+  display: block;
+}
+
+.v-feature p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* --------------------------------------------------------------------------
+   11. Capabilities Grid
+   -------------------------------------------------------------------------- */
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.75rem;
+}
+
+.capability-card {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-primary {
+  border-color: rgba(0, 229, 255, 0.35);
+  background: linear-gradient(180deg, rgba(16, 26, 60, 0.85) 0%, rgba(10, 16, 36, 0.8) 100%);
+}
+
+.cap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.cap-icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-md);
+  background: rgba(0, 102, 255, 0.12);
+  border: 1px solid rgba(0, 102, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cyan);
+}
+
+.primary-box {
+  background: rgba(0, 229, 255, 0.15);
+  border-color: var(--color-cyan);
+}
+
+.cap-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+}
+
+.badge-glow {
+  background: rgba(0, 229, 255, 0.15);
+  color: var(--color-cyan);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+}
+
+.cap-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  color: var(--text-pure);
+}
+
+.cap-description {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+.cap-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 1.25rem;
+}
+
+.cap-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.b-check {
+  color: var(--color-cyan);
+  font-weight: 800;
+}
+
+/* --------------------------------------------------------------------------
+   12. Featured Flagship Product Panel
+   -------------------------------------------------------------------------- */
+.flagship-panel {
+  background: linear-gradient(135deg, rgba(16, 26, 60, 0.92) 0%, rgba(8, 14, 32, 0.96) 100%);
+  border: 1px solid rgba(0, 229, 255, 0.35);
+  border-radius: var(--radius-xl);
+  padding: 4rem 3.5rem;
+  box-shadow: var(--shadow-elevation-2), var(--shadow-cyan-intense);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.flagship-top {
+  text-align: center;
+  max-width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3.5rem;
+}
+
+.flagship-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: var(--color-cyan);
+  background: rgba(0, 229, 255, 0.12);
+  border: 1px solid rgba(0, 229, 255, 0.35);
+  padding: 0.4rem 1.15rem;
+  border-radius: 999px;
+  margin-bottom: 1.25rem;
+}
+
+.flagship-heading {
+  font-size: clamp(2.3rem, 4.2vw, 3.4rem);
+  font-weight: 900;
+  color: var(--text-pure);
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.flagship-heading .tm {
+  font-size: 0.55em;
+  vertical-align: super;
+  color: var(--color-cyan);
+}
+
+.flagship-sub {
+  font-size: 1.18rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.flagship-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.flagship-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.75rem;
+}
+
+.col-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 229, 255, 0.15);
+  border: 1px solid rgba(0, 229, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cyan);
+}
+
+.col-icon-wrap.icon-green {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.35);
+  color: var(--color-emerald);
+}
+
+.col-header h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-pure);
+}
+
+.capability-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cap-mini-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: rgba(6, 10, 25, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-md);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.cap-mini-card:hover {
+  transform: translateX(4px);
+  border-color: rgba(0, 229, 255, 0.3);
+}
+
+.cap-num {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+  background: rgba(0, 229, 255, 0.1);
+  padding: 2px 7px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.cap-mini-card h4 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-pure);
+  margin-bottom: 0.2rem;
+}
+
+.cap-mini-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.benefits-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.benefit-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.18);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+}
+
+.benefit-box:hover {
+  background: rgba(16, 185, 129, 0.09);
+  border-color: rgba(16, 185, 129, 0.4);
+  transform: translateX(4px);
+}
+
+.b-icon-check {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.b-text strong {
+  display: block;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-pure);
+  margin-bottom: 0.15rem;
+}
+
+.b-text p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.benefits-cta-box {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.cta-callout {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.cta-callout span {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   13. Interactive Industry Deep Dive
+   -------------------------------------------------------------------------- */
+.industry-tab-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.industry-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.ind-tab-btn {
+  background: var(--bg-surface-glass);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.65rem 1.35rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-smooth);
+}
+
+.ind-tab-btn:hover {
+  background: rgba(0, 229, 255, 0.1);
+  color: var(--text-pure);
+  border-color: rgba(0, 229, 255, 0.3);
+}
+
+.ind-tab-btn.active {
+  background: linear-gradient(135deg, #0052d4, #00e5ff);
+  color: #030712;
+  font-weight: 700;
+  border-color: transparent;
+  box-shadow: 0 4px 18px rgba(0, 229, 255, 0.35);
+}
+
+.industry-display-card {
+  background: var(--bg-surface-glass);
+  border: 1px solid var(--bg-card-border);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-elevation-2);
+}
+
+.ind-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ind-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.ind-icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-md);
+  background: rgba(0, 229, 255, 0.12);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cyan);
+}
+
+.ind-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-cyan);
+  display: block;
+}
+
+.ind-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-pure);
+}
+
+.ind-stat-badge {
+  text-align: right;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-emerald);
+  display: block;
+  line-height: 1;
+}
+
+.stat-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.ind-card-body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.ind-col h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-pure);
+  margin-bottom: 0.75rem;
+}
+
+.ind-col p {
+  font-size: 0.925rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.ind-benefit-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ind-benefit-pills li {
+  font-size: 0.88rem;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-xs);
+}
+
+/* --------------------------------------------------------------------------
+   14. Architecture Pipeline (Edge to Cloud)
+   -------------------------------------------------------------------------- */
+.pipeline-flow-wrapper {
+  background: var(--bg-surface-glass);
+  border: 1px solid var(--bg-card-border);
+  border-radius: var(--radius-xl);
+  padding: 3.5rem 2rem;
+  backdrop-filter: blur(16px);
+}
+
+.pipeline-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pipeline-step {
+  flex: 1;
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(6, 10, 24, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.pipeline-step:hover,
+.pipeline-step.active-step {
+  transform: translateY(-4px);
+  border-color: var(--color-cyan);
+  background: rgba(0, 229, 255, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.step-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-faint);
+  margin-bottom: 0.75rem;
+}
+
+.step-badge.badge-cyan {
+  color: var(--color-cyan);
+}
+
+.step-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-pure);
+  margin: 0 auto 1rem auto;
+}
+
+.step-icon.icon-cyan {
+  background: rgba(0, 229, 255, 0.15);
+  border-color: var(--color-cyan);
+  color: var(--color-cyan);
+  box-shadow: 0 0 16px rgba(0, 229, 255, 0.3);
+}
+
+.pipeline-step h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-pure);
+  margin-bottom: 0.5rem;
+}
+
+.pipeline-step p {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.pipeline-connector {
+  width: 40px;
+  height: 2px;
+  background: rgba(0, 229, 255, 0.3);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.connector-pulse {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-cyan);
+  box-shadow: 0 0 8px var(--color-cyan);
+  animation: pulseAcross 2.2s infinite linear;
+}
+
+@keyframes pulseAcross {
+  0% { left: 0%; opacity: 0; }
+  50% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+/* --------------------------------------------------------------------------
+   15. Interactive ROI & Savings Calculator
+   -------------------------------------------------------------------------- */
+.calc-wrapper {
+  background: linear-gradient(135deg, rgba(14, 21, 52, 0.9) 0%, rgba(7, 12, 28, 0.95) 100%);
+  border: 1px solid rgba(0, 229, 255, 0.28);
+  border-radius: var(--radius-xl);
+  padding: 3.5rem;
+  box-shadow: var(--shadow-elevation-2), var(--shadow-cyan-glow);
+  backdrop-filter: blur(20px);
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.calc-inputs-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.calc-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.control-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control-header label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-pure);
+}
+
+.control-val {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+  background: rgba(0, 229, 255, 0.1);
+  padding: 2px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 229, 255, 0.25);
+}
+
+.calc-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  outline: none;
+  transition: background 0.2s;
+}
+
+.calc-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-cyan);
+  cursor: pointer;
+  box-shadow: 0 0 12px var(--color-cyan);
+  border: 2px solid #ffffff;
+  transition: transform 0.15s ease;
+}
+
+.calc-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.slider-marks {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-faint);
+}
+
+.calc-results-panel {
+  background: rgba(5, 8, 20, 0.85);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.results-top {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1.75rem;
+}
+
+.res-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-emerald);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.annual-savings-display {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--text-pure);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.annual-savings-display .currency {
+  color: var(--color-emerald);
+  font-size: 2.2rem;
+  vertical-align: top;
+  margin-right: 2px;
+}
+
+.savings-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 0.6rem;
+}
+
+.results-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.res-stat-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding: 0.4rem 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
+}
+
+.res-stat-row strong {
+  color: var(--text-pure);
+}
+
+.val-green { color: var(--color-emerald) !important; }
+
+/* --------------------------------------------------------------------------
+   16. Why MOSBI Section
+   -------------------------------------------------------------------------- */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.75rem;
+}
+
+.why-card {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.why-idx {
+  font-family: var(--font-mono);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: rgba(0, 229, 255, 0.2);
+  line-height: 1;
+}
+
+.why-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 229, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cyan);
+}
+
+.why-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  color: var(--text-pure);
+}
+
+.why-desc {
+  font-size: 0.925rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* --------------------------------------------------------------------------
+   17. Future Products Roadmap
+   -------------------------------------------------------------------------- */
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.roadmap-item {
+  background: var(--bg-surface-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  transition: all 0.3s var(--ease-smooth);
+}
+
+.roadmap-item:hover {
+  background: rgba(0, 229, 255, 0.08);
+  border-color: rgba(0, 229, 255, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.rm-icon {
+  font-size: 2rem;
+  margin-bottom: 0.85rem;
+}
+
+.roadmap-item h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-pure);
+  margin-bottom: 0.4rem;
+}
+
+.roadmap-item p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+/* --------------------------------------------------------------------------
+   18. Company Overview Card
+   -------------------------------------------------------------------------- */
+.company-profile-card {
+  padding: 3.5rem;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.company-heading {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--text-pure);
+}
+
+.founded-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.profile-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.p-col-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.p-col-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-pure);
+}
+
+.p-col-link {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.p-col-link:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   19. Contact Section & Channels
+   -------------------------------------------------------------------------- */
+.contact-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 2.75rem;
+}
+
+.channel-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.channel-box {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--bg-surface-glass);
+  border: 1px solid var(--bg-card-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  transition: all 0.25s var(--ease-smooth);
+}
+
+.channel-box:hover {
+  background: rgba(18, 28, 64, 0.85);
+  border-color: var(--color-cyan);
+  transform: translateX(6px);
+}
+
+.channel-highlight {
+  border-color: rgba(0, 229, 255, 0.35);
+  background: rgba(0, 102, 255, 0.12);
+}
+
+.ch-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 229, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cyan);
+  flex-shrink: 0;
+}
+
+.ch-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ch-label {
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ch-address {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-pure);
+}
+
+.ch-action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ch-copy-btn, .ch-send-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-xs);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ch-copy-btn:hover, .ch-send-btn:hover {
+  background: var(--color-cyan);
+  color: #040816;
+  border-color: var(--color-cyan);
+}
+
+/* Contact Form */
+.contact-form-card {
+  padding: 3rem;
+}
+
+.form-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--text-pure);
+  margin-bottom: 0.4rem;
+}
+
+.form-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.contact-form-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+.form-dual-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.form-field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.form-field .req {
+  color: var(--color-cyan);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  background: rgba(5, 8, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.15rem;
+  font-size: 0.95rem;
+  color: var(--text-pure);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--color-cyan);
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.2);
+}
+
+.form-field select option {
+  background-color: #0a0f24;
+  color: var(--text-pure);
+}
+
+.field-error {
+  font-size: 0.75rem;
+  color: var(--color-rose);
+  display: none;
+}
+
+.field-error.visible {
+  display: block;
+}
+
+.form-feedback {
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.form-feedback.success {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--color-emerald);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   20. Toast System
+   -------------------------------------------------------------------------- */
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+
+.toast-message {
+  background: rgba(9, 14, 32, 0.96);
+  border: 1px solid var(--color-cyan);
+  color: var(--text-pure);
+  padding: 0.85rem 1.4rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), var(--shadow-cyan-glow);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: toastIn 0.35s var(--ease-elastic) forwards;
+  pointer-events: auto;
+}
+
+@keyframes toastIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   21. Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+  position: relative;
+  z-index: 1;
+  background: #030610;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 5.5rem 0 2.5rem 0;
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 2fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.footer-brand-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.footer-tagline {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 340px;
+  line-height: 1.6;
+}
+
+.footer-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-faint);
+}
+
+.footer-location svg {
+  color: var(--color-cyan);
+}
+
+.footer-nav-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.f-col h5 {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-pure);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.15rem;
+}
+
+.f-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.f-col a {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.f-col a:hover {
+  color: var(--color-cyan);
+}
+
+.footer-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.85rem;
+  color: var(--text-faint);
+}
+
+.system-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.status-live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-emerald);
+  box-shadow: 0 0 10px var(--color-emerald);
+  animation: pulse-ring 2s infinite;
+}
+
+/* --------------------------------------------------------------------------
+   22. Reveal on Scroll Animation System
+   -------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s var(--ease-elastic), transform 0.75s var(--ease-elastic);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   23. Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .console-body-grid,
+  .flagship-body-grid,
+  .bento-grid,
+  .calc-grid,
+  .contact-layout-grid,
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pipeline-grid {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .pipeline-connector {
+    width: 2px;
+    height: 30px;
+  }
+  
+  .ind-card-body {
+    grid-template-columns: 1fr;
+  }
+  
+  .metrics-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .metric-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    height: 70px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: rgba(5, 8, 20, 0.98);
+    backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(0, 229, 255, 0.25);
+    padding: 2.25rem 1.5rem;
+    transform: translateY(-130%);
+    transition: transform 0.35s var(--ease-smooth);
+    display: block;
+  }
+
+  .nav-menu.open {
+    transform: translateY(0);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .nav-item {
+    font-size: 1.15rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .metrics-strip {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .flagship-panel,
+  .calc-wrapper,
+  .industry-display-card,
+  .contact-form-card,
+  .company-profile-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .form-dual-row {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-nav-columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+  }
+
+  .toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+</style>
+</head>
+<body class="theme-dark">
+  <!-- Interactive Neural Particles Canvas Background -->
+  <canvas id="neuralCanvas" class="neural-canvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient Light Auras -->
+  <div class="ambient-lights" aria-hidden="true">
+    <div class="light-orb orb-primary"></div>
+    <div class="light-orb orb-secondary"></div>
+    <div class="light-orb orb-tertiary"></div>
+    <div class="cyber-grid-overlay"></div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="MOSBI Systems - Home">
+        <div class="logo-badge">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+            <rect width="44" height="44" rx="12" fill="url(#brandGrad)" />
+            <path d="M12 30V14L22 23L32 14V30" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="22" cy="23" r="2.5" fill="#00e5ff" />
+            <defs>
+              <linearGradient id="brandGrad" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0052d4"/>
+                <stop offset="0.5" stop-color="#4364f7"/>
+                <stop offset="1" stop-color="#00e5ff"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">MOSBI</span>
+          <span class="brand-sub">SYSTEMS</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#mission" class="nav-item">Mission</a></li>
+          <li><a href="#capabilities" class="nav-item">Capabilities</a></li>
+          <li><a href="#product" class="nav-item">Machine Identifier AI™</a></li>
+          <li><a href="#industries" class="nav-item">Industries</a></li>
+          <li><a href="#architecture" class="nav-item">Architecture</a></li>
+          <li><a href="#roi-calculator" class="nav-item">ROI Calculator</a></li>
+          <li><a href="#company" class="nav-item">Company</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-primary-compact">
+          <span>Get in Touch</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-layout">
+        <!-- Live Status Pill -->
+        <div class="hero-pill-badge reveal">
+          <span class="live-pulse"></span>
+          <span class="badge-content">Next-Gen Industrial Computer Vision & Asset AI</span>
+          <span class="pill-chip">v4.2 Production</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="hero-title reveal">
+          Building Intelligent Software for <br class="desktop-only"/>
+          <span class="gradient-shimmer">Industrial Operations</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="hero-desc reveal">
+          Software, Artificial Intelligence, Computer Vision, and Digital Solutions engineered to accelerate productivity, eliminate maintenance bottlenecks, and maximize operational uptime.
+        </p>
+
+        <!-- CTAs -->
+        <div class="hero-cta-wrapper reveal">
+          <a href="#product" class="btn btn-primary btn-glow">
+            <span>Explore Machine Identifier AI™</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Request Technical Demo</span>
+          </a>
+          <button class="btn btn-ghost" id="quickCopyEmail" data-copy="info@mosbisystems.com">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            <span>Copy info@mosbisystems.com</span>
+          </button>
+        </div>
+
+        <!-- INTERACTIVE LIVE PRODUCT SCANNER CONSOLE -->
+        <div class="product-console-wrapper reveal">
+          <div class="console-box">
+            <!-- Console Header -->
+            <div class="console-topbar">
+              <div class="window-controls">
+                <span class="w-dot dot-red"></span>
+                <span class="w-dot dot-yellow"></span>
+                <span class="w-dot dot-green"></span>
+              </div>
+              <div class="console-title">
+                <span class="tech-tag">INFERENCE ENGINE</span>
+                <span>MOSBI Machine Identifier AI™ • Optical Inspection Simulator</span>
+              </div>
+              <div class="console-engine-status">
+                <span class="status-indicator-active"></span>
+                <span>EDGE SYNC ACTIVE</span>
+              </div>
+            </div>
+
+            <!-- Console Body -->
+            <div class="console-body-grid">
+              <!-- Left: Interactive Scanner View -->
+              <div class="interactive-viewport">
+                <!-- Machine Category Selector Bar -->
+                <div class="machine-switcher" role="tablist" aria-label="Select Machine Sample">
+                  <button class="machine-tab active" data-machine="turbine" role="tab" aria-selected="true">
+                    <span>Centrifugal Pump #402</span>
+                  </button>
+                  <button class="machine-tab" data-machine="valve" role="tab" aria-selected="false">
+                    <span>Cryogenic Valve PV-94</span>
+                  </button>
+                  <button class="machine-tab" data-machine="motor" role="tab" aria-selected="false">
+                    <span>Induction Motor M-7</span>
+                  </button>
+                  <button class="machine-tab" data-machine="compressor" role="tab" aria-selected="false">
+                    <span>Screw Compressor SC-12</span>
+                  </button>
+                </div>
+
+                <!-- Visual Optical Target Display -->
+                <div class="optical-stage" id="opticalStage">
+                  <!-- Laser scanning bar -->
+                  <div class="optical-laser"></div>
+                  
+                  <!-- HUD Reticle & Crosshairs -->
+                  <div class="hud-center-cross"></div>
+                  <div class="hud-grid-marks">
+                    <span class="hud-mark top-l">+0.00</span>
+                    <span class="hud-mark top-r">FPS 60</span>
+                    <span class="hud-mark bot-l">ISO 400</span>
+                    <span class="hud-mark bot-r">FOV 74°</span>
+                  </div>
+
+                  <!-- Dynamic SVG Machinery Illustration -->
+                  <div class="machinery-visual" id="machineryVisual">
+                    <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="machine-schematic-svg" id="machineSvg">
+                      <!-- Base Machine Graphic will be injected by script.js dynamically -->
+                    </svg>
+                  </div>
+
+                  <!-- Dynamic Bounding Boxes -->
+                  <div class="dynamic-bounding-box box-main" id="boxMain">
+                    <div class="box-tag-label" id="boxMainLabel">Turbine Pump #402 • 99.8% Match</div>
+                    <div class="b-corner tl"></div><div class="b-corner tr"></div>
+                    <div class="b-corner bl"></div><div class="b-corner br"></div>
+                  </div>
+
+                  <div class="dynamic-bounding-box box-sub" id="boxSub">
+                    <div class="box-tag-label label-sub" id="boxSubLabel">Flange Seal • PASS</div>
+                    <div class="b-corner tl"></div><div class="b-corner tr"></div>
+                    <div class="b-corner bl"></div><div class="b-corner br"></div>
+                  </div>
+                </div>
+
+                <!-- Bottom Viewport Footer -->
+                <div class="viewport-footer">
+                  <div class="vf-stat">
+                    <span class="vf-label">Inference:</span>
+                    <span class="vf-val" id="valLatency">14.2 ms</span>
+                  </div>
+                  <div class="vf-stat">
+                    <span class="vf-label">Model:</span>
+                    <span class="vf-val">MOSBI-Vision-4.2-Edge</span>
+                  </div>
+                  <div class="vf-stat">
+                    <span class="vf-label">Confidence:</span>
+                    <span class="vf-val val-green" id="valConfidence">99.8%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Real-Time Diagnostic Feed & Asset Metadata -->
+              <div class="telemetry-panel">
+                <div class="telemetry-tabs">
+                  <span class="t-tab active">Asset Intelligence Sheet</span>
+                </div>
+
+                <!-- Dynamic Machine Specification Details -->
+                <div class="asset-spec-card" id="assetSpecCard">
+                  <div class="spec-header">
+                    <div class="spec-id-group">
+                      <span class="spec-type-badge" id="specBadge">ROTARY EQUIPMENT</span>
+                      <h4 class="spec-title" id="specTitle">Centrifugal Slurry Pump</h4>
+                    </div>
+                    <span class="health-pill good" id="specHealth">Healthy • 98%</span>
+                  </div>
+
+                  <div class="spec-props-grid">
+                    <div class="prop-item">
+                      <span class="p-label">Asset Tag:</span>
+                      <span class="p-val" id="specTag">PUMP-CPX-800-MD</span>
+                    </div>
+                    <div class="prop-item">
+                      <span class="p-label">Serial OCR:</span>
+                      <span class="p-val" id="specSerial">SN-8849-01B</span>
+                    </div>
+                    <div class="prop-item">
+                      <span class="p-label">OEM Vendor:</span>
+                      <span class="p-val" id="specVendor">FlowMax Dynamics</span>
+                    </div>
+                    <div class="prop-item">
+                      <span class="p-label">Operating Temp:</span>
+                      <span class="p-val" id="specTemp">48.2 °C (Normal)</span>
+                    </div>
+                    <div class="prop-item">
+                      <span class="p-label">Next Service:</span>
+                      <span class="p-val val-accent" id="specService">14 Days (Routine)</span>
+                    </div>
+                    <div class="prop-item">
+                      <span class="p-label">CMMS Sync:</span>
+                      <span class="p-val val-green" id="specSync">Synced • ID #9481</span>
+                    </div>
+                  </div>
+
+                  <div class="spec-actions">
+                    <a href="#contact" class="btn btn-primary-compact btn-full">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                      <span>Access Complete Machine Dossier</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Live Terminal Stream Logs -->
+                <div class="live-stream-box">
+                  <div class="stream-title">
+                    <span>LIVE INFERENCE STREAM</span>
+                    <span class="stream-dot"></span>
+                  </div>
+                  <div class="stream-log-container" id="streamLogContainer">
+                    <!-- Logs populated via JS -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- High-Impact Metrics Bar -->
+        <div class="metrics-strip reveal">
+          <div class="metric-card">
+            <div class="metric-number"><span class="counter" data-target="99.8">99.8</span><span class="metric-unit">%</span></div>
+            <div class="metric-title">Recognition Accuracy</div>
+            <div class="metric-sub">Multi-angle visual neural validation</div>
+          </div>
+
+          <div class="metric-divider"></div>
+
+          <div class="metric-card">
+            <div class="metric-number">&lt;<span class="counter" data-target="250">250</span><span class="metric-unit">ms</span></div>
+            <div class="metric-title">Edge Latency</div>
+            <div class="metric-sub">Instant zero-delay mobile execution</div>
+          </div>
+
+          <div class="metric-divider"></div>
+
+          <div class="metric-card">
+            <div class="metric-number"><span class="counter" data-target="80">80</span><span class="metric-unit">%</span></div>
+            <div class="metric-title">Documentation Reduction</div>
+            <div class="metric-sub">Automated telemetry & manual elimination</div>
+          </div>
+
+          <div class="metric-divider"></div>
+
+          <div class="metric-card">
+            <div class="metric-number">24/7</div>
+            <div class="metric-title">Critical Asset Visibility</div>
+            <div class="metric-sub">Continuous cloud synchronization</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION & VISION SECTION -->
+    <section class="section mission-section" id="mission">
+      <div class="container">
+        <div class="section-intro text-center reveal">
+          <span class="sub-badge">Strategic Purpose</span>
+          <h2 class="section-heading">Transforming Complex Operations Into <span class="gradient-shimmer">Intelligent Experiences</span></h2>
+          <p class="section-lead">
+            We bridge physical industrial hardware with advanced neural software architectures to eliminate downtime and empower frontline workforces.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Mission Card -->
+          <div class="bento-card mission-card spotlight-card reveal">
+            <div class="bento-glow-spot"></div>
+            <div class="card-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24M14.83 14.83l4.24 4.24M14.83 9.17l4.24-4.24M4.93 19.07l4.24-4.24"/></svg>
+            </div>
+            <span class="card-kicker">OUR MISSION</span>
+            <h3 class="card-headline">Identify, Manage, and Maintain Critical Assets</h3>
+            <p class="card-paragraph">
+              MOSBI Systems develops innovative software products that help organizations identify, manage, and maintain critical assets through modern technologies such as <strong>Artificial Intelligence, Computer Vision, Mobile Applications, and Cloud Services</strong>.
+            </p>
+            <p class="card-paragraph muted">
+              Our goal is to transform complex operational processes into intelligent, efficient, and scalable digital experiences that deliver immediate operational clarity.
+            </p>
+            <div class="pillar-tags">
+              <span class="p-tag">AI Identification</span>
+              <span class="p-tag">Computer Vision</span>
+              <span class="p-tag">Mobile Ergonomics</span>
+              <span class="p-tag">Cloud Telemetry</span>
+            </div>
+          </div>
+
+          <!-- Vision Card -->
+          <div class="bento-card vision-card spotlight-card reveal">
+            <div class="bento-glow-spot"></div>
+            <div class="card-icon-box vision-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <span class="card-kicker">OUR VISION</span>
+            <h3 class="card-headline">Global Leadership in Industrial Intelligence</h3>
+            <p class="card-paragraph">
+              To become a leading provider of intelligent software solutions that help organizations understand, manage, and optimize their physical assets and operational environments worldwide.
+            </p>
+            <div class="vision-feature-list">
+              <div class="v-feature">
+                <div class="v-dot"></div>
+                <div>
+                  <strong>Universal Machine Indexing</strong>
+                  <p>Building the world's most comprehensive visual dataset for industrial parts and machinery.</p>
+                </div>
+              </div>
+              <div class="v-feature">
+                <div class="v-dot"></div>
+                <div>
+                  <strong>Autonomous Maintenance Workflows</strong>
+                  <p>Guiding field technicians with contextual computer vision overlays and predictive analytics.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE CAPABILITIES (WHAT WE DO) -->
+    <section class="section capabilities-section" id="capabilities">
+      <div class="container">
+        <div class="section-intro text-center reveal">
+          <span class="sub-badge">Technology Stack</span>
+          <h2 class="section-heading">What We <span class="gradient-shimmer">Do</span></h2>
+          <p class="section-lead">
+            A unified suite of digital and visual intelligence solutions architected to modernize legacy operations.
+          </p>
+        </div>
+
+        <div class="capability-grid">
+          <!-- Card 1: AI -->
+          <div class="capability-card spotlight-card reveal">
+            <div class="bento-glow-spot"></div>
+            <div class="cap-header">
+              <div class="cap-icon-box">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 3.36 2.07 6.24 5 7.42V20a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2.58c2.93-1.18 5-4.06 5-7.42a8 8 0 0 0-8-8z"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
+              </div>
+              <span class="cap-badge">Intelligence</span>
+            </div>
+            <h3 class="cap-title">Artificial Intelligence</h3>
+            <p class="cap-description">
+              Building practical AI solutions that automate workflows, improve operational decision-making, and increase frontline productivity.
+            </p>
+            <ul class="cap-bullets">
+              <li><span class="b-check">✓</span> Workflow Automation & Scheduling</li>
+              <li><span class="b-check">✓</span> Intelligent Predictive Diagnostics</li>
+              <li><span class="b-check">✓</span> Machine Anomaly Detection</li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Computer Vision -->
+          <div class="capability-card feature-primary spotlight-card reveal">
+            <div class="bento-glow-spot"></div>
+            <div class="cap-header">
+              <div class="cap-icon-box primary-box">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              </div>
+              <span class="cap-badge badge-glow">Core Pillar</span>
+            </div>
+            <h3 class="cap-title">Computer Vision</h3>
+            <p class="cap-description">
+              Developing visual recognition systems capable of identifying, classifying, and understanding real-world assets, parts, and equipment.
+            </p>
+            <ul class="cap-bullets">
+              <li><span class="b-check">✓</span> Zero-Barcode Visual Asset Identification</li>
+              <li><span class="b-check">✓</span> Optical Serial Number & Nameplate OCR</li>
+              <li><span class="b-check">✓</span> Spatial Component Localization</li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Mobile Apps -->
+          <div class="capability-card spotlight-card reveal">
+            <div class="bento-glow-spot"></div>
+            <div class="cap-header">
+              <div class="cap-icon-box">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              </div>
+              <span class="cap-badge">Field Ergonomics</span>
+            </div>
+            <h3 class="cap-title">Mobile Applications</h3>
+            <p class="cap-description">
+              Creating modern and intuitive mobile experiences that enable field teams and organizations to operate efficiently from anywhere.
+            </p>
+            <ul class="cap-bullets">
+              <li><span class="b-check">✓</span> Offline-First Local Model Execution</li>
+              <li><span class="b-check">✓</span> Instant Field Data Capture & Tagging</li>
+              <li><span class="b-check">✓</span> Technician Guidance Workflows</li>
+            </ul>
+          </div>
+
+          <!-- Card 4: Cloud Software -->
+          <div class="capability-card spotlight-card reveal">
+            <div class="bento-glow-spot"></div>
+            <div class="cap-header">
+              <div class="cap-icon-box">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+              </div>
+              <span class="cap-badge">Enterprise Scale</span>
+            </div>
+            <h3 class="cap-title">Cloud Software</h3>
+            <p class="cap-description">
+              Designing scalable SaaS platforms and distributed cloud systems that support sustainable organizational growth and digital transformation.
+            </p>
+            <ul class="cap-bullets">
+              <li><span class="b-check">✓</span> Enterprise Asset Registry & Digital Twins</li>
+              <li><span class="b-check">✓</span> Real-Time Multi-Plant Fleet Analytics</li>
+              <li><span class="b-check">✓</span> Secure API Integrations with CMMS & ERP</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCT DEEP DIVE -->
+    <section class="section product-showcase-section" id="product">
+      <div class="container">
+        <div class="flagship-panel reveal">
+          <div class="flagship-top">
+            <div class="flagship-badge">FLAGSHIP PLATFORM</div>
+            <h2 class="flagship-heading">Machine Identifier AI<span class="tm">™</span></h2>
+            <p class="flagship-sub">
+              An AI-powered platform designed to help identify industrial machinery and equipment quickly and accurately.
+            </p>
+          </div>
+
+          <div class="flagship-body-grid">
+            <!-- Left: Core Capabilities -->
+            <div class="flagship-col">
+              <div class="col-header">
+                <div class="col-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                </div>
+                <h3>Core Capabilities</h3>
+              </div>
+
+              <div class="capability-cards-list">
+                <div class="cap-mini-card">
+                  <span class="cap-num">01</span>
+                  <div>
+                    <h4>Equipment recognition using AI</h4>
+                    <p>Instant identification of complex industrial models, turbines, valves, and gearboxes.</p>
+                  </div>
+                </div>
+
+                <div class="cap-mini-card">
+                  <span class="cap-num">02</span>
+                  <div>
+                    <h4>Visual asset identification</h4>
+                    <p>Point-and-shoot camera identification with no tags, barcodes, or manual lookups required.</p>
+                  </div>
+                </div>
+
+                <div class="cap-mini-card">
+                  <span class="cap-num">03</span>
+                  <div>
+                    <h4>Industrial equipment documentation</h4>
+                    <p>Immediate digital linking to OEM schematics, torque specs, and historical maintenance logs.</p>
+                  </div>
+                </div>
+
+                <div class="cap-mini-card">
+                  <span class="cap-num">04</span>
+                  <div>
+                    <h4>Maintenance support workflows</h4>
+                    <p>Context-aware checklists and step-by-step diagnostic procedures for frontline technicians.</p>
+                  </div>
+                </div>
+
+                <div class="cap-mini-card">
+                  <span class="cap-num">05</span>
+                  <div>
+                    <h4>Machine data collection and organization</h4>
+                    <p>Automated aggregation of plant-floor operating conditions into unified digital twins.</p>
+                  </div>
+                </div>
+
+                <div class="cap-mini-card">
+                  <span class="cap-num">06</span>
+                  <div>
+                    <h4>Field technician productivity enhancement</h4>
+                    <p>Eliminate wasted transit and manual code-matching time for technicians on the floor.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Measurable Benefits & Action -->
+            <div class="flagship-col benefits-panel">
+              <div class="col-header">
+                <div class="col-icon-wrap icon-green">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <h3>Measurable ROI Benefits</h3>
+              </div>
+
+              <div class="benefits-stack">
+                <div class="benefit-box">
+                  <div class="b-icon-check">✅</div>
+                  <div class="b-text">
+                    <strong>Faster equipment identification</strong>
+                    <p>Slash asset verification time by up to 90% across distributed operations.</p>
+                  </div>
+                </div>
+
+                <div class="benefit-box">
+                  <div class="b-icon-check">✅</div>
+                  <div class="b-text">
+                    <strong>Reduced manual documentation effort</strong>
+                    <p>Eliminate human transcription errors and paper binder cataloging.</p>
+                  </div>
+                </div>
+
+                <div class="benefit-box">
+                  <div class="b-icon-check">✅</div>
+                  <div class="b-text">
+                    <strong>Increased maintenance efficiency</strong>
+                    <p>Provide technicians with immediate repair context right when they stand in front of the machine.</p>
+                  </div>
+                </div>
+
+                <div class="benefit-box">
+                  <div class="b-icon-check">✅</div>
+                  <div class="b-text">
+                    <strong>Better asset visibility</strong>
+                    <p>Real-time auditability of fleet location, health status, and lifecycle stage.</p>
+                  </div>
+                </div>
+
+                <div class="benefit-box">
+                  <div class="b-icon-check">✅</div>
+                  <div class="b-text">
+                    <strong>Improved operational decision-making</strong>
+                    <p>Data-driven prioritization of capital repairs and planned maintenance windows.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="benefits-cta-box">
+                <div class="cta-callout">
+                  <span>Ready to deploy Machine Identifier AI™?</span>
+                  <a href="#contact" class="btn btn-primary btn-block">
+                    <span>Request Enterprise Pilot</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE INDUSTRIES DEEP-DIVE -->
+    <section class="section industries-section" id="industries">
+      <div class="container">
+        <div class="section-intro text-center reveal">
+          <span class="sub-badge">Target Sectors</span>
+          <h2 class="section-heading">Industries We <span class="gradient-shimmer">Empower</span></h2>
+          <p class="section-lead">
+            MOSBI Systems solutions are purpose-built for organizations operating in demanding, asset-heavy industrial environments.
+          </p>
+        </div>
+
+        <!-- Dynamic Industry Selector Tabs -->
+        <div class="industry-tab-container reveal">
+          <div class="industry-nav" role="tablist">
+            <button class="ind-tab-btn active" data-industry="manufacturing" role="tab">Manufacturing</button>
+            <button class="ind-tab-btn" data-industry="operations" role="tab">Industrial Operations</button>
+            <button class="ind-tab-btn" data-industry="facility" role="tab">Facility Management</button>
+            <button class="ind-tab-btn" data-industry="field" role="tab">Field Service</button>
+            <button class="ind-tab-btn" data-industry="maintenance" role="tab">Maintenance Operations</button>
+            <button class="ind-tab-btn" data-industry="asset" role="tab">Asset Management</button>
+            <button class="ind-tab-btn" data-industry="infrastructure" role="tab">Infrastructure Services</button>
+          </div>
+
+          <!-- Dynamic Industry Detail Card -->
+          <div class="industry-display-card" id="industryDisplayCard">
+            <div class="ind-card-header">
+              <div class="ind-header-left">
+                <div class="ind-icon-box" id="indIcon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                </div>
+                <div>
+                  <span class="ind-kicker" id="indKicker">SECTOR FOCUS</span>
+                  <h3 class="ind-title" id="indTitle">Manufacturing Plants & Assembly Lines</h3>
+                </div>
+              </div>
+              <div class="ind-stat-badge">
+                <span class="stat-number" id="indStat">92%</span>
+                <span class="stat-desc" id="indStatDesc">Faster Line Diagnostics</span>
+              </div>
+            </div>
+
+            <div class="ind-card-body">
+              <div class="ind-col">
+                <h4>Operational Challenges</h4>
+                <p id="indChallenge">Unscheduled downtime on critical assembly lines caused by time-consuming manual part lookups and scattered documentation.</p>
+              </div>
+              <div class="ind-col">
+                <h4>The MOSBI AI Solution</h4>
+                <p id="indSolution">Visual identification of robotic arms, CNC spindles, and conveyors with immediate retrieval of technical schematics on technician tablets.</p>
+              </div>
+              <div class="ind-col">
+                <h4>Key Operational Gains</h4>
+                <ul class="ind-benefit-pills" id="indPills">
+                  <li>Zero paper manuals</li>
+                  <li>Instant part numbering</li>
+                  <li>Rapid shift changeover</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SYSTEM ARCHITECTURE (EDGE TO CLOUD) -->
+    <section class="section architecture-section" id="architecture">
+      <div class="container">
+        <div class="section-intro text-center reveal">
+          <span class="sub-badge">Architectural Flow</span>
+          <h2 class="section-heading">Edge to Cloud <span class="gradient-shimmer">Pipeline</span></h2>
+          <p class="section-lead">
+            How MOSBI Systems connects frontline visual capture with enterprise cloud synchronization.
+          </p>
+        </div>
+
+        <div class="pipeline-flow-wrapper reveal">
+          <div class="pipeline-grid">
+            <!-- Step 1 -->
+            <div class="pipeline-step">
+              <div class="step-badge">STAGE 01</div>
+              <div class="step-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              </div>
+              <h4>Field Capture</h4>
+              <p>Technician points camera or mobile sensor at any industrial equipment or component.</p>
+            </div>
+
+            <div class="pipeline-connector">
+              <span class="connector-pulse"></span>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="pipeline-step active-step">
+              <div class="step-badge badge-cyan">STAGE 02</div>
+              <div class="step-icon icon-cyan">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <h4>Edge Inference</h4>
+              <p>Proprietary neural model classifies machine signature in &lt;250ms with zero latency.</p>
+            </div>
+
+            <div class="pipeline-connector">
+              <span class="connector-pulse"></span>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="pipeline-step">
+              <div class="step-badge">STAGE 03</div>
+              <div class="step-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <h4>Instant Dossier</h4>
+              <p>Digital twin specs, OEM manuals, and guided maintenance checklists render on-screen.</p>
+            </div>
+
+            <div class="pipeline-connector">
+              <span class="connector-pulse"></span>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="pipeline-step">
+              <div class="step-badge">STAGE 04</div>
+              <div class="step-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+              </div>
+              <h4>Cloud CMMS Sync</h4>
+              <p>Fleet logs, location tags, and repair records update in real time across plant databases.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE ROI & MAINTENANCE SAVINGS CALCULATOR -->
+    <section class="section calculator-section" id="roi-calculator">
+      <div class="container">
+        <div class="calc-wrapper reveal">
+          <div class="calc-intro text-center">
+            <span class="sub-badge">Value Estimation</span>
+            <h2 class="section-heading">Calculate Your <span class="gradient-shimmer">Operational Savings</span></h2>
+            <p class="section-lead">
+              See how much time and budget MOSBI Machine Identifier AI™ can save your facilities.
+            </p>
+          </div>
+
+          <div class="calc-grid">
+            <!-- Left: Sliders -->
+            <div class="calc-inputs-panel">
+              <!-- Slider 1 -->
+              <div class="calc-control-group">
+                <div class="control-header">
+                  <label for="techCount">Number of Field Technicians / Operators</label>
+                  <span class="control-val" id="valTechCount">25</span>
+                </div>
+                <input type="range" id="techCount" min="2" max="200" value="25" step="1" class="calc-slider" />
+                <div class="slider-marks"><span>2</span><span>100</span><span>200+</span></div>
+              </div>
+
+              <!-- Slider 2 -->
+              <div class="calc-control-group">
+                <div class="control-header">
+                  <label for="inspectionsPerMonth">Machine Lookups / Inspections per Month</label>
+                  <span class="control-val" id="valInspections">600</span>
+                </div>
+                <input type="range" id="inspectionsPerMonth" min="50" max="5000" value="600" step="50" class="calc-slider" />
+                <div class="slider-marks"><span>50</span><span>2,500</span><span>5,000+</span></div>
+              </div>
+
+              <!-- Slider 3 -->
+              <div class="calc-control-group">
+                <div class="control-header">
+                  <label for="laborRate">Average Hourly Labor Rate ($/hr)</label>
+                  <span class="control-val" id="valLaborRate">$55</span>
+                </div>
+                <input type="range" id="laborRate" min="20" max="150" value="55" step="5" class="calc-slider" />
+                <div class="slider-marks"><span>$20/hr</span><span>$85/hr</span><span>$150/hr</span></div>
+              </div>
+            </div>
+
+            <!-- Right: Dynamic Results Box -->
+            <div class="calc-results-panel">
+              <div class="results-top">
+                <span class="res-kicker">PROJECTED ANNUAL IMPACT</span>
+                <div class="annual-savings-display">
+                  <span class="currency">$</span>
+                  <span class="savings-amount" id="resAnnualSavings">198,000</span>
+                </div>
+                <span class="savings-sub">Estimated Annual Labor & Downtime Savings</span>
+              </div>
+
+              <div class="results-breakdown">
+                <div class="res-stat-row">
+                  <span>Hours Saved Monthly:</span>
+                  <strong id="resHoursMonthly">300 hrs</strong>
+                </div>
+                <div class="res-stat-row">
+                  <span>Documentation Reduction:</span>
+                  <strong class="val-green">80% Less Paperwork</strong>
+                </div>
+                <div class="res-stat-row">
+                  <span>Inspection Speedup:</span>
+                  <strong class="val-accent">4.5x Faster Lookups</strong>
+                </div>
+              </div>
+
+              <a href="#contact" class="btn btn-primary btn-block">
+                <span>Lock In Your Enterprise Pilot</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY MOSBI SECTION -->
+    <section class="section why-section" id="why-us">
+      <div class="container">
+        <div class="section-intro text-center reveal">
+          <span class="sub-badge">Differentiators</span>
+          <h2 class="section-heading">Why <span class="gradient-shimmer">MOSBI</span></h2>
+          <p class="section-lead">
+            Our architectural philosophy centers on human ergonomics, high-reliability engineering, and rapid ROI.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card spotlight-card reveal">
+            <div class="bento-glow-spot"></div>
+            <div class="why-card-top">
+              <div class="why-idx">01</div>
+              <div class="why-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+            </div>
+            <h3 class="why-title">Innovation First</h3>
+            <p class="why-desc">
+              We focus on practical innovation that produces real business value. We engineer tools that solve physical shop-floor bottlenecks directly.
+            </p>
+          </div>
+
+          <div class="why-card spotlight-card reveal">
+            <div class="bento-glow-spot"></div>
+            <div class="why-card-top">
+              <div class="why-idx">02</div>
+              <div class="why-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+              </div>
+            </div>
+            <h3 class="why-title">Built for Growth</h3>
+            <p class="why-desc">
+              Our products are designed with scalability and long-term sustainability in mind, gracefully scaling from single facilities to global multisite operations.
+            </p>
+          </div>
+
+          <div class="why-card spotlight-card reveal">
+            <div class="bento-glow-spot"></div>
+            <div class="why-card-top">
+              <div class="why-idx">03</div>
+              <div class="why-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
+              </div>
+            </div>
+            <h3 class="why-title">Simplicity</h3>
+            <p class="why-desc">
+              Technology should simplify work, not complicate it. Intuitive user experiences ensure frontline technicians adopt our tools on day one without manual training.
+            </p>
+          </div>
+
+          <div class="why-card spotlight-card reveal">
+            <div class="bento-glow-spot"></div>
+            <div class="why-card-top">
+              <div class="why-idx">04</div>
+              <div class="why-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+            </div>
+            <h3 class="why-title">Reliability</h3>
+            <p class="why-desc">
+              Industrial plants cannot tolerate software downtime. We build rock-solid, secure, offline-tolerant architectures organizations can depend on 24/7.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUTURE PRODUCTS ROADMAP -->
+    <section class="section roadmap-section">
+      <div class="container">
+        <div class="section-intro text-center reveal">
+          <span class="sub-badge">Expanding Ecosystem</span>
+          <h2 class="section-heading">Future <span class="gradient-shimmer">Products</span></h2>
+          <p class="section-lead">
+            MOSBI Systems is continuously building a specialized portfolio of intelligent industrial platforms.
+          </p>
+        </div>
+
+        <div class="roadmap-grid reveal">
+          <div class="roadmap-item">
+            <div class="rm-icon">⚡</div>
+            <h4>Artificial Intelligence</h4>
+            <p>Predictive operational algorithms & diagnostic decision engines.</p>
+          </div>
+          <div class="roadmap-item">
+            <div class="rm-icon">🏭</div>
+            <h4>Industrial Intelligence</h4>
+            <p>Digital plant twins, telemetry aggregation, and anomaly detection.</p>
+          </div>
+          <div class="roadmap-item">
+            <div class="rm-icon">📦</div>
+            <h4>Asset Management</h4>
+            <p>Automated lifecycle tracking, parts inventories, and audit trails.</p>
+          </div>
+          <div class="roadmap-item">
+            <div class="rm-icon">👁️</div>
+            <h4>Computer Vision</h4>
+            <p>Deep visual recognition, OCR nameplate parsing, and thermal analysis.</p>
+          </div>
+          <div class="roadmap-item">
+            <div class="rm-icon">☁️</div>
+            <h4>SaaS Platforms</h4>
+            <p>Centralized cloud coordination hubs for global enterprise fleets.</p>
+          </div>
+          <div class="roadmap-item">
+            <div class="rm-icon">📱</div>
+            <h4>Mobile Applications</h4>
+            <p>Ergonomic field companion tools with native offline-first AI.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPANY OVERVIEW & PROFILE -->
+    <section class="section company-section" id="company">
+      <div class="container">
+        <div class="company-profile-card spotlight-card reveal">
+          <div class="bento-glow-spot"></div>
+          <div class="profile-header">
+            <div>
+              <span class="sub-badge">Entity Profile</span>
+              <h2 class="company-heading">MOSBI Systems LLC</h2>
+            </div>
+            <div class="founded-tag">EST. 2026 • MARYLAND, USA</div>
+          </div>
+
+          <div class="profile-grid">
+            <div class="profile-col">
+              <span class="p-col-label">Legal Name</span>
+              <span class="p-col-value">MOSBI Systems LLC</span>
+            </div>
+            <div class="profile-col">
+              <span class="p-col-label">Headquarters Location</span>
+              <span class="p-col-value">College Park, Maryland, USA</span>
+            </div>
+            <div class="profile-col">
+              <span class="p-col-label">Official Website</span>
+              <a href="https://mosbisystems.com" target="_blank" rel="noopener noreferrer" class="p-col-link">
+                https://mosbisystems.com
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+            <div class="profile-col">
+              <span class="p-col-label">Specialization</span>
+              <span class="p-col-value">Industrial AI & Optical Machine Recognition</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & ENGAGEMENT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-intro text-center reveal">
+          <span class="sub-badge">Direct Communication</span>
+          <h2 class="section-heading">Get in <span class="gradient-shimmer">Touch</span></h2>
+          <p class="section-lead">
+            Connect directly with our engineering, sales, or leadership teams for pilot inquiries, enterprise demos, or partnerships.
+          </p>
+        </div>
+
+        <div class="contact-layout-grid">
+          <!-- Channel Cards -->
+          <div class="channel-stack reveal">
+            <!-- General Inquiries -->
+            <div class="channel-box" data-copy="info@mosbisystems.com">
+              <div class="ch-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+              </div>
+              <div class="ch-info">
+                <span class="ch-label">General Inquiries</span>
+                <span class="ch-address">info@mosbisystems.com</span>
+              </div>
+              <div class="ch-action-buttons">
+                <button class="ch-copy-btn" title="Copy email" aria-label="Copy info email">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                </button>
+                <a href="mailto:info@mosbisystems.com" class="ch-send-btn" title="Compose mail" aria-label="Send email to info">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Sales -->
+            <div class="channel-box channel-highlight" data-copy="sales@mosbisystems.com">
+              <div class="ch-icon icon-cyan">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+              </div>
+              <div class="ch-info">
+                <span class="ch-label">Sales & Enterprise Solutions</span>
+                <span class="ch-address">sales@mosbisystems.com</span>
+              </div>
+              <div class="ch-action-buttons">
+                <button class="ch-copy-btn" title="Copy email" aria-label="Copy sales email">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                </button>
+                <a href="mailto:sales@mosbisystems.com" class="ch-send-btn" title="Compose mail" aria-label="Send email to sales">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Support -->
+            <div class="channel-box" data-copy="support@mosbisystems.com">
+              <div class="ch-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <div class="ch-info">
+                <span class="ch-label">Technical Support</span>
+                <span class="ch-address">support@mosbisystems.com</span>
+              </div>
+              <div class="ch-action-buttons">
+                <button class="ch-copy-btn" title="Copy email" aria-label="Copy support email">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                </button>
+                <a href="mailto:support@mosbisystems.com" class="ch-send-btn" title="Compose mail" aria-label="Send email to support">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Founder -->
+            <div class="channel-box" data-copy="founder@mosbisystems.com">
+              <div class="ch-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div class="ch-info">
+                <span class="ch-label">Founder & Partnerships</span>
+                <span class="ch-address">founder@mosbisystems.com</span>
+              </div>
+              <div class="ch-action-buttons">
+                <button class="ch-copy-btn" title="Copy email" aria-label="Copy founder email">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                </button>
+                <a href="mailto:founder@mosbisystems.com" class="ch-send-btn" title="Compose mail" aria-label="Send email to founder">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-card spotlight-card reveal">
+            <div class="bento-glow-spot"></div>
+            <form id="contactForm" class="contact-form-inner" novalidate>
+              <h3 class="form-title">Send a Direct Message</h3>
+              <p class="form-desc">Inquiries are routed directly to the appropriate technical or executive lead within 24 hours.</p>
+
+              <div class="form-field">
+                <label for="fullName">Full Name <span class="req">*</span></label>
+                <input type="text" id="fullName" name="fullName" required placeholder="e.g. Elena Rostova" autocomplete="name" />
+                <span class="field-error" id="nameError">Please provide your name.</span>
+              </div>
+
+              <div class="form-dual-row">
+                <div class="form-field">
+                  <label for="workEmail">Work Email <span class="req">*</span></label>
+                  <input type="email" id="workEmail" name="workEmail" required placeholder="name@company.com" autocomplete="email" />
+                  <span class="field-error" id="emailError">Please provide a valid email address.</span>
+                </div>
+                <div class="form-field">
+                  <label for="companyName">Organization</label>
+                  <input type="text" id="companyName" name="companyName" placeholder="e.g. Apex Industrial Group" autocomplete="organization" />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="departmentSelect">Department Target</label>
+                <div class="custom-select-wrap">
+                  <select id="departmentSelect" name="department">
+                    <option value="sales@mosbisystems.com">Sales & Demo Request</option>
+                    <option value="info@mosbisystems.com">General Inquiries</option>
+                    <option value="support@mosbisystems.com">Technical Support</option>
+                    <option value="founder@mosbisystems.com">Executive & Partnerships</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="message">Message <span class="req">*</span></label>
+                <textarea id="message" name="message" rows="4" required placeholder="Detail your machinery, fleet scale, or operational challenge..."></textarea>
+                <span class="field-error" id="msgError">Please enter your message.</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitBtn">
+                <span id="submitBtnText">Dispatch Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+
+              <div id="formFeedback" class="form-feedback" style="display: none;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-side">
+          <div class="brand-logo">
+            <div class="logo-badge">
+              <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="44" height="44" rx="12" fill="url(#brandGradFooter)" />
+                <path d="M12 30V14L22 23L32 14V30" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="22" cy="23" r="2.5" fill="#00e5ff" />
+                <defs>
+                  <linearGradient id="brandGradFooter" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#0052d4"/>
+                    <stop offset="0.5" stop-color="#4364f7"/>
+                    <stop offset="1" stop-color="#00e5ff"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">MOSBI</span>
+              <span class="brand-sub">SYSTEMS</span>
+            </div>
+          </div>
+          <p class="footer-tagline">
+            Building intelligent software, Computer Vision models, and cloud platforms for mission-critical industrial operations.
+          </p>
+          <div class="footer-location">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>College Park, Maryland, USA</span>
+          </div>
+        </div>
+
+        <div class="footer-nav-columns">
+          <div class="f-col">
+            <h5>Navigation</h5>
+            <ul>
+              <li><a href="#hero">Overview</a></li>
+              <li><a href="#mission">Our Mission</a></li>
+              <li><a href="#capabilities">What We Do</a></li>
+              <li><a href="#product">Machine Identifier AI™</a></li>
+              <li><a href="#industries">Target Industries</a></li>
+            </ul>
+          </div>
+
+          <div class="f-col">
+            <h5>Core Solutions</h5>
+            <ul>
+              <li><a href="#product">Equipment Recognition AI</a></li>
+              <li><a href="#capabilities">Computer Vision Systems</a></li>
+              <li><a href="#capabilities">Mobile Field Apps</a></li>
+              <li><a href="#capabilities">Cloud SaaS Platforms</a></li>
+              <li><a href="#roi-calculator">ROI Estimation</a></li>
+            </ul>
+          </div>
+
+          <div class="f-col">
+            <h5>Contact Channels</h5>
+            <ul>
+              <li><a href="mailto:info@mosbisystems.com">info@mosbisystems.com</a></li>
+              <li><a href="mailto:sales@mosbisystems.com">sales@mosbisystems.com</a></li>
+              <li><a href="mailto:support@mosbisystems.com">support@mosbisystems.com</a></li>
+              <li><a href="mailto:founder@mosbisystems.com">founder@mosbisystems.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="copyright-text">
+          &copy; 2026 MOSBI Systems LLC. All rights reserved.
+        </div>
+        <div class="system-status-indicator">
+          <span class="status-live-dot"></span>
+          <span>All Neural Pipelines Operational • Production Ready</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive JavaScript -->
+  <script>
+/**
+ * MOSBI SYSTEMS - IMPECCABLE INTERACTIVITY & SCRIPT SUITE
+ * World-Class UI Logic, Canvas Physics, Scanner Simulation & ROI Engine
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  initNeuralCanvas();
+  initSpotlightEffect();
+  initHeaderScroll();
+  initMobileNav();
+  initScrollReveal();
+  initMetricCounters();
+  initMachineScanner();
+  initIndustryTabs();
+  initRoiCalculator();
+  initClipboardSystem();
+  initContactForm();
+});
+
+/* ==========================================================================
+   1. Interactive Neural Particles & Constellation Canvas
+   ========================================================================== */
+function initNeuralCanvas() {
+  const canvas = document.getElementById('neuralCanvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let width, height;
+  let particles = [];
+  const particleCount = 45;
+  let mouse = { x: null, y: null, radius: 140 };
+
+  const resize = () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  };
+
+  window.addEventListener('resize', resize);
+  resize();
+
+  window.addEventListener('mousemove', (e) => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+
+  window.addEventListener('mouseout', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  class Particle {
+    constructor() {
+      this.x = Math.random() * width;
+      this.y = Math.random() * height;
+      this.vx = (Math.random() - 0.5) * 0.45;
+      this.vy = (Math.random() - 0.5) * 0.45;
+      this.radius = Math.random() * 1.8 + 0.8;
+    }
+
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+
+      if (this.x < 0 || this.x > width) this.vx *= -1;
+      if (this.y < 0 || this.y > height) this.vy *= -1;
+
+      // Mouse repulsion/attraction physics
+      if (mouse.x !== null && mouse.y !== null) {
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < mouse.radius) {
+          const force = (mouse.radius - dist) / mouse.radius;
+          this.x -= (dx / dist) * force * 1.5;
+          this.y -= (dy / dist) * force * 1.5;
+        }
+      }
+    }
+
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(0, 229, 255, 0.4)';
+      ctx.fill();
+    }
+  }
+
+  for (let i = 0; i < particleCount; i++) {
+    particles.push(new Particle());
+  }
+
+  const connectParticles = () => {
+    for (let a = 0; a < particles.length; a++) {
+      for (let b = a + 1; b < particles.length; b++) {
+        const dx = particles[a].x - particles[b].x;
+        const dy = particles[a].y - particles[b].y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < 130) {
+          const opacity = (1 - distance / 130) * 0.22;
+          ctx.strokeStyle = `rgba(0, 229, 255, ${opacity})`;
+          ctx.lineWidth = 0.8;
+          ctx.beginPath();
+          ctx.moveTo(particles[a].x, particles[a].y);
+          ctx.lineTo(particles[b].x, particles[b].y);
+          ctx.stroke();
+        }
+      }
+    }
+  };
+
+  const animate = () => {
+    ctx.clearRect(0, 0, width, height);
+    particles.forEach(p => {
+      p.update();
+      p.draw();
+    });
+    connectParticles();
+    requestAnimationFrame(animate);
+  };
+
+  animate();
+}
+
+/* ==========================================================================
+   2. Spotlight Hover Tracker for Bento & Feature Cards
+   ========================================================================== */
+function initSpotlightEffect() {
+  const cards = document.querySelectorAll('.spotlight-card');
+  if (!cards.length) return;
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+}
+
+/* ==========================================================================
+   3. Header Navigation Scroll & Sticky Elevation
+   ========================================================================== */
+function initHeaderScroll() {
+  const header = document.getElementById('siteHeader');
+  if (!header) return;
+
+  const checkScroll = () => {
+    if (window.scrollY > 30) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  };
+
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
+}
+
+/* ==========================================================================
+   4. Mobile Navigation Drawer
+   ========================================================================== */
+function initMobileNav() {
+  const toggleBtn = document.getElementById('mobileMenuBtn');
+  const navMenu = document.getElementById('navMenu');
+  const navLinks = document.querySelectorAll('.nav-item');
+
+  if (!toggleBtn || !navMenu) return;
+
+  const toggle = () => {
+    const isOpen = navMenu.classList.toggle('open');
+    toggleBtn.classList.toggle('active', isOpen);
+    toggleBtn.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  };
+
+  toggleBtn.addEventListener('click', toggle);
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (navMenu.classList.contains('open')) {
+        toggle();
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   5. Reveal on Scroll Observer
+   ========================================================================== */
+function initScrollReveal() {
+  const reveals = document.querySelectorAll('.reveal');
+  if (!reveals.length) return;
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -50px 0px',
+      threshold: 0.08
+    });
+
+    reveals.forEach(el => observer.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('active'));
+  }
+}
+
+/* ==========================================================================
+   6. Animated Metric Counters
+   ========================================================================== */
+function initMetricCounters() {
+  const counters = document.querySelectorAll('.counter');
+  if (!counters.length) return;
+
+  let hasAnimated = false;
+
+  const animate = () => {
+    counters.forEach(counter => {
+      const target = parseFloat(counter.getAttribute('data-target'));
+      const isDecimal = target % 1 !== 0;
+      const duration = 1800;
+      const startTime = performance.now();
+
+      const update = (now) => {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        const current = target * ease;
+
+        counter.innerText = isDecimal ? current.toFixed(1) : Math.floor(current);
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          counter.innerText = isDecimal ? target.toFixed(1) : target;
+        }
+      };
+
+      requestAnimationFrame(update);
+    });
+  };
+
+  const strip = document.querySelector('.metrics-strip');
+  if (strip) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !hasAnimated) {
+        hasAnimated = true;
+        animate();
+      }
+    }, { threshold: 0.3 });
+
+    observer.observe(strip);
+  }
+}
+
+/* ==========================================================================
+   7. Interactive Machine Identifier AI™ Scanner Demo Simulation
+   ========================================================================== */
+const MACHINE_DATABASE = {
+  turbine: {
+    title: 'Centrifugal Slurry Pump',
+    badge: 'ROTARY EQUIPMENT',
+    tag: 'PUMP-CPX-800-MD',
+    serial: 'SN-8849-01B',
+    vendor: 'FlowMax Dynamics',
+    temp: '48.2 °C (Normal)',
+    service: '14 Days (Routine)',
+    sync: 'Synced • ID #9481',
+    health: 'Healthy • 98%',
+    confidence: '99.8%',
+    latency: '14.2 ms',
+    box1: { label: 'Turbine Pump #402 • 99.8% Match', top: '16%', left: '12%', width: '56%', height: '62%' },
+    box2: { label: 'Flange Seal • PASS', top: '44%', right: '10%', width: '28%', height: '38%' },
+    svg: `
+      <circle cx="180" cy="120" r="60" stroke="#00e5ff" stroke-width="2.5" stroke-dasharray="4 2" fill="rgba(0, 229, 255, 0.05)" />
+      <circle cx="180" cy="120" r="32" stroke="#4364f7" stroke-width="3" fill="rgba(67, 100, 247, 0.15)" />
+      <path d="M180 88V152M148 120H212M158 98L202 142M158 142L202 98" stroke="#00e5ff" stroke-width="2" stroke-linecap="round"/>
+      <rect x="240" y="100" width="90" height="40" rx="6" stroke="#10b981" stroke-width="2" fill="rgba(16, 185, 129, 0.08)"/>
+      <line x1="240" y1="120" x2="330" y2="120" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <rect x="80" y="105" width="40" height="30" rx="4" stroke="#00e5ff" stroke-width="2" fill="rgba(0, 229, 255, 0.06)"/>
+      <circle cx="285" cy="120" r="8" fill="#10b981" />
+    `
+  },
+  valve: {
+    title: 'Cryogenic Control Valve',
+    badge: 'PRESSURE CONTROL',
+    tag: 'VALVE-PV-94-CRYO',
+    serial: 'SN-4412-99C',
+    vendor: 'Vortex Automation',
+    temp: '-32.4 °C (Stable)',
+    service: '4 Days (Impending)',
+    sync: 'Synced • ID #3312',
+    health: 'Warning • Seal Check',
+    confidence: '99.4%',
+    latency: '11.8 ms',
+    box1: { label: 'Cryo Valve PV-94 • 99.4% Match', top: '20%', left: '20%', width: '48%', height: '58%' },
+    box2: { label: 'Actuator Stem • CALIBRATED', top: '10%', right: '22%', width: '24%', height: '32%' },
+    svg: `
+      <polygon points="120,80 200,120 120,160" stroke="#00e5ff" stroke-width="2.5" fill="rgba(0, 229, 255, 0.08)"/>
+      <polygon points="280,80 200,120 280,160" stroke="#00e5ff" stroke-width="2.5" fill="rgba(0, 229, 255, 0.08)"/>
+      <rect x="185" y="40" width="30" height="50" rx="4" stroke="#10b981" stroke-width="2.5" fill="rgba(16, 185, 129, 0.15)"/>
+      <circle cx="200" cy="35" r="18" stroke="#8b5cf6" stroke-width="3" fill="rgba(139, 92, 246, 0.15)"/>
+      <line x1="80" y1="120" x2="320" y2="120" stroke="#00e5ff" stroke-width="2" stroke-dasharray="5 3"/>
+    `
+  },
+  motor: {
+    title: 'High-Torque Induction Motor',
+    badge: 'ELECTRO-MECHANICAL',
+    tag: 'MOTOR-IND-M7-3P',
+    serial: 'SN-7731-08A',
+    vendor: 'ElectroCore Global',
+    temp: '64.1 °C (Nominal)',
+    service: '45 Days (Healthy)',
+    sync: 'Synced • ID #1842',
+    health: 'Optimal • 100%',
+    confidence: '99.9%',
+    latency: '9.4 ms',
+    box1: { label: 'Induction Motor M-7 • 99.9% Match', top: '15%', left: '16%', width: '60%', height: '65%' },
+    box2: { label: 'Terminal Box • OK', top: '18%', right: '14%', width: '22%', height: '28%' },
+    svg: `
+      <rect x="120" y="80" width="160" height="90" rx="10" stroke="#00e5ff" stroke-width="2.5" fill="rgba(0, 229, 255, 0.08)"/>
+      <line x1="150" y1="80" x2="150" y2="170" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="180" y1="80" x2="180" y2="170" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="210" y1="80" x2="210" y2="170" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="240" y1="80" x2="240" y2="170" stroke="#00e5ff" stroke-width="1.5"/>
+      <rect x="280" y="112" width="45" height="26" rx="4" stroke="#10b981" stroke-width="2" fill="rgba(16, 185, 129, 0.2)"/>
+      <rect x="150" y="55" width="40" height="25" rx="3" stroke="#8b5cf6" stroke-width="2" fill="rgba(139, 92, 246, 0.2)"/>
+    `
+  },
+  compressor: {
+    title: 'Rotary Screw Compressor',
+    badge: 'PNEUMATIC SYSTEMS',
+    tag: 'COMP-SC-1200-HP',
+    serial: 'SN-9102-54X',
+    vendor: 'AeroPress Systems',
+    temp: '51.8 °C (Normal)',
+    service: '28 Days (Scheduled)',
+    sync: 'Synced • ID #6720',
+    health: 'Operational • 96%',
+    confidence: '99.7%',
+    latency: '15.6 ms',
+    box1: { label: 'Screw Compressor SC-12 • 99.7%', top: '14%', left: '15%', width: '62%', height: '66%' },
+    box2: { label: 'Oil Filter Unit • INSPECTED', top: '35%', right: '12%', width: '25%', height: '35%' },
+    svg: `
+      <rect x="100" y="70" width="180" height="105" rx="12" stroke="#00e5ff" stroke-width="2.5" fill="rgba(0, 229, 255, 0.06)"/>
+      <circle cx="160" cy="120" r="30" stroke="#10b981" stroke-width="2" stroke-dasharray="3 3"/>
+      <circle cx="220" cy="120" r="30" stroke="#10b981" stroke-width="2" stroke-dasharray="3 3"/>
+      <path d="M140 120 Q160 95 180 120 T220 120" stroke="#4364f7" stroke-width="3" fill="none"/>
+      <rect x="280" y="90" width="35" height="60" rx="6" stroke="#f59e0b" stroke-width="2" fill="rgba(245, 158, 11, 0.15)"/>
+    `
+  }
+};
+
+function initMachineScanner() {
+  const tabs = document.querySelectorAll('.machine-tab');
+  const svgContainer = document.getElementById('machineSvg');
+  const boxMain = document.getElementById('boxMain');
+  const boxMainLabel = document.getElementById('boxMainLabel');
+  const boxSub = document.getElementById('boxSub');
+  const boxSubLabel = document.getElementById('boxSubLabel');
+  
+  const specBadge = document.getElementById('specBadge');
+  const specTitle = document.getElementById('specTitle');
+  const specHealth = document.getElementById('specHealth');
+  const specTag = document.getElementById('specTag');
+  const specSerial = document.getElementById('specSerial');
+  const specVendor = document.getElementById('specVendor');
+  const specTemp = document.getElementById('specTemp');
+  const specService = document.getElementById('specService');
+  const specSync = document.getElementById('specSync');
+  const valLatency = document.getElementById('valLatency');
+  const valConfidence = document.getElementById('valConfidence');
+  const streamLog = document.getElementById('streamLogContainer');
+
+  if (!tabs.length || !svgContainer) return;
+
+  const loadMachine = (key) => {
+    const data = MACHINE_DATABASE[key];
+    if (!data) return;
+
+    svgContainer.style.opacity = '0';
+    setTimeout(() => {
+      svgContainer.innerHTML = data.svg;
+      svgContainer.style.opacity = '1';
+    }, 150);
+
+    if (boxMain && boxMainLabel) {
+      boxMain.style.top = data.box1.top;
+      boxMain.style.left = data.box1.left;
+      boxMain.style.width = data.box1.width;
+      boxMain.style.height = data.box1.height;
+      boxMainLabel.innerText = data.box1.label;
+    }
+
+    if (boxSub && boxSubLabel) {
+      boxSub.style.top = data.box2.top;
+      boxSub.style.right = data.box2.right;
+      boxSub.style.width = data.box2.width;
+      boxSub.style.height = data.box2.height;
+      boxSubLabel.innerText = data.box2.label;
+    }
+
+    if (specBadge) specBadge.innerText = data.badge;
+    if (specTitle) specTitle.innerText = data.title;
+    if (specHealth) specHealth.innerText = data.health;
+    if (specTag) specTag.innerText = data.tag;
+    if (specSerial) specSerial.innerText = data.serial;
+    if (specVendor) specVendor.innerText = data.vendor;
+    if (specTemp) specTemp.innerText = data.temp;
+    if (specService) specService.innerText = data.service;
+    if (specSync) specSync.innerText = data.sync;
+    if (valLatency) valLatency.innerText = data.latency;
+    if (valConfidence) valConfidence.innerText = data.confidence;
+
+    if (streamLog) {
+      const now = new Date();
+      const timeStr = `[${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}]`;
+      const entry = document.createElement('div');
+      entry.className = 'log-entry';
+      entry.innerHTML = `<span class="log-time">${timeStr}</span> <span class="log-cyan">SWITCH:</span> Loaded model for ${data.title} (${data.confidence})`;
+      streamLog.appendChild(entry);
+      if (streamLog.children.length > 5) {
+        streamLog.removeChild(streamLog.firstElementChild);
+      }
+    }
+  };
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      loadMachine(tab.getAttribute('data-machine'));
+    });
+  });
+
+  loadMachine('turbine');
+
+  const logPool = [
+    { tag: 'INSPECT', cls: 'log-cyan', msg: 'Spatial feature extraction 100% verified.' },
+    { tag: 'OCR_PASS', cls: 'log-green', msg: 'Serial plate optical text verified with plant ERP.' },
+    { tag: 'TELEMETRY', cls: 'log-blue', msg: 'Vibration & heat sensors reporting nominal levels.' },
+    { tag: 'CLOUD_SYNC', cls: 'log-green', msg: 'Cloud digital twin packet pushed successfully.' }
+  ];
+
+  let logIdx = 0;
+  setInterval(() => {
+    if (!streamLog) return;
+    const item = logPool[logIdx % logPool.length];
+    const now = new Date();
+    const timeStr = `[${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}]`;
+    const entry = document.createElement('div');
+    entry.className = 'log-entry';
+    entry.innerHTML = `<span class="log-time">${timeStr}</span> <span class="${item.cls}">${item.tag}:</span> ${item.msg}`;
+    streamLog.appendChild(entry);
+    if (streamLog.children.length > 5) {
+      streamLog.removeChild(streamLog.firstElementChild);
+    }
+    logIdx++;
+  }, 3500);
+}
+
+/* ==========================================================================
+   8. Interactive Industry Deep-Dive Switcher
+   ========================================================================== */
+const INDUSTRY_DATA = {
+  manufacturing: {
+    title: 'Manufacturing Plants & Assembly Lines',
+    stat: '92%',
+    statDesc: 'Faster Line Diagnostics',
+    challenge: 'Unscheduled downtime on critical assembly lines caused by time-consuming manual part lookups and scattered documentation.',
+    solution: 'Visual identification of robotic arms, CNC spindles, and conveyors with immediate retrieval of technical schematics on technician tablets.',
+    pills: ['Zero paper manuals', 'Instant part numbering', 'Rapid shift changeover']
+  },
+  operations: {
+    title: 'Heavy Industrial & Plant Operations',
+    stat: '85%',
+    statDesc: 'Reduction in MTTR',
+    challenge: 'Managing thousands of dispersed mechanical pumps, gearboxes, and compressors across multi-acre facilities without visual tags.',
+    solution: 'Point-and-shoot camera identification that indexes machines instantly, even in grease-covered or weathered conditions.',
+    pills: ['Multi-acre coverage', 'Weathered tag recognition', 'Central plant telemetry']
+  },
+  facility: {
+    title: 'Facility & Building Management',
+    stat: '4.8x',
+    statDesc: 'Inspection Throughput',
+    challenge: 'Technicians wasting time locating HVAC units, switchgear, and plumbing manifolds across complex high-rise facilities.',
+    solution: 'Augmented visual tags and automated digital twin lookups with integrated step-by-step filter and valve check routines.',
+    pills: ['HVAC & Switchgear indexing', 'Automated checklists', 'Asset lifecycle audits']
+  },
+  field: {
+    title: 'Roving Field Service & Support',
+    stat: '3.5 hrs',
+    statDesc: 'Daily Technician Time Saved',
+    challenge: 'Field technicians facing unfamiliar machinery models and needing immediate access to torque specs and OEM wiring guides.',
+    solution: 'Mobile-first offline AI model that identifies models locally in remote sites without cell coverage.',
+    pills: ['Offline-first AI', 'Immediate torque specs', 'Digital service sign-off']
+  },
+  maintenance: {
+    title: 'Maintenance & Reliability Operations',
+    stat: '70%',
+    statDesc: 'Fewer Repeat Failures',
+    challenge: 'Lack of historical repair context leading to incorrect part replacements and recurring machine failures.',
+    solution: 'Instant overlay of last service date, past failure logs, and recommended spare parts upon visual recognition.',
+    pills: ['Historical service timeline', 'Spare parts recommendation', 'Predictive failure alerts']
+  },
+  asset: {
+    title: 'Enterprise Asset Management (EAM)',
+    stat: '99.9%',
+    statDesc: 'Inventory Audit Accuracy',
+    challenge: 'Ghost assets and outdated spreadsheets creating costly compliance gaps and inaccurate capital depreciation models.',
+    solution: 'Continuous visual audit trail that confirms physical existence and condition with GPS & timestamp metadata.',
+    pills: ['Automated asset tagging', 'Zero ghost inventory', 'Seamless ERP integration']
+  },
+  infrastructure: {
+    title: 'Infrastructure & Municipal Services',
+    stat: '60%',
+    statDesc: 'Faster Emergency Triage',
+    challenge: 'Critical utility hubs, water pumps, and power substations requiring rapid triage during grid anomalies.',
+    solution: 'Secure, high-reliability visual intelligence that standardizes emergency inspection procedures for city teams.',
+    pills: ['Substation component parsing', 'Emergency standard workflows', 'High-security telemetry']
+  }
+};
+
+function initIndustryTabs() {
+  const btns = document.querySelectorAll('.ind-tab-btn');
+  const title = document.getElementById('indTitle');
+  const stat = document.getElementById('indStat');
+  const statDesc = document.getElementById('indStatDesc');
+  const challenge = document.getElementById('indChallenge');
+  const solution = document.getElementById('indSolution');
+  const pills = document.getElementById('indPills');
+
+  if (!btns.length || !title) return;
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const key = btn.getAttribute('data-industry');
+      const data = INDUSTRY_DATA[key];
+      if (!data) return;
+
+      title.innerText = data.title;
+      stat.innerText = data.stat;
+      statDesc.innerText = data.statDesc;
+      challenge.innerText = data.challenge;
+      solution.innerText = data.solution;
+
+      pills.innerHTML = data.pills.map(p => `<li>${p}</li>`).join('');
+    });
+  });
+}
+
+/* ==========================================================================
+   9. Interactive ROI & Maintenance Savings Calculator
+   ========================================================================== */
+function initRoiCalculator() {
+  const sliderTechs = document.getElementById('techCount');
+  const sliderInspections = document.getElementById('inspectionsPerMonth');
+  const sliderRate = document.getElementById('laborRate');
+
+  const valTechs = document.getElementById('valTechCount');
+  const valInspections = document.getElementById('valInspections');
+  const valRate = document.getElementById('valLaborRate');
+
+  const resAnnualSavings = document.getElementById('resAnnualSavings');
+  const resHoursMonthly = document.getElementById('resHoursMonthly');
+
+  if (!sliderTechs || !sliderInspections || !sliderRate) return;
+
+  const calculate = () => {
+    const techs = parseInt(sliderTechs.value, 10);
+    const inspections = parseInt(sliderInspections.value, 10);
+    const rate = parseInt(sliderRate.value, 10);
+
+    valTechs.innerText = techs;
+    valInspections.innerText = inspections.toLocaleString();
+    valRate.innerText = `$${rate}`;
+
+    const hoursSavedMonthly = Math.round(inspections * 0.467);
+    const annualSavings = Math.round(hoursSavedMonthly * 12 * rate);
+
+    if (resHoursMonthly) {
+      resHoursMonthly.innerText = `${hoursSavedMonthly.toLocaleString()} hrs`;
+    }
+
+    if (resAnnualSavings) {
+      resAnnualSavings.innerText = annualSavings.toLocaleString();
+    }
+  };
+
+  sliderTechs.addEventListener('input', calculate);
+  sliderInspections.addEventListener('input', calculate);
+  sliderRate.addEventListener('input', calculate);
+
+  calculate();
+}
+
+/* ==========================================================================
+   10. Clipboard Copying & Toast Notification System
+   ========================================================================== */
+function showToast(message) {
+  const container = document.getElementById('toastContainer');
+  if (!container) return;
+
+  const toast = document.createElement('div');
+  toast.className = 'toast-message';
+  toast.innerHTML = `
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+    <span>${message}</span>
+  `;
+
+  container.appendChild(toast);
+
+  setTimeout(() => {
+    toast.style.transition = 'opacity 0.3s, transform 0.3s';
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateY(15px)';
+    setTimeout(() => toast.remove(), 300);
+  }, 3000);
+}
+
+function initClipboardSystem() {
+  const quickCopy = document.getElementById('quickCopyEmail');
+  if (quickCopy) {
+    quickCopy.addEventListener('click', () => {
+      const email = quickCopy.getAttribute('data-copy');
+      navigator.clipboard.writeText(email).then(() => {
+        showToast(`Copied ${email} to clipboard!`);
+      });
+    });
+  }
+
+  const copyButtons = document.querySelectorAll('.ch-copy-btn');
+  copyButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const parent = btn.closest('.channel-box');
+      if (parent) {
+        const email = parent.getAttribute('data-copy');
+        navigator.clipboard.writeText(email).then(() => {
+          showToast(`Copied ${email} to clipboard!`);
+        });
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   11. Contact Form Processing & Routing
+   ========================================================================== */
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  const feedback = document.getElementById('formFeedback');
+  const submitBtn = document.getElementById('submitBtn');
+  const submitBtnText = document.getElementById('submitBtnText');
+
+  if (!form || !feedback || !submitBtn) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('fullName').value.trim();
+    const email = document.getElementById('workEmail').value.trim();
+    const company = document.getElementById('companyName').value.trim();
+    const dept = document.getElementById('departmentSelect').value;
+    const msg = document.getElementById('message').value.trim();
+
+    let valid = true;
+
+    if (!name) {
+      document.getElementById('nameError').classList.add('visible');
+      valid = false;
+    } else {
+      document.getElementById('nameError').classList.remove('visible');
+    }
+
+    if (!email || !email.includes('@')) {
+      document.getElementById('emailError').classList.add('visible');
+      valid = false;
+    } else {
+      document.getElementById('emailError').classList.remove('visible');
+    }
+
+    if (!msg) {
+      document.getElementById('msgError').classList.add('visible');
+      valid = false;
+    } else {
+      document.getElementById('msgError').classList.remove('visible');
+    }
+
+    if (!valid) return;
+
+    submitBtn.disabled = true;
+    submitBtnText.innerText = 'Routing Message...';
+
+    setTimeout(() => {
+      const subject = encodeURIComponent(`[Enterprise Inquiry] ${company || name} - MOSBI Operations`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nCompany: ${company}\nTarget Dept: ${dept}\n\nMessage:\n${msg}`);
+      const mailto = `mailto:${dept}?subject=${subject}&body=${body}`;
+
+      feedback.style.display = 'block';
+      feedback.className = 'form-feedback success';
+      feedback.innerHTML = `Thank you, <strong>${name}</strong>. Opening your email client to dispatch directly to <strong>${dept}</strong>.`;
+
+      window.location.href = mailto;
+
+      submitBtn.disabled = false;
+      submitBtnText.innerText = 'Message Dispatched!';
+      form.reset();
+      showToast(`Inquiry prepared for ${dept}`);
+    }, 600);
+  });
+}
+
+</script>
+</body>
+</html>
+
+
