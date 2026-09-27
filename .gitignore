@@ -1,5 +1,31 @@
-﻿llc docs/
+llc docs/
 *.pdf
 *.docx
+
+# OS
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (if tooling added later)
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# Environment
+.env
+.env.local
+
+# Build output (if build tools added later)
+dist/
+build/
+
+# Large binary assets — use logo.svg instead
+mosbi-logo.png

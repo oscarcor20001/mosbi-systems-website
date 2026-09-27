@@ -12,6 +12,47 @@ Format: `[version] - YYYY-MM-DD` following [Keep a Changelog](https://keepachang
 
 ---
 
+## [0.7.0] - 2026-09-27
+
+### Changed — Project Restructuring (Best Practices)
+
+**Proposal A — Cleanup**
+- Deleted 4 empty stub files (`script.js`, `styles.css` from root and `Landing page/`)
+- Improved `.gitignore`: added OS, editors, Node, `.env`, and binary asset entries
+- Created `README.md` with project structure, tech stack, i18n guide, and local dev instructions
+
+**Proposal B — Folder consolidation**
+- Moved `Landing page/landing page.md` → `docs/project.md`
+- Removed `Landing page/` subfolder — root is now the single source of truth
+- Eliminated manual `Copy-Item` sync step after every change
+
+**Proposal C — Separate CSS and JS from HTML**
+- Extracted all CSS → `assets/css/styles.css` (2,723 lines)
+- Extracted app logic → `assets/js/main.js` (1,191 lines)
+- Extracted i18n dictionary → `assets/js/translations.js` (901 lines)
+- `index.html` reduced from **6,044 → 1,256 lines** (79% reduction, pure markup)
+- `index.html` references: `<link rel="stylesheet">` + `<script src="">` for external files
+
+**Proposal D — Replace PNG with SVG**
+- Removed `mosbi-logo.png` (777 KB) from repository
+- Official logo is now `logo.svg` — the Infinity-M (3 KB, vector, scalable)
+
+**Proposal E — SEO meta tags**
+- Added `<link rel="canonical" href="https://mosbisystems.com/">`
+- Added `<link rel="icon" href="logo.svg" type="image/svg+xml">` (SVG favicon)
+- Added `<meta name="robots" content="index, follow">`
+- Added `<meta name="theme-color" content="#050917">`
+- Added `<meta name="author" content="MOSBI Systems LLC">`
+
+**Logo update**
+- Replaced generic M logo in navbar with the **Infinity-M** SVG (∞ symbol integrated into the M letterform, neon cyan-to-blue gradient with depth layers)
+
+### Fixed
+- JS syntax error: 3 missing commas between injected translation key blocks (EN, ES, FR)
+- `translations.js` and `main.js` both pass `node --check` syntax validation
+
+---
+
 ## [0.6.0] - 2026-09-27
 
 ### Fixed
