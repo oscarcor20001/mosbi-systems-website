@@ -129,10 +129,6 @@ sales@mosbisystems.com
 
 support@mosbisystems.com
 
-### Founder
-
-founder@mosbisystems.com
-
 ---
 
 ## Vision

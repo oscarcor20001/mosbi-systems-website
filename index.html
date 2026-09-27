@@ -13,8 +13,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mosbisystems.com" />
   
-  <!-- Favicon: Infinity Loop M -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23050814'/><defs><linearGradient id='g' x1='10' y1='50' x2='90' y2='50' gradientUnits='userSpaceOnUse'><stop offset='0%25' stop-color='%2300f7ff'/><stop offset='50%25' stop-color='%2300b8ff'/><stop offset='100%25' stop-color='%232563eb'/></linearGradient></defs><path d='M36 68C26 75 15 70 15 58V26C15 14 28 11 36 20L50 35L64 20C72 11 85 14 85 26V58C85 70 74 75 64 68' stroke='url(%23g)' stroke-width='7' stroke-linecap='round' stroke-linejoin='round' fill='none'/><path d='M36 68C44 62 47 55 50 50C56 41 62 39 68 39C75 39 79 44 79 49C79 55 74 59 68 59C61 59 56 54 50 47C44 40 39 39 32 39C25 39 21 44 21 49C21 55 26 59 32 59C39 59 44 54 50 48' stroke='url(%23g)' stroke-width='6.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23060a17'/><path d='M22 72V28L50 50L78 28V72' stroke='%2300e5ff' stroke-width='9' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='50' cy='50' r='6' fill='%230066ff'/></svg>" />
   
   <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -389,8 +389,8 @@ button, input, select, textarea {
 }
 
 .logo-svg {
-  width: 46px;
-  height: 46px;
+  width: 42px;
+  height: 42px;
 }
 
 .brand-text {
@@ -400,20 +400,18 @@ button, input, select, textarea {
 }
 
 .brand-name {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 900;
   letter-spacing: 0.08em;
-  background: linear-gradient(90deg, #00f7ff 0%, #00b8ff 50%, #3b82f6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-pure);
 }
 
 .brand-sub {
-  font-size: 0.66rem;
+  font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.28em;
-  color: #ffffff;
-  margin-top: 3px;
+  color: var(--color-cyan);
+  margin-top: 2px;
 }
 
 .nav-links {
@@ -2547,24 +2545,17 @@ button, input, select, textarea {
     <div class="container header-container">
       <a href="#hero" class="brand-logo" aria-label="MOSBI Systems - Home">
         <div class="logo-badge">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+            <rect width="44" height="44" rx="12" fill="url(#brandGrad)" />
+            <path d="M12 30V14L22 23L32 14V30" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="22" cy="23" r="2.5" fill="#00e5ff" />
             <defs>
-              <linearGradient id="infGradH" x1="10" y1="50" x2="90" y2="50" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#00f7ff" />
-                <stop offset="50%" stop-color="#00b8ff" />
-                <stop offset="100%" stop-color="#2563eb" />
-              </linearGradient>
-              <linearGradient id="infDepthH" x1="15" y1="75" x2="85" y2="25" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#0099cc" />
-                <stop offset="100%" stop-color="#1e40af" />
+              <linearGradient id="brandGrad" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0052d4"/>
+                <stop offset="0.5" stop-color="#4364f7"/>
+                <stop offset="1" stop-color="#00e5ff"/>
               </linearGradient>
             </defs>
-            <!-- Outer M Ribbon -->
-            <path d="M36 70 C24 78, 13 72, 13 58 L13 26 C13 13, 27 10, 36 20 L50 35 L64 20 C73 10, 87 13, 87 26 L87 58 C87 72, 76 78, 64 70" stroke="url(#infGradH)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
-            <!-- Inner Infinity Loop Under-Ribbon -->
-            <path d="M64 70 C57 65, 53 58, 50 53 C44 45, 39 40, 32 40 C24 40, 20 46, 20 51 C20 57, 25 62, 32 62 C38 62, 43 57, 50 50 C57 43, 62 40, 68 40 C75 40, 80 46, 80 51 C80 57, 75 62, 68 62 C62 62, 57 58, 52 52" stroke="url(#infDepthH)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
-            <!-- Inner Infinity Loop Over-Ribbon -->
-            <path d="M36 70 C43 64, 47 57, 50 52 C57 43, 62 40, 68 40 C75 40, 80 46, 80 51 C80 57, 75 62, 68 62 C61 62, 56 57, 50 50 C44 43, 39 40, 32 40 C25 40, 20 46, 20 51 C20 57, 25 62, 32 62 C38 62, 44 57, 50 50" stroke="url(#infGradH)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
         <div class="brand-text">
@@ -3569,25 +3560,6 @@ button, input, select, textarea {
                 </a>
               </div>
             </div>
-
-            <!-- Founder -->
-            <div class="channel-box" data-copy="founder@mosbisystems.com">
-              <div class="ch-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              </div>
-              <div class="ch-info">
-                <span class="ch-label">Founder & Partnerships</span>
-                <span class="ch-address">founder@mosbisystems.com</span>
-              </div>
-              <div class="ch-action-buttons">
-                <button class="ch-copy-btn" title="Copy email" aria-label="Copy founder email">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-                </button>
-                <a href="mailto:founder@mosbisystems.com" class="ch-send-btn" title="Compose mail" aria-label="Send email to founder">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-              </div>
-            </div>
           </div>
 
           <!-- Interactive Contact Form -->
@@ -3595,7 +3567,7 @@ button, input, select, textarea {
             <div class="bento-glow-spot"></div>
             <form id="contactForm" class="contact-form-inner" novalidate>
               <h3 class="form-title">Send a Direct Message</h3>
-              <p class="form-desc">Inquiries are routed directly to the appropriate technical or executive lead within 24 hours.</p>
+              <p class="form-desc">Inquiries are routed directly to the appropriate technical or sales lead within 24 hours.</p>
 
               <div class="form-field">
                 <label for="fullName">Full Name <span class="req">*</span></label>
@@ -3622,7 +3594,6 @@ button, input, select, textarea {
                     <option value="sales@mosbisystems.com">Sales & Demo Request</option>
                     <option value="info@mosbisystems.com">General Inquiries</option>
                     <option value="support@mosbisystems.com">Technical Support</option>
-                    <option value="founder@mosbisystems.com">Executive & Partnerships</option>
                   </select>
                 </div>
               </div>
@@ -3653,24 +3624,17 @@ button, input, select, textarea {
         <div class="footer-brand-side">
           <div class="brand-logo">
             <div class="logo-badge">
-              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+              <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="44" height="44" rx="12" fill="url(#brandGradFooter)" />
+                <path d="M12 30V14L22 23L32 14V30" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="22" cy="23" r="2.5" fill="#00e5ff" />
                 <defs>
-                  <linearGradient id="infGradF" x1="10" y1="50" x2="90" y2="50" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stop-color="#00f7ff" />
-                    <stop offset="50%" stop-color="#00b8ff" />
-                    <stop offset="100%" stop-color="#2563eb" />
-                  </linearGradient>
-                  <linearGradient id="infDepthF" x1="15" y1="75" x2="85" y2="25" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stop-color="#0099cc" />
-                    <stop offset="100%" stop-color="#1e40af" />
+                  <linearGradient id="brandGradFooter" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#0052d4"/>
+                    <stop offset="0.5" stop-color="#4364f7"/>
+                    <stop offset="1" stop-color="#00e5ff"/>
                   </linearGradient>
                 </defs>
-                <!-- Outer M Ribbon -->
-                <path d="M36 70 C24 78, 13 72, 13 58 L13 26 C13 13, 27 10, 36 20 L50 35 L64 20 C73 10, 87 13, 87 26 L87 58 C87 72, 76 78, 64 70" stroke="url(#infGradF)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
-                <!-- Inner Infinity Loop Under-Ribbon -->
-                <path d="M64 70 C57 65, 53 58, 50 53 C44 45, 39 40, 32 40 C24 40, 20 46, 20 51 C20 57, 25 62, 32 62 C38 62, 43 57, 50 50 C57 43, 62 40, 68 40 C75 40, 80 46, 80 51 C80 57, 75 62, 68 62 C62 62, 57 58, 52 52" stroke="url(#infDepthF)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
-                <!-- Inner Infinity Loop Over-Ribbon -->
-                <path d="M36 70 C43 64, 47 57, 50 52 C57 43, 62 40, 68 40 C75 40, 80 46, 80 51 C80 57, 75 62, 68 62 C61 62, 56 57, 50 50 C44 43, 39 40, 32 40 C25 40, 20 46, 20 51 C20 57, 25 62, 32 62 C38 62, 44 57, 50 50" stroke="url(#infGradF)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
             <div class="brand-text">
@@ -3716,7 +3680,6 @@ button, input, select, textarea {
               <li><a href="mailto:info@mosbisystems.com">info@mosbisystems.com</a></li>
               <li><a href="mailto:sales@mosbisystems.com">sales@mosbisystems.com</a></li>
               <li><a href="mailto:support@mosbisystems.com">support@mosbisystems.com</a></li>
-              <li><a href="mailto:founder@mosbisystems.com">founder@mosbisystems.com</a></li>
             </ul>
           </div>
         </div>

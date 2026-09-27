@@ -1,74 +1,17 @@
-<svg viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Primary Horizontal Gradient: Neon Cyan to Cobalt Blue -->
-    <linearGradient id="infGradMain" x1="25" y1="100" x2="215" y2="100" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#00f7ff" />
-      <stop offset="45%" stop-color="#00b8ff" />
-      <stop offset="100%" stop-color="#2563eb" />
+    <linearGradient id="mosbiLogoGrad" x1="36" y1="100" x2="164" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00f5ff" />
+      <stop offset="45%" stop-color="#0099ff" />
+      <stop offset="100%" stop-color="#1d55e8" />
     </linearGradient>
-
-    <!-- 3D Ribbon Highlight Gradient -->
-    <linearGradient id="infGradLight" x1="30" y1="35" x2="205" y2="175" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#67ffff" />
-      <stop offset="50%" stop-color="#00d4ff" />
-      <stop offset="100%" stop-color="#3b82f6" />
-    </linearGradient>
-
-    <!-- 3D Ribbon Shadow / Depth Gradient -->
-    <linearGradient id="infGradDepth" x1="40" y1="160" x2="200" y2="50" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0099cc" />
-      <stop offset="50%" stop-color="#0052d4" />
-      <stop offset="100%" stop-color="#1e3a8a" />
-    </linearGradient>
-
-    <!-- Text Gradient for MOSBI -->
-    <linearGradient id="textGradMosbi" x1="40" y1="0" x2="200" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#00f7ff" />
-      <stop offset="55%" stop-color="#00b4ff" />
-      <stop offset="100%" stop-color="#3b82f6" />
-    </linearGradient>
-
-    <!-- Ambient Cyan Drop Glow -->
-    <filter id="neonRibbonGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="5" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
   </defs>
-
-  <!-- Outer M Frame + Continuous Ribbon Base Shadow Layer -->
+  <rect width="200" height="200" rx="36" fill="#121417" />
   <path 
-    d="M 88 158 C 65 174, 38 164, 38 135 L 38 62 C 38 34, 68 26, 86 46 L 120 82 L 154 46 C 172 26, 202 34, 202 62 L 202 135 C 202 164, 175 174, 152 158 L 136 144" 
-    stroke="url(#infGradDepth)" 
-    stroke-width="18" 
-    stroke-linecap="round" 
-    stroke-linejoin="round"
-  />
-
-  <!-- Outer M Frame Main Luminous Ribbon -->
-  <path 
-    d="M 88 158 C 65 174, 38 164, 38 135 L 38 62 C 38 34, 68 26, 86 46 L 120 82 L 154 46 C 172 26, 202 34, 202 62 L 202 135 C 202 164, 175 174, 152 158" 
-    stroke="url(#infGradMain)" 
-    stroke-width="14" 
-    stroke-linecap="round" 
-    stroke-linejoin="round"
-    filter="url(#neonRibbonGlow)"
-  />
-
-  <!-- Inner Infinity Loop (Under-Cross Right to Left) -->
-  <path 
-    d="M 152 158 C 138 148, 128 134, 120 124 C 106 106, 94 94, 78 94 C 60 94, 52 108, 52 118 C 52 130, 62 142, 78 142 C 92 142, 104 132, 120 116 C 136 100, 148 94, 162 94 C 178 94, 188 106, 188 118 C 188 130, 178 142, 162 142 C 148 142, 136 132, 124 120" 
-    stroke="url(#infGradDepth)" 
-    stroke-width="17" 
-    stroke-linecap="round" 
-    stroke-linejoin="round"
-  />
-
-  <!-- Inner Infinity Loop (Over-Cross Left Bottom to Right Loop) -->
-  <path 
-    d="M 88 158 C 102 146, 112 132, 120 120 C 136 100, 148 94, 162 94 C 178 94, 188 106, 188 118 C 188 132, 176 142, 162 142 C 146 142, 134 130, 120 114 C 106 98, 94 94, 78 94 C 62 94, 52 106, 52 118 C 52 132, 64 142, 78 142 C 92 142, 106 132, 120 116" 
-    stroke="url(#infGradLight)" 
-    stroke-width="13.5" 
-    stroke-linecap="round" 
-    stroke-linejoin="round"
+    d="M 46 146 L 46 62 C 46 40, 66 35, 78 50 L 100 76 L 122 50 C 134 35, 154 40, 154 62 L 154 146 L 126 146 L 126 94 L 110 113 C 104 120, 96 120, 90 113 L 74 94 L 74 146 Z" 
+    fill="none" 
+    stroke="url(#mosbiLogoGrad)" 
+    stroke-width="12" 
+    stroke-miterlimit="10"
   />
 </svg>
