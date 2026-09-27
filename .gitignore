@@ -1,0 +1,5 @@
+﻿llc docs/
+*.pdf
+*.docx
+.DS_Store
+Thumbs.db
