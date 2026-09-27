@@ -107,7 +107,7 @@ MOSBI Systems LLC
 
 **Location**
 
-College Park, Maryland, USA
+Maryland, USA
 
 **Website**
 
