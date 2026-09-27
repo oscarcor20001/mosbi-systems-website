@@ -1,0 +1,51 @@
+<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Left to Right Optical Wave Gradient -->
+    <linearGradient id="waveGradLeft" x1="20" y1="20" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="50%" stop-color="#0088ff" />
+      <stop offset="100%" stop-color="#0055ff" />
+    </linearGradient>
+    
+    <!-- Right to Left Optical Wave Gradient -->
+    <linearGradient id="waveGradRight" x1="180" y1="20" x2="20" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#00e5ff" />
+      <stop offset="100%" stop-color="#0066ff" />
+    </linearGradient>
+
+    <!-- Center Overlap Glow -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Left Symmetrical Wing & Optical Curve -->
+  <path 
+    d="M42 165 C42 165, 36 100, 36 52 C36 34, 46 28, 54 38 C68 55, 96 112, 100 120 C104 112, 132 55, 146 38 C154 28, 164 34, 164 52 C164 100, 158 165, 158 165 C158 165, 138 135, 100 152 C62 135, 42 165, 42 165 Z" 
+    fill="url(#waveGradLeft)" 
+    opacity="0.15" 
+  />
+
+  <!-- Main Left Outer Wave Stroke -->
+  <path 
+    d="M40 162 V48 C40 34 52 28 62 42 L100 102 L138 42 C148 28 160 34 160 48 V162" 
+    stroke="url(#waveGradLeft)" 
+    stroke-width="14" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+  />
+
+  <!-- Overlapping Inner Optical Ribbon Cross -->
+  <path 
+    d="M46 45 C75 90 125 155 154 158 C145 130 115 105 100 88 C85 105 55 130 46 158 C75 155 125 90 154 45" 
+    stroke="url(#waveGradRight)" 
+    stroke-width="11" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+  />
+
+  <!-- Central Dynamic Apex Node -->
+  <circle cx="100" cy="102" r="5" fill="#ffffff" filter="url(#softGlow)" />
+</svg>
