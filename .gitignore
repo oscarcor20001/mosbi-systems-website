@@ -1,0 +1,10 @@
+# Private legal and payment documents
+llc docs/
+*.pdf
+*.docx
+
+# Environment and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
