@@ -414,18 +414,93 @@ button, input, select, textarea {
   margin-top: 2px;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: 1rem;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.85rem;
+  gap: clamp(0.7rem, 1.1vw, 1.35rem);
 }
 
 .nav-item {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--text-muted);
   position: relative;
   padding: 0.35rem 0;
+  white-space: nowrap;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.btn-primary-compact {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 1200px) {
+  .nav-links {
+    gap: 0.65rem;
+  }
+  .nav-item {
+    font-size: 0.8rem;
+  }
+  .brand-name {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: rgba(5, 8, 20, 0.98);
+    backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(0, 229, 255, 0.25);
+    padding: 2.25rem 1.5rem;
+    transform: translateY(-130%);
+    transition: transform 0.35s var(--ease-smooth);
+    display: block;
+  }
+
+  .nav-menu.open {
+    transform: translateY(0);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .nav-item {
+    font-size: 1.15rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
 }
 
 .nav-item::after {
@@ -4154,16 +4229,16 @@ const MACHINE_DATABASE_I18N = {
         "box1": {
             "label": "Turbine Pump #402 • 99.8% Match",
             "top": "16%",
-            "left": "12%",
-            "width": "56%",
-            "height": "62%"
+            "left": "15%",
+            "width": "46%",
+            "height": "68%"
         },
         "box2": {
             "label": "Flange Seal • PASS",
-            "top": "44%",
-            "right": "10%",
-            "width": "28%",
-            "height": "38%"
+            "top": "36%",
+            "left": "62%",
+            "width": "24%",
+            "height": "36%"
         }
     },
     "valve": {
@@ -4180,17 +4255,17 @@ const MACHINE_DATABASE_I18N = {
         "latency": "11.8 ms",
         "box1": {
             "label": "Cryo Valve PV-94 • 99.4% Match",
-            "top": "20%",
-            "left": "20%",
-            "width": "48%",
+            "top": "22%",
+            "left": "22%",
+            "width": "54%",
             "height": "58%"
         },
         "box2": {
             "label": "Actuator Stem • CALIBRATED",
             "top": "10%",
-            "right": "22%",
-            "width": "24%",
-            "height": "32%"
+            "left": "42%",
+            "width": "18%",
+            "height": "26%"
         }
     },
     "motor": {
@@ -4207,17 +4282,17 @@ const MACHINE_DATABASE_I18N = {
         "latency": "9.4 ms",
         "box1": {
             "label": "Induction Motor M-7 • 99.9% Match",
-            "top": "15%",
-            "left": "16%",
-            "width": "60%",
-            "height": "65%"
+            "top": "24%",
+            "left": "22%",
+            "width": "48%",
+            "height": "56%"
         },
         "box2": {
             "label": "Terminal Box • OK",
-            "top": "18%",
-            "right": "14%",
-            "width": "22%",
-            "height": "28%"
+            "top": "16%",
+            "left": "68%",
+            "width": "16%",
+            "height": "24%"
         }
     },
     "compressor": {
@@ -4234,17 +4309,17 @@ const MACHINE_DATABASE_I18N = {
         "latency": "15.6 ms",
         "box1": {
             "label": "Screw Compressor SC-12 • 99.7%",
-            "top": "14%",
-            "left": "15%",
-            "width": "62%",
-            "height": "66%"
+            "top": "20%",
+            "left": "18%",
+            "width": "50%",
+            "height": "60%"
         },
         "box2": {
             "label": "Oil Filter Unit • INSPECTED",
-            "top": "35%",
-            "right": "12%",
-            "width": "25%",
-            "height": "35%"
+            "top": "30%",
+            "left": "68%",
+            "width": "16%",
+            "height": "36%"
         }
     }
 },
@@ -4264,16 +4339,16 @@ const MACHINE_DATABASE_I18N = {
         "box1": {
             "label": "Bomba Turbina #402 • 99.8% Coincidencia",
             "top": "16%",
-            "left": "12%",
-            "width": "56%",
-            "height": "62%"
+            "left": "15%",
+            "width": "46%",
+            "height": "68%"
         },
         "box2": {
             "label": "Sello de Brida • APROBADO",
-            "top": "44%",
-            "right": "10%",
-            "width": "28%",
-            "height": "38%"
+            "top": "36%",
+            "left": "62%",
+            "width": "24%",
+            "height": "36%"
         }
     },
     "valve": {
@@ -4290,17 +4365,17 @@ const MACHINE_DATABASE_I18N = {
         "latency": "11.8 ms",
         "box1": {
             "label": "Válvula Criogénica PV-94 • 99.4% Coincidencia",
-            "top": "20%",
-            "left": "20%",
-            "width": "48%",
+            "top": "22%",
+            "left": "22%",
+            "width": "54%",
             "height": "58%"
         },
         "box2": {
             "label": "Vástago Actuador • CALIBRADO",
             "top": "10%",
-            "right": "22%",
-            "width": "24%",
-            "height": "32%"
+            "left": "42%",
+            "width": "18%",
+            "height": "26%"
         }
     },
     "motor": {
@@ -4317,17 +4392,17 @@ const MACHINE_DATABASE_I18N = {
         "latency": "9.4 ms",
         "box1": {
             "label": "Motor Inducción M-7 • 99.9% Coincidencia",
-            "top": "15%",
-            "left": "16%",
-            "width": "60%",
-            "height": "65%"
+            "top": "24%",
+            "left": "22%",
+            "width": "48%",
+            "height": "56%"
         },
         "box2": {
             "label": "Caja Bornes • OK",
-            "top": "18%",
-            "right": "14%",
-            "width": "22%",
-            "height": "28%"
+            "top": "16%",
+            "left": "68%",
+            "width": "16%",
+            "height": "24%"
         }
     },
     "compressor": {
@@ -4344,17 +4419,17 @@ const MACHINE_DATABASE_I18N = {
         "latency": "15.6 ms",
         "box1": {
             "label": "Compresor Tornillo SC-12 • 99.7%",
-            "top": "14%",
-            "left": "15%",
-            "width": "62%",
-            "height": "66%"
+            "top": "20%",
+            "left": "18%",
+            "width": "50%",
+            "height": "60%"
         },
         "box2": {
             "label": "Filtro de Aceite • INSPECCIONADO",
-            "top": "35%",
-            "right": "12%",
-            "width": "25%",
-            "height": "35%"
+            "top": "30%",
+            "left": "68%",
+            "width": "16%",
+            "height": "36%"
         }
     }
 },
@@ -4374,16 +4449,16 @@ const MACHINE_DATABASE_I18N = {
         "box1": {
             "label": "Pompe Turbine #402 • 99.8% Concordance",
             "top": "16%",
-            "left": "12%",
-            "width": "56%",
-            "height": "62%"
+            "left": "15%",
+            "width": "46%",
+            "height": "68%"
         },
         "box2": {
             "label": "Joint de Bride • CONFORME",
-            "top": "44%",
-            "right": "10%",
-            "width": "28%",
-            "height": "38%"
+            "top": "36%",
+            "left": "62%",
+            "width": "24%",
+            "height": "36%"
         }
     },
     "valve": {
@@ -4400,17 +4475,17 @@ const MACHINE_DATABASE_I18N = {
         "latency": "11.8 ms",
         "box1": {
             "label": "Vanne Cryogénique PV-94 • 99.4% Concordance",
-            "top": "20%",
-            "left": "20%",
-            "width": "48%",
+            "top": "22%",
+            "left": "22%",
+            "width": "54%",
             "height": "58%"
         },
         "box2": {
             "label": "Tige Actionneur • CALIBRÉ",
             "top": "10%",
-            "right": "22%",
-            "width": "24%",
-            "height": "32%"
+            "left": "42%",
+            "width": "18%",
+            "height": "26%"
         }
     },
     "motor": {
@@ -4427,17 +4502,17 @@ const MACHINE_DATABASE_I18N = {
         "latency": "9.4 ms",
         "box1": {
             "label": "Moteur Induction M-7 • 99.9% Concordance",
-            "top": "15%",
-            "left": "16%",
-            "width": "60%",
-            "height": "65%"
+            "top": "24%",
+            "left": "22%",
+            "width": "48%",
+            "height": "56%"
         },
         "box2": {
             "label": "Boîte à Bornes • OK",
-            "top": "18%",
-            "right": "14%",
-            "width": "22%",
-            "height": "28%"
+            "top": "16%",
+            "left": "68%",
+            "width": "16%",
+            "height": "24%"
         }
     },
     "compressor": {
@@ -4454,17 +4529,17 @@ const MACHINE_DATABASE_I18N = {
         "latency": "15.6 ms",
         "box1": {
             "label": "Compresseur à Vis SC-12 • 99.7%",
-            "top": "14%",
-            "left": "15%",
-            "width": "62%",
-            "height": "66%"
+            "top": "20%",
+            "left": "18%",
+            "width": "50%",
+            "height": "60%"
         },
         "box2": {
             "label": "Unité Filtre à Huile • INSPECTÉ",
-            "top": "35%",
-            "right": "12%",
-            "width": "25%",
-            "height": "35%"
+            "top": "30%",
+            "left": "68%",
+            "width": "16%",
+            "height": "36%"
         }
     }
 }
@@ -4540,16 +4615,20 @@ function loadMachine(key) {
   }
 
   if (boxMain && boxMainLabel) {
-    boxMain.style.top = data.box1.top;
-    boxMain.style.left = data.box1.left;
+    boxMain.style.left = data.box1.left || '15%';
+    boxMain.style.right = '';
+    boxMain.style.top = data.box1.top || '15%';
+    boxMain.style.bottom = '';
     boxMain.style.width = data.box1.width;
     boxMain.style.height = data.box1.height;
     boxMainLabel.innerText = data.box1.label;
   }
 
   if (boxSub && boxSubLabel) {
-    boxSub.style.top = data.box2.top;
-    boxSub.style.right = data.box2.right;
+    boxSub.style.left = data.box2.left || '65%';
+    boxSub.style.right = '';
+    boxSub.style.top = data.box2.top || '35%';
+    boxSub.style.bottom = '';
     boxSub.style.width = data.box2.width;
     boxSub.style.height = data.box2.height;
     boxSubLabel.innerText = data.box2.label;

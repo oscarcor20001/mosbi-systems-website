@@ -1,24 +1,10 @@
-# MOSBI Systems LLC
+# MOSBI Systems
 
 **Building intelligent software for industrial operations.**
 
-Software, Artificial Intelligence, Computer Vision, and Digital Solutions designed to improve productivity, eliminate maintenance bottlenecks, and maximize operational efficiency.
+Software, Artificial Intelligence, Computer Vision and Digital Solutions designed to improve productivity, maintenance, and operational efficiency.
 
-- **Website:** https://mosbisystems.com
-- **Headquarters:** Maryland, USA
-- **Supported Languages:** English (Default), Español (ES), Français (FR)
-
----
-
-## Brand Identity & Logo
-
-- **Symbol:** Infinity Loop M (`logo.svg` / `mosbi-logo.png`)
-- **Typography:** Cyan-to-Cobalt Gradient on `MOSBI` (`#0052d4` -> `#4364f7` -> `#00e5ff`) with Pure White `SYSTEMS`
-- **Color Palette:**
-  - Deep Space Navy (`#040816`)
-  - Cyan Pulse (`#00e5ff`)
-  - Cobalt Engine (`#0052d4`)
-  - Neon Emerald (`#10b981`)
+info@mosbisystems.com
 
 ---
 
@@ -30,19 +16,23 @@ Our goal is to transform complex operational processes into intelligent, efficie
 
 ---
 
-## What We Do (Core Pillars)
+## What We Do
 
-### 1. Artificial Intelligence
-Deploying custom deep neural networks that automate complex decision-making, pattern recognition, and predictive workflows.
+### Artificial Intelligence
 
-### 2. Industrial Intelligence
-Transforming disparate raw machine telemetry into actionable insights, health indices, and lifecycle predictions.
+Building practical AI solutions that automate workflows, improve decision-making, and increase productivity.
 
-### 3. Mobile Applications
-Creating modern and intuitive mobile experiences that enable field teams and organizations to operate efficiently from anywhere (with offline-first local ML models).
+### Computer Vision
 
-### 4. Cloud Software
-Designing scalable platforms and SaaS products that support growth and digital transformation with secure CMMS & ERP integrations.
+Developing visual recognition systems capable of identifying, classifying, and understanding real-world assets and equipment.
+
+### Mobile Applications
+
+Creating modern and intuitive mobile experiences that enable field teams and organizations to operate efficiently from anywhere.
+
+### Cloud Software
+
+Designing scalable platforms and SaaS products that support growth and digital transformation.
 
 ---
 
@@ -54,56 +44,106 @@ An AI-powered platform designed to help identify industrial machinery and equipm
 
 ### Core Capabilities
 
-- **Equipment recognition using AI:** Instant identification of complex industrial models, turbines, valves, and gearboxes.
-- **Visual asset identification:** Point-and-shoot camera identification with no tags, barcodes, or manual lookups required.
-- **Industrial equipment documentation:** Immediate digital linking to OEM schematics, torque specs, and historical maintenance logs.
-- **Maintenance support workflows:** Context-aware checklists and step-by-step diagnostic procedures for frontline technicians.
-- **Machine data collection and organization:** Automated aggregation of plant-floor operating conditions into unified digital twins.
-- **Field technician productivity enhancement:** Eliminate wasted transit and manual code-matching time for technicians on the floor.
+- Equipment recognition using AI
+- Visual asset identification
+- Industrial equipment documentation
+- Maintenance support workflows
+- Machine data collection and organization
+- Field technician productivity enhancement
 
-### Measurable ROI Benefits
+### Benefits
 
-- ✅ **Faster equipment identification** (Slash verification time by up to 90%)
-- ✅ **Reduced manual documentation effort** (Eliminate paper binders & manual errors)
-- ✅ **Faster troubleshooting & maintenance** (Accelerate MTTR with optical schematics)
-- ✅ **Improved knowledge transfer** (Empower junior technicians on day one)
-- ✅ **Streamlined operational workflows** (Seamless ERP/CMMS synchronization)
+✅ Faster equipment identification
+
+✅ Reduced manual documentation effort
+
+✅ Increased maintenance efficiency
+
+✅ Better asset visibility
+
+✅ Improved operational decision-making
 
 ---
 
-## Target Industries
+## Industries
 
-MOSBI Systems solutions are purpose-built for organizations operating in:
+MOSBI Systems solutions are being designed for organizations operating in:
 
-- **Manufacturing Plants & Assembly Lines**
-- **Heavy Industrial & Plant Operations**
-- **Facility & Building Management (HVAC/Switchgear)**
-- **Roving Field Service & Support**
-- **Maintenance & Reliability Operations**
-- **Enterprise Asset Management (EAM)**
-- **Infrastructure & Municipal Services**
+- Manufacturing
+- Industrial Operations
+- Facility Management
+- Field Service
+- Maintenance Operations
+- Asset Management
+- Infrastructure Services
+
+---
+
+## Why MOSBI
+
+### Innovation First
+
+We focus on practical innovation that produces real business value.
+
+### Built for Growth
+
+Our products are designed with scalability and long-term sustainability in mind.
+
+### Simplicity
+
+Technology should simplify work, not complicate it.
+
+### Reliability
+
+We build solutions organizations can trust.
 
 ---
 
 ## Company Overview
 
-- **Legal Name:** MOSBI Systems LLC
-- **Entity Type:** Limited Liability Company (LLC)
-- **Jurisdiction:** Maryland, USA
-- **Official Domain:** https://mosbisystems.com
-- **Strategic Focus:** Industrial AI, Computer Vision, Physical Asset Intelligence
+**Legal Name**
+
+MOSBI Systems LLC
+
+**Location**
+
+Maryland, USA
+
+**Website**
+
+https://mosbisystems.com
 
 ---
 
-## Official Contact Channels
+## Contact
 
-- **General Inquiries:** `info@mosbisystems.com`
-- **Sales & Enterprise Demos:** `sales@mosbisystems.com`
-- **Technical & Engineering Support:** `support@mosbisystems.com`
+### General Inquiries
+
+info@mosbisystems.com
+
+### Sales
+
+sales@mosbisystems.com
+
+### Support
+
+support@mosbisystems.com
+
+### Founder
+
+founder@mosbisystems.com
 
 ---
 
-## Product Roadmap & Future Portfolio
+## Vision
+
+To become a leading provider of intelligent software solutions that help organizations better understand, manage, and optimize their physical assets and operational environments.
+
+---
+
+## Future Products
+
+MOSBI Systems is building a portfolio of products focused on:
 
 - Artificial Intelligence
 - Industrial Intelligence
@@ -114,4 +154,4 @@ MOSBI Systems solutions are purpose-built for organizations operating in:
 
 ---
 
-© 2026 MOSBI Systems LLC. All rights reserved.
+© 2026 MOSBI Systems LLC
