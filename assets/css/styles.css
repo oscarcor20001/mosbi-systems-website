@@ -935,27 +935,33 @@ button, input, select, textarea {
 
 .spec-type-badge {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   color: var(--color-cyan);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   display: block;
 }
 
+.spec-id-group {
+  min-width: 0;
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
 .spec-title {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 700;
   color: var(--text-pure);
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .health-pill {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  padding: 2px 7px;
+  padding: 3px 8px;
   border-radius: 4px;
-  white-space: nowrap;
-  flex-shrink: 0;
 }
 
 .health-pill.good {
@@ -965,39 +971,35 @@ button, input, select, textarea {
 }
 
 .spec-props-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.4rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
   font-size: 0.72rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.prop-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  min-width: 0;
 }
 
 .p-label {
   color: var(--text-faint);
-  display: block;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-family: var(--font-mono);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .p-val {
   color: var(--text-main);
   font-weight: 600;
-}
-
-.spec-actions {
-  margin-top: 0.75rem;
-}
-
-.spec-actions .btn-primary-compact {
-  font-size: 0.78rem;
-  padding: 0.45rem 0.75rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  justify-content: center;
+  min-width: 0;
 }
 
 /* Stream Log Box */
