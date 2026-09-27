@@ -2778,22 +2778,22 @@ button, input, select, textarea {
         </h1>
 
         <!-- Subtitle -->
-        <p class="hero-desc reveal">
+        <p class="hero-desc reveal" data-i18n="hero.desc">
           Software, Artificial Intelligence, Computer Vision, and Digital Solutions engineered to accelerate productivity, eliminate maintenance bottlenecks, and maximize operational uptime.
         </p>
 
         <!-- CTAs -->
         <div class="hero-cta-wrapper reveal">
           <a href="#product" class="btn btn-primary btn-glow">
-            <span>Explore Machine Identifier AI™</span>
+            <span data-i18n="hero.cta_explore">Explore Machine Identifier AI™</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a href="#contact" class="btn btn-secondary">
-            <span>Request Technical Demo</span>
+            <span data-i18n="hero.cta_demo">Request Technical Demo</span>
           </a>
           <button class="btn btn-ghost" id="quickCopyEmail" data-copy="info@mosbisystems.com">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-            <span>Copy info@mosbisystems.com</span>
+            <span data-i18n="hero.cta_copy">Copy info@mosbisystems.com</span>
           </button>
         </div>
 
@@ -2809,11 +2809,11 @@ button, input, select, textarea {
               </div>
               <div class="console-title">
                 <span class="tech-tag">INFERENCE ENGINE</span>
-                <span>MOSBI Machine Identifier AI™ • Optical Inspection Simulator</span>
+                <span><span data-i18n="hero.sim_title">MOSBI Machine Identifier AI™ • Optical Inspection Simulator</span></span>
               </div>
               <div class="console-engine-status">
                 <span class="status-indicator-active"></span>
-                <span>EDGE SYNC ACTIVE</span>
+                <span data-i18n="hero.sim_status">EDGE SYNC ACTIVE</span>
               </div>
             </div>
 
@@ -2824,16 +2824,16 @@ button, input, select, textarea {
                 <!-- Machine Category Selector Bar -->
                 <div class="machine-switcher" role="tablist" aria-label="Select Machine Sample">
                   <button class="machine-tab active" data-machine="turbine" role="tab" aria-selected="true">
-                    <span>Centrifugal Pump #402</span>
+                    <span data-i18n="hero.tab_turbine">Centrifugal Pump #402</span>
                   </button>
                   <button class="machine-tab" data-machine="valve" role="tab" aria-selected="false">
-                    <span>Cryogenic Valve PV-94</span>
+                    <span data-i18n="hero.tab_valve">Cryogenic Valve PV-94</span>
                   </button>
                   <button class="machine-tab" data-machine="motor" role="tab" aria-selected="false">
-                    <span>Induction Motor M-7</span>
+                    <span data-i18n="hero.tab_motor">Induction Motor M-7</span>
                   </button>
                   <button class="machine-tab" data-machine="compressor" role="tab" aria-selected="false">
-                    <span>Screw Compressor SC-12</span>
+                    <span data-i18n="hero.tab_compressor">Screw Compressor SC-12</span>
                   </button>
                 </div>
 
@@ -2875,15 +2875,15 @@ button, input, select, textarea {
                 <!-- Bottom Viewport Footer -->
                 <div class="viewport-footer">
                   <div class="vf-stat">
-                    <span class="vf-label">Inference:</span>
+                    <span class="vf-label" data-i18n="hero.vf_latency">Inference:</span>
                     <span class="vf-val" id="valLatency">14.2 ms</span>
                   </div>
                   <div class="vf-stat">
-                    <span class="vf-label">Model:</span>
+                    <span class="vf-label" data-i18n="hero.vf_model">Model:</span>
                     <span class="vf-val">MOSBI-Vision-4.2-Edge</span>
                   </div>
                   <div class="vf-stat">
-                    <span class="vf-label">Confidence:</span>
+                    <span class="vf-label" data-i18n="hero.vf_confidence">Confidence:</span>
                     <span class="vf-val val-green" id="valConfidence">99.8%</span>
                   </div>
                 </div>
@@ -2892,7 +2892,7 @@ button, input, select, textarea {
               <!-- Right: Real-Time Diagnostic Feed & Asset Metadata -->
               <div class="telemetry-panel">
                 <div class="telemetry-tabs">
-                  <span class="t-tab active">Asset Intelligence Sheet</span>
+                  <span class="t-tab active" data-i18n="hero.dossier_tab">Asset Intelligence Sheet</span>
                 </div>
 
                 <!-- Dynamic Machine Specification Details -->
@@ -2996,7 +2996,7 @@ button, input, select, textarea {
         <div class="section-intro text-center reveal">
           <span class="sub-badge">Strategic Purpose</span>
           <h2 class="section-heading">Transforming Complex Operations Into <span class="gradient-shimmer">Intelligent Experiences</span></h2>
-          <p class="section-lead">
+          <p class="section-lead" data-i18n="cap.lead">
             We bridge physical industrial hardware with advanced neural software architectures to eliminate downtime and empower frontline workforces.
           </p>
         </div>
@@ -3062,7 +3062,7 @@ button, input, select, textarea {
         <div class="section-intro text-center reveal">
           <span class="sub-badge">Technology Stack</span>
           <h2 class="section-heading">What We <span class="gradient-shimmer">Do</span></h2>
-          <p class="section-lead">
+          <p class="section-lead" data-i18n="cap.lead">
             A unified suite of digital and visual intelligence solutions architected to modernize legacy operations.
           </p>
         </div>
@@ -3159,7 +3159,7 @@ button, input, select, textarea {
             <div class="flagship-badge" data-i18n="prod.badge">FLAGSHIP PLATFORM</div>
             <h2 class="flagship-heading"><span data-i18n="prod.title">Machine Identifier AI™</span></h2>
             <p class="flagship-sub">
-              An AI-powered platform designed to help identify industrial machinery and equipment quickly and accurately.
+              <span data-i18n="prod.sub">An AI-powered platform designed to help identify industrial machinery and equipment quickly and accurately.</span>
             </p>
           </div>
 
@@ -3178,7 +3178,7 @@ button, input, select, textarea {
                   <span class="cap-num">01</span>
                   <div>
                     <h4 data-i18n="prod.cap1_title">Equipment recognition using AI</h4>
-                    <p>Instant identification of complex industrial models, turbines, valves, and gearboxes.</p>
+                    <p data-i18n="prod.cap1_desc">Instant identification of complex industrial models, turbines, valves, and gearboxes.</p>
                   </div>
                 </div>
 
@@ -3186,39 +3186,39 @@ button, input, select, textarea {
                   <span class="cap-num">02</span>
                   <div>
                     <h4 data-i18n="prod.cap2_title">Visual asset identification</h4>
-                    <p>Point-and-shoot camera identification with no tags, barcodes, or manual lookups required.</p>
+                    <p data-i18n="prod.cap2_desc">Point-and-shoot camera identification with no tags, barcodes, or manual lookups required.</p>
                   </div>
                 </div>
 
                 <div class="cap-mini-card">
                   <span class="cap-num">03</span>
                   <div>
-                    <h4>Industrial equipment documentation</h4>
-                    <p>Immediate digital linking to OEM schematics, torque specs, and historical maintenance logs.</p>
+                    <h4 data-i18n="prod.cap3_title">Industrial equipment documentation</h4>
+                    <p data-i18n="prod.cap3_desc">Immediate digital linking to OEM schematics, torque specs, and historical maintenance logs.</p>
                   </div>
                 </div>
 
                 <div class="cap-mini-card">
                   <span class="cap-num">04</span>
                   <div>
-                    <h4>Maintenance support workflows</h4>
-                    <p>Context-aware checklists and step-by-step diagnostic procedures for frontline technicians.</p>
+                    <h4 data-i18n="prod.cap4_title">Maintenance support workflows</h4>
+                    <p data-i18n="prod.cap4_desc">Context-aware checklists and step-by-step diagnostic procedures for frontline technicians.</p>
                   </div>
                 </div>
 
                 <div class="cap-mini-card">
                   <span class="cap-num">05</span>
                   <div>
-                    <h4>Machine data collection and organization</h4>
-                    <p>Automated aggregation of plant-floor operating conditions into unified digital twins.</p>
+                    <h4 data-i18n="prod.cap5_title">Machine data collection and organization</h4>
+                    <p data-i18n="prod.cap5_desc">Automated aggregation of plant-floor operating conditions into unified digital twins.</p>
                   </div>
                 </div>
 
                 <div class="cap-mini-card">
                   <span class="cap-num">06</span>
                   <div>
-                    <h4>Field technician productivity enhancement</h4>
-                    <p>Eliminate wasted transit and manual code-matching time for technicians on the floor.</p>
+                    <h4 data-i18n="prod.cap6_title">Field technician productivity enhancement</h4>
+                    <p data-i18n="prod.cap6_desc">Eliminate wasted transit and manual code-matching time for technicians on the floor.</p>
                   </div>
                 </div>
               </div>
@@ -3230,23 +3230,23 @@ button, input, select, textarea {
                 <div class="col-icon-wrap icon-green">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                 </div>
-                <h3>Measurable ROI Benefits</h3>
+                <h3 data-i18n="prod.roi_benefits_title">Measurable ROI Benefits</h3>
               </div>
 
               <div class="benefits-stack">
                 <div class="benefit-box">
                   <div class="b-icon-check">✅</div>
                   <div class="b-text">
-                    <strong>Faster equipment identification</strong>
-                    <p>Slash asset verification time by up to 90% across distributed operations.</p>
+                    <strong data-i18n="prod.b1_title">Faster equipment identification</strong>
+                    <p data-i18n="prod.b1_desc">Slash asset verification time by up to 90% across distributed operations.</p>
                   </div>
                 </div>
 
                 <div class="benefit-box">
                   <div class="b-icon-check">✅</div>
                   <div class="b-text">
-                    <strong>Reduced manual documentation effort</strong>
-                    <p>Eliminate human transcription errors and paper binder cataloging.</p>
+                    <strong data-i18n="prod.b2_title">Reduced manual documentation effort</strong>
+                    <p data-i18n="prod.b2_desc">Eliminate human transcription errors and paper binder cataloging.</p>
                   </div>
                 </div>
 
@@ -3295,22 +3295,22 @@ button, input, select, textarea {
       <div class="container">
         <div class="section-intro text-center reveal">
           <span class="sub-badge">Target Sectors</span>
-          <h2 class="section-heading">Industries We <span class="gradient-shimmer">Empower</span></h2>
-          <p class="section-lead">
-            MOSBI Systems solutions are purpose-built for organizations operating in demanding, asset-heavy industrial environments.
+          <h2 class="section-heading"><span data-i18n="ind.heading_pre">Industries We</span> <span class="gradient-shimmer" data-i18n="ind.heading_highlight">Empower</span></h2>
+          <p class="section-lead" data-i18n="cap.lead">
+            <span data-i18n="ind.lead">MOSBI Systems solutions are purpose-built for organizations operating in demanding, asset-heavy industrial environments.</span>
           </p>
         </div>
 
         <!-- Dynamic Industry Selector Tabs -->
         <div class="industry-tab-container reveal">
           <div class="industry-nav" role="tablist">
-            <button class="ind-tab-btn active" data-industry="manufacturing" role="tab">Manufacturing</button>
-            <button class="ind-tab-btn" data-industry="operations" role="tab">Industrial Operations</button>
-            <button class="ind-tab-btn" data-industry="facility" role="tab">Facility Management</button>
-            <button class="ind-tab-btn" data-industry="field" role="tab">Field Service</button>
-            <button class="ind-tab-btn" data-industry="maintenance" role="tab">Maintenance Operations</button>
-            <button class="ind-tab-btn" data-industry="asset" role="tab">Asset Management</button>
-            <button class="ind-tab-btn" data-industry="infrastructure" role="tab">Infrastructure Services</button>
+            <button class="ind-tab-btn active" data-industry="manufacturing" role="tab" data-i18n="ind.tab_mfg" data-i18n="ind.tab_mfg">Manufacturing</button>
+            <button class="ind-tab-btn" data-industry="operations" role="tab" data-i18n="ind.tab_ops" data-i18n="ind.tab_ops">Industrial Operations</button>
+            <button class="ind-tab-btn" data-industry="facility" role="tab" data-i18n="ind.tab_fac" data-i18n="ind.tab_fac">Facility Management</button>
+            <button class="ind-tab-btn" data-industry="field" role="tab" data-i18n="ind.tab_field" data-i18n="ind.tab_field">Field Service</button>
+            <button class="ind-tab-btn" data-industry="maintenance" role="tab" data-i18n="ind.tab_maint" data-i18n="ind.tab_maint">Maintenance Operations</button>
+            <button class="ind-tab-btn" data-industry="asset" role="tab" data-i18n="ind.tab_asset" data-i18n="ind.tab_asset">Asset Management</button>
+            <button class="ind-tab-btn" data-industry="infrastructure" role="tab" data-i18n="ind.tab_infra" data-i18n="ind.tab_infra">Infrastructure Services</button>
           </div>
 
           <!-- Dynamic Industry Detail Card -->
@@ -3333,15 +3333,15 @@ button, input, select, textarea {
 
             <div class="ind-card-body">
               <div class="ind-col">
-                <h4>Operational Challenges</h4>
+                <h4 data-i18n="ind.lbl_challenge">Operational Challenges</h4>
                 <p id="indChallenge">Unscheduled downtime on critical assembly lines caused by time-consuming manual part lookups and scattered documentation.</p>
               </div>
               <div class="ind-col">
-                <h4>The MOSBI AI Solution</h4>
+                <h4 data-i18n="ind.lbl_solution">The MOSBI AI Solution</h4>
                 <p id="indSolution">Visual identification of robotic arms, CNC spindles, and conveyors with immediate retrieval of technical schematics on technician tablets.</p>
               </div>
               <div class="ind-col">
-                <h4>Key Operational Gains</h4>
+                <h4 data-i18n="ind.lbl_gains">Key Operational Gains</h4>
                 <ul class="ind-benefit-pills" id="indPills">
                   <li>Zero paper manuals</li>
                   <li>Instant part numbering</li>
@@ -3358,10 +3358,10 @@ button, input, select, textarea {
     <section class="section architecture-section" id="architecture">
       <div class="container">
         <div class="section-intro text-center reveal">
-          <span class="sub-badge">Architectural Flow</span>
-          <h2 class="section-heading">Edge to Cloud <span class="gradient-shimmer">Pipeline</span></h2>
-          <p class="section-lead">
-            How MOSBI Systems connects frontline visual capture with enterprise cloud synchronization.
+          <span class="sub-badge" data-i18n="arch.subbadge">Architectural Flow</span>
+          <h2 class="section-heading"><span data-i18n="arch.heading_pre">Edge to Cloud</span> <span class="gradient-shimmer" data-i18n="arch.heading_highlight">Pipeline</span></h2>
+          <p class="section-lead" data-i18n="cap.lead">
+            <span data-i18n="arch.lead">How MOSBI Systems connects frontline visual capture with enterprise cloud synchronization.</span>
           </p>
         </div>
 
@@ -3373,8 +3373,8 @@ button, input, select, textarea {
               <div class="step-icon">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
               </div>
-              <h4>Field Capture</h4>
-              <p>Technician points camera or mobile sensor at any industrial equipment or component.</p>
+              <h4 data-i18n="arch.s1_title">Field Capture</h4>
+              <p data-i18n="arch.s1_desc">Technician points camera or mobile sensor at any industrial equipment or component.</p>
             </div>
 
             <div class="pipeline-connector">
@@ -3387,8 +3387,8 @@ button, input, select, textarea {
               <div class="step-icon icon-cyan">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
               </div>
-              <h4>Edge Inference</h4>
-              <p>Proprietary neural model classifies machine signature in &lt;250ms with zero latency.</p>
+              <h4 data-i18n="arch.s2_title">Edge Inference</h4>
+              <p data-i18n="arch.s2_desc">Proprietary neural model classifies machine signature in &lt;250ms with zero latency.</p>
             </div>
 
             <div class="pipeline-connector">
@@ -3401,8 +3401,8 @@ button, input, select, textarea {
               <div class="step-icon">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
               </div>
-              <h4>Instant Dossier</h4>
-              <p>Digital twin specs, OEM manuals, and guided maintenance checklists render on-screen.</p>
+              <h4 data-i18n="arch.s3_title">Instant Dossier</h4>
+              <p data-i18n="arch.s3_desc">Digital twin specs, OEM manuals, and guided maintenance checklists render on-screen.</p>
             </div>
 
             <div class="pipeline-connector">
@@ -3415,8 +3415,8 @@ button, input, select, textarea {
               <div class="step-icon">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
               </div>
-              <h4>Cloud CMMS Sync</h4>
-              <p>Fleet logs, location tags, and repair records update in real time across plant databases.</p>
+              <h4 data-i18n="arch.s4_title">Cloud CMMS Sync</h4>
+              <p data-i18n="arch.s4_desc">Fleet logs, location tags, and repair records update in real time across plant databases.</p>
             </div>
           </div>
         </div>
@@ -3428,10 +3428,10 @@ button, input, select, textarea {
       <div class="container">
         <div class="calc-wrapper reveal">
           <div class="calc-intro text-center">
-            <span class="sub-badge">Value Estimation</span>
-            <h2 class="section-heading">Calculate Your <span class="gradient-shimmer">Operational Savings</span></h2>
-            <p class="section-lead">
-              See how much time and budget MOSBI Machine Identifier AI™ can save your facilities.
+            <span class="sub-badge" data-i18n="roi.subbadge">Value Estimation</span>
+            <h2 class="section-heading"><span data-i18n="roi.heading_pre">Calculate Your</span> <span class="gradient-shimmer" data-i18n="roi.heading_highlight">Operational Savings</span></h2>
+            <p class="section-lead" data-i18n="cap.lead">
+              <span data-i18n="roi.lead">See how much time and budget MOSBI Machine Identifier AI™ can save your facilities.</span>
             </p>
           </div>
 
@@ -3441,7 +3441,7 @@ button, input, select, textarea {
               <!-- Slider 1 -->
               <div class="calc-control-group">
                 <div class="control-header">
-                  <label for="techCount">Number of Field Technicians / Operators</label>
+                  <label for="techCount" data-i18n="roi.lbl_techs">Number of Field Technicians / Operators</label>
                   <span class="control-val" id="valTechCount">25</span>
                 </div>
                 <input type="range" id="techCount" min="2" max="200" value="25" step="1" class="calc-slider" />
@@ -3511,7 +3511,7 @@ button, input, select, textarea {
         <div class="section-intro text-center reveal">
           <span class="sub-badge">Differentiators</span>
           <h2 class="section-heading">Why <span class="gradient-shimmer">MOSBI</span></h2>
-          <p class="section-lead">
+          <p class="section-lead" data-i18n="cap.lead">
             Our architectural philosophy centers on human ergonomics, high-reliability engineering, and rapid ROI.
           </p>
         </div>
@@ -3582,7 +3582,7 @@ button, input, select, textarea {
         <div class="section-intro text-center reveal">
           <span class="sub-badge">Expanding Ecosystem</span>
           <h2 class="section-heading">Future <span class="gradient-shimmer">Products</span></h2>
-          <p class="section-lead">
+          <p class="section-lead" data-i18n="cap.lead">
             MOSBI Systems is continuously building a specialized portfolio of intelligent industrial platforms.
           </p>
         </div>
@@ -3652,8 +3652,8 @@ button, input, select, textarea {
               </a>
             </div>
             <div class="profile-col">
-              <span class="p-col-label">Specialization</span>
-              <span class="p-col-value">Industrial AI & Optical Machine Recognition</span>
+              <span class="p-col-label" data-i18n="comp.lbl_spec">Specialization</span>
+              <span class="p-col-value" data-i18n="comp.val_spec">Industrial AI & Optical Machine Recognition</span>
             </div>
           </div>
         </div>
@@ -3664,10 +3664,10 @@ button, input, select, textarea {
     <section class="section contact-section" id="contact">
       <div class="container">
         <div class="section-intro text-center reveal">
-          <span class="sub-badge">Direct Communication</span>
-          <h2 class="section-heading">Get in <span class="gradient-shimmer">Touch</span></h2>
-          <p class="section-lead">
-            Connect directly with our engineering, sales, or leadership teams for pilot inquiries, enterprise demos, or partnerships.
+          <span class="sub-badge" data-i18n="contact.subbadge">Direct Communication</span>
+          <h2 class="section-heading"><span data-i18n="contact.heading_pre">Get in</span> <span class="gradient-shimmer" data-i18n="contact.heading_highlight">Touch</span></h2>
+          <p class="section-lead" data-i18n="cap.lead">
+            <span data-i18n="contact.lead">Connect directly with our engineering, sales, or leadership teams for pilot inquiries, enterprise demos, or partnerships.</span>
           </p>
         </div>
 
@@ -3699,7 +3699,7 @@ button, input, select, textarea {
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
               </div>
               <div class="ch-info">
-                <span class="ch-label">Sales & Enterprise Solutions</span>
+                <span class="ch-label" data-i18n="contact.card_sales">Sales & Enterprise Solutions</span>
                 <span class="ch-address">sales@mosbisystems.com</span>
               </div>
               <div class="ch-action-buttons">
@@ -3731,53 +3731,35 @@ button, input, select, textarea {
               </div>
             </div>
 
-            <!-- Founder -->
-            <div class="channel-box" data-copy="info@mosbisystems.com">
-              <div class="ch-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              </div>
-              <div class="ch-info">
-                <span class="ch-label">Founder & Partnerships</span>
-                <span class="ch-address">info@mosbisystems.com</span>
-              </div>
-              <div class="ch-action-buttons">
-                <button class="ch-copy-btn" title="Copy email" aria-label="Copy founder email">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-                </button>
-                <a href="mailto:info@mosbisystems.com" class="ch-send-btn" title="Compose mail" aria-label="Send email to founder">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-              </div>
             </div>
-          </div>
 
           <!-- Interactive Contact Form -->
           <div class="contact-form-card spotlight-card reveal">
             <div class="bento-glow-spot"></div>
             <form id="contactForm" class="contact-form-inner" novalidate>
-              <h3 class="form-title">Send a Direct Message</h3>
-              <p class="form-desc">Inquiries are routed directly to the appropriate technical or executive lead within 24 hours.</p>
+              <h3 class="form-title" data-i18n="contact.form_title">Send a Direct Message</h3>
+              <p class="form-desc" data-i18n="contact.form_desc">Inquiries are routed directly to the appropriate technical or executive lead within 24 hours.</p>
 
               <div class="form-field">
-                <label for="fullName">Full Name <span class="req">*</span></label>
-                <input type="text" id="fullName" name="fullName" required placeholder="e.g. Elena Rostova" autocomplete="name" />
+                <label for="fullName"><span data-i18n="contact.lbl_name">Full Name</span> <span class="req">*</span></label>
+                <input type="text" id="fullName" name="fullName" required placeholder="e.g. Elena Rostova" autocomplete="name" data-i18n-placeholder="contact.ph_name" />
                 <span class="field-error" id="nameError">Please provide your name.</span>
               </div>
 
               <div class="form-dual-row">
                 <div class="form-field">
-                  <label for="workEmail">Work Email <span class="req">*</span></label>
-                  <input type="email" id="workEmail" name="workEmail" required placeholder="name@company.com" autocomplete="email" />
+                  <label for="workEmail"><span data-i18n="contact.lbl_email">Work Email</span> <span class="req">*</span></label>
+                  <input type="email" id="workEmail" name="workEmail" required placeholder="name@company.com" autocomplete="email" data-i18n-placeholder="contact.ph_email" />
                   <span class="field-error" id="emailError">Please provide a valid email address.</span>
                 </div>
                 <div class="form-field">
-                  <label for="companyName">Organization</label>
-                  <input type="text" id="companyName" name="companyName" placeholder="e.g. Apex Industrial Group" autocomplete="organization" />
+                  <label for="companyName" data-i18n="contact.lbl_org">Organization</label>
+                  <input type="text" id="companyName" name="companyName" placeholder="e.g. Apex Industrial Group" autocomplete="organization" data-i18n-placeholder="contact.ph_org" />
                 </div>
               </div>
 
               <div class="form-field">
-                <label for="departmentSelect">Department Target</label>
+                <label for="departmentSelect" data-i18n="contact.lbl_dept">Department Target</label>
                 <div class="custom-select-wrap">
                   <select id="departmentSelect" name="department">
                     <option value="sales@mosbisystems.com">Sales & Demo Request</option>
@@ -3788,13 +3770,13 @@ button, input, select, textarea {
               </div>
 
               <div class="form-field">
-                <label for="message">Message <span class="req">*</span></label>
-                <textarea id="message" name="message" rows="4" required placeholder="Detail your machinery, fleet scale, or operational challenge..."></textarea>
+                <label for="message"><span data-i18n="contact.lbl_msg">Message</span> <span class="req">*</span></label>
+                <textarea id="message" name="message" rows="4" required placeholder="Detail your machinery, fleet scale, or operational challenge..." data-i18n-placeholder="contact.ph_msg"></textarea>
                 <span class="field-error" id="msgError">Please enter your message.</span>
               </div>
 
               <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitBtn">
-                <span id="submitBtnText">Dispatch Message</span>
+                <span id="submitBtnText" data-i18n="contact.btn_send">Dispatch Message</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
               </button>
 
@@ -3844,22 +3826,22 @@ button, input, select, textarea {
           <div class="f-col">
             <h5 data-i18n="footer.col_nav">Navigation</h5>
             <ul>
-              <li><a href="#hero">Overview</a></li>
-              <li><a href="#mission">Our Mission</a></li>
-              <li><a href="#capabilities">What We Do</a></li>
+              <li><a href="#hero" data-i18n="footer.link_overview">Overview</a></li>
+              <li><a href="#mission" data-i18n="footer.link_mission">Our Mission</a></li>
+              <li><a href="#capabilities" data-i18n="footer.link_capabilities">What We Do</a></li>
               <li><a href="#product" data-i18n="nav.product">Machine Identifier AI™</a></li>
-              <li><a href="#industries">Target Industries</a></li>
+              <li><a href="#industries" data-i18n="footer.link_industries">Target Industries</a></li>
             </ul>
           </div>
 
           <div class="f-col">
             <h5 data-i18n="footer.col_sol">Core Solutions</h5>
             <ul>
-              <li><a href="#product">Equipment Recognition AI</a></li>
-              <li><a href="#capabilities">Computer Vision Systems</a></li>
-              <li><a href="#capabilities">Mobile Field Apps</a></li>
-              <li><a href="#capabilities">Cloud SaaS Platforms</a></li>
-              <li><a href="#roi-calculator">ROI Estimation</a></li>
+              <li><a href="#product" data-i18n="footer.link_recog">Equipment Recognition AI</a></li>
+              <li><a href="#capabilities" data-i18n="footer.link_cv">Computer Vision Systems</a></li>
+              <li><a href="#capabilities" data-i18n="footer.link_mobile">Mobile Field Apps</a></li>
+              <li><a href="#capabilities" data-i18n="footer.link_cloud">Cloud SaaS Platforms</a></li>
+              <li><a href="#roi-calculator" data-i18n="footer.link_roi">ROI Estimation</a></li>
             </ul>
           </div>
 
@@ -4153,105 +4135,384 @@ function initMetricCounters() {
 }
 
 /* ==========================================================================
-   7. Interactive Machine Identifier AI™ Scanner Demo Simulation
+   7. Interactive Machine Identifier AI™ Scanner Demo Simulation (Localized)
    ========================================================================== */
-const MACHINE_DATABASE = {
-  turbine: {
-    title: 'Centrifugal Slurry Pump',
-    badge: 'ROTARY EQUIPMENT',
-    tag: 'PUMP-CPX-800-MD',
-    serial: 'SN-8849-01B',
-    vendor: 'FlowMax Dynamics',
-    temp: '48.2 °C (Normal)',
-    service: '14 Days (Routine)',
-    sync: 'Synced • ID #9481',
-    health: 'Healthy • 98%',
-    confidence: '99.8%',
-    latency: '14.2 ms',
-    box1: { label: 'Turbine Pump #402 • 99.8% Match', top: '16%', left: '12%', width: '56%', height: '62%' },
-    box2: { label: 'Flange Seal • PASS', top: '44%', right: '10%', width: '28%', height: '38%' },
-    svg: `
-      <circle cx="180" cy="120" r="60" stroke="#00e5ff" stroke-width="2.5" stroke-dasharray="4 2" fill="rgba(0, 229, 255, 0.05)" />
-      <circle cx="180" cy="120" r="32" stroke="#4364f7" stroke-width="3" fill="rgba(67, 100, 247, 0.15)" />
-      <path d="M180 88V152M148 120H212M158 98L202 142M158 142L202 98" stroke="#00e5ff" stroke-width="2" stroke-linecap="round"/>
-      <rect x="240" y="100" width="90" height="40" rx="6" stroke="#10b981" stroke-width="2" fill="rgba(16, 185, 129, 0.08)"/>
-      <line x1="240" y1="120" x2="330" y2="120" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/>
-      <rect x="80" y="105" width="40" height="30" rx="4" stroke="#00e5ff" stroke-width="2" fill="rgba(0, 229, 255, 0.06)"/>
-      <circle cx="285" cy="120" r="8" fill="#10b981" />
-    `
-  },
-  valve: {
-    title: 'Cryogenic Control Valve',
-    badge: 'PRESSURE CONTROL',
-    tag: 'VALVE-PV-94-CRYO',
-    serial: 'SN-4412-99C',
-    vendor: 'Vortex Automation',
-    temp: '-32.4 °C (Stable)',
-    service: '4 Days (Impending)',
-    sync: 'Synced • ID #3312',
-    health: 'Warning • Seal Check',
-    confidence: '99.4%',
-    latency: '11.8 ms',
-    box1: { label: 'Cryo Valve PV-94 • 99.4% Match', top: '20%', left: '20%', width: '48%', height: '58%' },
-    box2: { label: 'Actuator Stem • CALIBRATED', top: '10%', right: '22%', width: '24%', height: '32%' },
-    svg: `
-      <polygon points="120,80 200,120 120,160" stroke="#00e5ff" stroke-width="2.5" fill="rgba(0, 229, 255, 0.08)"/>
-      <polygon points="280,80 200,120 280,160" stroke="#00e5ff" stroke-width="2.5" fill="rgba(0, 229, 255, 0.08)"/>
-      <rect x="185" y="40" width="30" height="50" rx="4" stroke="#10b981" stroke-width="2.5" fill="rgba(16, 185, 129, 0.15)"/>
-      <circle cx="200" cy="35" r="18" stroke="#8b5cf6" stroke-width="3" fill="rgba(139, 92, 246, 0.15)"/>
-      <line x1="80" y1="120" x2="320" y2="120" stroke="#00e5ff" stroke-width="2" stroke-dasharray="5 3"/>
-    `
-  },
-  motor: {
-    title: 'High-Torque Induction Motor',
-    badge: 'ELECTRO-MECHANICAL',
-    tag: 'MOTOR-IND-M7-3P',
-    serial: 'SN-7731-08A',
-    vendor: 'ElectroCore Global',
-    temp: '64.1 °C (Nominal)',
-    service: '45 Days (Healthy)',
-    sync: 'Synced • ID #1842',
-    health: 'Optimal • 100%',
-    confidence: '99.9%',
-    latency: '9.4 ms',
-    box1: { label: 'Induction Motor M-7 • 99.9% Match', top: '15%', left: '16%', width: '60%', height: '65%' },
-    box2: { label: 'Terminal Box • OK', top: '18%', right: '14%', width: '22%', height: '28%' },
-    svg: `
-      <rect x="120" y="80" width="160" height="90" rx="10" stroke="#00e5ff" stroke-width="2.5" fill="rgba(0, 229, 255, 0.08)"/>
-      <line x1="150" y1="80" x2="150" y2="170" stroke="#00e5ff" stroke-width="1.5"/>
-      <line x1="180" y1="80" x2="180" y2="170" stroke="#00e5ff" stroke-width="1.5"/>
-      <line x1="210" y1="80" x2="210" y2="170" stroke="#00e5ff" stroke-width="1.5"/>
-      <line x1="240" y1="80" x2="240" y2="170" stroke="#00e5ff" stroke-width="1.5"/>
-      <rect x="280" y="112" width="45" height="26" rx="4" stroke="#10b981" stroke-width="2" fill="rgba(16, 185, 129, 0.2)"/>
-      <rect x="150" y="55" width="40" height="25" rx="3" stroke="#8b5cf6" stroke-width="2" fill="rgba(139, 92, 246, 0.2)"/>
-    `
-  },
-  compressor: {
-    title: 'Rotary Screw Compressor',
-    badge: 'PNEUMATIC SYSTEMS',
-    tag: 'COMP-SC-1200-HP',
-    serial: 'SN-9102-54X',
-    vendor: 'AeroPress Systems',
-    temp: '51.8 °C (Normal)',
-    service: '28 Days (Scheduled)',
-    sync: 'Synced • ID #6720',
-    health: 'Operational • 96%',
-    confidence: '99.7%',
-    latency: '15.6 ms',
-    box1: { label: 'Screw Compressor SC-12 • 99.7%', top: '14%', left: '15%', width: '62%', height: '66%' },
-    box2: { label: 'Oil Filter Unit • INSPECTED', top: '35%', right: '12%', width: '25%', height: '35%' },
-    svg: `
-      <rect x="100" y="70" width="180" height="105" rx="12" stroke="#00e5ff" stroke-width="2.5" fill="rgba(0, 229, 255, 0.06)"/>
-      <circle cx="160" cy="120" r="30" stroke="#10b981" stroke-width="2" stroke-dasharray="3 3"/>
-      <circle cx="220" cy="120" r="30" stroke="#10b981" stroke-width="2" stroke-dasharray="3 3"/>
-      <path d="M140 120 Q160 95 180 120 T220 120" stroke="#4364f7" stroke-width="3" fill="none"/>
-      <rect x="280" y="90" width="35" height="60" rx="6" stroke="#f59e0b" stroke-width="2" fill="rgba(245, 158, 11, 0.15)"/>
-    `
-  }
+const MACHINE_DATABASE_I18N = {
+  en: {
+    "turbine": {
+        "title": "Centrifugal Slurry Pump",
+        "badge": "ROTARY EQUIPMENT",
+        "tag": "PUMP-CPX-800-MD",
+        "serial": "SN-8849-01B",
+        "vendor": "FlowMax Dynamics",
+        "temp": "48.2 °C (Normal)",
+        "service": "14 Days (Routine)",
+        "sync": "Synced • ID #9481",
+        "health": "Healthy • 98%",
+        "confidence": "99.8%",
+        "latency": "14.2 ms",
+        "box1": {
+            "label": "Turbine Pump #402 • 99.8% Match",
+            "top": "16%",
+            "left": "12%",
+            "width": "56%",
+            "height": "62%"
+        },
+        "box2": {
+            "label": "Flange Seal • PASS",
+            "top": "44%",
+            "right": "10%",
+            "width": "28%",
+            "height": "38%"
+        }
+    },
+    "valve": {
+        "title": "Cryogenic Control Valve",
+        "badge": "PRESSURE CONTROL",
+        "tag": "VALVE-PV-94-CRYO",
+        "serial": "SN-4412-99C",
+        "vendor": "Vortex Automation",
+        "temp": "-32.4 °C (Stable)",
+        "service": "4 Days (Impending)",
+        "sync": "Synced • ID #3312",
+        "health": "Warning • Seal Check",
+        "confidence": "99.4%",
+        "latency": "11.8 ms",
+        "box1": {
+            "label": "Cryo Valve PV-94 • 99.4% Match",
+            "top": "20%",
+            "left": "20%",
+            "width": "48%",
+            "height": "58%"
+        },
+        "box2": {
+            "label": "Actuator Stem • CALIBRATED",
+            "top": "10%",
+            "right": "22%",
+            "width": "24%",
+            "height": "32%"
+        }
+    },
+    "motor": {
+        "title": "High-Torque Induction Motor",
+        "badge": "ELECTRO-MECHANICAL",
+        "tag": "MOTOR-IND-M7-3P",
+        "serial": "SN-7731-08A",
+        "vendor": "ElectroCore Global",
+        "temp": "64.1 °C (Nominal)",
+        "service": "45 Days (Healthy)",
+        "sync": "Synced • ID #1842",
+        "health": "Optimal • 100%",
+        "confidence": "99.9%",
+        "latency": "9.4 ms",
+        "box1": {
+            "label": "Induction Motor M-7 • 99.9% Match",
+            "top": "15%",
+            "left": "16%",
+            "width": "60%",
+            "height": "65%"
+        },
+        "box2": {
+            "label": "Terminal Box • OK",
+            "top": "18%",
+            "right": "14%",
+            "width": "22%",
+            "height": "28%"
+        }
+    },
+    "compressor": {
+        "title": "Rotary Screw Compressor",
+        "badge": "PNEUMATIC SYSTEMS",
+        "tag": "COMP-SC-1200-HP",
+        "serial": "SN-9102-54X",
+        "vendor": "AeroPress Systems",
+        "temp": "51.8 °C (Normal)",
+        "service": "28 Days (Scheduled)",
+        "sync": "Synced • ID #6720",
+        "health": "Operational • 96%",
+        "confidence": "99.7%",
+        "latency": "15.6 ms",
+        "box1": {
+            "label": "Screw Compressor SC-12 • 99.7%",
+            "top": "14%",
+            "left": "15%",
+            "width": "62%",
+            "height": "66%"
+        },
+        "box2": {
+            "label": "Oil Filter Unit • INSPECTED",
+            "top": "35%",
+            "right": "12%",
+            "width": "25%",
+            "height": "35%"
+        }
+    }
+},
+  es: {
+    "turbine": {
+        "title": "Bomba Centrífuga de Lodos",
+        "badge": "EQUIPO ROTATIVO",
+        "tag": "PUMP-CPX-800-MD",
+        "serial": "SN-8849-01B",
+        "vendor": "FlowMax Dynamics",
+        "temp": "48.2 °C (Normal)",
+        "service": "14 Días (Rutina)",
+        "sync": "Sincronizado • ID #9481",
+        "health": "Saludable • 98%",
+        "confidence": "99.8%",
+        "latency": "14.2 ms",
+        "box1": {
+            "label": "Bomba Turbina #402 • 99.8% Coincidencia",
+            "top": "16%",
+            "left": "12%",
+            "width": "56%",
+            "height": "62%"
+        },
+        "box2": {
+            "label": "Sello de Brida • APROBADO",
+            "top": "44%",
+            "right": "10%",
+            "width": "28%",
+            "height": "38%"
+        }
+    },
+    "valve": {
+        "title": "Válvula de Control Criogénica",
+        "badge": "CONTROL DE PRESIÓN",
+        "tag": "VALVE-PV-94-CRYO",
+        "serial": "SN-4412-99C",
+        "vendor": "Vortex Automation",
+        "temp": "-32.4 °C (Estable)",
+        "service": "4 Días (Inminente)",
+        "sync": "Sincronizado • ID #3312",
+        "health": "Alerta • Revisión Sello",
+        "confidence": "99.4%",
+        "latency": "11.8 ms",
+        "box1": {
+            "label": "Válvula Criogénica PV-94 • 99.4% Coincidencia",
+            "top": "20%",
+            "left": "20%",
+            "width": "48%",
+            "height": "58%"
+        },
+        "box2": {
+            "label": "Vástago Actuador • CALIBRADO",
+            "top": "10%",
+            "right": "22%",
+            "width": "24%",
+            "height": "32%"
+        }
+    },
+    "motor": {
+        "title": "Motor de Inducción de Alto Par",
+        "badge": "ELECTROMECÁNICO",
+        "tag": "MOTOR-IND-M7-3P",
+        "serial": "SN-7731-08A",
+        "vendor": "ElectroCore Global",
+        "temp": "64.1 °C (Nominal)",
+        "service": "45 Días (Óptimo)",
+        "sync": "Sincronizado • ID #1842",
+        "health": "Óptimo • 100%",
+        "confidence": "99.9%",
+        "latency": "9.4 ms",
+        "box1": {
+            "label": "Motor Inducción M-7 • 99.9% Coincidencia",
+            "top": "15%",
+            "left": "16%",
+            "width": "60%",
+            "height": "65%"
+        },
+        "box2": {
+            "label": "Caja Bornes • OK",
+            "top": "18%",
+            "right": "14%",
+            "width": "22%",
+            "height": "28%"
+        }
+    },
+    "compressor": {
+        "title": "Compresor Rotativo de Tornillo",
+        "badge": "SISTEMAS NEUMÁTICOS",
+        "tag": "COMP-SC-1200-HP",
+        "serial": "SN-9102-54X",
+        "vendor": "AeroPress Systems",
+        "temp": "51.8 °C (Normal)",
+        "service": "28 Días (Programado)",
+        "sync": "Sincronizado • ID #6720",
+        "health": "Operativo • 96%",
+        "confidence": "99.7%",
+        "latency": "15.6 ms",
+        "box1": {
+            "label": "Compresor Tornillo SC-12 • 99.7%",
+            "top": "14%",
+            "left": "15%",
+            "width": "62%",
+            "height": "66%"
+        },
+        "box2": {
+            "label": "Filtro de Aceite • INSPECCIONADO",
+            "top": "35%",
+            "right": "12%",
+            "width": "25%",
+            "height": "35%"
+        }
+    }
+},
+  fr: {
+    "turbine": {
+        "title": "Pompe Centrifuge à Boue",
+        "badge": "ÉQUIPEMENT ROTATIF",
+        "tag": "PUMP-CPX-800-MD",
+        "serial": "SN-8849-01B",
+        "vendor": "FlowMax Dynamics",
+        "temp": "48.2 °C (Normal)",
+        "service": "14 Jours (Routine)",
+        "sync": "Synchronisé • ID #9481",
+        "health": "Sain • 98%",
+        "confidence": "99.8%",
+        "latency": "14.2 ms",
+        "box1": {
+            "label": "Pompe Turbine #402 • 99.8% Concordance",
+            "top": "16%",
+            "left": "12%",
+            "width": "56%",
+            "height": "62%"
+        },
+        "box2": {
+            "label": "Joint de Bride • CONFORME",
+            "top": "44%",
+            "right": "10%",
+            "width": "28%",
+            "height": "38%"
+        }
+    },
+    "valve": {
+        "title": "Vanne de Régulation Cryogénique",
+        "badge": "RÉGULATION PRESSION",
+        "tag": "VALVE-PV-94-CRYO",
+        "serial": "SN-4412-99C",
+        "vendor": "Vortex Automation",
+        "temp": "-32.4 °C (Stable)",
+        "service": "4 Jours (Imminent)",
+        "sync": "Synchronisé • ID #3312",
+        "health": "Avertissement • Joint",
+        "confidence": "99.4%",
+        "latency": "11.8 ms",
+        "box1": {
+            "label": "Vanne Cryogénique PV-94 • 99.4% Concordance",
+            "top": "20%",
+            "left": "20%",
+            "width": "48%",
+            "height": "58%"
+        },
+        "box2": {
+            "label": "Tige Actionneur • CALIBRÉ",
+            "top": "10%",
+            "right": "22%",
+            "width": "24%",
+            "height": "32%"
+        }
+    },
+    "motor": {
+        "title": "Moteur à Induction Haut Couple",
+        "badge": "ÉLECTROMÉCANIQUE",
+        "tag": "MOTOR-IND-M7-3P",
+        "serial": "SN-7731-08A",
+        "vendor": "ElectroCore Global",
+        "temp": "64.1 °C (Nominal)",
+        "service": "45 Jours (Sain)",
+        "sync": "Synchronisé • ID #1842",
+        "health": "Optimal • 100%",
+        "confidence": "99.9%",
+        "latency": "9.4 ms",
+        "box1": {
+            "label": "Moteur Induction M-7 • 99.9% Concordance",
+            "top": "15%",
+            "left": "16%",
+            "width": "60%",
+            "height": "65%"
+        },
+        "box2": {
+            "label": "Boîte à Bornes • OK",
+            "top": "18%",
+            "right": "14%",
+            "width": "22%",
+            "height": "28%"
+        }
+    },
+    "compressor": {
+        "title": "Compresseur Rotatif à Vis",
+        "badge": "SYSTÈMES PNEUMATIQUES",
+        "tag": "COMP-SC-1200-HP",
+        "serial": "SN-9102-54X",
+        "vendor": "AeroPress Systems",
+        "temp": "51.8 °C (Normal)",
+        "service": "28 Jours (Planifié)",
+        "sync": "Synchronisé • ID #6720",
+        "health": "Opérationnel • 96%",
+        "confidence": "99.7%",
+        "latency": "15.6 ms",
+        "box1": {
+            "label": "Compresseur à Vis SC-12 • 99.7%",
+            "top": "14%",
+            "left": "15%",
+            "width": "62%",
+            "height": "66%"
+        },
+        "box2": {
+            "label": "Unité Filtre à Huile • INSPECTÉ",
+            "top": "35%",
+            "right": "12%",
+            "width": "25%",
+            "height": "35%"
+        }
+    }
+}
 };
 
-function initMachineScanner() {
-  const tabs = document.querySelectorAll('.machine-tab');
+const MACHINE_SVGS = {
+  turbine: `
+    <circle cx="180" cy="120" r="60" stroke="#00e5ff" stroke-width="2.5" stroke-dasharray="4 2" fill="rgba(0, 229, 255, 0.05)" />
+    <circle cx="180" cy="120" r="32" stroke="#4364f7" stroke-width="3" fill="rgba(67, 100, 247, 0.15)" />
+    <path d="M180 88V152M148 120H212M158 98L202 142M158 142L202 98" stroke="#00e5ff" stroke-width="2" stroke-linecap="round"/>
+    <rect x="240" y="100" width="90" height="40" rx="6" stroke="#10b981" stroke-width="2" fill="rgba(16, 185, 129, 0.08)"/>
+    <line x1="240" y1="120" x2="330" y2="120" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <rect x="80" y="105" width="40" height="30" rx="4" stroke="#00e5ff" stroke-width="2" fill="rgba(0, 229, 255, 0.06)"/>
+    <circle cx="285" cy="120" r="8" fill="#10b981" />
+  `,
+  valve: `
+    <polygon points="120,80 200,120 120,160" stroke="#00e5ff" stroke-width="2.5" fill="rgba(0, 229, 255, 0.08)"/>
+    <polygon points="280,80 200,120 280,160" stroke="#00e5ff" stroke-width="2.5" fill="rgba(0, 229, 255, 0.08)"/>
+    <rect x="185" y="40" width="30" height="50" rx="4" stroke="#10b981" stroke-width="2.5" fill="rgba(16, 185, 129, 0.15)"/>
+    <circle cx="200" cy="35" r="18" stroke="#8b5cf6" stroke-width="3" fill="rgba(139, 92, 246, 0.15)"/>
+    <line x1="80" y1="120" x2="320" y2="120" stroke="#00e5ff" stroke-width="2" stroke-dasharray="5 3"/>
+  `,
+  motor: `
+    <rect x="120" y="80" width="160" height="90" rx="10" stroke="#00e5ff" stroke-width="2.5" fill="rgba(0, 229, 255, 0.08)"/>
+    <line x1="150" y1="80" x2="150" y2="170" stroke="#00e5ff" stroke-width="1.5"/>
+    <line x1="180" y1="80" x2="180" y2="170" stroke="#00e5ff" stroke-width="1.5"/>
+    <line x1="210" y1="80" x2="210" y2="170" stroke="#00e5ff" stroke-width="1.5"/>
+    <line x1="240" y1="80" x2="240" y2="170" stroke="#00e5ff" stroke-width="1.5"/>
+    <rect x="280" y="112" width="45" height="26" rx="4" stroke="#10b981" stroke-width="2" fill="rgba(16, 185, 129, 0.2)"/>
+    <rect x="150" y="55" width="40" height="25" rx="3" stroke="#8b5cf6" stroke-width="2" fill="rgba(139, 92, 246, 0.2)"/>
+  `,
+  compressor: `
+    <rect x="100" y="70" width="180" height="105" rx="12" stroke="#00e5ff" stroke-width="2.5" fill="rgba(0, 229, 255, 0.06)"/>
+    <circle cx="160" cy="120" r="30" stroke="#10b981" stroke-width="2" stroke-dasharray="3 3"/>
+    <circle cx="220" cy="120" r="30" stroke="#10b981" stroke-width="2" stroke-dasharray="3 3"/>
+    <path d="M140 120 Q160 95 180 120 T220 120" stroke="#4364f7" stroke-width="3" fill="none"/>
+    <rect x="280" y="90" width="35" height="60" rx="6" stroke="#f59e0b" stroke-width="2" fill="rgba(245, 158, 11, 0.15)"/>
+  `
+};
+
+let currentActiveMachine = 'turbine';
+
+function loadMachine(key) {
+  currentActiveMachine = key;
+  const langDb = MACHINE_DATABASE_I18N[currentLanguage] || MACHINE_DATABASE_I18N['en'];
+  const data = langDb[key];
+  if (!data) return;
+
   const svgContainer = document.getElementById('machineSvg');
   const boxMain = document.getElementById('boxMain');
   const boxMainLabel = document.getElementById('boxMainLabel');
@@ -4269,60 +4530,47 @@ function initMachineScanner() {
   const specSync = document.getElementById('specSync');
   const valLatency = document.getElementById('valLatency');
   const valConfidence = document.getElementById('valConfidence');
-  const streamLog = document.getElementById('streamLogContainer');
 
-  if (!tabs.length || !svgContainer) return;
-
-  const loadMachine = (key) => {
-    const data = MACHINE_DATABASE[key];
-    if (!data) return;
-
+  if (svgContainer) {
     svgContainer.style.opacity = '0';
     setTimeout(() => {
-      svgContainer.innerHTML = data.svg;
+      svgContainer.innerHTML = MACHINE_SVGS[key] || '';
       svgContainer.style.opacity = '1';
     }, 150);
+  }
 
-    if (boxMain && boxMainLabel) {
-      boxMain.style.top = data.box1.top;
-      boxMain.style.left = data.box1.left;
-      boxMain.style.width = data.box1.width;
-      boxMain.style.height = data.box1.height;
-      boxMainLabel.innerText = data.box1.label;
-    }
+  if (boxMain && boxMainLabel) {
+    boxMain.style.top = data.box1.top;
+    boxMain.style.left = data.box1.left;
+    boxMain.style.width = data.box1.width;
+    boxMain.style.height = data.box1.height;
+    boxMainLabel.innerText = data.box1.label;
+  }
 
-    if (boxSub && boxSubLabel) {
-      boxSub.style.top = data.box2.top;
-      boxSub.style.right = data.box2.right;
-      boxSub.style.width = data.box2.width;
-      boxSub.style.height = data.box2.height;
-      boxSubLabel.innerText = data.box2.label;
-    }
+  if (boxSub && boxSubLabel) {
+    boxSub.style.top = data.box2.top;
+    boxSub.style.right = data.box2.right;
+    boxSub.style.width = data.box2.width;
+    boxSub.style.height = data.box2.height;
+    boxSubLabel.innerText = data.box2.label;
+  }
 
-    if (specBadge) specBadge.innerText = data.badge;
-    if (specTitle) specTitle.innerText = data.title;
-    if (specHealth) specHealth.innerText = data.health;
-    if (specTag) specTag.innerText = data.tag;
-    if (specSerial) specSerial.innerText = data.serial;
-    if (specVendor) specVendor.innerText = data.vendor;
-    if (specTemp) specTemp.innerText = data.temp;
-    if (specService) specService.innerText = data.service;
-    if (specSync) specSync.innerText = data.sync;
-    if (valLatency) valLatency.innerText = data.latency;
-    if (valConfidence) valConfidence.innerText = data.confidence;
+  if (specBadge) specBadge.innerText = data.badge;
+  if (specTitle) specTitle.innerText = data.title;
+  if (specHealth) specHealth.innerText = data.health;
+  if (specTag) specTag.innerText = data.tag;
+  if (specSerial) specSerial.innerText = data.serial;
+  if (specVendor) specVendor.innerText = data.vendor;
+  if (specTemp) specTemp.innerText = data.temp;
+  if (specService) specService.innerText = data.service;
+  if (specSync) specSync.innerText = data.sync;
+  if (valLatency) valLatency.innerText = data.latency;
+  if (valConfidence) valConfidence.innerText = data.confidence;
+}
 
-    if (streamLog) {
-      const now = new Date();
-      const timeStr = `[${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}]`;
-      const entry = document.createElement('div');
-      entry.className = 'log-entry';
-      entry.innerHTML = `<span class="log-time">${timeStr}</span> <span class="log-cyan">SWITCH:</span> Loaded model for ${data.title} (${data.confidence})`;
-      streamLog.appendChild(entry);
-      if (streamLog.children.length > 5) {
-        streamLog.removeChild(streamLog.firstElementChild);
-      }
-    }
-  };
+function initMachineScanner() {
+  const tabs = document.querySelectorAll('.machine-tab');
+  if (!tabs.length) return;
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -4338,6 +4586,7 @@ function initMachineScanner() {
 
   loadMachine('turbine');
 
+  const streamLog = document.getElementById('streamLogContainer');
   const logPool = [
     { tag: 'INSPECT', cls: 'log-cyan', msg: 'Spatial feature extraction 100% verified.' },
     { tag: 'OCR_PASS', cls: 'log-green', msg: 'Serial plate optical text verified with plant ERP.' },
@@ -4363,69 +4612,277 @@ function initMachineScanner() {
 }
 
 /* ==========================================================================
-   8. Interactive Industry Deep-Dive Switcher
+   8. Interactive Industry Deep-Dive Switcher (Localized)
    ========================================================================== */
-const INDUSTRY_DATA = {
-  manufacturing: {
-    title: 'Manufacturing Plants & Assembly Lines',
-    stat: '92%',
-    statDesc: 'Faster Line Diagnostics',
-    challenge: 'Unscheduled downtime on critical assembly lines caused by time-consuming manual part lookups and scattered documentation.',
-    solution: 'Visual identification of robotic arms, CNC spindles, and conveyors with immediate retrieval of technical schematics on technician tablets.',
-    pills: ['Zero paper manuals', 'Instant part numbering', 'Rapid shift changeover']
-  },
-  operations: {
-    title: 'Heavy Industrial & Plant Operations',
-    stat: '85%',
-    statDesc: 'Reduction in MTTR',
-    challenge: 'Managing thousands of dispersed mechanical pumps, gearboxes, and compressors across multi-acre facilities without visual tags.',
-    solution: 'Point-and-shoot camera identification that indexes machines instantly, even in grease-covered or weathered conditions.',
-    pills: ['Multi-acre coverage', 'Weathered tag recognition', 'Central plant telemetry']
-  },
-  facility: {
-    title: 'Facility & Building Management',
-    stat: '4.8x',
-    statDesc: 'Inspection Throughput',
-    challenge: 'Technicians wasting time locating HVAC units, switchgear, and plumbing manifolds across complex high-rise facilities.',
-    solution: 'Augmented visual tags and automated digital twin lookups with integrated step-by-step filter and valve check routines.',
-    pills: ['HVAC & Switchgear indexing', 'Automated checklists', 'Asset lifecycle audits']
-  },
-  field: {
-    title: 'Roving Field Service & Support',
-    stat: '3.5 hrs',
-    statDesc: 'Daily Technician Time Saved',
-    challenge: 'Field technicians facing unfamiliar machinery models and needing immediate access to torque specs and OEM wiring guides.',
-    solution: 'Mobile-first offline AI model that identifies models locally in remote sites without cell coverage.',
-    pills: ['Offline-first AI', 'Immediate torque specs', 'Digital service sign-off']
-  },
-  maintenance: {
-    title: 'Maintenance & Reliability Operations',
-    stat: '70%',
-    statDesc: 'Fewer Repeat Failures',
-    challenge: 'Lack of historical repair context leading to incorrect part replacements and recurring machine failures.',
-    solution: 'Instant overlay of last service date, past failure logs, and recommended spare parts upon visual recognition.',
-    pills: ['Historical service timeline', 'Spare parts recommendation', 'Predictive failure alerts']
-  },
-  asset: {
-    title: 'Enterprise Asset Management (EAM)',
-    stat: '99.9%',
-    statDesc: 'Inventory Audit Accuracy',
-    challenge: 'Ghost assets and outdated spreadsheets creating costly compliance gaps and inaccurate capital depreciation models.',
-    solution: 'Continuous visual audit trail that confirms physical existence and condition with GPS & timestamp metadata.',
-    pills: ['Automated asset tagging', 'Zero ghost inventory', 'Seamless ERP integration']
-  },
-  infrastructure: {
-    title: 'Infrastructure & Municipal Services',
-    stat: '60%',
-    statDesc: 'Faster Emergency Triage',
-    challenge: 'Critical utility hubs, water pumps, and power substations requiring rapid triage during grid anomalies.',
-    solution: 'Secure, high-reliability visual intelligence that standardizes emergency inspection procedures for city teams.',
-    pills: ['Substation component parsing', 'Emergency standard workflows', 'High-security telemetry']
-  }
+const INDUSTRY_DATA_I18N = {
+  en: {
+    "manufacturing": {
+        "title": "Manufacturing Plants & Assembly Lines",
+        "stat": "92%",
+        "statDesc": "Faster Line Diagnostics",
+        "challenge": "Unscheduled downtime on critical assembly lines caused by time-consuming manual part lookups and scattered documentation.",
+        "solution": "Visual identification of robotic arms, CNC spindles, and conveyors with immediate retrieval of technical schematics on technician tablets.",
+        "pills": [
+            "Zero paper manuals",
+            "Instant part numbering",
+            "Rapid shift changeover"
+        ]
+    },
+    "operations": {
+        "title": "Heavy Industrial & Plant Operations",
+        "stat": "85%",
+        "statDesc": "Reduction in MTTR",
+        "challenge": "Managing thousands of dispersed mechanical pumps, gearboxes, and compressors across multi-acre facilities without visual tags.",
+        "solution": "Point-and-shoot camera identification that indexes machines instantly, even in grease-covered or weathered conditions.",
+        "pills": [
+            "Multi-acre coverage",
+            "Weathered tag recognition",
+            "Central plant telemetry"
+        ]
+    },
+    "facility": {
+        "title": "Facility & Building Management",
+        "stat": "4.8x",
+        "statDesc": "Inspection Throughput",
+        "challenge": "Technicians wasting time locating HVAC units, switchgear, and plumbing manifolds across complex high-rise facilities.",
+        "solution": "Augmented visual tags and automated digital twin lookups with integrated step-by-step filter and valve check routines.",
+        "pills": [
+            "HVAC & Switchgear indexing",
+            "Automated checklists",
+            "Asset lifecycle audits"
+        ]
+    },
+    "field": {
+        "title": "Roving Field Service & Support",
+        "stat": "3.5 hrs",
+        "statDesc": "Daily Technician Time Saved",
+        "challenge": "Field technicians facing unfamiliar machinery models and needing immediate access to torque specs and OEM wiring guides.",
+        "solution": "Mobile-first offline AI model that identifies models locally in remote sites without cell coverage.",
+        "pills": [
+            "Offline-first AI",
+            "Immediate torque specs",
+            "Digital service sign-off"
+        ]
+    },
+    "maintenance": {
+        "title": "Maintenance & Reliability Operations",
+        "stat": "70%",
+        "statDesc": "Fewer Repeat Failures",
+        "challenge": "Lack of historical repair context leading to incorrect part replacements and recurring machine failures.",
+        "solution": "Instant overlay of last service date, past failure logs, and recommended spare parts upon visual recognition.",
+        "pills": [
+            "Historical service timeline",
+            "Spare parts recommendation",
+            "Predictive failure alerts"
+        ]
+    },
+    "asset": {
+        "title": "Enterprise Asset Management (EAM)",
+        "stat": "99.9%",
+        "statDesc": "Inventory Audit Accuracy",
+        "challenge": "Ghost assets and outdated spreadsheets creating costly compliance gaps and inaccurate capital depreciation models.",
+        "solution": "Continuous visual audit trail that confirms physical existence and condition with GPS & timestamp metadata.",
+        "pills": [
+            "Automated asset tagging",
+            "Zero ghost inventory",
+            "Seamless ERP integration"
+        ]
+    },
+    "infrastructure": {
+        "title": "Infrastructure & Municipal Services",
+        "stat": "60%",
+        "statDesc": "Faster Emergency Triage",
+        "challenge": "Critical utility hubs, water pumps, and power substations requiring rapid triage during grid anomalies.",
+        "solution": "Secure, high-reliability visual intelligence that standardizes emergency inspection procedures for city teams.",
+        "pills": [
+            "Substation component parsing",
+            "Emergency standard workflows",
+            "High-security telemetry"
+        ]
+    }
+},
+  es: {
+    "manufacturing": {
+        "title": "Plantas de Fabricación y Líneas de Ensamblaje",
+        "stat": "92%",
+        "statDesc": "Diagnóstico de Línea Más Rápido",
+        "challenge": "Tiempos de inactividad no programados en líneas de ensamblaje críticas por búsquedas manuales lentas y manuales dispersos.",
+        "solution": "Identificación visual de brazos robóticos, husillos CNC y transportadores con despliegue inmediato de esquemas técnicos en tablets.",
+        "pills": [
+            "Cero manuales de papel",
+            "Identificación de piezas al instante",
+            "Cambio rápido de turno"
+        ]
+    },
+    "operations": {
+        "title": "Operaciones Industriales Pesadas y Plantas",
+        "stat": "85%",
+        "statDesc": "Reducción en MTTR",
+        "challenge": "Gestión de miles de bombas mecánicas, reductores y compresores dispersos en complejos extensos sin placas legibles.",
+        "solution": "Identificación apuntando la cámara que indexa equipos al instante, incluso con grasa, polvo o desgaste ambiental.",
+        "pills": [
+            "Cobertura de complejos extensos",
+            "Lectura de placas desgastadas",
+            "Telemetría centralizada"
+        ]
+    },
+    "facility": {
+        "title": "Gestión de Edificios e Instalaciones (Facility)",
+        "stat": "4.8x",
+        "statDesc": "Rendimiento de Inspección",
+        "challenge": "Técnicos perdiendo tiempo buscando unidades HVAC, cuadros eléctricos y colectores en complejos de gran escala.",
+        "solution": "Etiquetas visuales aumentadas y sincronización con gemelos digitales con rutinas asistidas de verificación.",
+        "pills": [
+            "Indexación HVAC y cuadros",
+            "Listas de verificación automáticas",
+            "Auditoría de ciclo de vida"
+        ]
+    },
+    "field": {
+        "title": "Servicio y Soporte Técnico en Campo",
+        "stat": "3.5 hrs",
+        "statDesc": "Ahorro Diario por Técnico",
+        "challenge": "Técnicos frente a modelos desconocidos sin conexión a internet y necesitando pares de apriete y guías OEM.",
+        "solution": "Modelo de IA local offline que identifica maquinaria en zonas remotas sin cobertura celular.",
+        "pills": [
+            "IA offline en el dispositivo",
+            "Pares de apriete inmediatos",
+            "Cierre digital de servicio"
+        ]
+    },
+    "maintenance": {
+        "title": "Operaciones de Mantenimiento y Confiabilidad",
+        "stat": "70%",
+        "statDesc": "Menos Fallos Repetitivos",
+        "challenge": "Falta de historial de reparaciones que genera reemplazo incorrecto de repuestos y averías recurrentes.",
+        "solution": "Superposición instantánea de última fecha de servicio, historial de averías y repuestos recomendados al escanear.",
+        "pills": [
+            "Línea de tiempo histórica",
+            "Recomendación de repuestos",
+            "Alertas predictivas de fallo"
+        ]
+    },
+    "asset": {
+        "title": "Gestión de Activos Empresariales (EAM)",
+        "stat": "99.9%",
+        "statDesc": "Precisión en Auditorías",
+        "challenge": "Activos fantasma y hojas de cálculo obsoletas que generan brechas de cumplimiento y depreciación errónea.",
+        "solution": "Pista de auditoría visual continua que certifica existencia física y estado con metadatos GPS y fecha.",
+        "pills": [
+            "Etiquetado automático",
+            "Cero inventario fantasma",
+            "Integración fluida con ERP"
+        ]
+    },
+    "infrastructure": {
+        "title": "Infraestructura y Servicios Municipales",
+        "stat": "60%",
+        "statDesc": "Triaje de Emergencia Rápido",
+        "challenge": "Subestaciones eléctricas y bombas de agua críticas que requieren diagnóstico urgente ante anomalías de red.",
+        "solution": "Inteligencia visual de alta fiabilidad que estandariza protocolos de inspección de emergencia en campo.",
+        "pills": [
+            "Lectura de subestaciones",
+            "Protocolos estándar de emergencia",
+            "Telemetría de alta seguridad"
+        ]
+    }
+},
+  fr: {
+    "manufacturing": {
+        "title": "Usines de Fabrication et Lignes d'Assemblage",
+        "stat": "92%",
+        "statDesc": "Diagnostic de Ligne Plus Rapide",
+        "challenge": "Arrêts non planifiés sur lignes critiques causés par des recherches manuelles lentes et des documentations dispersées.",
+        "solution": "Identification visuelle de bras robotisés, broches CNC et convoyeurs avec accès immédiat aux schémas sur tablettes.",
+        "pills": [
+            "Zéro manuel papier",
+            "Numérotation immédiate des pièces",
+            "Relève rapide des équipes"
+        ]
+    },
+    "operations": {
+        "title": "Opérations Industrielles Lourdes & Usines",
+        "stat": "85%",
+        "statDesc": "Réduction du MTTR",
+        "challenge": "Gestion de milliers de pompes, réducteurs et compresseurs répartis sur de vastes sites sans plaques lisibles.",
+        "solution": "Reconnaissance optique par caméra qui indexe instantanément les machines, même couvertes de graisse ou usées.",
+        "pills": [
+            "Couverture de grands sites",
+            "Lecture de plaques usées",
+            "Télémétrie centrale usine"
+        ]
+    },
+    "facility": {
+        "title": "Gestion Technique de Bâtiments & Installations",
+        "stat": "4.8x",
+        "statDesc": "Débit d'Inspection",
+        "challenge": "Perte de temps des techniciens pour localiser CVC, armoires électriques et collecteurs dans des complexes étendus.",
+        "solution": "Tags visuels augmentés et jumeaux numériques avec checklists guidées de vérification de filtres et vannes.",
+        "pills": [
+            "Indexation CVC et armoires",
+            "Checklists automatisées",
+            "Audits de cycle de vie"
+        ]
+    },
+    "field": {
+        "title": "Service & Maintenance Terrain Itinérante",
+        "stat": "3.5 hrs",
+        "statDesc": "Temps Économisé / Jour / Technicien",
+        "challenge": "Techniciens face à des équipements inconnus nécessitant des couples de serrage et guides OEM sans réseau.",
+        "solution": "Modèle IA embarqué hors ligne qui identifie les modèles localement sans couverture mobile.",
+        "pills": [
+            "IA locale hors ligne",
+            "Couples de serrage immédiats",
+            "Validation numérique de service"
+        ]
+    },
+    "maintenance": {
+        "title": "Maintenance & Fiabilité Opérationnelle",
+        "stat": "70%",
+        "statDesc": "Moins de Pannes Répétées",
+        "challenge": "Manque d'historique entraînant le remplacement de mauvaises pièces et des pannes récurrentes.",
+        "solution": "Affichage immédiat de la date du dernier entretien, historique des pannes et pièces recommandées par scan.",
+        "pills": [
+            "Historique chronologique",
+            "Recommandation de pièces",
+            "Alertes prédictives de panne"
+        ]
+    },
+    "asset": {
+        "title": "Gestion d'Actifs d'Entreprise (EAM)",
+        "stat": "99.9%",
+        "statDesc": "Précision d'Audit d'Inventaire",
+        "challenge": "Actifs fantômes et tableurs obsolètes créant des écarts de conformité et des amortissements erronés.",
+        "solution": "Piste d'audit visuelle continue confirmant l'existence et l'état physique avec métadonnées GPS horodatées.",
+        "pills": [
+            "Marquage automatique",
+            "Zéro inventaire fantôme",
+            "Intégration fluide ERP"
+        ]
+    },
+    "infrastructure": {
+        "title": "Infrastructures & Services Publics",
+        "stat": "60%",
+        "statDesc": "Triage d'Urgence Accéléré",
+        "challenge": "Sous-stations électriques et stations de pompage nécessitant un diagnostic urgent lors d'anomalies de réseau.",
+        "solution": "Intelligence visuelle de haute fiabilité standardisant les procédures d'inspection d'urgence.",
+        "pills": [
+            "Analyse de sous-stations",
+            "Procédures d'urgence standard",
+            "Télémétrie haute sécurité"
+        ]
+    }
+}
 };
 
-function initIndustryTabs() {
-  const btns = document.querySelectorAll('.ind-tab-btn');
+let currentActiveIndustry = 'manufacturing';
+
+function loadIndustry(key) {
+  currentActiveIndustry = key;
+  const langDb = INDUSTRY_DATA_I18N[currentLanguage] || INDUSTRY_DATA_I18N['en'];
+  const data = langDb[key];
+  if (!data) return;
+
   const title = document.getElementById('indTitle');
   const stat = document.getElementById('indStat');
   const statDesc = document.getElementById('indStatDesc');
@@ -4433,26 +4890,27 @@ function initIndustryTabs() {
   const solution = document.getElementById('indSolution');
   const pills = document.getElementById('indPills');
 
-  if (!btns.length || !title) return;
+  if (title) title.innerText = data.title;
+  if (stat) stat.innerText = data.stat;
+  if (statDesc) statDesc.innerText = data.statDesc;
+  if (challenge) challenge.innerText = data.challenge;
+  if (solution) solution.innerText = data.solution;
+  if (pills) pills.innerHTML = data.pills.map(p => `<li>${p}</li>`).join('');
+}
+
+function initIndustryTabs() {
+  const btns = document.querySelectorAll('.ind-tab-btn');
+  if (!btns.length) return;
 
   btns.forEach(btn => {
     btn.addEventListener('click', () => {
       btns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-
-      const key = btn.getAttribute('data-industry');
-      const data = INDUSTRY_DATA[key];
-      if (!data) return;
-
-      title.innerText = data.title;
-      stat.innerText = data.stat;
-      statDesc.innerText = data.statDesc;
-      challenge.innerText = data.challenge;
-      solution.innerText = data.solution;
-
-      pills.innerHTML = data.pills.map(p => `<li>${p}</li>`).join('');
+      loadIndustry(btn.getAttribute('data-industry'));
     });
   });
+
+  loadIndustry('manufacturing');
 }
 
 /* ==========================================================================
@@ -4477,9 +4935,9 @@ function initRoiCalculator() {
     const inspections = parseInt(sliderInspections.value, 10);
     const rate = parseInt(sliderRate.value, 10);
 
-    valTechs.innerText = techs;
-    valInspections.innerText = inspections.toLocaleString();
-    valRate.innerText = `$${rate}`;
+    if (valTechs) valTechs.innerText = techs;
+    if (valInspections) valInspections.innerText = inspections.toLocaleString();
+    if (valRate) valRate.innerText = `$${rate}`;
 
     const hoursSavedMonthly = Math.round(inspections * 0.467);
     const annualSavings = Math.round(hoursSavedMonthly * 12 * rate);
@@ -4501,665 +4959,717 @@ function initRoiCalculator() {
 }
 
 /* ==========================================================================
-   10. Clipboard Copying & Toast Notification System
+   10. Toast Notification System & Clipboard
    ========================================================================== */
-function showToast(message) {
+function showToast(message, type = 'info') {
   const container = document.getElementById('toastContainer');
   if (!container) return;
 
   const toast = document.createElement('div');
-  toast.className = 'toast-message';
+  toast.className = `toast-item toast-${type}`;
   toast.innerHTML = `
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-    <span>${message}</span>
+    <span class="toast-dot"></span>
+    <span class="toast-text">${message}</span>
   `;
 
   container.appendChild(toast);
+  setTimeout(() => toast.classList.add('visible'), 10);
 
   setTimeout(() => {
-    toast.style.transition = 'opacity 0.3s, transform 0.3s';
-    toast.style.opacity = '0';
-    toast.style.transform = 'translateY(15px)';
+    toast.classList.remove('visible');
     setTimeout(() => toast.remove(), 300);
-  }, 3000);
+  }, 3200);
 }
 
 function initClipboardSystem() {
-  const quickCopy = document.getElementById('quickCopyEmail');
-  if (quickCopy) {
-    quickCopy.addEventListener('click', () => {
-      const email = quickCopy.getAttribute('data-copy');
-      navigator.clipboard.writeText(email).then(() => {
-        showToast(`Copied ${email} to clipboard!`);
-      });
-    });
-  }
-
-  const copyButtons = document.querySelectorAll('.ch-copy-btn');
+  const copyButtons = document.querySelectorAll('[data-copy]');
   copyButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const parent = btn.closest('.channel-box');
-      if (parent) {
-        const email = parent.getAttribute('data-copy');
-        navigator.clipboard.writeText(email).then(() => {
-          showToast(`Copied ${email} to clipboard!`);
-        });
-      }
+      e.preventDefault();
+      const textToCopy = btn.getAttribute('data-copy');
+      if (!textToCopy) return;
+
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        showToast(`Copied: ${textToCopy}`, 'success');
+      }).catch(() => {
+        showToast(`Copy manually: ${textToCopy}`, 'info');
+      });
     });
   });
 }
 
 /* ==========================================================================
-   11. Contact Form Processing & Routing
+   11. Interactive Contact Form Submission Logic
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('contactForm');
   const feedback = document.getElementById('formFeedback');
-  const submitBtn = document.getElementById('submitBtn');
-  const submitBtnText = document.getElementById('submitBtnText');
-
-  if (!form || !feedback || !submitBtn) return;
+  if (!form) return;
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('fullName').value.trim();
-    const email = document.getElementById('workEmail').value.trim();
-    const company = document.getElementById('companyName').value.trim();
-    const dept = document.getElementById('departmentSelect').value;
-    const msg = document.getElementById('message').value.trim();
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const org = form.organization ? form.organization.value.trim() : '';
+    const message = form.message.value.trim();
 
-    let valid = true;
-
-    if (!name) {
-      document.getElementById('nameError').classList.add('visible');
-      valid = false;
-    } else {
-      document.getElementById('nameError').classList.remove('visible');
+    if (!name || !email || !message) {
+      if (feedback) {
+        feedback.className = 'form-feedback error';
+        feedback.innerText = currentLanguage === 'es' 
+          ? 'Por favor completa todos los campos requeridos.' 
+          : (currentLanguage === 'fr' ? 'Veuillez remplir tous les champs obligatoires.' : 'Please fill out all required fields.');
+        feedback.style.display = 'block';
+      }
+      return;
     }
 
-    if (!email || !email.includes('@')) {
-      document.getElementById('emailError').classList.add('visible');
-      valid = false;
-    } else {
-      document.getElementById('emailError').classList.remove('visible');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<span>${currentLanguage === 'es' ? 'Enviando...' : (currentLanguage === 'fr' ? 'Envoi en cours...' : 'Sending...')}</span>`;
     }
-
-    if (!msg) {
-      document.getElementById('msgError').classList.add('visible');
-      valid = false;
-    } else {
-      document.getElementById('msgError').classList.remove('visible');
-    }
-
-    if (!valid) return;
-
-    submitBtn.disabled = true;
-    submitBtnText.innerText = 'Routing Message...';
 
     setTimeout(() => {
-      const subject = encodeURIComponent(`[Enterprise Inquiry] ${company || name} - MOSBI Operations`);
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nCompany: ${company}\nTarget Dept: ${dept}\n\nMessage:\n${msg}`);
-      const mailto = `mailto:${dept}?subject=${subject}&body=${body}`;
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `<span>${currentLanguage === 'es' ? 'Mensaje Enviado ✓' : (currentLanguage === 'fr' ? 'Message Envoyé ✓' : 'Message Sent ✓')}</span>`;
+      }
 
-      feedback.style.display = 'block';
-      feedback.className = 'form-feedback success';
-      feedback.innerHTML = `Thank you, <strong>${name}</strong>. Opening your email client to dispatch directly to <strong>${dept}</strong>.`;
+      if (feedback) {
+        feedback.className = 'form-feedback success';
+        feedback.innerText = currentLanguage === 'es'
+          ? `¡Gracias, ${name}! Tu solicitud ha sido recibida. Nos comunicaremos contigo en menos de 24 horas.`
+          : (currentLanguage === 'fr' 
+             ? `Merci ${name} ! Votre demande a été reçue. Nous vous contacterons sous 24 heures.`
+             : `Thank you, ${name}! Your inquiry has been received. Our team will contact you within 24 hours.`);
+        feedback.style.display = 'block';
+      }
 
-      window.location.href = mailto;
-
-      submitBtn.disabled = false;
-      submitBtnText.innerText = 'Message Dispatched!';
       form.reset();
-      showToast(`Inquiry prepared for ${dept}`);
-    }, 600);
+      showToast(currentLanguage === 'es' ? 'Mensaje enviado exitosamente' : (currentLanguage === 'fr' ? 'Message envoyé avec succès' : 'Inquiry sent successfully!'), 'success');
+    }, 900);
   });
 }
 
-
 /* ==========================================================================
-   11. Multi-Language Internationalization (i18n) Engine
+   12. Multi-Language Internationalization (i18n) Engine
    English (EN), Spanish (ES), French (FR)
    ========================================================================== */
-
 const TRANSLATIONS = {
   en: {
-    // Navigation
-    'nav.mission': 'Mission',
-    'nav.capabilities': 'Capabilities',
-    'nav.product': 'Machine Identifier AI™',
-    'nav.industries': 'Industries',
-    'nav.architecture': 'Architecture',
-    'nav.roi': 'ROI Calculator',
-    'nav.company': 'Company',
-    'nav.get_in_touch': 'Get in Touch',
-
-    // Hero Section
-    'hero.pill': 'Next-Gen Industrial Computer Vision & Asset AI',
-    'hero.pill_chip': 'v4.2 Production',
-    'hero.title_pre': 'Building Intelligent Software for',
-    'hero.title_highlight': 'Industrial Operations',
-    'hero.desc': 'MOSBI Systems designs cutting-edge software solutions combining Artificial Intelligence, Industrial Intelligence, Computer Vision, and scalable Cloud platforms for physical asset management.',
-    'hero.cta_capabilities': 'Explore Capabilities',
-    'hero.cta_demo': 'Launch Machine Demo',
-    'hero.dossier_type': 'ROTARY EQUIPMENT',
-    'hero.dossier_title': 'Centrifugal Slurry Pump',
-    'hero.dossier_health': 'Healthy • 98%',
-    'hero.prop_tag': 'Asset Tag:',
-    'hero.prop_serial': 'Serial OCR:',
-    'hero.prop_vendor': 'OEM Vendor:',
-    'hero.prop_temp': 'Operating Temp:',
-    'hero.prop_service': 'Next Service:',
-    'hero.prop_service_val': '14 Days (Routine)',
-    'hero.prop_sync': 'CMMS Sync:',
-    'hero.prop_sync_val': 'Synced • ID #9481',
-    'hero.dossier_btn': 'Access Complete Machine Dossier',
-    'hero.stream_title': 'LIVE INFERENCE STREAM',
-
-    // Metrics Strip
-    'metric.accuracy_title': 'Recognition Accuracy',
-    'metric.accuracy_sub': 'Multi-angle visual neural validation',
-    'metric.latency_title': 'Edge Latency',
-    'metric.latency_sub': 'Instant zero-delay mobile execution',
-    'metric.doc_title': 'Documentation Reduction',
-    'metric.doc_sub': 'Automated telemetry & manual elimination',
-    'metric.vis_title': 'Critical Asset Visibility',
-    'metric.vis_sub': 'Continuous cloud synchronization',
-
-    // Mission Section
-    'mission.badge': 'OUR PURPOSE & DIRECTION',
-    'mission.title': '<span data-i18n="mission.title">Transforming Physical Operations with Intelligence</span>',
-    'mission.desc': 'At MOSBI Systems, our mission is to develop intelligent software that empowers organizations to seamlessly manage, understand, and optimize their complex physical operations.',
-    'mission.quote': 'We believe the future of industrial efficiency lies at the intersection of high-precision Computer Vision, edge Machine Learning, and cloud-native architecture.',
-    'mission.pill1': 'Real-Time Telemetry',
-    'mission.pill2': 'Deep Neural Networks',
-    'mission.pill3': 'Hardware-Agnostic',
-    'mission.pill4': 'Zero Data Loss',
-
-    // Capabilities Section
-    'cap.badge': 'CORE PILLARS',
-    'cap.title': 'Enterprise-Grade Engineering',
-    'cap.sub': '<span data-i18n="cap.sub">Four interconnected technical disciplines driving modern industrial autonomy.</span>',
-    'cap.card1_badge': 'Neural Architectures',
-    'cap.card1_title': 'Artificial Intelligence',
-    'cap.card1_desc': 'Deploying custom deep neural networks that automate complex decision-making, pattern recognition, and predictive workflows.',
-    'cap.card1_b1': 'Predictive Diagnostics & Anomaly Detection',
-    'cap.card1_b2': 'Autonomous Visual Inspection Pipelines',
-    'cap.card1_b3': 'Edge Machine Learning Model Compression',
-    'cap.card2_badge': 'Physical-Digital Convergence',
-    'cap.card2_title': 'Industrial Intelligence',
-    'cap.card2_desc': 'Transforming disparate raw machine telemetry into actionable insights, health indices, and lifecycle predictions.',
-    'cap.card2_b1': 'Asset Lifecycle Forecasting',
-    'cap.card2_b2': 'Dynamic Load & Stress Analysis',
-    'cap.card2_b3': 'Mean Time to Failure (MTTF) Modeling',
-    'cap.card3_badge': 'Field Ergonomics',
-    'cap.card3_title': 'Mobile Applications',
-    'cap.card3_desc': 'Creating modern and intuitive mobile experiences that enable field teams and organizations to operate efficiently from anywhere.',
-    'cap.card3_b1': 'Offline-First Local Model Execution',
-    'cap.card3_b2': 'Instant Field Data Capture & Tagging',
-    'cap.card3_b3': 'Technician Guidance Workflows',
-    'cap.card4_badge': 'Enterprise Scale',
-    'cap.card4_title': 'Cloud Software',
-    'cap.card4_desc': 'Designing scalable SaaS platforms and distributed cloud systems that support sustainable organizational growth and digital transformation.',
-    'cap.card4_b1': 'Enterprise Asset Registry & Digital Twins',
-    'cap.card4_b2': 'Real-Time Multi-Plant Fleet Analytics',
-    'cap.card4_b3': 'Secure API Integrations with CMMS & ERP',
-
-    // Product Section
-    'prod.badge': 'FLAGSHIP PLATFORM',
-    'prod.title': 'Machine Identifier AI™',
-    'prod.sub': 'An AI-powered platform designed to help identify industrial machinery and equipment quickly and accurately.',
-    'prod.core_title': 'Core Capabilities',
-    'prod.cap1_title': 'Equipment recognition using AI',
-    'prod.cap1_desc': 'Instant identification of complex industrial models, turbines, valves, and gearboxes.',
-    'prod.cap2_title': 'Visual asset identification',
-    'prod.cap2_desc': 'Point-and-shoot camera identification with no tags, barcodes, or manual lookups required.',
-    'prod.cap3_title': 'Technical information retrieval',
-    'prod.cap3_desc': 'Instant access to operational manuals, wiring diagrams, torque specs, and safety bulletins.',
-    'prod.cap4_title': 'Field technician productivity',
-    'prod.cap4_desc': 'Drastically reduce equipment search times, eliminating downtime and costly servicing delays.',
-    'prod.scanner_title': 'NEURAL OPTICAL SCANNER v4.2',
-    'prod.scanner_status': 'SCANNING ENGINE ACTIVE',
-    'prod.select_target_label': 'Select Industrial Equipment Target:',
-    'prod.target1': 'Centrifugal Slurry Pump (Mining / FlowMax CPX)',
-    'prod.target2': 'High-Pressure Steam Turbine (Energy / Westinghouse 45MW)',
-    'prod.target3': '6-Axis Robotic Articulated Arm (Automotive / KUKA KR-1000)',
-    'prod.target4': 'Cryogenic Reciprocating Compressor (Chemical / Atlas Copco)',
-    'prod.scan_btn': 'Run Neural Visual Scan',
-    'prod.upload_btn': 'Upload Photo / Image',
-    'prod.specs_heading': 'AI Telemetry & Diagnostics Dossier',
-
-    // Industries Section
-    'ind.badge': 'WHERE WE DEPLOY',
-    'ind.title': 'Engineered for Demanding Sectors',
-    'ind.sub': 'Purpose-built intelligence tailored to heavy infrastructure, strict compliance, and high-uptime environments.',
-
-    // Architecture Section
-    'arch.badge': 'SYSTEM DESIGN',
-    'arch.title': 'Edge-to-Cloud Neural Pipeline',
-    'arch.sub': 'Built with zero single-points-of-failure, sub-250ms visual classification latency, and end-to-end encryption.',
-
-    // ROI Calculator
-    'roi.badge': 'BUSINESS IMPACT ESTIMATOR',
-    'roi.title': 'Quantify Your Operational Return',
-    'roi.sub': 'Simulate the immediate labor hours saved and downtime avoided by deploying MOSBI Systems AI in your facilities.',
-    'roi.lbl_assets': 'Number of Physical Assets',
-    'roi.lbl_techs': 'Field Technicians / Operators',
-    'roi.lbl_rate': 'Average Technician Hourly Rate ($)',
-    'roi.lbl_downtime': 'Average Hourly Downtime Cost ($)',
-    'roi.res_hours': 'Annual Labor Hours Saved',
-    'roi.res_downtime': 'Downtime Cost Reduction',
-    'roi.res_net': '3-Year Net Projected Value',
-    'roi.res_payback': 'Estimated Payback Period',
-    'roi.res_payback_val': '< 3.2 Months',
-
-    // Company Section
-    'comp.badge': 'CORPORATE OVERVIEW',
-    'comp.title': 'MOSBI Systems LLC',
-    'comp.sub': 'An agile industrial technology firm registered and headquartered in Maryland, USA.',
-    'comp.lbl_legal': 'Legal Name',
-    'comp.lbl_type': 'Entity Type',
-    'comp.val_type': 'Limited Liability Company (LLC)',
-    'comp.lbl_jurisdiction': 'Jurisdiction',
-    'comp.lbl_domain': 'Official Domain',
-    'comp.lbl_focus': 'Strategic Focus',
-    'comp.val_focus': 'Industrial AI, Computer Vision, Asset Management',
-    'comp.future_title': 'Future Products & Capabilities',
-
-    // Contact Section
-    'contact.badge': 'GET IN TOUCH',
-    'contact.title': 'Initiate Your Industrial AI Transformation',
-    'contact.sub': 'Connect with our engineering and solutions team to discuss custom deployments, pilot programs, or technology partnerships.',
-    'contact.card_sales': 'Enterprise Sales & Demos',
-    'contact.card_info': 'General Inquiries',
-    'contact.card_support': 'Technical Support',
-    'contact.form_title': 'Send a Direct Message',
-    'contact.form_desc': 'Complete the form below to reach our specialized industrial solutions engineers.',
-    'contact.lbl_name': 'Full Name *',
-    'contact.ph_name': 'John Doe',
-    'contact.lbl_email': 'Work Email *',
-    'contact.ph_email': 'john@company.com',
-    'contact.lbl_org': 'Organization / Company *',
-    'contact.ph_org': 'Apex Manufacturing Corp',
-    'contact.lbl_topic': 'Inquiry Topic *',
-    'contact.opt_select': 'Select Topic',
-    'contact.opt_sales': 'Enterprise Sales & Platform Demos',
-    'contact.opt_info': 'General Information & Inquiries',
-    'contact.opt_support': 'Technical & Engineering Support',
-    'contact.opt_pilot': 'Request a Custom Pilot Program',
-    'contact.lbl_msg': 'Your Message *',
-    'contact.ph_msg': 'Describe your physical asset challenges, facility size, or pilot requirements...',
-    'contact.btn_send': 'Send Message',
-    'contact.privacy': 'Your data is protected under enterprise-grade encryption. We never share operational details.',
-
-    // Footer
-    'footer.tagline': 'Building intelligent software, Computer Vision models, and cloud platforms for mission-critical industrial operations.',
-    'footer.location': 'Maryland, USA',
-    'footer.col_nav': 'Navigation',
-    'footer.col_sol': 'Core Solutions',
-    'footer.col_ch': 'Contact Channels',
-    'footer.rights': '© 2026 MOSBI Systems LLC. All rights reserved.',
-    'footer.status': 'All Neural Pipelines Operational • Production Ready'
-  },
-
+    "nav.mission": "Mission",
+    "nav.capabilities": "Capabilities",
+    "nav.product": "Machine Identifier AI™",
+    "nav.industries": "Industries",
+    "nav.architecture": "Architecture",
+    "nav.roi": "ROI Calculator",
+    "nav.company": "Company",
+    "nav.get_in_touch": "Get in Touch",
+    "hero.pill": "Next-Gen Industrial Computer Vision & Asset AI",
+    "hero.pill_chip": "v4.2 Production",
+    "hero.title_pre": "Building Intelligent Software for",
+    "hero.title_highlight": "Industrial Operations",
+    "hero.desc": "Software, Artificial Intelligence, Computer Vision, and Digital Solutions engineered to accelerate productivity, eliminate maintenance bottlenecks, and maximize operational uptime.",
+    "hero.cta_explore": "Explore Machine Identifier AI™",
+    "hero.cta_demo": "Request Technical Demo",
+    "hero.cta_copy": "Copy info@mosbisystems.com",
+    "hero.sim_title": "MOSBI Machine Identifier AI™ • Optical Inspection Simulator",
+    "hero.sim_status": "EDGE SYNC ACTIVE",
+    "hero.tab_turbine": "Centrifugal Pump #402",
+    "hero.tab_valve": "Cryogenic Valve PV-94",
+    "hero.tab_motor": "Induction Motor M-7",
+    "hero.tab_compressor": "Screw Compressor SC-12",
+    "hero.vf_latency": "Inference:",
+    "hero.vf_model": "Model:",
+    "hero.vf_confidence": "Confidence:",
+    "hero.dossier_tab": "Asset Intelligence Sheet",
+    "hero.dossier_type": "ROTARY EQUIPMENT",
+    "hero.dossier_title": "Centrifugal Slurry Pump",
+    "hero.dossier_health": "Healthy • 98%",
+    "hero.prop_tag": "Asset Tag:",
+    "hero.prop_serial": "Serial OCR:",
+    "hero.prop_vendor": "OEM Vendor:",
+    "hero.prop_temp": "Operating Temp:",
+    "hero.prop_service": "Next Service:",
+    "hero.prop_sync": "CMMS Sync:",
+    "hero.dossier_btn": "Access Complete Machine Dossier",
+    "hero.stream_title": "LIVE INFERENCE STREAM",
+    "metric.accuracy_title": "Recognition Accuracy",
+    "metric.accuracy_sub": "Multi-angle visual neural validation",
+    "metric.latency_title": "Edge Latency",
+    "metric.latency_sub": "Instant zero-delay mobile execution",
+    "metric.doc_title": "Documentation Reduction",
+    "metric.doc_sub": "Automated telemetry & manual elimination",
+    "metric.vis_title": "Critical Asset Visibility",
+    "metric.vis_sub": "Continuous cloud synchronization",
+    "mission.badge": "OUR PURPOSE & DIRECTION",
+    "mission.title_pre": "Transforming Physical Operations with",
+    "mission.title_highlight": "Intelligence",
+    "mission.lead": "At MOSBI Systems, our mission is to develop intelligent software solutions that empower organizations to seamlessly understand, manage, and optimize their physical operations and critical assets.",
+    "mission.secondary": "We bridge industrial machinery and cloud enterprise platforms through real-time computer vision, local edge ML inference, and automated technical intelligence.",
+    "mission.pill1": "Real-Time Telemetry",
+    "mission.pill2": "Deep Neural Networks",
+    "mission.pill3": "Hardware-Agnostic",
+    "mission.pill4": "Zero Data Loss",
+    "cap.subbadge": "Engineering Disciplines",
+    "cap.badge": "CORE PILLARS",
+    "cap.heading_pre": "Core",
+    "cap.heading_highlight": "Capabilities",
+    "cap.lead": "Four interconnected engineering disciplines driving industrial autonomy and frontline productivity.",
+    "cap.card1_badge": "Neural Architectures",
+    "cap.ai_title": "Artificial Intelligence",
+    "cap.card1_desc": "Deploying custom deep neural networks that automate complex decision-making, pattern recognition, and predictive workflows.",
+    "cap.card1_b1": "Predictive Diagnostics & Anomaly Detection",
+    "cap.card1_b2": "Autonomous Visual Inspection Pipelines",
+    "cap.card1_b3": "Edge Machine Learning Model Compression",
+    "cap.card2_badge": "Physical-Digital Convergence",
+    "cap.ii_title": "Industrial Intelligence",
+    "cap.card2_desc": "Transforming disparate raw machine telemetry into actionable insights, health indices, and lifecycle predictions.",
+    "cap.card2_b1": "Asset Lifecycle Forecasting",
+    "cap.card2_b2": "Dynamic Load & Stress Analysis",
+    "cap.card2_b3": "Mean Time to Failure (MTTF) Modeling",
+    "cap.card3_badge": "Field Ergonomics",
+    "cap.mob_title": "Mobile Applications",
+    "cap.card3_desc": "Creating modern and intuitive mobile experiences that enable field teams and organizations to operate efficiently from anywhere.",
+    "cap.card3_b1": "Offline-First Local Model Execution",
+    "cap.card3_b2": "Instant Field Data Capture & Tagging",
+    "cap.card3_b3": "Technician Guidance Workflows",
+    "cap.card4_badge": "Enterprise Scale",
+    "cap.cloud_title": "Cloud Software",
+    "cap.card4_desc": "Designing scalable SaaS platforms and distributed cloud systems that support sustainable organizational growth and digital transformation.",
+    "cap.card4_b1": "Enterprise Asset Registry & Digital Twins",
+    "cap.card4_b2": "Real-Time Multi-Plant Fleet Analytics",
+    "cap.card4_b3": "Secure API Integrations with CMMS & ERP",
+    "prod.badge": "FLAGSHIP PLATFORM",
+    "prod.title": "Machine Identifier AI™",
+    "prod.sub": "An AI-powered platform designed to help identify industrial machinery and equipment quickly and accurately.",
+    "prod.core_title": "Core Capabilities",
+    "prod.cap1_title": "Equipment recognition using AI",
+    "prod.cap1_desc": "Instant identification of complex industrial models, turbines, valves, and gearboxes.",
+    "prod.cap2_title": "Visual asset identification",
+    "prod.cap2_desc": "Point-and-shoot camera identification with no tags, barcodes, or manual lookups required.",
+    "prod.cap3_title": "Industrial equipment documentation",
+    "prod.cap3_desc": "Immediate digital linking to OEM schematics, torque specs, and historical maintenance logs.",
+    "prod.cap4_title": "Maintenance support workflows",
+    "prod.cap4_desc": "Context-aware checklists and step-by-step diagnostic procedures for frontline technicians.",
+    "prod.cap5_title": "Machine data collection and organization",
+    "prod.cap5_desc": "Automated aggregation of plant-floor operating conditions into unified digital twins.",
+    "prod.cap6_title": "Field technician productivity enhancement",
+    "prod.cap6_desc": "Eliminate wasted transit and manual code-matching time for technicians on the floor.",
+    "prod.roi_benefits_title": "Measurable ROI Benefits",
+    "prod.b1_title": "Faster equipment identification",
+    "prod.b1_desc": "Slash asset verification time by up to 90% across distributed operations.",
+    "prod.b2_title": "Reduced manual documentation effort",
+    "prod.b2_desc": "Eliminate human transcription errors and paper binder cataloging.",
+    "prod.b3_title": "Faster troubleshooting & maintenance",
+    "prod.b3_desc": "Accelerate mean-time-to-repair (MTTR) with direct-to-schematic optical recognition.",
+    "prod.b4_title": "Improved knowledge transfer for teams",
+    "prod.b4_desc": "Empower junior technicians with senior-level machine guidance on day one.",
+    "prod.b5_title": "Streamlined operational workflows",
+    "prod.b5_desc": "Integrate directly into leading enterprise CMMS and ERP infrastructure.",
+    "ind.subbadge": "Deployment Domains",
+    "ind.badge": "WHERE WE DEPLOY",
+    "ind.heading_pre": "Industries We",
+    "ind.heading_highlight": "Empower",
+    "ind.lead": "MOSBI Systems solutions are purpose-built for organizations operating in demanding, asset-heavy industrial environments.",
+    "ind.tab_mfg": "Manufacturing",
+    "ind.tab_ops": "Industrial Operations",
+    "ind.tab_fac": "Facility Management",
+    "ind.tab_field": "Field Service",
+    "ind.tab_maint": "Maintenance Operations",
+    "ind.tab_asset": "Asset Management",
+    "ind.tab_infra": "Infrastructure Services",
+    "ind.lbl_challenge": "Operational Challenges",
+    "ind.lbl_solution": "The MOSBI AI Solution",
+    "ind.lbl_gains": "Key Operational Gains",
+    "arch.subbadge": "Architectural Flow",
+    "arch.badge": "SYSTEM DESIGN",
+    "arch.heading_pre": "Edge to Cloud",
+    "arch.heading_highlight": "Pipeline",
+    "arch.lead": "How MOSBI Systems connects frontline visual capture with enterprise cloud synchronization.",
+    "arch.s1_title": "Field Capture",
+    "arch.s1_desc": "Technician points camera or mobile sensor at any industrial equipment or component.",
+    "arch.s2_title": "Edge Inference",
+    "arch.s2_desc": "Proprietary neural model classifies machine signature in <250ms with zero latency.",
+    "arch.s3_title": "Instant Dossier",
+    "arch.s3_desc": "Digital twin specs, OEM manuals, and guided maintenance checklists render on-screen.",
+    "arch.s4_title": "Cloud CMMS Sync",
+    "arch.s4_desc": "Fleet logs, location tags, and repair records update in real time across plant databases.",
+    "roi.subbadge": "Value Estimation",
+    "roi.badge": "BUSINESS IMPACT ESTIMATOR",
+    "roi.heading_pre": "Calculate Your",
+    "roi.heading_highlight": "Operational Savings",
+    "roi.lead": "See how much time and budget MOSBI Machine Identifier AI™ can save your facilities.",
+    "roi.lbl_techs": "Number of Field Technicians / Operators",
+    "roi.lbl_inspections": "Monthly Machine Lookups / Inspections",
+    "roi.lbl_rate": "Average Loaded Technician Hourly Rate ($)",
+    "roi.res_annual_label": "Projected Annual Savings",
+    "roi.res_hours_label": "Technician Hours Saved / Mo",
+    "roi.res_payback_label": "Payback Period",
+    "roi.res_accuracy_label": "Data Accuracy Gain",
+    "comp.subbadge": "Corporate Profile",
+    "comp.badge": "CORPORATE OVERVIEW",
+    "comp.heading_pre": "About",
+    "comp.heading_highlight": "MOSBI Systems",
+    "comp.lead": "MOSBI Systems is an industrial technology company registered in Maryland, United States.",
+    "comp.lbl_name": "Company Name",
+    "comp.lbl_legal": "Legal Structure",
+    "comp.lbl_hq": "Headquarters",
+    "comp.lbl_domain": "Official Domain",
+    "comp.lbl_spec": "Specialization",
+    "comp.val_spec": "Industrial AI & Optical Machine Recognition",
+    "comp.future_title": "Future Products & Capabilities",
+    "contact.subbadge": "Direct Communication",
+    "contact.badge": "GET IN TOUCH",
+    "contact.heading_pre": "Get in",
+    "contact.heading_highlight": "Touch",
+    "contact.lead": "Connect directly with our engineering, sales, or leadership teams for pilot inquiries, enterprise demos, or partnerships.",
+    "contact.card_info": "General Inquiries",
+    "contact.card_sales": "Sales & Enterprise Solutions",
+    "contact.card_support": "Technical Support",
+    "contact.form_title": "Send a Direct Message",
+    "contact.form_desc": "Inquiries are routed directly to the appropriate technical or executive lead within 24 hours.",
+    "contact.lbl_name": "Full Name *",
+    "contact.ph_name": "John Doe",
+    "contact.lbl_email": "Work Email *",
+    "contact.ph_email": "john@company.com",
+    "contact.lbl_org": "Organization / Company *",
+    "contact.ph_org": "Apex Manufacturing Corp",
+    "contact.lbl_topic": "Inquiry Topic *",
+    "contact.opt_select": "Select Topic",
+    "contact.opt_sales": "Enterprise Sales & Platform Demos",
+    "contact.opt_info": "General Information & Inquiries",
+    "contact.opt_support": "Technical & Engineering Support",
+    "contact.opt_pilot": "Request a Custom Pilot Program",
+    "contact.lbl_msg": "Your Message *",
+    "contact.ph_msg": "Describe your physical asset challenges, facility size, or pilot requirements...",
+    "contact.btn_send": "Send Message",
+    "footer.tagline": "Building intelligent software, Computer Vision models, and cloud platforms for mission-critical industrial operations.",
+    "footer.col_nav": "Navigation",
+    "footer.col_sol": "Core Solutions",
+    "footer.col_ch": "Contact Channels",
+    "footer.link_overview": "Overview",
+    "footer.link_mission": "Our Mission",
+    "footer.link_capabilities": "What We Do",
+    "footer.link_industries": "Target Industries",
+    "footer.link_recog": "Equipment Recognition AI",
+    "footer.link_cv": "Computer Vision Systems",
+    "footer.link_mobile": "Mobile Field Apps",
+    "footer.link_cloud": "Cloud SaaS Platforms",
+    "footer.link_roi": "ROI Estimation",
+    "footer.rights": "© 2026 MOSBI Systems LLC. All rights reserved.",
+    "footer.status": "All Neural Pipelines Operational • Production Ready"
+},
   es: {
-    // Navigation
-    'nav.mission': 'Misión',
-    'nav.capabilities': 'Capacidades',
-    'nav.product': 'Machine Identifier AI™',
-    'nav.industries': 'Sectores',
-    'nav.architecture': 'Arquitectura',
-    'nav.roi': 'Calculadora ROI',
-    'nav.company': 'Empresa',
-    'nav.get_in_touch': 'Contáctanos',
-
-    // Hero Section
-    'hero.pill': 'IA de Visión Computacional y Activos Industriales de Próxima Generación',
-    'hero.pill_chip': 'v4.2 Producción',
-    'hero.title_pre': 'Construyendo Software Inteligente para',
-    'hero.title_highlight': 'Operaciones Industriales',
-    'hero.desc': 'MOSBI Systems diseña soluciones de software de vanguardia que combinan Inteligencia Artificial, Inteligencia Industrial, Visión Computacional y plataformas Cloud escalables para la gestión de activos físicos.',
-    'hero.cta_capabilities': 'Explorar Capacidades',
-    'hero.cta_demo': 'Ver Demo Interactiva',
-    'hero.dossier_type': 'EQUIPO ROTATIVO',
-    'hero.dossier_title': 'Bomba Centrífuga de Lodos',
-    'hero.dossier_health': 'Saludable • 98%',
-    'hero.prop_tag': 'Etiqueta Activo:',
-    'hero.prop_serial': 'OCR de Serie:',
-    'hero.prop_vendor': 'Fabricante OEM:',
-    'hero.prop_temp': 'Temp. de Operación:',
-    'hero.prop_service': 'Próximo Servicio:',
-    'hero.prop_service_val': '14 Días (Rutina)',
-    'hero.prop_sync': 'Sincronización CMMS:',
-    'hero.prop_sync_val': 'Sincronizado • ID #9481',
-    'hero.dossier_btn': 'Ver Expediente Técnico Completo',
-    'hero.stream_title': 'TRANSMISIÓN DE INFERENCIA EN VIVO',
-
-    // Metrics Strip
-    'metric.accuracy_title': 'Precisión de Reconocimiento',
-    'metric.accuracy_sub': 'Validación neuronal visual multi-ángulo',
-    'metric.latency_title': 'Latencia en el Edge',
-    'metric.latency_sub': 'Ejecución móvil instantánea sin demora',
-    'metric.doc_title': 'Reducción de Tiempo Manual',
-    'metric.doc_sub': 'Telemetría automatizada y eliminación manual',
-    'metric.vis_title': 'Visibilidad de Activos Críticos',
-    'metric.vis_sub': 'Sincronización continua en la nube',
-
-    // Mission Section
-    'mission.badge': 'NUESTRO PROPÓSITO Y VISIÓN',
-    'mission.title': 'Transformando las Operaciones Físicas con Inteligencia',
-    'mission.desc': 'En MOSBI Systems, nuestra misión es desarrollar software inteligente que permita a las organizaciones gestionar, comprender y optimizar sus complejas operaciones físicas con total fluidez.',
-    'mission.quote': 'Creemos firmemente que el futuro de la eficiencia industrial reside en la intersección de la Visión Computacional de alta precisión, el Machine Learning en el edge y las arquitecturas cloud-native.',
-    'mission.pill1': 'Telemetría en Tiempo Real',
-    'mission.pill2': 'Redes Neuronales Profundas',
-    'mission.pill3': 'Independiente del Hardware',
-    'mission.pill4': 'Cero Pérdida de Datos',
-
-    // Capabilities Section
-    'cap.badge': 'PILARES FUNDAMENTALES',
-    'cap.title': 'Ingeniería de Grado Empresarial',
-    'cap.sub': 'Cuatro disciplinas técnicas interconectadas que impulsan la autonomía industrial moderna.',
-    'cap.card1_badge': 'Arquitecturas Neuronales',
-    'cap.card1_title': 'Inteligencia Artificial',
-    'cap.card1_desc': 'Desplegamos redes neuronales profundas personalizadas que automatizan la toma de decisiones complejas, el reconocimiento de patrones y flujos predictivos.',
-    'cap.card1_b1': 'Diagnóstico Predictivo y Detección de Anomalías',
-    'cap.card1_b2': 'Canalizaciones Autónomas de Inspección Visual',
-    'cap.card1_b3': 'Compresión de Modelos de ML para Edge',
-    'cap.card2_badge': 'Convergencia Físico-Digital',
-    'cap.card2_title': 'Inteligencia Industrial',
-    'cap.card2_desc': 'Transformamos la telemetría dispersa de maquinaria en información procesable, índices de salud y pronósticos de ciclo de vida.',
-    'cap.card2_b1': 'Pronóstico de Ciclo de Vida de Activos',
-    'cap.card2_b2': 'Análisis Dinámico de Carga y Fatiga',
-    'cap.card2_b3': 'Modelado de Tiempo Medio hasta Fallo (MTTF)',
-    'cap.card3_badge': 'Ergonomía de Campo',
-    'cap.card3_title': 'Aplicaciones Móviles',
-    'cap.card3_desc': 'Creamos experiencias móviles modernas e intuitivas que permiten a los equipos técnicos y organizaciones operar con máxima eficiencia en campo.',
-    'cap.card3_b1': 'Ejecución de Modelos Locales Offline',
-    'cap.card3_b2': 'Captura y Etiquetado Inmediato de Datos',
-    'cap.card3_b3': 'Flujos Asistidos de Guiado Técnico',
-    'cap.card4_badge': 'Escala Empresarial',
-    'cap.card4_title': 'Software en la Nube',
-    'cap.card4_desc': 'Diseñamos plataformas SaaS escalables y sistemas distribuidos en la nube que impulsan el crecimiento sostenible y la transformación digital.',
-    'cap.card4_b1': 'Registro Empresarial de Activos y Gemelos Digitales',
-    'cap.card4_b2': 'Analítica en Tiempo Real de Flotas Multi-Planta',
-    'cap.card4_b3': 'Integraciones API Seguras con CMMS y ERP',
-
-    // Product Section
-    'prod.badge': 'PLATAFORMA INSIGNIA',
-    'prod.title': 'Machine Identifier AI™',
-    'prod.sub': 'Una plataforma impulsada por IA diseñada para identificar maquinaria y equipos industriales con máxima rapidez y precisión.',
-    'prod.core_title': 'Capacidades Principales',
-    'prod.cap1_title': 'Reconocimiento de equipos mediante IA',
-    'prod.cap1_desc': 'Identificación instantánea de modelos industriales complejos, turbinas, válvulas y reductores.',
-    'prod.cap2_title': 'Identificación visual de activos',
-    'prod.cap2_desc': 'Identificación óptica apuntando la cámara, sin requerir códigos de barras, etiquetas ni búsquedas manuales.',
-    'prod.cap3_title': 'Recuperación de información técnica',
-    'prod.cap3_desc': 'Acceso instantáneo a manuales operativos, diagramas eléctricos, pares de apriete y boletines de seguridad.',
-    'prod.cap4_title': 'Productividad de técnicos de campo',
-    'prod.cap4_desc': 'Reduce drásticamente los tiempos de búsqueda, eliminando paradas no planificadas y costosos retrasos de servicio.',
-    'prod.scanner_title': 'ESCÁNER ÓPTICO NEURONAL v4.2',
-    'prod.scanner_status': 'MOTOR DE ESCANEO ACTIVO',
-    'prod.select_target_label': 'Selecciona el Objetivo Industrial:',
-    'prod.target1': 'Bomba Centrífuga de Lodos (Minería / FlowMax CPX)',
-    'prod.target2': 'Turbina de Vapor de Alta Presión (Energía / Westinghouse 45MW)',
-    'prod.target3': 'Brazo Articulado Robótico de 6 Ejes (Automotriz / KUKA KR-1000)',
-    'prod.target4': 'Compresor Reciprocante Criogénico (Química / Atlas Copco)',
-    'prod.scan_btn': 'Ejecutar Escaneo Visual',
-    'prod.upload_btn': 'Subir Foto / Imagen',
-    'prod.specs_heading': 'Expediente de Telemetría y Diagnóstico IA',
-
-    // Industries Section
-    'ind.badge': 'SECTORES DE APLICACIÓN',
-    'ind.title': 'Diseñado para Sectores de Alta Exigencia',
-    'ind.sub': 'Inteligencia desarrollada específicamente para infraestructuras críticas, estricto cumplimiento normativo y máxima disponibilidad operativa.',
-
-    // Architecture Section
-    'arch.badge': 'DISEÑO DEL SISTEMA',
-    'arch.title': 'Pipeline Neuronal de Edge a la Nube',
-    'arch.sub': 'Construido sin puntos únicos de fallo, latencia de clasificación visual inferior a 250ms y cifrado de extremo a extremo.',
-
-    // ROI Calculator
-    'roi.badge': 'ESTIMADOR DE IMPACTO ECONÓMICO',
-    'roi.title': 'Cuantifica tu Retorno Operativo',
-    'roi.sub': 'Simula las horas de trabajo ahorradas y el tiempo de inactividad prevenido al implementar la IA de MOSBI Systems en tus instalaciones.',
-    'roi.lbl_assets': 'Número de Activos Físicos',
-    'roi.lbl_techs': 'Técnicos / Operadores de Campo',
-    'roi.lbl_rate': 'Tarifa Horaria Promedio de Técnico ($)',
-    'roi.lbl_downtime': 'Costo Promedio por Hora de Parada ($)',
-    'roi.res_hours': 'Horas Anuales de Trabajo Ahorradas',
-    'roi.res_downtime': 'Reducción de Costos por Inactividad',
-    'roi.res_net': 'Valor Neto Proyectado a 3 Años',
-    'roi.res_payback': 'Período Estimado de Retorno',
-    'roi.res_payback_val': '< 3.2 Meses',
-
-    // Company Section
-    'comp.badge': 'PERFIL CORPORATIVO',
-    'comp.title': 'MOSBI Systems LLC',
-    'comp.sub': 'Una firma de tecnología industrial ágil registrada y con sede en Maryland, EE. UU.',
-    'comp.lbl_legal': 'Razón Social',
-    'comp.lbl_type': 'Tipo de Entidad',
-    'comp.val_type': 'Sociedad de Responsabilidad Limitada (LLC)',
-    'comp.lbl_jurisdiction': 'Jurisdicción',
-    'comp.lbl_domain': 'Dominio Oficial',
-    'comp.lbl_focus': 'Enfoque Estratégico',
-    'comp.val_focus': 'IA Industrial, Visión Computacional, Gestión de Activos',
-    'comp.future_title': 'Productos y Capacidades Futuras',
-
-    // Contact Section
-    'contact.badge': 'CONTÁCTANOS',
-    'contact.title': 'Inicia la Transformación IA de tus Operaciones',
-    'contact.sub': 'Conéctate con nuestro equipo de ingeniería y soluciones para explorar despliegues a medida, programas piloto o alianzas tecnológicas.',
-    'contact.card_sales': 'Ventas Corporativas y Demos',
-    'contact.card_info': 'Consultas Generales',
-    'contact.card_support': 'Soporte Técnico',
-    'contact.form_title': 'Envíanos un Mensaje Directo',
-    'contact.form_desc': 'Completa el siguiente formulario para comunicarte directamente con nuestros ingenieros de soluciones.',
-    'contact.lbl_name': 'Nombre Completo *',
-    'contact.ph_name': 'Tu nombre y apellido',
-    'contact.lbl_email': 'Correo Corporativo *',
-    'contact.ph_email': 'correo@empresa.com',
-    'contact.lbl_org': 'Empresa u Organización *',
-    'contact.ph_org': 'Nombre de tu empresa',
-    'contact.lbl_topic': 'Tema de Consulta *',
-    'contact.opt_select': 'Seleccionar Tema',
-    'contact.opt_sales': 'Ventas Corporativas y Demos',
-    'contact.opt_info': 'Información General y Consultas',
-    'contact.opt_support': 'Soporte Técnico y de Ingeniería',
-    'contact.opt_pilot': 'Solicitar un Programa Piloto a Medida',
-    'contact.lbl_msg': 'Tu Mensaje *',
-    'contact.ph_msg': 'Describe tus desafíos operativos, cantidad de equipos o requerimientos del proyecto piloto...',
-    'contact.btn_send': 'Enviar Mensaje',
-    'contact.privacy': 'Tus datos están protegidos bajo cifrado de grado empresarial. Nunca compartimos información confidencial.',
-
-    // Footer
-    'footer.tagline': 'Desarrollamos software inteligente, modelos de Visión Computacional y plataformas cloud para operaciones industriales críticas.',
-    'footer.location': 'Maryland, EE. UU.',
-    'footer.col_nav': 'Navegación',
-    'footer.col_sol': 'Soluciones Principales',
-    'footer.col_ch': 'Canales de Contacto',
-    'footer.rights': '© 2026 MOSBI Systems LLC. Todos los derechos reservados.',
-    'footer.status': 'Todos los Pipelines Neuronales Operativos • Listo para Producción'
-  },
-
+    "nav.mission": "Misión",
+    "nav.capabilities": "Capacidades",
+    "nav.product": "Machine Identifier AI™",
+    "nav.industries": "Sectores",
+    "nav.architecture": "Arquitectura",
+    "nav.roi": "Calculadora ROI",
+    "nav.company": "Empresa",
+    "nav.get_in_touch": "Contáctanos",
+    "hero.pill": "IA de Visión Computacional y Activos Industriales de Próxima Generación",
+    "hero.pill_chip": "v4.2 Producción",
+    "hero.title_pre": "Construyendo Software Inteligente para",
+    "hero.title_highlight": "Operaciones Industriales",
+    "hero.desc": "Software, Inteligencia Artificial, Visión Computacional y Soluciones Digitales diseñadas para acelerar la productividad, eliminar cuellos de botella en mantenimiento y maximizar la operatividad.",
+    "hero.cta_explore": "Explorar Machine Identifier AI™",
+    "hero.cta_demo": "Solicitar Demo Técnica",
+    "hero.cta_copy": "Copiar info@mosbisystems.com",
+    "hero.sim_title": "MOSBI Machine Identifier AI™ • Simulador de Inspección Óptica",
+    "hero.sim_status": "SINCRONIZACIÓN EDGE ACTIVA",
+    "hero.tab_turbine": "Bomba Centrífuga #402",
+    "hero.tab_valve": "Válvula Criogénica PV-94",
+    "hero.tab_motor": "Motor de Inducción M-7",
+    "hero.tab_compressor": "Compresor de Tornillo SC-12",
+    "hero.vf_latency": "Inferencia:",
+    "hero.vf_model": "Modelo:",
+    "hero.vf_confidence": "Confianza:",
+    "hero.dossier_tab": "Ficha de Inteligencia de Activo",
+    "hero.dossier_type": "EQUIPO ROTATIVO",
+    "hero.dossier_title": "Bomba Centrífuga de Lodos",
+    "hero.dossier_health": "Saludable • 98%",
+    "hero.prop_tag": "Etiqueta Activo:",
+    "hero.prop_serial": "OCR de Serie:",
+    "hero.prop_vendor": "Fabricante OEM:",
+    "hero.prop_temp": "Temp. de Operación:",
+    "hero.prop_service": "Próximo Servicio:",
+    "hero.prop_sync": "Sincronización CMMS:",
+    "hero.dossier_btn": "Ver Expediente Técnico Completo",
+    "hero.stream_title": "TRANSMISIÓN DE INFERENCIA EN VIVO",
+    "metric.accuracy_title": "Precisión de Reconocimiento",
+    "metric.accuracy_sub": "Validación neuronal visual multi-ángulo",
+    "metric.latency_title": "Latencia en el Edge",
+    "metric.latency_sub": "Ejecución móvil instantánea sin demora",
+    "metric.doc_title": "Reducción de Tiempo Manual",
+    "metric.doc_sub": "Telemetría automatizada y eliminación manual",
+    "metric.vis_title": "Visibilidad de Activos Críticos",
+    "metric.vis_sub": "Sincronización continua en la nube",
+    "mission.badge": "NUESTRO PROPÓSITO Y VISIÓN",
+    "mission.title_pre": "Transformando las Operaciones Físicas con",
+    "mission.title_highlight": "Inteligencia",
+    "mission.lead": "En MOSBI Systems, nuestra misión es desarrollar soluciones de software inteligente que permitan a las organizaciones comprender, gestionar y optimizar sus complejas operaciones físicas y activos críticos.",
+    "mission.secondary": "Unimos la maquinaria industrial con las plataformas empresariales en la nube mediante visión computacional en tiempo real, inferencia ML en el edge y documentación técnica automatizada.",
+    "mission.pill1": "Telemetría en Tiempo Real",
+    "mission.pill2": "Redes Neuronales Profundas",
+    "mission.pill3": "Independiente del Hardware",
+    "mission.pill4": "Cero Pérdida de Datos",
+    "cap.subbadge": "Disciplinas de Ingeniería",
+    "cap.badge": "PILARES FUNDAMENTALES",
+    "cap.heading_pre": "Capacidades",
+    "cap.heading_highlight": "Principales",
+    "cap.lead": "Cuatro disciplinas de ingeniería interconectadas que impulsan la autonomía industrial y la productividad en el terreno.",
+    "cap.card1_badge": "Arquitecturas Neuronales",
+    "cap.ai_title": "Inteligencia Artificial",
+    "cap.card1_desc": "Desplegamos redes neuronales profundas personalizadas que automatizan la toma de decisiones complejas, el reconocimiento de patrones y flujos predictivos.",
+    "cap.card1_b1": "Diagnóstico Predictivo y Detección de Anomalías",
+    "cap.card1_b2": "Canalizaciones Autónomas de Inspección Visual",
+    "cap.card1_b3": "Compresión de Modelos de ML para Edge",
+    "cap.card2_badge": "Convergencia Físico-Digital",
+    "cap.ii_title": "Inteligencia Industrial",
+    "cap.card2_desc": "Transformamos la telemetría dispersa de maquinaria en información procesable, índices de salud y pronósticos de ciclo de vida.",
+    "cap.card2_b1": "Pronóstico de Ciclo de Vida de Activos",
+    "cap.card2_b2": "Análisis Dinámico de Carga y Fatiga",
+    "cap.card2_b3": "Modelado de Tiempo Medio hasta Fallo (MTTF)",
+    "cap.card3_badge": "Ergonomía de Campo",
+    "cap.mob_title": "Aplicaciones Móviles",
+    "cap.card3_desc": "Creamos experiencias móviles modernas e intuitivas que permiten a los equipos técnicos y organizaciones operar con máxima eficiencia en campo.",
+    "cap.card3_b1": "Ejecución de Modelos Locales Offline",
+    "cap.card3_b2": "Captura y Etiquetado Inmediato de Datos",
+    "cap.card3_b3": "Flujos Asistidos de Guiado Técnico",
+    "cap.card4_badge": "Escala Empresarial",
+    "cap.cloud_title": "Software en la Nube",
+    "cap.card4_desc": "Diseñamos plataformas SaaS escalables y sistemas distribuidos en la nube que impulsan el crecimiento sostenible y la transformación digital.",
+    "cap.card4_b1": "Registro Empresarial de Activos y Gemelos Digitales",
+    "cap.card4_b2": "Analítica en Tiempo Real de Flotas Multi-Planta",
+    "cap.card4_b3": "Integraciones API Seguras con CMMS y ERP",
+    "prod.badge": "PLATAFORMA INSIGNIA",
+    "prod.title": "Machine Identifier AI™",
+    "prod.sub": "Una plataforma impulsada por IA diseñada para identificar maquinaria y equipos industriales con máxima rapidez y precisión.",
+    "prod.core_title": "Capacidades Principales",
+    "prod.cap1_title": "Reconocimiento de equipos mediante IA",
+    "prod.cap1_desc": "Identificación instantánea de modelos industriales complejos, turbinas, válvulas y reductores.",
+    "prod.cap2_title": "Identificación visual de activos",
+    "prod.cap2_desc": "Identificación óptica apuntando la cámara, sin requerir códigos de barras, etiquetas ni búsquedas manuales.",
+    "prod.cap3_title": "Documentación de equipos industriales",
+    "prod.cap3_desc": "Vinculación digital inmediata con manuales OEM, pares de apriete e historiales de mantenimiento.",
+    "prod.cap4_title": "Flujos de apoyo al mantenimiento",
+    "prod.cap4_desc": "Checklists contextuales y procedimientos de diagnóstico guiados paso a paso para técnicos.",
+    "prod.cap5_title": "Recopilación y organización de datos de máquinas",
+    "prod.cap5_desc": "Agregación automatizada de las condiciones operativas de planta en gemelos digitales.",
+    "prod.cap6_title": "Mejora de la productividad de técnicos de campo",
+    "prod.cap6_desc": "Elimina tiempos muertos de traslado y búsqueda manual de números de parte.",
+    "prod.roi_benefits_title": "Beneficios Medibles de Retorno (ROI)",
+    "prod.b1_title": "Identificación más rápida de equipos",
+    "prod.b1_desc": "Reduce el tiempo de verificación de activos hasta en un 90% en instalaciones distribuidas.",
+    "prod.b2_title": "Menor esfuerzo de documentación manual",
+    "prod.b2_desc": "Elimina errores de transcripción humana y búsqueda en archivadores de papel.",
+    "prod.b3_title": "Resolución y mantenimiento más rápidos",
+    "prod.b3_desc": "Acelera el tiempo medio de reparación (MTTR) con acceso directo a esquemas ópticos.",
+    "prod.b4_title": "Mejor transferencia de conocimiento",
+    "prod.b4_desc": "Capacita a técnicos principiantes con asistencia de nivel experto desde el primer día.",
+    "prod.b5_title": "Flujos de trabajo operacionales optimizados",
+    "prod.b5_desc": "Integración directa con los principales sistemas de gestión empresarial CMMS y ERP.",
+    "ind.subbadge": "Ámbitos de Despliegue",
+    "ind.badge": "SECTORES DE APLICACIÓN",
+    "ind.heading_pre": "Sectores que",
+    "ind.heading_highlight": "Impulsamos",
+    "ind.lead": "Las soluciones de MOSBI Systems están diseñadas específicamente para organizaciones que operan en entornos industriales exigentes y con gran volumen de activos.",
+    "ind.tab_mfg": "Manufactura",
+    "ind.tab_ops": "Operaciones Industriales",
+    "ind.tab_fac": "Gestión de Instalaciones",
+    "ind.tab_field": "Servicio de Campo",
+    "ind.tab_maint": "Mantenimiento",
+    "ind.tab_asset": "Gestión de Activos",
+    "ind.tab_infra": "Infraestructura",
+    "ind.lbl_challenge": "Desafíos Operacionales",
+    "ind.lbl_solution": "La Solución de IA MOSBI",
+    "ind.lbl_gains": "Beneficios Operativos Clave",
+    "arch.subbadge": "Flujo Arquitectónico",
+    "arch.badge": "DISEÑO DEL SISTEMA",
+    "arch.heading_pre": "Pipeline de",
+    "arch.heading_highlight": "Edge a la Nube",
+    "arch.lead": "Cómo MOSBI Systems conecta la captura visual en primera línea con la sincronización empresarial en la nube.",
+    "arch.s1_title": "Captura en Campo",
+    "arch.s1_desc": "El técnico apunta la cámara o sensor móvil hacia cualquier máquina o componente.",
+    "arch.s2_title": "Inferencia en el Edge",
+    "arch.s2_desc": "El modelo neuronal clasifica la firma del equipo en <250ms sin latencia ni dependencia de red.",
+    "arch.s3_title": "Expediente Instantáneo",
+    "arch.s3_desc": "Especificaciones del gemelo digital, manuales OEM y listas de chequeo aparecen en pantalla.",
+    "arch.s4_title": "Sincronización CMMS Cloud",
+    "arch.s4_desc": "Registros de flota, geolocalización e historial de servicio se actualizan en tiempo real.",
+    "roi.subbadge": "Estimación de Valor",
+    "roi.badge": "ESTIMADOR DE IMPACTO ECONÓMICO",
+    "roi.heading_pre": "Calcula tu",
+    "roi.heading_highlight": "Ahorro Operativo",
+    "roi.lead": "Descubre cuánto tiempo y presupuesto puede ahorrar MOSBI Machine Identifier AI™ en tus instalaciones.",
+    "roi.lbl_techs": "Número de Técnicos / Operadores de Campo",
+    "roi.lbl_inspections": "Búsquedas / Inspecciones Mensuales de Máquinas",
+    "roi.lbl_rate": "Costo Horario Promedio por Técnico ($)",
+    "roi.res_annual_label": "Ahorro Anual Proyectado",
+    "roi.res_hours_label": "Horas de Técnicos Ahorradas / Mes",
+    "roi.res_payback_label": "Período de Retorno",
+    "roi.res_accuracy_label": "Mejora en Precisión de Datos",
+    "comp.subbadge": "Perfil Corporativo",
+    "comp.badge": "PERFIL CORPORATIVO",
+    "comp.heading_pre": "Acerca de",
+    "comp.heading_highlight": "MOSBI Systems",
+    "comp.lead": "MOSBI Systems es una empresa de tecnología industrial registrada en Maryland, Estados Unidos.",
+    "comp.lbl_name": "Razón Social",
+    "comp.lbl_legal": "Estructura Legal",
+    "comp.lbl_hq": "Sede Principal",
+    "comp.lbl_domain": "Dominio Oficial",
+    "comp.lbl_spec": "Especialización",
+    "comp.val_spec": "IA Industrial y Reconocimiento Óptico de Maquinaria",
+    "comp.future_title": "Productos y Capacidades Futuras",
+    "contact.subbadge": "Comunicación Directa",
+    "contact.badge": "CONTÁCTANOS",
+    "contact.heading_pre": "Ponte en",
+    "contact.heading_highlight": "Contacto",
+    "contact.lead": "Comunícate directamente con nuestro equipo técnico, comercial o directivo para consultas sobre pilotos, demostraciones empresariales o alianzas.",
+    "contact.card_info": "Consultas Generales",
+    "contact.card_sales": "Ventas y Soluciones Corporativas",
+    "contact.card_support": "Soporte Técnico",
+    "contact.form_title": "Envíanos un Mensaje Directo",
+    "contact.form_desc": "Las consultas son atendidas directamente por un especialista técnico en menos de 24 horas.",
+    "contact.lbl_name": "Nombre Completo *",
+    "contact.ph_name": "Tu nombre y apellido",
+    "contact.lbl_email": "Correo Corporativo *",
+    "contact.ph_email": "correo@empresa.com",
+    "contact.lbl_org": "Empresa u Organización *",
+    "contact.ph_org": "Nombre de tu empresa",
+    "contact.lbl_topic": "Tema de Consulta *",
+    "contact.opt_select": "Seleccionar Tema",
+    "contact.opt_sales": "Ventas Corporativas y Demos",
+    "contact.opt_info": "Información General y Consultas",
+    "contact.opt_support": "Soporte Técnico y de Ingeniería",
+    "contact.opt_pilot": "Solicitar un Programa Piloto a Medida",
+    "contact.lbl_msg": "Tu Mensaje *",
+    "contact.ph_msg": "Describe tus desafíos operativos, cantidad de equipos o requerimientos del proyecto piloto...",
+    "contact.btn_send": "Enviar Mensaje",
+    "footer.tagline": "Desarrollamos software inteligente, modelos de Visión Computacional y plataformas cloud para operaciones industriales críticas.",
+    "footer.col_nav": "Navegación",
+    "footer.col_sol": "Soluciones Principales",
+    "footer.col_ch": "Canales de Contacto",
+    "footer.link_overview": "Inicio",
+    "footer.link_mission": "Nuestra Misión",
+    "footer.link_capabilities": "Qué Hacemos",
+    "footer.link_industries": "Sectores",
+    "footer.link_recog": "IA de Reconocimiento de Equipos",
+    "footer.link_cv": "Sistemas de Visión Computacional",
+    "footer.link_mobile": "Apps Móviles de Campo",
+    "footer.link_cloud": "Plataformas Cloud SaaS",
+    "footer.link_roi": "Estimación de ROI",
+    "footer.rights": "© 2026 MOSBI Systems LLC. Todos los derechos reservados.",
+    "footer.status": "Todos los Pipelines Neuronales Operativos • Listo para Producción"
+},
   fr: {
-    // Navigation
-    'nav.mission': 'Mission',
-    'nav.capabilities': 'Capacités',
-    'nav.product': 'Machine Identifier AI™',
-    'nav.industries': 'Industries',
-    'nav.architecture': 'Architecture',
-    'nav.roi': 'Calculateur ROI',
-    'nav.company': 'Entreprise',
-    'nav.get_in_touch': 'Contactez-nous',
-
-    // Hero Section
-    'hero.pill': "IA de Vision Industrielle et Gestion d'Actifs de Nouvelle Génération",
-    'hero.pill_chip': 'v4.2 Production',
-    'hero.title_pre': 'Développement de Logiciels Intelligents pour',
-    'hero.title_highlight': 'Opérations Industrielles',
-    'hero.desc': "MOSBI Systems conçoit des solutions logicielles de pointe combinant Intelligence Artificielle, Intelligence Industrielle, Vision par Ordinateur et plateformes Cloud évolutives pour la gestion d'actifs physiques.",
-    'hero.cta_capabilities': 'Explorer les Capacités',
-    'hero.cta_demo': 'Lancer la Démo',
-    'hero.dossier_type': 'ÉQUIPEMENT ROTATIF',
-    'hero.dossier_title': 'Pompe Centrifuge à Boue',
-    'hero.dossier_health': 'Sain • 98%',
-    'hero.prop_tag': 'Tag Actif :',
-    'hero.prop_serial': 'OCR Série :',
-    'hero.prop_vendor': 'Fabricant OEM :',
-    'hero.prop_temp': 'Temp. de Service :',
-    'hero.prop_service': 'Prochain Service :',
-    'hero.prop_service_val': '14 Jours (Routine)',
-    'hero.prop_sync': 'Synchro CMMS :',
-    'hero.prop_sync_val': 'Synchronisé • ID #9481',
-    'hero.dossier_btn': 'Accéder au Dossier Machine Complet',
-    'hero.stream_title': "FLUX D'INFÉRENCE EN DIRECT",
-
-    // Metrics Strip
-    'metric.accuracy_title': 'Précision de Reconnaissance',
-    'metric.accuracy_sub': 'Validation neuronale visuelle multi-angle',
-    'metric.latency_title': "Latence à l'Edge",
-    'metric.latency_sub': 'Exécution mobile instantanée sans délai',
-    'metric.doc_title': 'Réduction du Temps Manuel',
-    'metric.doc_sub': 'Télémétrie automatisée et suppression manuelle',
-    'metric.vis_title': 'Visibilité des Actifs Critiques',
-    'metric.vis_sub': 'Synchronisation continue dans le cloud',
-
-    // Mission Section
-    'mission.badge': "NOTRE RAISON D'ÊTRE & VISION",
-    'mission.title': "Transformer les Opérations Physiques grâce à l'Intelligence",
-    'mission.desc': "Chez MOSBI Systems, notre mission est de développer des logiciels intelligents permettant aux organisations de gérer, comprendre et optimiser leurs opérations physiques complexes en toute fluidité.",
-    'mission.quote': "Nous croyons fermement que l'avenir de l'efficacité industrielle réside à l'intersection de la Vision par Ordinateur de haute précision, du Machine Learning embarqué et de l'architecture cloud-native.",
-    'mission.pill1': 'Télémétrie en Temps Réel',
-    'mission.pill2': 'Réseaux Neuronaux Profonds',
-    'mission.pill3': 'Agnostique au Matériel',
-    'mission.pill4': 'Zéro Perte de Données',
-
-    // Capabilities Section
-    'cap.badge': 'PILIERS FONDAMENTAUX',
-    'cap.title': "Ingénierie de Niveau Entreprise",
-    'cap.sub': "Quatre disciplines techniques interconnectées au service de l'autonomie industrielle moderne.",
-    'cap.card1_badge': 'Architectures Neuronales',
-    'cap.card1_title': 'Intelligence Artificielle',
-    'cap.card1_desc': "Déploiement de réseaux de neurones profonds personnalisés automatisant la prise de décision complexe, la reconnaissance de motifs et les flux prédictifs.",
-    'cap.card1_b1': "Diagnostics Prédictifs et Détection d'Anomalies",
-    'cap.card1_b2': "Pipelines Autonomes d'Inspection Visuelle",
-    'cap.card1_b3': "Compression de Modèles ML pour l'Edge",
-    'cap.card2_badge': 'Convergence Physico-Numérique',
-    'cap.card2_title': 'Intelligence Industrielle',
-    'cap.card2_desc': "Transformation des données brutes de télémétrie machine en informations exploitables, indices d'état et prévisions de cycle de vie.",
-    'cap.card2_b1': 'Prévision du Cycle de Vie des Équipements',
-    'cap.card2_b2': 'Analyse Dynamique de Charge et de Contrainte',
-    'cap.card2_b3': 'Modélisation du Temps Moyen Avant Panne (MTTF)',
-    'cap.card3_badge': 'Ergonomie Terrain',
-    'cap.card3_title': 'Applications Mobiles',
-    'cap.card3_desc': "Conception d'expériences mobiles modernes et intuitives permettant aux techniciens terrain et aux organisations d'opérer avec efficacité partout.",
-    'cap.card3_b1': 'Exécution Locale de Modèles Hors Ligne',
-    'cap.card3_b2': 'Capture et Marquage Instantanés des Données',
-    'cap.card3_b3': 'Flux de Guidage Assisté pour Techniciens',
-    'cap.card4_badge': 'Échelle Entreprise',
-    'cap.card4_title': 'Logiciels Cloud',
-    'cap.card4_desc': "Conception de plateformes SaaS évolutives et de systèmes cloud distribués stimulant une croissance durable et la transformation numérique.",
-    'cap.card4_b1': "Registre d'Actifs d'Entreprise et Jumeaux Numériques",
-    'cap.card4_b2': 'Analytique en Temps Réel de Flottes Multi-Sites',
-    'cap.card4_b3': 'Intégrations API Sécurisées avec GMAO et ERP',
-
-    // Product Section
-    'prod.badge': 'PLATEFORME PHARE',
-    'prod.title': 'Machine Identifier AI™',
-    'prod.sub': "Une plateforme propulsée par l'IA conçue pour identifier rapidement et avec précision les machines et équipements industriels.",
-    'prod.core_title': 'Capacités Clés',
-    'prod.cap1_title': "Reconnaissance d'équipements par IA",
-    'prod.cap1_desc': 'Identification instantanée de modèles industriels complexes, turbines, vannes et réducteurs.',
-    'prod.cap2_title': "Identification visuelle d'actifs",
-    'prod.cap2_desc': 'Identification optique directe par caméra, sans étiquettes, codes-barres ni recherches manuelles.',
-    'prod.cap3_title': "Récupération d'informations techniques",
-    'prod.cap3_desc': "Accès instantané aux manuels d'utilisation, schémas de câblage, couples de serrage et bulletins de sécurité.",
-    'prod.cap4_title': 'Productivité des techniciens terrain',
-    'prod.cap4_desc': "Réduisez drastiquement les temps de recherche, éliminant les arrêts non planifiés et les retards coûteux.",
-    'prod.scanner_title': 'SCANNER OPTIQUE NEURONAL v4.2',
-    'prod.scanner_status': 'MOTEUR DE SCAN ACTIF',
-    'prod.select_target_label': "Sélectionnez l'Équipement Cible :",
-    'prod.target1': 'Pompe Centrifuge à Boue (Mines / FlowMax CPX)',
-    'prod.target2': 'Turbine à Vapeur Haute Pression (Énergie / Westinghouse 45MW)',
-    'prod.target3': 'Bras Robotisé Articulé 6 Axes (Automobile / KUKA KR-1000)',
-    'prod.target4': 'Compresseur Alternatif Cryogénique (Chimie / Atlas Copco)',
-    'prod.scan_btn': 'Lancer le Scan Visuel',
-    'prod.upload_btn': 'Charger une Photo / Image',
-    'prod.specs_heading': 'Dossier de Télémétrie et Diagnostic IA',
-
-    // Industries Section
-    'ind.badge': "SECTEURS D'APPLICATION",
-    'ind.title': 'Conçu pour les Secteurs Exigeants',
-    'ind.sub': "Intelligence conçue sur mesure pour les infrastructures lourdes, la conformité stricte et la haute disponibilité.",
-
-    // Architecture Section
-    'arch.badge': 'CONCEPTION SYSTÈME',
-    'arch.title': "Pipeline Neuronal de l'Edge au Cloud",
-    'arch.sub': 'Conçu sans point unique de défaillance, avec une latence de classification inférieure à 250ms et un chiffrement de bout en bout.',
-
-    // ROI Calculator
-    'roi.badge': "ESTIMATEUR D'IMPACT ÉCONOMIQUE",
-    'roi.title': 'Quantifiez votre Retour Opérationnel',
-    'roi.sub': "Simulez les heures de travail économisées et les arrêts évités en déployant l'IA de MOSBI Systems dans vos installations.",
-    'roi.lbl_assets': "Nombre d'Actifs Physiques",
-    'roi.lbl_techs': 'Techniciens / Opérateurs Terrain',
-    'roi.lbl_rate': 'Taux Horaire Moyen du Technicien ($)',
-    'roi.lbl_downtime': "Coût Horaire Moyen d'Arrêt ($)",
-    'roi.res_hours': 'Heures Annuelles Économisées',
-    'roi.res_downtime': "Réduction des Coûts d'Arrêt",
-    'roi.res_net': 'Valeur Nette Projetée sur 3 Ans',
-    'roi.res_payback': 'Délai Estimé de Rentabilisation',
-    'roi.res_payback_val': '< 3.2 Mois',
-
-    // Company Section
-    'comp.badge': "PROFIL D'ENTREPRISE",
-    'comp.title': 'MOSBI Systems LLC',
-    'comp.sub': 'Une entreprise technologique industrielle agile enregistrée et basée dans le Maryland, États-Unis.',
-    'comp.lbl_legal': 'Raison Sociale',
-    'comp.lbl_type': 'Forme Juridique',
-    'comp.val_type': 'Société à Responsabilité Limitée (LLC)',
-    'comp.lbl_jurisdiction': 'Juridiction',
-    'comp.lbl_domain': 'Domaine Officiel',
-    'comp.lbl_focus': 'Orientation Stratégique',
-    'comp.val_focus': "IA Industrielle, Vision par Ordinateur, Gestion d'Actifs",
-    'comp.future_title': 'Produits et Capacités Futures',
-
-    // Contact Section
-    'contact.badge': 'CONTACTEZ-NOUS',
-    'contact.title': 'Initiez la Transformation IA de vos Opérations',
-    'contact.sub': "Prenez contact avec notre équipe d'ingénierie et solutions pour échanger sur des déploiements sur mesure, projets pilotes ou partenariats technologiques.",
-    'contact.card_sales': 'Ventes Entreprise & Démos',
-    'contact.card_info': 'Demandes Générales',
-    'contact.card_support': 'Support Technique',
-    'contact.form_title': 'Envoyez-nous un Message Direct',
-    'contact.form_desc': 'Remplissez le formulaire ci-dessous pour contacter nos ingénieurs en solutions industrielles.',
-    'contact.lbl_name': 'Nom Complet *',
-    'contact.ph_name': 'Votre nom et prénom',
-    'contact.lbl_email': 'Email Professionnel *',
-    'contact.ph_email': 'jean@entreprise.com',
-    'contact.lbl_org': 'Entreprise / Organisation *',
-    'contact.ph_org': 'Nom de votre entreprise',
-    'contact.lbl_topic': 'Objet de la Demande *',
-    'contact.opt_select': 'Sélectionner un Sujet',
-    'contact.opt_sales': 'Ventes Entreprise et Démonstrations',
-    'contact.opt_info': 'Informations Générales & Renseignements',
-    'contact.opt_support': 'Support Technique & Ingénierie',
-    'contact.opt_pilot': 'Demander un Projet Pilote Personnalisé',
-    'contact.lbl_msg': 'Votre Message *',
-    'contact.ph_msg': 'Décrivez vos défis opérationnels, la taille de vos installations ou vos besoins de pilote...',
-    'contact.btn_send': 'Envoyer le Message',
-    'contact.privacy': 'Vos données sont protégées par un chiffrement de niveau entreprise. Nous ne partageons aucune information opérationnelle.',
-
-    // Footer
-    'footer.tagline': 'Développement de logiciels intelligents, modèles de Vision par Ordinateur et plateformes cloud pour les opérations industrielles critiques.',
-    'footer.location': 'Maryland, États-Unis',
-    'footer.col_nav': 'Navigation',
-    'footer.col_sol': 'Solutions Principales',
-    'footer.col_ch': 'Canaux de Contact',
-    'footer.rights': '© 2026 MOSBI Systems LLC. Tous droits réservés.',
-    'footer.status': 'Tous les Pipelines Neuronaux Opérationnels • Prêt pour la Production'
-  }
+    "nav.mission": "Mission",
+    "nav.capabilities": "Capacités",
+    "nav.product": "Machine Identifier AI™",
+    "nav.industries": "Industries",
+    "nav.architecture": "Architecture",
+    "nav.roi": "Calculateur ROI",
+    "nav.company": "Entreprise",
+    "nav.get_in_touch": "Contactez-nous",
+    "hero.pill": "IA de Vision Industrielle et Gestion d'Actifs de Nouvelle Génération",
+    "hero.pill_chip": "v4.2 Production",
+    "hero.title_pre": "Développement de Logiciels Intelligents pour",
+    "hero.title_highlight": "Opérations Industrielles",
+    "hero.desc": "Logiciels, Intelligence Artificielle, Vision par Ordinateur et Solutions Numériques conçus pour accélérer la productivité, éliminer les goulots d'étranglement et maximiser la disponibilité opérationnelle.",
+    "hero.cta_explore": "Explorer Machine Identifier AI™",
+    "hero.cta_demo": "Demander une Démo Technique",
+    "hero.cta_copy": "Copier info@mosbisystems.com",
+    "hero.sim_title": "MOSBI Machine Identifier AI™ • Simulateur d'Inspection Optique",
+    "hero.sim_status": "SYNCHRO EDGE ACTIVE",
+    "hero.tab_turbine": "Pompe Centrifuge #402",
+    "hero.tab_valve": "Vanne Cryogénique PV-94",
+    "hero.tab_motor": "Moteur à Induction M-7",
+    "hero.tab_compressor": "Compresseur à Vis SC-12",
+    "hero.vf_latency": "Inférence :",
+    "hero.vf_model": "Modèle :",
+    "hero.vf_confidence": "Confiance :",
+    "hero.dossier_tab": "Fiche d'Intelligence Équipement",
+    "hero.dossier_type": "ÉQUIPEMENT ROTATIF",
+    "hero.dossier_title": "Pompe Centrifuge à Boue",
+    "hero.dossier_health": "Sain • 98%",
+    "hero.prop_tag": "Tag Actif :",
+    "hero.prop_serial": "OCR Série :",
+    "hero.prop_vendor": "Fabricant OEM :",
+    "hero.prop_temp": "Temp. de Service :",
+    "hero.prop_service": "Prochain Service :",
+    "hero.prop_sync": "Synchro CMMS :",
+    "hero.dossier_btn": "Accéder au Dossier Machine Complet",
+    "hero.stream_title": "FLUX D'INFÉRENCE EN DIRECT",
+    "metric.accuracy_title": "Précision de Reconnaissance",
+    "metric.accuracy_sub": "Validation neuronale visuelle multi-angle",
+    "metric.latency_title": "Latence à l'Edge",
+    "metric.latency_sub": "Exécution mobile instantanée sans délai",
+    "metric.doc_title": "Réduction du Temps Manuel",
+    "metric.doc_sub": "Télémétrie automatisée et suppression manuelle",
+    "metric.vis_title": "Visibilité des Actifs Critiques",
+    "metric.vis_sub": "Synchronisation continue dans le cloud",
+    "mission.badge": "NOTRE RAISON D'ÊTRE & VISION",
+    "mission.title_pre": "Transformer les Opérations Physiques grâce à",
+    "mission.title_highlight": "l'Intelligence",
+    "mission.lead": "Chez MOSBI Systems, notre mission est de développer des solutions logicielles intelligentes permettant aux organisations de comprendre, gérer et optimiser en toute fluidité leurs opérations physiques complexes et équipements critiques.",
+    "mission.secondary": "Nous relions les machines industrielles aux plateformes cloud d'entreprise grâce à la vision par ordinateur en temps réel, l'inférence ML locale à l'edge et la documentation technique automatisée.",
+    "mission.pill1": "Télémétrie en Temps Réel",
+    "mission.pill2": "Réseaux Neuronaux Profonds",
+    "mission.pill3": "Agnostique au Matériel",
+    "mission.pill4": "Zéro Perte de Données",
+    "cap.subbadge": "Disciplines d'Ingénierie",
+    "cap.badge": "PILIERS FONDAMENTAUX",
+    "cap.heading_pre": "Capacités",
+    "cap.heading_highlight": "Clés",
+    "cap.lead": "Quatre disciplines d'ingénierie interconnectées au service de l'autonomie industrielle et de la productivité sur le terrain.",
+    "cap.card1_badge": "Architectures Neuronales",
+    "cap.ai_title": "Intelligence Artificielle",
+    "cap.card1_desc": "Déploiement de réseaux de neurones profonds personnalisés automatisant la prise de décision complexe, la reconnaissance de motifs et les flux prédictifs.",
+    "cap.card1_b1": "Diagnostics Prédictifs et Détection d'Anomalies",
+    "cap.card1_b2": "Pipelines Autonomes d'Inspection Visuelle",
+    "cap.card1_b3": "Compression de Modèles ML pour l'Edge",
+    "cap.card2_badge": "Convergence Physico-Numérique",
+    "cap.ii_title": "Intelligence Industrielle",
+    "cap.card2_desc": "Transformation des données brutes de télémétrie machine en informations exploitables, indices d'état et prévisions de cycle de vie.",
+    "cap.card2_b1": "Prévision du Cycle de Vie des Équipements",
+    "cap.card2_b2": "Analyse Dynamique de Charge et de Contrainte",
+    "cap.card2_b3": "Modélisation du Temps Moyen Avant Panne (MTTF)",
+    "cap.card3_badge": "Ergonomie Terrain",
+    "cap.mob_title": "Applications Mobiles",
+    "cap.card3_desc": "Conception d'expériences mobiles modernes et intuitives permettant aux techniciens terrain et aux organisations d'opérer avec efficacité partout.",
+    "cap.card3_b1": "Exécution Locale de Modèles Hors Ligne",
+    "cap.card3_b2": "Capture et Marquage Instantanés des Données",
+    "cap.card3_b3": "Flux de Guidage Assisté pour Techniciens",
+    "cap.card4_badge": "Échelle Entreprise",
+    "cap.cloud_title": "Logiciels Cloud",
+    "cap.card4_desc": "Conception de plateformes SaaS évolutives et de systèmes cloud distribués stimulant une croissance durable et la transformation numérique.",
+    "cap.card4_b1": "Registre d'Actifs d'Entreprise et Jumeaux Numériques",
+    "cap.card4_b2": "Analytique en Temps Réel de Flottes Multi-Sites",
+    "cap.card4_b3": "Intégrations API Sécurisées avec GMAO et ERP",
+    "prod.badge": "PLATEFORME PHARE",
+    "prod.title": "Machine Identifier AI™",
+    "prod.sub": "Une plateforme propulsée par l'IA conçue pour identifier rapidement et avec précision les machines et équipements industriels.",
+    "prod.core_title": "Capacités Clés",
+    "prod.cap1_title": "Reconnaissance d'équipements par IA",
+    "prod.cap1_desc": "Identification instantanée de modèles industriels complexes, turbines, vannes et réducteurs.",
+    "prod.cap2_title": "Identification visuelle d'actifs",
+    "prod.cap2_desc": "Identification optique directe par caméra, sans étiquettes, codes-barres ni recherches manuelles.",
+    "prod.cap3_title": "Documentation d'équipements industriels",
+    "prod.cap3_desc": "Accès numérique instantané aux manuels OEM, couples de serrage et historiques de maintenance.",
+    "prod.cap4_title": "Flux de support à la maintenance",
+    "prod.cap4_desc": "Checklists contextuelles et procédures de diagnostic pas à pas pour techniciens de terrain.",
+    "prod.cap5_title": "Collecte et organisation des données machines",
+    "prod.cap5_desc": "Agrégation automatisée des conditions d'exploitation de l'usine en jumeaux numériques.",
+    "prod.cap6_title": "Amélioration de la productivité terrain",
+    "prod.cap6_desc": "Élimine les temps de déplacement et de recherche manuelle de références de pièces.",
+    "prod.roi_benefits_title": "Bénéfices ROI Mesurables",
+    "prod.b1_title": "Identification accélérée des équipements",
+    "prod.b1_desc": "Réduit le temps de vérification des actifs jusqu'à 90% sur l'ensemble des sites.",
+    "prod.b2_title": "Effort de documentation manuelle réduit",
+    "prod.b2_desc": "Élimine les erreurs de saisie manuelle et les classeurs papier encombrants.",
+    "prod.b3_title": "Dépannage et maintenance plus rapides",
+    "prod.b3_desc": "Accélère le temps moyen de réparation (MTTR) avec accès direct aux schémas techniques.",
+    "prod.b4_title": "Transfert de connaissances renforcé",
+    "prod.b4_desc": "Accompagne les techniciens débutants avec l'expertise d'un tuteur senior dès le premier jour.",
+    "prod.b5_title": "Processus opérationnels simplifiés",
+    "prod.b5_desc": "Intégration directe aux infrastructures GMAO et ERP majeures du marché.",
+    "ind.subbadge": "Domaines d'Application",
+    "ind.badge": "SECTEURS D'APPLICATION",
+    "ind.heading_pre": "Secteurs que nous",
+    "ind.heading_highlight": "Accompagnons",
+    "ind.lead": "Les solutions MOSBI Systems sont spécialement conçues pour les entreprises opérant dans des environnements industriels lourds et exigeants.",
+    "ind.tab_mfg": "Fabrication",
+    "ind.tab_ops": "Opérations Industrielles",
+    "ind.tab_fac": "Gestion de Bâtiments",
+    "ind.tab_field": "Service Terrain",
+    "ind.tab_maint": "Maintenance",
+    "ind.tab_asset": "Gestion d'Actifs",
+    "ind.tab_infra": "Infrastructures",
+    "ind.lbl_challenge": "Défis Opérationnels",
+    "ind.lbl_solution": "La Solution d'IA MOSBI",
+    "ind.lbl_gains": "Gains Opérationnels Clés",
+    "arch.subbadge": "Flux Architectural",
+    "arch.badge": "CONCEPTION SYSTÈME",
+    "arch.heading_pre": "Pipeline de",
+    "arch.heading_highlight": "l'Edge au Cloud",
+    "arch.lead": "Comment MOSBI Systems relie la capture visuelle sur le terrain à la synchronisation cloud d'entreprise.",
+    "arch.s1_title": "Capture Terrain",
+    "arch.s1_desc": "Le technicien pointe la caméra ou le capteur mobile vers l'équipement ou le composant.",
+    "arch.s2_title": "Inférence à l'Edge",
+    "arch.s2_desc": "Le modèle neuronal propriétaire classifie la machine en <250ms sans latence réseau.",
+    "arch.s3_title": "Dossier Instantané",
+    "arch.s3_desc": "Spécifications du jumeau numérique, manuels OEM et checklists de maintenance s'affichent à l'écran.",
+    "arch.s4_title": "Synchronisation GMAO Cloud",
+    "arch.s4_desc": "Journaux de flotte, balises GPS et historiques d'intervention se mettent à jour en temps réel.",
+    "roi.subbadge": "Estimation de Valeur",
+    "roi.badge": "ESTIMATEUR D'IMPACT ÉCONOMIQUE",
+    "roi.heading_pre": "Calculez vos",
+    "roi.heading_highlight": "Économies Opérationnelles",
+    "roi.lead": "Découvrez le temps et le budget que MOSBI Machine Identifier AI™ peut faire économiser à vos sites.",
+    "roi.lbl_techs": "Nombre de Techniciens / Opérateurs Terrain",
+    "roi.lbl_inspections": "Recherches / Inspections Mensuelles de Machines",
+    "roi.lbl_rate": "Taux Horaire Moyen Chargé du Technicien ($)",
+    "roi.res_annual_label": "Économies Annuelles Projetées",
+    "roi.res_hours_label": "Heures Technicien Économisées / Mois",
+    "roi.res_payback_label": "Délai de Rentabilisation",
+    "roi.res_accuracy_label": "Gain en Précision des Données",
+    "comp.subbadge": "Profil d'Entreprise",
+    "comp.badge": "PROFIL D'ENTREPRISE",
+    "comp.heading_pre": "À Propos de",
+    "comp.heading_highlight": "MOSBI Systems",
+    "comp.lead": "MOSBI Systems est une entreprise de technologie industrielle enregistrée dans le Maryland, États-Unis.",
+    "comp.lbl_name": "Raison Sociale",
+    "comp.lbl_legal": "Forme Juridique",
+    "comp.lbl_hq": "Siège Social",
+    "comp.lbl_domain": "Domaine Officiel",
+    "comp.lbl_spec": "Spécialisation",
+    "comp.val_spec": "IA Industrielle & Reconnaissance Optique d'Équipements",
+    "comp.future_title": "Produits et Capacités Futures",
+    "contact.subbadge": "Communication Directe",
+    "contact.badge": "CONTACTEZ-NOUS",
+    "contact.heading_pre": "Prenez",
+    "contact.heading_highlight": "Contact",
+    "contact.lead": "Échangez directement avec notre équipe technique, commerciale ou dirigeante pour vos projets pilotes, démos ou partenariats.",
+    "contact.card_info": "Demandes Générales",
+    "contact.card_sales": "Ventes & Solutions Entreprise",
+    "contact.card_support": "Support Technique",
+    "contact.form_title": "Envoyez-nous un Message Direct",
+    "contact.form_desc": "Les demandes sont traitées directement par nos spécialistes techniques sous 24 heures.",
+    "contact.lbl_name": "Nom Complet *",
+    "contact.ph_name": "Votre nom et prénom",
+    "contact.lbl_email": "Email Professionnel *",
+    "contact.ph_email": "jean@entreprise.com",
+    "contact.lbl_org": "Entreprise / Organisation *",
+    "contact.ph_org": "Nom de votre entreprise",
+    "contact.lbl_topic": "Objet de la Demande *",
+    "contact.opt_select": "Sélectionner un Sujet",
+    "contact.opt_sales": "Ventes Entreprise et Démonstrations",
+    "contact.opt_info": "Informations Générales & Renseignements",
+    "contact.opt_support": "Support Technique & Ingénierie",
+    "contact.opt_pilot": "Demander un Projet Pilote Personnalisé",
+    "contact.lbl_msg": "Votre Message *",
+    "contact.ph_msg": "Décrivez vos défis opérationnels, la taille de vos installations ou vos besoins de pilote...",
+    "contact.btn_send": "Envoyer le Message",
+    "footer.tagline": "Développement de logiciels intelligents, modèles de Vision par Ordinateur et plateformes cloud pour les opérations industrielles critiques.",
+    "footer.col_nav": "Navigation",
+    "footer.col_sol": "Solutions Principales",
+    "footer.col_ch": "Canaux de Contact",
+    "footer.link_overview": "Accueil",
+    "footer.link_mission": "Notre Mission",
+    "footer.link_capabilities": "Ce Que Nous Faisons",
+    "footer.link_industries": "Secteurs Cibles",
+    "footer.link_recog": "IA de Reconnaissance d'Équipements",
+    "footer.link_cv": "Systèmes de Vision par Ordinateur",
+    "footer.link_mobile": "Applications Mobiles Terrain",
+    "footer.link_cloud": "Plateformes Cloud SaaS",
+    "footer.link_roi": "Estimation du ROI",
+    "footer.rights": "© 2026 MOSBI Systems LLC. Tous droits réservés.",
+    "footer.status": "Tous les Pipelines Neuronaux Opérationnels • Prêt pour la Production"
+}
 };
 
 let currentLanguage = 'en';
@@ -5200,13 +5710,24 @@ function setLanguage(lang) {
     }
   });
 
-  // Update scanner targets if select exists
-  const targetSelect = document.getElementById('machineSelect');
-  if (targetSelect && targetSelect.options.length >= 4) {
-    targetSelect.options[0].text = dict['prod.target1'] || targetSelect.options[0].text;
-    targetSelect.options[1].text = dict['prod.target2'] || targetSelect.options[1].text;
-    targetSelect.options[2].text = dict['prod.target3'] || targetSelect.options[2].text;
-    targetSelect.options[3].text = dict['prod.target4'] || targetSelect.options[3].text;
+  // Re-render active machine scanner data in new language
+  if (typeof loadMachine === 'function') {
+    loadMachine(currentActiveMachine || 'turbine');
+  }
+
+  // Re-render active industry data in new language
+  if (typeof loadIndustry === 'function') {
+    loadIndustry(currentActiveIndustry || 'manufacturing');
+  }
+
+  // Update contact select dropdown options if available
+  const contactTopic = document.getElementById('contactTopic');
+  if (contactTopic && contactTopic.options.length >= 5) {
+    contactTopic.options[0].text = dict['contact.opt_select'] || contactTopic.options[0].text;
+    contactTopic.options[1].text = dict['contact.opt_sales'] || contactTopic.options[1].text;
+    contactTopic.options[2].text = dict['contact.opt_info'] || contactTopic.options[2].text;
+    contactTopic.options[3].text = dict['contact.opt_support'] || contactTopic.options[3].text;
+    contactTopic.options[4].text = dict['contact.opt_pilot'] || contactTopic.options[4].text;
   }
 }
 
@@ -5232,7 +5753,7 @@ function initLanguageSelector() {
       btn.setAttribute('aria-expanded', 'false');
       
       const langNames = { en: 'English', es: 'Español', fr: 'Français' };
-      showToast(`Language switched to ${langNames[lang] || lang.toUpperCase()}`);
+      showToast(`Language: ${langNames[lang] || lang.toUpperCase()}`);
     });
   });
 
@@ -5266,7 +5787,6 @@ function initLanguageSelector() {
     }
   }
 }
-
 </script>
 </body>
 </html>
