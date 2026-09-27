@@ -16,15 +16,21 @@ Our goal is to transform complex operational processes into intelligent, efficie
 
 ---
 
+## Our Vision
+
+To become a leading provider of intelligent software solutions that help organizations better understand, manage, and optimize their physical assets and operational environments worldwide.
+
+---
+
 ## What We Do
 
 ### Artificial Intelligence
 
-Building practical AI solutions that automate workflows, improve decision-making, and increase productivity.
+Building practical AI solutions that automate workflows, improve operational decision-making, and increase frontline productivity.
 
 ### Computer Vision
 
-Developing visual recognition systems capable of identifying, classifying, and understanding real-world assets and equipment.
+Developing visual recognition systems capable of identifying, classifying, and understanding real-world assets, parts, and equipment.
 
 ### Mobile Applications
 
@@ -32,7 +38,7 @@ Creating modern and intuitive mobile experiences that enable field teams and org
 
 ### Cloud Software
 
-Designing scalable platforms and SaaS products that support growth and digital transformation.
+Designing scalable SaaS platforms and distributed cloud systems that support sustainable organizational growth and digital transformation.
 
 ---
 
@@ -129,15 +135,22 @@ sales@mosbisystems.com
 
 support@mosbisystems.com
 
-### Founder
-
-founder@mosbisystems.com
-
 ---
 
-## Vision
+## Language Support
 
-To become a leading provider of intelligent software solutions that help organizations better understand, manage, and optimize their physical assets and operational environments.
+The landing page supports three languages: English (EN), Spanish (ES), and French (FR).
+
+Language is selectable via a 🌐 globe dropdown in the navigation bar. The selection is persisted in `localStorage`.
+
+All sections are fully translated including:
+- Navigation, hero, and metrics strip
+- Mission & Vision section (all cards, tags, features)
+- Core Capabilities / What We Do (all card titles, descriptions, badges)
+- Featured Product and product cards
+- Industries, Architecture, ROI Calculator
+- Why MOSBI, Future Products Roadmap
+- Company profile, Contact section, Footer
 
 ---
 
