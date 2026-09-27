@@ -729,6 +729,8 @@ button, input, select, textarea {
   gap: 1.5rem;
   padding: 1.5rem;
   text-align: left;
+  min-width: 0;
+  overflow: hidden;
 }
 
 /* Machine Switcher Tabs */
@@ -919,6 +921,8 @@ button, input, select, textarea {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .telemetry-tabs {
@@ -940,6 +944,9 @@ button, input, select, textarea {
   border: 1px solid rgba(0, 229, 255, 0.18);
   border-radius: var(--radius-md);
   padding: 1.25rem;
+  min-width: 0;
+  overflow: hidden;
+  word-break: break-word;
 }
 
 .spec-header {
@@ -3069,8 +3076,8 @@ button, input, select, textarea {
     <section class="section mission-section" id="mission">
       <div class="container">
         <div class="section-intro text-center reveal">
-          <span class="sub-badge">Strategic Purpose</span>
-          <h2 class="section-heading">Transforming Complex Operations Into <span class="gradient-shimmer">Intelligent Experiences</span></h2>
+          <span class="sub-badge" data-i18n="mission.strategic_badge">Strategic Purpose</span>
+          <h2 class="section-heading"><span data-i18n="mission.h2_pre">Transforming Complex Operations Into</span> <span class="gradient-shimmer" data-i18n="mission.h2_highlight">Intelligent Experiences</span></h2>
           <p class="section-lead" data-i18n="cap.lead">
             We bridge physical industrial hardware with advanced neural software architectures to eliminate downtime and empower frontline workforces.
           </p>
@@ -3083,8 +3090,8 @@ button, input, select, textarea {
             <div class="card-icon-box">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24M14.83 14.83l4.24 4.24M14.83 9.17l4.24-4.24M4.93 19.07l4.24-4.24"/></svg>
             </div>
-            <span class="card-kicker">OUR MISSION</span>
-            <h3 class="card-headline">Identify, Manage, and Maintain Critical Assets</h3>
+            <span class="card-kicker" data-i18n="mission.kicker_mission">OUR MISSION</span>
+            <h3 class="card-headline" data-i18n="mission.headline_mission">Identify, Manage, and Maintain Critical Assets</h3>
             <p class="card-paragraph">
               MOSBI Systems develops innovative software products that help organizations identify, manage, and maintain critical assets through modern technologies such as <strong>Artificial Intelligence, Computer Vision, Mobile Applications, and Cloud Services</strong>.
             </p>
@@ -3092,10 +3099,10 @@ button, input, select, textarea {
               Our goal is to transform complex operational processes into intelligent, efficient, and scalable digital experiences that deliver immediate operational clarity.
             </p>
             <div class="pillar-tags">
-              <span class="p-tag">AI Identification</span>
-              <span class="p-tag">Computer Vision</span>
-              <span class="p-tag">Mobile Ergonomics</span>
-              <span class="p-tag">Cloud Telemetry</span>
+              <span class="p-tag" data-i18n="mission.tag1">AI Identification</span>
+              <span class="p-tag" data-i18n="mission.tag2">Computer Vision</span>
+              <span class="p-tag" data-i18n="mission.tag3">Mobile Ergonomics</span>
+              <span class="p-tag" data-i18n="mission.tag4">Cloud Telemetry</span>
             </div>
           </div>
 
@@ -3105,8 +3112,8 @@ button, input, select, textarea {
             <div class="card-icon-box vision-icon-box">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
             </div>
-            <span class="card-kicker">OUR VISION</span>
-            <h3 class="card-headline">Global Leadership in Industrial Intelligence</h3>
+            <span class="card-kicker" data-i18n="mission.kicker_vision">OUR VISION</span>
+            <h3 class="card-headline" data-i18n="mission.headline_vision">Global Leadership in Industrial Intelligence</h3>
             <p class="card-paragraph">
               To become a leading provider of intelligent software solutions that help organizations understand, manage, and optimize their physical assets and operational environments worldwide.
             </p>
@@ -3114,15 +3121,15 @@ button, input, select, textarea {
               <div class="v-feature">
                 <div class="v-dot"></div>
                 <div>
-                  <strong>Universal Machine Indexing</strong>
-                  <p>Building the world's most comprehensive visual dataset for industrial parts and machinery.</p>
+                  <strong data-i18n="mission.feat1_title">Universal Machine Indexing</strong>
+                  <p data-i18n="mission.feat1_desc">Building the world's most comprehensive visual dataset for industrial parts and machinery.</p>
                 </div>
               </div>
               <div class="v-feature">
                 <div class="v-dot"></div>
                 <div>
-                  <strong>Autonomous Maintenance Workflows</strong>
-                  <p>Guiding field technicians with contextual computer vision overlays and predictive analytics.</p>
+                  <strong data-i18n="mission.feat2_title">Autonomous Maintenance Workflows</strong>
+                  <p data-i18n="mission.feat2_desc">Guiding field technicians with contextual computer vision overlays and predictive analytics.</p>
                 </div>
               </div>
             </div>
@@ -3135,8 +3142,8 @@ button, input, select, textarea {
     <section class="section capabilities-section" id="capabilities">
       <div class="container">
         <div class="section-intro text-center reveal">
-          <span class="sub-badge">Technology Stack</span>
-          <h2 class="section-heading">What We <span class="gradient-shimmer">Do</span></h2>
+          <span class="sub-badge" data-i18n="cap.subbadge">Technology Stack</span>
+          <h2 class="section-heading"><span data-i18n="cap.heading_what">What We</span> <span class="gradient-shimmer" data-i18n="cap.heading_do">Do</span></h2>
           <p class="section-lead" data-i18n="cap.lead">
             A unified suite of digital and visual intelligence solutions architected to modernize legacy operations.
           </p>
@@ -3150,7 +3157,7 @@ button, input, select, textarea {
               <div class="cap-icon-box">
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 3.36 2.07 6.24 5 7.42V20a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2.58c2.93-1.18 5-4.06 5-7.42a8 8 0 0 0-8-8z"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
               </div>
-              <span class="cap-badge">Intelligence</span>
+              <span class="cap-badge" data-i18n="cap.card1_badge">Intelligence</span>
             </div>
             <h3 class="cap-title" data-i18n="cap.card1_title">Artificial Intelligence</h3>
             <p class="cap-description">
@@ -3170,9 +3177,9 @@ button, input, select, textarea {
               <div class="cap-icon-box primary-box">
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
               </div>
-              <span class="cap-badge badge-glow">Core Pillar</span>
+              <span class="cap-badge badge-glow" data-i18n="cap.card2_badge_pillar">Core Pillar</span>
             </div>
-            <h3 class="cap-title">Computer Vision</h3>
+            <h3 class="cap-title" data-i18n="cap.card2_title">Computer Vision</h3>
             <p class="cap-description">
               Developing visual recognition systems capable of identifying, classifying, and understanding real-world assets, parts, and equipment.
             </p>
@@ -5180,6 +5187,29 @@ const TRANSLATIONS = {
     "mission.pill2": "Deep Neural Networks",
     "mission.pill3": "Hardware-Agnostic",
     "mission.pill4": "Zero Data Loss",
+    "mission.strategic_badge": "Strategic Purpose",
+    "mission.h2_pre": "Transforming Complex Operations Into",
+    "mission.h2_highlight": "Intelligent Experiences",
+    "mission.kicker_mission": "OUR MISSION",
+    "mission.headline_mission": "Identify, Manage, and Maintain Critical Assets",
+    "mission.para1": "MOSBI Systems develops innovative software products that help organizations identify, manage, and maintain critical assets through modern technologies such as <strong>Artificial Intelligence, Computer Vision, Mobile Applications, and Cloud Services</strong>.",
+    "mission.para2": "Our goal is to transform complex operational processes into intelligent, efficient, and scalable digital experiences that deliver immediate operational clarity.",
+    "mission.tag1": "AI Identification",
+    "mission.tag2": "Computer Vision",
+    "mission.tag3": "Mobile Ergonomics",
+    "mission.tag4": "Cloud Telemetry",
+    "mission.kicker_vision": "OUR VISION",
+    "mission.headline_vision": "Global Leadership in Industrial Intelligence",
+    "mission.vision_para": "To become a leading provider of intelligent software solutions that help organizations understand, manage, and optimize their physical assets and operational environments worldwide.",
+    "mission.feat1_title": "Universal Machine Indexing",
+    "mission.feat1_desc": "Building the world's most comprehensive visual dataset for industrial parts and machinery.",
+    "mission.feat2_title": "Autonomous Maintenance Workflows",
+    "mission.feat2_desc": "Guiding field technicians with contextual computer vision overlays and predictive analytics.",
+    "cap.heading_what": "What We",
+    "cap.heading_do": "Do",
+    "cap.card2_badge_pillar": "Core Pillar",
+    "cap.card2_title": "Computer Vision",
+    "cap.card2_desc_cv": "Developing visual recognition systems capable of identifying, classifying, and understanding real-world assets, parts, and equipment.",
     "cap.subbadge": "Engineering Disciplines",
     "cap.badge": "CORE PILLARS",
     "cap.heading_pre": "Core",
@@ -5413,6 +5443,29 @@ const TRANSLATIONS = {
     "mission.pill2": "Redes Neuronales Profundas",
     "mission.pill3": "Independiente del Hardware",
     "mission.pill4": "Cero Pérdida de Datos",
+    "mission.strategic_badge": "Propósito Estratégico",
+    "mission.h2_pre": "Transformando Operaciones Complejas en",
+    "mission.h2_highlight": "Experiencias Inteligentes",
+    "mission.kicker_mission": "NUESTRA MISIÓN",
+    "mission.headline_mission": "Identificar, Gestionar y Mantener Activos Críticos",
+    "mission.para1": "MOSBI Systems desarrolla productos de software innovadores que ayudan a las organizaciones a identificar, gestionar y mantener activos críticos mediante tecnologías modernas como <strong>Inteligencia Artificial, Visión por Computadora, Aplicaciones Móviles y Servicios en la Nube</strong>.",
+    "mission.para2": "Nuestro objetivo es transformar procesos operativos complejos en experiencias digitales inteligentes, eficientes y escalables que brinden claridad operacional inmediata.",
+    "mission.tag1": "Identificación IA",
+    "mission.tag2": "Visión Computacional",
+    "mission.tag3": "Ergonomía Móvil",
+    "mission.tag4": "Telemetría en la Nube",
+    "mission.kicker_vision": "NUESTRA VISIÓN",
+    "mission.headline_vision": "Liderazgo Global en Inteligencia Industrial",
+    "mission.vision_para": "Convertirnos en un proveedor líder de soluciones de software inteligente que ayuden a las organizaciones a comprender, gestionar y optimizar sus activos físicos y entornos operativos a nivel mundial.",
+    "mission.feat1_title": "Indexación Universal de Maquinaria",
+    "mission.feat1_desc": "Construyendo el conjunto de datos visuales más completo del mundo para piezas y maquinaria industrial.",
+    "mission.feat2_title": "Flujos de Mantenimiento Autónomo",
+    "mission.feat2_desc": "Guiando a los técnicos de campo con superposiciones de visión por computadora y análisis predictivo.",
+    "cap.heading_what": "Lo Que",
+    "cap.heading_do": "Hacemos",
+    "cap.card2_badge_pillar": "Pilar Principal",
+    "cap.card2_title": "Visión por Computadora",
+    "cap.card2_desc_cv": "Desarrollamos sistemas de reconocimiento visual capaces de identificar, clasificar y comprender activos, piezas y equipos del mundo real.",
     "cap.subbadge": "Disciplinas de Ingeniería",
     "cap.badge": "PILARES FUNDAMENTALES",
     "cap.heading_pre": "Capacidades",
@@ -5646,6 +5699,29 @@ const TRANSLATIONS = {
     "mission.pill2": "Réseaux Neuronaux Profonds",
     "mission.pill3": "Agnostique au Matériel",
     "mission.pill4": "Zéro Perte de Données",
+    "mission.strategic_badge": "Objectif Stratégique",
+    "mission.h2_pre": "Transformer les Opérations Complexes en",
+    "mission.h2_highlight": "Expériences Intelligentes",
+    "mission.kicker_mission": "NOTRE MISSION",
+    "mission.headline_mission": "Identifier, Gérer et Maintenir les Actifs Critiques",
+    "mission.para1": "MOSBI Systems développe des produits logiciels innovants qui aident les organisations à identifier, gérer et maintenir leurs actifs critiques grâce à des technologies modernes telles que <strong>l'Intelligence Artificielle, la Vision par Ordinateur, les Applications Mobiles et les Services Cloud</strong>.",
+    "mission.para2": "Notre objectif est de transformer des processus opérationnels complexes en expériences numériques intelligentes, efficaces et évolutives offrant une clarté opérationnelle immédiate.",
+    "mission.tag1": "Identification IA",
+    "mission.tag2": "Vision Artificielle",
+    "mission.tag3": "Ergonomie Mobile",
+    "mission.tag4": "Télémétrie Cloud",
+    "mission.kicker_vision": "NOTRE VISION",
+    "mission.headline_vision": "Leadership Mondial en Intelligence Industrielle",
+    "mission.vision_para": "Devenir un fournisseur de référence de solutions logicielles intelligentes aidant les organisations à comprendre, gérer et optimiser leurs actifs physiques et environnements opérationnels dans le monde entier.",
+    "mission.feat1_title": "Indexation Universelle des Machines",
+    "mission.feat1_desc": "Construire le jeu de données visuelles le plus complet au monde pour les pièces et machines industrielles.",
+    "mission.feat2_title": "Flux de Maintenance Autonome",
+    "mission.feat2_desc": "Guider les techniciens de terrain avec des superpositions de vision par ordinateur et des analyses prédictives.",
+    "cap.heading_what": "Ce Que",
+    "cap.heading_do": "Nous Faisons",
+    "cap.card2_badge_pillar": "Pilier Central",
+    "cap.card2_title": "Vision par Ordinateur",
+    "cap.card2_desc_cv": "Développement de systèmes de reconnaissance visuelle capables d'identifier, classer et comprendre les actifs, pièces et équipements réels.",
     "cap.subbadge": "Disciplines d'Ingénierie",
     "cap.badge": "PILIERS FONDAMENTAUX",
     "cap.heading_pre": "Capacités",
@@ -5849,10 +5925,15 @@ function setLanguage(lang) {
 
   // Translate all marked DOM elements
   const dict = TRANSLATIONS[lang];
+  const htmlKeys = new Set(['mission.para1', 'mission.para2']);
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (dict[key]) {
-      el.textContent = dict[key];
+    if (dict[key] !== undefined) {
+      if (htmlKeys.has(key)) {
+        el.innerHTML = dict[key];
+      } else {
+        el.textContent = dict[key];
+      }
     }
   });
 
@@ -5944,6 +6025,7 @@ function initLanguageSelector() {
 </script>
 </body>
 </html>
+
 
 
 
