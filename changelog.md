@@ -12,13 +12,19 @@ Format: `[version] - YYYY-MM-DD` following [Keep a Changelog](https://keepachang
 
 ---
 
-## [0.7.1] - 2026-09-27
+## [0.7.2] - 2026-09-27
 
 ### Fixed
-- **Console panel layout**: Right telemetry panel now wider than the scanner
-  - Grid columns: `1.35fr / 1fr` → `1fr / 1.15fr` (right panel gets the majority)
-  - Gap and padding reduced: `1.5rem → 1.25rem` for extra room
-- **Optical Stage height**: Reduced `280px → 210px` to keep scanner compact and prevent text overflow on the bottom button
+- **Console Grid Proportion (60% / 40%)**:
+  - Configured `.console-body-grid` to `minmax(0, 60fr) minmax(0, 40fr)` giving 60% width to the interactive scanner HUD and 40% to the telemetry panel.
+  - Sized `.optical-stage` to `240px` height with clean bounding box alignment.
+  - Centered detection bounding box 2 (`box2`) coordinates in `MACHINE_DATABASE_I18N` across EN, ES, and FR so long labels like `Filtro de Aceite • INSPECCIONADO` never clip against the right edge.
+  - Compacted `.machine-tab` and `.viewport-footer` stats with clean flex alignment and spacing.
+
+- **High-Impact Metrics Strip Layout**:
+  - Removed 3 ghost `<div class="metric-divider"></div>` DOM elements from `index.html`.
+  - Replaced divider elements with native CSS right borders (`.metric-card:not(:last-child)`).
+  - Adjusted responsive media queries so the 4 metrics stay in a single horizontal 4-column row on desktop and laptop displays, avoiding premature 2x2 wrapping with orphan slots.
 
 ---
 

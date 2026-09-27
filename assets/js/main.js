@@ -363,15 +363,15 @@ const MACHINE_DATABASE_I18N = {
         "box1": {
             "label": "Screw Compressor SC-12 • 99.7%",
             "top": "20%",
-            "left": "18%",
-            "width": "50%",
+            "left": "12%",
+            "width": "42%",
             "height": "60%"
         },
         "box2": {
             "label": "Oil Filter Unit • INSPECTED",
             "top": "30%",
-            "left": "68%",
-            "width": "16%",
+            "left": "56%",
+            "width": "18%",
             "height": "36%"
         }
     }
@@ -473,15 +473,15 @@ const MACHINE_DATABASE_I18N = {
         "box1": {
             "label": "Compresor Tornillo SC-12 • 99.7%",
             "top": "20%",
-            "left": "18%",
-            "width": "50%",
+            "left": "12%",
+            "width": "42%",
             "height": "60%"
         },
         "box2": {
             "label": "Filtro de Aceite • INSPECCIONADO",
             "top": "30%",
-            "left": "68%",
-            "width": "16%",
+            "left": "56%",
+            "width": "18%",
             "height": "36%"
         }
     }

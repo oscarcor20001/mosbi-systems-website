@@ -700,12 +700,18 @@ button, input, select, textarea {
 
 .console-body-grid {
   display: grid;
-  grid-template-columns: 0.72fr 1fr;
-  gap: 1rem;
-  padding: 1rem;
+  grid-template-columns: minmax(0, 60fr) minmax(0, 40fr);
+  gap: 1.25rem;
+  padding: 1.25rem;
   text-align: left;
   min-width: 0;
   overflow: hidden;
+}
+
+.interactive-viewport {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Machine Switcher Tabs */
@@ -722,8 +728,8 @@ button, input, select, textarea {
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--text-muted);
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  padding: 0.45rem 0.85rem;
+  font-size: 0.62rem;
+  padding: 0.32rem 0.6rem;
   border-radius: var(--radius-xs);
   cursor: pointer;
   white-space: nowrap;
@@ -750,7 +756,7 @@ button, input, select, textarea {
   background: radial-gradient(circle at center, #0c1836 0%, #050917 100%);
   border: 1px solid rgba(0, 229, 255, 0.2);
   border-radius: var(--radius-md);
-  height: 200px;
+  height: 240px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -918,42 +924,40 @@ button, input, select, textarea {
   background: rgba(14, 22, 48, 0.75);
   border: 1px solid rgba(0, 229, 255, 0.18);
   border-radius: var(--radius-md);
-  padding: 0.85rem;
+  padding: 1.15rem;
   min-width: 0;
-  overflow: hidden;
-  word-break: break-word;
 }
 
 .spec-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  padding-bottom: 0.5rem;
-}
-
-.spec-type-badge {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  color: var(--color-cyan);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  display: block;
+  padding-bottom: 0.6rem;
+  gap: 0.75rem;
 }
 
 .spec-id-group {
   min-width: 0;
   flex: 1;
-  margin-right: 0.5rem;
+}
+
+.spec-type-badge {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: var(--color-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 2px;
 }
 
 .spec-title {
-  font-size: 0.82rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-pure);
-  word-break: normal;
-  overflow-wrap: break-word;
+  line-height: 1.25;
 }
 
 .health-pill {
@@ -962,6 +966,8 @@ button, input, select, textarea {
   font-weight: 700;
   padding: 3px 8px;
   border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .health-pill.good {
@@ -971,17 +977,17 @@ button, input, select, textarea {
 }
 
 .spec-props-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  font-size: 0.72rem;
-  margin-bottom: 0.65rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem 1.15rem;
+  font-size: 0.8rem;
+  margin-bottom: 0.85rem;
 }
 
 .prop-item {
   display: flex;
-  align-items: baseline;
-  gap: 0.4rem;
+  flex-direction: column;
+  gap: 2px;
   min-width: 0;
 }
 
@@ -990,16 +996,31 @@ button, input, select, textarea {
   font-size: 0.68rem;
   font-family: var(--font-mono);
   white-space: nowrap;
-  flex-shrink: 0;
 }
 
 .p-val {
   color: var(--text-main);
   font-weight: 600;
+  font-size: 0.82rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   min-width: 0;
+}
+
+.spec-actions {
+  margin-top: 0.75rem;
+}
+
+.spec-actions .btn-primary-compact {
+  font-size: 0.85rem;
+  padding: 0.6rem 1rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  justify-content: center;
+  width: 100%;
 }
 
 /* Stream Log Box */
@@ -1056,19 +1077,26 @@ button, input, select, textarea {
 .metrics-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  align-items: center;
+  align-items: stretch;
   width: 100%;
   max-width: 1100px;
   background: var(--bg-surface-glass);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 1.75rem 1rem;
   backdrop-filter: blur(16px);
 }
 
 .metric-card {
   text-align: center;
-  padding: 0 1rem;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.metric-card:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .metric-number {
@@ -1086,23 +1114,16 @@ button, input, select, textarea {
 }
 
 .metric-title {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: var(--text-main);
   margin-top: 0.35rem;
 }
 
 .metric-sub {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: var(--text-faint);
   margin-top: 0.2rem;
-}
-
-.metric-divider {
-  width: 1px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.08);
-  margin: 0 auto;
 }
 
 /* --------------------------------------------------------------------------
@@ -2490,7 +2511,7 @@ button, input, select, textarea {
 /* --------------------------------------------------------------------------
    23. Responsive Media Queries
    -------------------------------------------------------------------------- */
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
   .console-body-grid,
   .flagship-body-grid,
   .bento-grid,
@@ -2512,15 +2533,6 @@ button, input, select, textarea {
   
   .ind-card-body {
     grid-template-columns: 1fr;
-  }
-  
-  .metrics-strip {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-  
-  .metric-divider {
-    display: none;
   }
 }
 
@@ -2566,8 +2578,17 @@ button, input, select, textarea {
   }
 
   .metrics-strip {
-    grid-template-columns: 1fr;
-    padding: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 0;
+    padding: 1.5rem 1rem;
+  }
+  .metric-card:nth-child(1),
+  .metric-card:nth-child(3) {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .metric-card:nth-child(2),
+  .metric-card:nth-child(4) {
+    border-right: none;
   }
 
   .flagship-panel,
@@ -2741,3 +2762,4 @@ button, input, select, textarea {
     font-size: 0.8rem;
   }
 }
+
