@@ -12,6 +12,16 @@ Format: `[version] - YYYY-MM-DD` following [Keep a Changelog](https://keepachang
 
 ---
 
+## [0.7.1] - 2026-09-27
+
+### Fixed
+- **Console panel layout**: Right telemetry panel now wider than the scanner
+  - Grid columns: `1.35fr / 1fr` → `1fr / 1.15fr` (right panel gets the majority)
+  - Gap and padding reduced: `1.5rem → 1.25rem` for extra room
+- **Optical Stage height**: Reduced `280px → 210px` to keep scanner compact and prevent text overflow on the bottom button
+
+---
+
 ## [0.7.0] - 2026-09-27
 
 ### Changed — Project Restructuring (Best Practices)
