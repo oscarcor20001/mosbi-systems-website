@@ -24,7 +24,7 @@
         </div>
       </div>
 
-      <nav aria-label="Secciones de demostración">
+      <nav aria-label="MachId™ v2.0">
         <ul class="nav-links">
           <li><a href="#simulator" data-i18n="nav.sim">Simulador en Vivo</a></li>
           <li><a href="#pillars" data-i18n="nav.pillars">Arquitectura v2.0</a></li>
@@ -58,14 +58,14 @@
         </div>
 
         <!-- 4 Operating Modes Selector (v2.0) -->
-        <div class="mode-selector-bar" role="tablist" aria-label="Modos Operativos de MachId v2.0">
+        <div class="mode-selector-bar" role="tablist" aria-label="MachId v2.0" data-i18n-aria="mode.aria">
           <button type="button" class="mode-card-btn active" data-mode="distributedSystem">
             <div class="mode-card-top">
               <span class="mode-icon">🔗</span>
               <span class="mode-tag" data-i18n="mode.tag_new">NUEVO v2.0</span>
             </div>
             <div class="mode-title" data-i18n="mode.m1_title">Sistema Distribuido (Multi-Nodo)</div>
-            <div class="mode-desc" data-i18n="mode.m1_desc">Compactador estacionario con chute multi-piso, unidad hidráulica y panel.</div>
+            <div class="mode-desc" data-i18n="mode.m1_desc">Compactador Precision Auto-Pak 1830-4000 con chute vertical, cámara y contenedor.</div>
           </button>
 
           <button type="button" class="mode-card-btn" data-mode="componentOrPart">
@@ -97,7 +97,7 @@
         </div>
 
         <!-- 3-Step Animated Workflow Bar -->
-        <div class="workflow-stepper" aria-label="Flujo de trabajo de 3 pasos">
+        <div class="workflow-stepper" aria-label="3-step workflow" data-i18n-aria="step.aria">
           <div class="step-pill completed" id="stepPill1" data-step="1">
             <div class="step-num">1</div>
             <div class="step-info">
@@ -130,7 +130,7 @@
             <div class="phone-Statusbar">
               <div class="phone-app-brand">
                 <img src="./assets/app_icon.png" alt="MachId" />
-                <span>MachId™ Inspector v2.0</span>
+                <span data-i18n="phone.brand">MachId™ Inspector v2.0</span>
               </div>
               <span class="phone-mode-chip" id="phoneModeBadge">MODO: MULTI-NODO</span>
             </div>
@@ -160,12 +160,12 @@
               <!-- 3 Interactive Photo / Node Slots -->
               <div class="slots-title">
                 <span data-i18n="sim.slots_label">Tomas Fotográficas Capturadas (Haz clic para cambiar ángulo):</span>
-                <span id="slotCounterText">3 / 3 Tomas</span>
+                <span id="slotCounterText" data-i18n="sim.counter">3 / 3 Tomas</span>
               </div>
               <div class="photo-slots-row" id="photoSlotsContainer">
                 <button type="button" class="slot-card active" data-slot="0">
                   <div class="slot-card-top">
-                    <span>📸 Toma 1</span>
+                    <span data-i18n="sim.shot1">📸 Toma 1</span>
                     <span class="slot-node-tag" id="slotTag0">NODO 1</span>
                   </div>
                   <span class="slot-role-name" id="slotRole0">Tolva y Chute Superior</span>
@@ -173,7 +173,7 @@
 
                 <button type="button" class="slot-card" data-slot="1">
                   <div class="slot-card-top">
-                    <span>🏷️ Toma 2</span>
+                    <span data-i18n="sim.shot2">🏷️ Toma 2</span>
                     <span class="slot-node-tag" id="slotTag1">NODO 2</span>
                   </div>
                   <span class="slot-role-name" id="slotRole1">Cámara y Contenedor</span>
@@ -181,10 +181,10 @@
 
                 <button type="button" class="slot-card" data-slot="2">
                   <div class="slot-card-top">
-                    <span>🎛️ Toma 3</span>
+                    <span data-i18n="sim.shot3">🎛️ Toma 3</span>
                     <span class="slot-node-tag" id="slotTag2">NODO 3</span>
                   </div>
-                  <span class="slot-role-name" id="slotRole2">Unidad Hidráulica y Panel</span>
+                  <span class="slot-role-name" id="slotRole2">Placa OEM y Datos Eléctricos</span>
                 </button>
               </div>
 
@@ -215,11 +215,11 @@
             <div class="ds-top-header">
               <div>
                 <span class="ds-category-badge" id="dsCategory">SISTEMA DE COMPACTACIÓN DE RESIDUOS CON CHUTE VERTICAL</span>
-                <h2 class="ds-title" id="dsTitle">Compactador Hidráulico de Apartamentos (Tipo Chute-Fed)</h2>
+                <h2 class="ds-title" id="dsTitle">Compactador Hidráulico Chute-Fed Precision Machinery Systems Auto-Pak 1830-4000</h2>
               </div>
               <div class="ds-Badges-col">
                 <span class="market-badge market-active" id="dsMarketBadge">● Activa (Soporte OEM & Repuestos)</span>
-                <span class="confidence-pill" id="dsConfidence">Confianza IA: 96.4% • Silueta 3D + Multi-Nodo</span>
+                <span class="confidence-pill" id="dsConfidence">Confianza IA: 98.7% • OCR de Placa Metal + Correlación Multi-Nodo 3D</span>
               </div>
             </div>
 
@@ -227,7 +227,7 @@
             <div class="forensic-dictamen">
               <strong data-i18n="ds.forensic_heading">Dictamen Forense Multimodal (Ignorando Pintura Superficial)</strong>
               <p id="dsForensicText">
-                Identificación positiva mediante correlación morfológica de 3 nodos: (1) Cabezal de descarga de chute telescópico en acero galvanizado con compuerta cortafuego contrapesada (NFPA 82), (2) Tolva de transición y cámara de compactación de 0.5 yd³ en chapa de acero estructural con anclaje de trinquete lateral amarillo y contenedor rodante de 2 yd³, y (3) Unidad de potencia hidráulica (HPU) superior con motor trifásico TEFC y gabinete eléctrico NEMA 12.
+                Identificación positiva mediante correlación de 3 nodos físicos: (1) Cabezal de descarga de chute telescópico en acero galvanizado con compuerta cortafuego fusible (NFPA 82), (2) Tolva de transición y cámara de compactación de 0.5 yd³ con anclaje de trinquete lateral a contenedor de 2 yd³, y (3) Placa metálica remachada al chasis confirmando fabricante Precision Machinery Systems (York, PA), modelo Auto-Pak 1830-4000, serie 871344-015 y motor de 2 HP a 208V trifásico.
               </p>
             </div>
 
@@ -304,10 +304,10 @@
   <div class="modal-backdrop" id="pdfModalBackdrop" role="dialog" aria-modal="true">
     <div class="modal-window">
       <div class="modal-topbar">
-        <strong>MachId™ v2.0 — Vista Previa del Dossier Ejecutivo en PDF (1 Página US Letter)</strong>
+        <strong data-i18n="pdfm.title">MachId™ v2.0 — Vista Previa del Dossier Ejecutivo en PDF (1 Página US Letter)</strong>
         <div style="display:flex;gap:10px;">
-          <button type="button" class="btn btn-primary" id="printPdfNowBtn">🖨️ Imprimir / Guardar PDF</button>
-          <button type="button" class="btn btn-outline" id="closePdfModalBtn" style="color:#fff;">✕ Cerrar</button>
+          <button type="button" class="btn btn-primary" id="printPdfNowBtn" data-i18n="pdfm.print">🖨️ Imprimir / Guardar PDF</button>
+          <button type="button" class="btn btn-outline" id="closePdfModalBtn" style="color:#fff;" data-i18n="pdfm.close">✕ Cerrar</button>
         </div>
       </div>
       <div class="pdf-sheet" id="pdfSheetContent">
@@ -320,16 +320,16 @@
   <div class="modal-backdrop" id="fieldopsModalBackdrop" role="dialog" aria-modal="true">
     <div class="modal-window dark-modal">
       <div class="modal-topbar">
-        <strong>FieldOpsMachineAdapter — Payload de Sincronización Directa (SC ≠ WO)</strong>
-        <button type="button" class="btn btn-outline" id="closeFieldOpsModalBtn" style="color:#fff;">✕ Cerrar</button>
+        <strong data-i18n="fom.title">FieldOpsMachineAdapter — Payload de Sincronización Directa (SC ≠ WO)</strong>
+        <button type="button" class="btn btn-outline" id="closeFieldOpsModalBtn" style="color:#fff;" data-i18n="fom.close">✕ Cerrar</button>
       </div>
       <div style="padding:24px;">
-        <p style="font-size:14px;color:#cbd5e1;margin-bottom:14px;">
+        <p style="font-size:14px;color:#cbd5e1;margin-bottom:14px;" data-i18n-html="fom.intro">
           Este es el paquete JSON estructurado generado automáticamente por <code>FieldOpsMachineAdapter</code> en <strong>MachId™ v2.0</strong> para registrar el equipo y convertir anomalías visuales en <em>Findings</em> dentro de <strong>FieldOps Gen Pro™</strong>:
         </p>
         <pre class="code-pre" id="fieldopsJsonPre"></pre>
         <div style="margin-top:18px;display:flex;justify-content:flex-end;gap:12px;">
-          <a href="../fieldops-gen-pro/index.html" class="btn btn-primary">Ir al Simulador de FieldOps Gen Pro™ →</a>
+          <a href="../fieldops-gen-pro/index.html" class="btn btn-primary" data-i18n="fom.go">Ir al Simulador de FieldOps Gen Pro™ →</a>
         </div>
       </div>
     </div>
@@ -338,15 +338,14 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;">
+      <div data-i18n-html="foot.main"><strong>MachId™ Machine Identifier AI (v2.0)</strong> — Un producto insignia de <a href="../index.html">MOSBI Systems LLC</a>.</div>
       <div>
-        <strong>MachId™ Machine Identifier AI (v2.0)</strong> — Un producto insignia de <a href="../index.html">MOSBI Systems LLC</a>.
-      </div>
-      <div>
-        <span>info@mosbisystems.com • Maryland &amp; Florida, USA</span>
+        <span data-i18n="foot.contact">info@mosbisystems.com • Maryland, USA</span>
       </div>
     </div>
   </footer>
 
+  <script src="./data.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>

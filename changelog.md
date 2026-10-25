@@ -12,6 +12,29 @@ Format: `[version] - YYYY-MM-DD` following [Keep a Changelog](https://keepachang
 
 ---
 
+## [0.9.2] - 2026-10-25
+
+### Fixed
+- **MachId™ compactor identification precision (`machid/`)**:
+  - Replaced generic/unverified "Marathon / Wastequip" placeholder references with the exact machine shown in the inspection photograph (`compactor_chute_3.jpg`): **Precision Machinery Systems Auto-Pak Model No. 1830-4000** (York, PA - S/N 871344-015, 208V / 3Ph / 60 Hz / 7.1A / 2 HP).
+  - Aligned bounding boxes in `machid/data.js` for `compactor_chute_3.jpg` to accurately enclose the manufacturer & model title (`bbox1: top: 11%, left: 31%, width: 58%, height: 23%`) and the stamped serial number & electrical ratings (`bbox2: top: 34%, left: 31%, width: 58%, height: 15%`).
+  - Updated Shot 3 role, HUD nodes, and forensic analysis across ES, EN, and FR: replaced "Unidad Hidráulica y Panel / Three-Phase HPU Motor" with "Placa OEM y Datos Eléctricos / OEM Nameplate & Electrical Specs", correctly attributing the photo to the riveted factory nameplate with direct industrial OCR.
+  - Synchronized fallback HTML in `machid/index.html` and UI strings in `machid/app.js`.
+
+---
+
+## [0.9.1] - 2026-10-25
+
+### Fixed
+- **MachId™ demo (`machid/`) language (i18n) errors**:
+  - Previously only the surrounding UI labels were translated; all mode content (titles, forensic verdicts, specs, node/bbox labels, scan logs, v2.0 modules), scan status messages, PDF dossier, FieldOps modal, pillar texts and footer stayed in Spanish when EN/FR was selected.
+  - Added `machid/data.js` with fully localized mode content for **ES / EN / FR** (language-independent images and bounding boxes are kept separate).
+  - Rewrote `machid/app.js`: every visible string now resolves through `t()`; `data-i18n` / `data-i18n-html` / `data-i18n-aria` bindings added in `machid/index.html`; document `<title>` and `<html lang>` follow the selected language.
+  - Language now defaults to the visitor's saved `mosbi_lang` (shared with the main site) or browser language, persists on change, and re-renders the datasheet and any open modal instantly.
+  - Fixed inconsistent figure in the Financial Audit verdict (68% vs 76% overhaul savings) and removed literal backticks shown in the FieldOps pillar text.
+  - Verified: 0 missing keys across ES/EN/FR (UI strings, HTML bindings and all 4 modes).
+
+---
 ## [0.9.0] - 2026-10-25
 
 ### Added
@@ -29,7 +52,7 @@ Format: `[version] - YYYY-MM-DD` following [Keep a Changelog](https://keepachang
 - `README.md` and `docs/project.md` updated with the new structure and product name.
 
 ### Known Issues
-- Several language (i18n) errors remain in the `machid/` demo page; scheduled as the next fix.
+- Several language (i18n) errors remained in the `machid/` demo page (resolved in 0.9.1).
 
 ---
 ## [0.8.0] - 2026-10-25
