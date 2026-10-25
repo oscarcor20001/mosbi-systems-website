@@ -1,5 +1,17 @@
 const TRANSLATIONS = {
   en: {
+    "cap.card1_title": "Artificial Intelligence",
+    "cap.card3_title": "Mobile Applications",
+    "cap.card4_title": "Cloud Software",
+    "prod.cta_ready": "Ready to deploy Machine Identifier AI™?",
+    "prod.cta_btn": "Request Enterprise Pilot",
+    "roi.kicker_impact": "PROJECTED ANNUAL IMPACT",
+    "roi.lbl_doc_red": "Documentation Reduction:",
+    "roi.val_doc_red": "80% Less Paperwork",
+    "roi.lbl_speedup": "Inspection Speedup:",
+    "roi.val_speedup": "4.5x Faster Lookups",
+    "roi.btn_pilot": "Lock In Your Enterprise Pilot",
+    "contact.lbl_dept": "Target Department",
     "nav.mission": "Mission",
     "nav.capabilities": "Capabilities",
     "nav.product": "Machine Identifier AI™",
@@ -79,16 +91,40 @@ const TRANSLATIONS = {
     "hero.cta_explore": "Explore Machine Identifier AI™",
     "hero.cta_demo": "Request Technical Demo",
     "hero.cta_copy": "Copy info@mosbisystems.com",
-    "hero.sim_title": "MOSBI Machine Identifier AI™ • Optical Inspection Simulator",
-    "hero.sim_status": "EDGE SYNC ACTIVE",
+        "hero.sim_title": "Machine Identifier AI™ • Multimodal Forensic Identification",
+        "hero.sim_status": "DUAL ENGINE: MOBILE APP & CMMS PLUGIN",
+    "pdf_modal.print": "Print / Download PDF",
+    "pdf_modal.title": "Executive Technical Datasheet — 10-Section Audit Preview",
+    "hero.btn_cmms": "Sync with FieldOps Pro / CMMS",
+    "hero.btn_pdf": "Export Executive PDF (10 Sections)",
+    "hero.lbl_manual": "Service Manual:",
+    "hero.lbl_oem": "OEM Manufacturer:",
+    "hero.spec_year": "Estimated Year:",
+    "hero.spec_weight": "Weight / Frame:",
+    "hero.spec_voltage": "Voltage / Frequency:",
+    "hero.spec_flow": "Nominal Flow Rate:",
+    "hero.spec_pressure": "Max Pressure / Head:",
+    "hero.spec_power": "Nominal Power:",
+    "hero.evidence_title": "Forensic Evidence & AI Assessment",
+    "hero.vf_engine": "AI Engine:",
+    "hero.vf_method": "Forensic Method:",
+    "hero.forensic_rule": "⚡ Critical Rule: Paint color ignored (equipment frequently repainted)",
+    "hero.slot_conn": "Connections",
+    "hero.slot_panel": "Control Panel",
+    "hero.slot_plate": "Nameplate OCR",
+    "hero.slot_general": "3D Silhouette",
+    "hero.tab_joy": "Joy Twistair (Discontinued)",
+    "hero.tab_siemens": "Siemens 1LE1 (Hybrid)",
+    "hero.tab_atlas": "Atlas Copco GA 55 (OCR)",
+    "hero.tab_goulds": "Goulds 3196 (3D Silhouette)",
     "hero.tab_turbine": "Centrifugal Pump #402",
     "hero.tab_valve": "Cryogenic Valve PV-94",
     "hero.tab_motor": "Induction Motor M-7",
     "hero.tab_compressor": "Screw Compressor SC-12",
     "hero.vf_latency": "Inference:",
     "hero.vf_model": "Model:",
-    "hero.vf_confidence": "Confidence:",
-    "hero.dossier_tab": "Asset Intelligence Sheet",
+        "hero.vf_confidence": "Confidence:",
+        "hero.dossier_tab": "Structured Engineering Datasheet",
     "hero.dossier_type": "ROTARY EQUIPMENT",
     "hero.dossier_title": "Centrifugal Slurry Pump",
     "hero.dossier_health": "Healthy • 98%",
@@ -324,6 +360,18 @@ const TRANSLATIONS = {
     "footer.status": "All Neural Pipelines Operational • Production Ready"
 },
   es: {
+    "cap.card1_title": "Inteligencia Artificial",
+    "cap.card3_title": "Aplicaciones Móviles",
+    "cap.card4_title": "Software en la Nube",
+    "prod.cta_ready": "¿Listo para implementar Machine Identifier AI™?",
+    "prod.cta_btn": "Solicitar Piloto Empresarial",
+    "roi.kicker_impact": "IMPACTO ANUAL PROYECTADO",
+    "roi.lbl_doc_red": "Reducción de Documentación:",
+    "roi.val_doc_red": "80% Menos Papeleo",
+    "roi.lbl_speedup": "Aceleración de Inspección:",
+    "roi.val_speedup": "Consultas 4.5x Más Rápidas",
+    "roi.btn_pilot": "Asegura tu Piloto Empresarial",
+    "contact.lbl_dept": "Departamento de Destino",
     "nav.mission": "Misión",
     "nav.capabilities": "Capacidades",
     "nav.product": "Machine Identifier AI™",
@@ -403,16 +451,40 @@ const TRANSLATIONS = {
     "hero.cta_explore": "Explorar Machine Identifier AI™",
     "hero.cta_demo": "Solicitar Demo Técnica",
     "hero.cta_copy": "Copiar info@mosbisystems.com",
-    "hero.sim_title": "MOSBI Machine Identifier AI™ • Simulador de Inspección Óptica",
-    "hero.sim_status": "SINCRONIZACIÓN EDGE ACTIVA",
+        "hero.sim_title": "Machine Identifier AI™ • Identificación Forense Multimodal",
+        "hero.sim_status": "MODO DUAL: APP MÓVIL Y PLUGIN CMMS",
+    "pdf_modal.print": "Imprimir / Guardar PDF",
+    "pdf_modal.title": "Ficha Técnica Ejecutiva — Auditoría Forense de 10 Secciones",
+    "hero.btn_cmms": "Sincronizar con FieldOps Pro / CMMS",
+    "hero.btn_pdf": "Exportar Ficha Técnica en PDF (10 Secciones)",
+    "hero.lbl_manual": "Manual de Servicio:",
+    "hero.lbl_oem": "Fabricante OEM:",
+    "hero.spec_year": "Año Estimado:",
+    "hero.spec_weight": "Bastidor / Peso:",
+    "hero.spec_voltage": "Tensión / Frecuencia:",
+    "hero.spec_flow": "Caudal Nominal:",
+    "hero.spec_pressure": "Presión / Altura:",
+    "hero.spec_power": "Potencia Nominal:",
+    "hero.evidence_title": "Evidencia Forense y Dictamen IA",
+    "hero.vf_engine": "Motor IA:",
+    "hero.vf_method": "Método Forense:",
+    "hero.forensic_rule": "⚡ Regla Forense: Ignora color de pintura (análisis estructural puro)",
+    "hero.slot_conn": "Conexiones",
+    "hero.slot_panel": "Panel de Control",
+    "hero.slot_plate": "Placa de Datos",
+    "hero.slot_general": "Silueta 3D",
+    "hero.tab_joy": "Joy Twistair (Descontinuada)",
+    "hero.tab_siemens": "Siemens 1LE1 (Híbrido)",
+    "hero.tab_atlas": "Atlas Copco GA 55 (OCR)",
+    "hero.tab_goulds": "Goulds 3196 (Silueta 3D)",
     "hero.tab_turbine": "Bomba Centrífuga #402",
     "hero.tab_valve": "Válvula Criogénica PV-94",
     "hero.tab_motor": "Motor de Inducción M-7",
     "hero.tab_compressor": "Compresor de Tornillo SC-12",
     "hero.vf_latency": "Inferencia:",
     "hero.vf_model": "Modelo:",
-    "hero.vf_confidence": "Confianza:",
-    "hero.dossier_tab": "Ficha de Inteligencia de Activo",
+        "hero.vf_confidence": "Confianza:",
+        "hero.dossier_tab": "Ficha Técnica Estructurada de Ingeniería",
     "hero.dossier_type": "EQUIPO ROTATIVO",
     "hero.dossier_title": "Bomba Centrífuga de Lodos",
     "hero.dossier_health": "Saludable • 98%",
@@ -426,8 +498,8 @@ const TRANSLATIONS = {
     "hero.stream_title": "TRANSMISIÓN DE INFERENCIA EN VIVO",
     "metric.accuracy_title": "Precisión de Reconocimiento",
     "metric.accuracy_sub": "Validación neuronal visual multi-ángulo",
-    "metric.latency_title": "Latencia en el Edge",
-    "metric.latency_sub": "Ejecución móvil instantánea sin demora",
+    "metric.latency_title": "Tiempo de Respuesta",
+    "metric.latency_sub": "Ejecución instantánea en el dispositivo sin demora",
     "metric.doc_title": "Reducción de Tiempo Manual",
     "metric.doc_sub": "Telemetría automatizada y eliminación manual",
     "metric.vis_title": "Visibilidad de Activos Críticos",
@@ -436,7 +508,7 @@ const TRANSLATIONS = {
     "mission.title_pre": "Transformando las Operaciones Físicas con",
     "mission.title_highlight": "Inteligencia",
     "mission.lead": "En MOSBI Systems, nuestra misión es desarrollar soluciones de software inteligente que permitan a las organizaciones comprender, gestionar y optimizar sus complejas operaciones físicas y activos críticos.",
-    "mission.secondary": "Unimos la maquinaria industrial con las plataformas empresariales en la nube mediante visión computacional en tiempo real, inferencia ML en el edge y documentación técnica automatizada.",
+    "mission.secondary": "Unimos la maquinaria industrial con las plataformas empresariales en la nube mediante visión computacional en tiempo real, inferencia ML en el dispositivo y documentación técnica automatizada.",
     "mission.pill1": "Telemetría en Tiempo Real",
     "mission.pill2": "Redes Neuronales Profundas",
     "mission.pill3": "Independiente del Hardware",
@@ -507,7 +579,7 @@ const TRANSLATIONS = {
     "prod.cap2_title": "Identificación visual de activos",
     "prod.cap2_desc": "Identificación óptica apuntando la cámara, sin requerir códigos de barras, etiquetas ni búsquedas manuales.",
     "prod.cap3_title": "Documentación de equipos industriales",
-    "prod.cap3_desc": "Vinculación digital inmediata con manuales OEM, pares de apriete e historiales de mantenimiento.",
+    "prod.cap3_desc": "Vinculación digital inmediata con manuales OEM, información técnica e historiales de mantenimiento.",
     "prod.cap4_title": "Flujos de apoyo al mantenimiento",
     "prod.cap4_desc": "Checklists contextuales y procedimientos de diagnóstico guiados paso a paso para técnicos.",
     "prod.cap5_title": "Recopilación y organización de datos de máquinas",
@@ -547,8 +619,8 @@ const TRANSLATIONS = {
     "arch.lead": "Cómo MOSBI Systems conecta la captura visual en primera línea con la sincronización empresarial en la nube.",
     "arch.s1_title": "Captura en Campo",
     "arch.s1_desc": "El técnico apunta la cámara o sensor móvil hacia cualquier máquina o componente.",
-    "arch.s2_title": "Inferencia en el Edge",
-    "arch.s2_desc": "El modelo neuronal clasifica la firma del equipo en <250ms sin latencia ni dependencia de red.",
+    "arch.s2_title": "Procesamiento en el Dispositivo",
+    "arch.s2_desc": "El modelo neuronal clasifica la firma del equipo en <250ms sin demoras ni dependencia de red.",
     "arch.s3_title": "Expediente Instantáneo",
     "arch.s3_desc": "Especificaciones del gemelo digital, manuales OEM y listas de chequeo aparecen en pantalla.",
     "arch.s4_title": "Sincronización CMMS Cloud",
@@ -648,6 +720,28 @@ const TRANSLATIONS = {
     "footer.status": "Todos los Pipelines Neuronales Operativos • Listo para Producción"
 },
   fr: {
+    "cap.card1_title": "Intelligence Artificielle",
+    "cap.card3_title": "Applications Mobiles",
+    "cap.card4_title": "Logiciels Cloud",
+    "prod.cta_ready": "Prêt à déployer Machine Identifier AI™ ?",
+    "prod.cta_btn": "Demander un Projet Pilote Entreprise",
+    "fo.pil_title": "Opération de bout en bout",
+    "fo.pil1_t": "Contrôle Journalier & Inventaire Camionnette",
+    "fo.pil1_d": "Groupes de camionnettes par métier, références obligatoires, déduction automatique de stock et réapprovisionnement en un clic.",
+    "fo.pil2_t": "Reçu Numérique Guidé",
+    "fo.pil2_d": "Clôture en deux étapes reproduisant la facture autocopiante, immuable après validation, avec vue prête à imprimer.",
+    "fo.pil3_t": "Constats → Propositions → Ordres de Travail",
+    "fo.pil3_d": "Les appels de service ne se convertissent jamais directement en ordres de travail. Les ordres proviennent uniquement de propositions approuvées.",
+    "fo.pil5_t": "Sécurité OSHA & Passerelle Chat IA",
+    "fo.pil5_d": "90 normes officielles, rappels à l'arrivée, accusés de réception immuables et widget de chat IA Gemini intégrable.",
+    "fo.ed_title": "Équipe vs Entreprise",
+    "roi.kicker_impact": "IMPACT ANNUEL PROJETÉ",
+    "roi.lbl_doc_red": "Réduction de la Documentation :",
+    "roi.val_doc_red": "80% de Papiers en Moins",
+    "roi.lbl_speedup": "Accélération des Inspections :",
+    "roi.val_speedup": "Recherches 4.5x Plus Rapides",
+    "roi.btn_pilot": "Réservez Votre Projet Pilote",
+    "contact.lbl_dept": "Département Destinataire",
     "nav.mission": "Mission",
     "nav.capabilities": "Capacités",
     "nav.product": "Machine Identifier AI™",
@@ -673,16 +767,40 @@ const TRANSLATIONS = {
     "hero.cta_explore": "Explorer Machine Identifier AI™",
     "hero.cta_demo": "Demander une Démo Technique",
     "hero.cta_copy": "Copier info@mosbisystems.com",
-    "hero.sim_title": "MOSBI Machine Identifier AI™ • Simulateur d'Inspection Optique",
-    "hero.sim_status": "SYNCHRO EDGE ACTIVE",
+        "hero.sim_title": "Machine Identifier AI™ • Identification Légale Multimodale",
+        "hero.sim_status": "MODE DOUBLE : APP MOBILE & PLUGIN CMMS",
+    "pdf_modal.print": "Imprimer / Télécharger PDF",
+    "pdf_modal.title": "Fiche Technique Dirigeant — Rapport d'Audit 10 Sections",
+    "hero.btn_cmms": "Synchroniser avec FieldOps Pro / CMMS",
+    "hero.btn_pdf": "Exporter Fiche Technique PDF (10 Sections)",
+    "hero.lbl_manual": "Manuel de Service :",
+    "hero.lbl_oem": "Constructeur OEM :",
+    "hero.spec_year": "Année Estimée :",
+    "hero.spec_weight": "Poids / Châssis :",
+    "hero.spec_voltage": "Tension / Fréquence :",
+    "hero.spec_flow": "Débit Nominal :",
+    "hero.spec_pressure": "Pression / Hauteur :",
+    "hero.spec_power": "Puissance Nominale :",
+    "hero.evidence_title": "Preuve Légale & Analyse IA",
+    "hero.vf_engine": "Moteur IA :",
+    "hero.vf_method": "Méthode Légale :",
+    "hero.forensic_rule": "⚡ Règle Métier : Couleur peinture ignorée (analyse structurelle pure)",
+    "hero.slot_conn": "Connexions",
+    "hero.slot_panel": "Panneau Contrôle",
+    "hero.slot_plate": "Plaque Constructeur",
+    "hero.slot_general": "Silhouette 3D",
+    "hero.tab_joy": "Joy Twistair (Obsolète)",
+    "hero.tab_siemens": "Siemens 1LE1 (Hybride)",
+    "hero.tab_atlas": "Atlas Copco GA 55 (OCR)",
+    "hero.tab_goulds": "Goulds 3196 (Silhouette 3D)",
     "hero.tab_turbine": "Pompe Centrifuge #402",
     "hero.tab_valve": "Vanne Cryogénique PV-94",
     "hero.tab_motor": "Moteur à Induction M-7",
     "hero.tab_compressor": "Compresseur à Vis SC-12",
     "hero.vf_latency": "Inférence :",
     "hero.vf_model": "Modèle :",
-    "hero.vf_confidence": "Confiance :",
-    "hero.dossier_tab": "Fiche d'Intelligence Équipement",
+        "hero.vf_confidence": "Confiance :",
+        "hero.dossier_tab": "Fiche Technique Structurée d'Ingénierie",
     "hero.dossier_type": "ÉQUIPEMENT ROTATIF",
     "hero.dossier_title": "Pompe Centrifuge à Boue",
     "hero.dossier_health": "Sain • 98%",
@@ -696,8 +814,8 @@ const TRANSLATIONS = {
     "hero.stream_title": "FLUX D'INFÉRENCE EN DIRECT",
     "metric.accuracy_title": "Précision de Reconnaissance",
     "metric.accuracy_sub": "Validation neuronale visuelle multi-angle",
-    "metric.latency_title": "Latence à l'Edge",
-    "metric.latency_sub": "Exécution mobile instantanée sans délai",
+    "metric.latency_title": "Temps de Réponse",
+    "metric.latency_sub": "Exécution instantanée sur l'appareil sans délai",
     "metric.doc_title": "Réduction du Temps Manuel",
     "metric.doc_sub": "Télémétrie automatisée et suppression manuelle",
     "metric.vis_title": "Visibilité des Actifs Critiques",
@@ -945,7 +1063,11 @@ function setLanguage(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (dict[key]) {
-      el.textContent = dict[key];
+      if (dict[key].includes('<') && dict[key].includes('>')) {
+        el.innerHTML = dict[key];
+      } else {
+        el.textContent = dict[key];
+      }
     }
   });
 
@@ -959,7 +1081,7 @@ function setLanguage(lang) {
 
   // Re-render active machine scanner data in new language
   if (typeof loadMachine === 'function') {
-    loadMachine(currentActiveMachine || 'turbine');
+    loadMachine(currentActiveMachine || 'goulds', typeof currentActiveSlot !== 'undefined' ? currentActiveSlot : 0);
   }
 
   // Re-render active industry data in new language
@@ -968,13 +1090,11 @@ function setLanguage(lang) {
   }
 
   // Update contact select dropdown options if available
-  const contactTopic = document.getElementById('contactTopic');
-  if (contactTopic && contactTopic.options.length >= 5) {
-    contactTopic.options[0].text = dict['contact.opt_select'] || contactTopic.options[0].text;
-    contactTopic.options[1].text = dict['contact.opt_sales'] || contactTopic.options[1].text;
-    contactTopic.options[2].text = dict['contact.opt_info'] || contactTopic.options[2].text;
-    contactTopic.options[3].text = dict['contact.opt_support'] || contactTopic.options[3].text;
-    contactTopic.options[4].text = dict['contact.opt_pilot'] || contactTopic.options[4].text;
+  const deptSelect = document.getElementById('departmentSelect');
+  if (deptSelect && deptSelect.options.length >= 3) {
+    deptSelect.options[0].text = dict['contact.opt_sales'] || deptSelect.options[0].text;
+    deptSelect.options[1].text = dict['contact.opt_info'] || deptSelect.options[1].text;
+    deptSelect.options[2].text = dict['contact.opt_support'] || deptSelect.options[2].text;
   }
 }
 

@@ -22,7 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=10">
+  <link rel="stylesheet" href="assets/css/styles.css?v=13">
   <link rel="canonical" href="https://mosbisystems.com/">
 
   <link rel="icon" href="logo.svg" type="image/svg+xml">
@@ -187,9 +187,9 @@
         </div>
 
         <!-- INTERACTIVE LIVE PRODUCT SCANNER CONSOLE -->
-        <div class="product-console-wrapper reveal">
+        <div class="product-console-wrapper reveal" id="machineShowcase">
           <div class="console-box">
-            <!-- Console Header -->
+            <!-- Console Topbar -->
             <div class="console-topbar">
               <div class="window-controls">
                 <span class="w-dot dot-red"></span>
@@ -197,33 +197,48 @@
                 <span class="w-dot dot-green"></span>
               </div>
               <div class="console-title">
-                <span class="tech-tag">INFERENCE ENGINE</span>
-                <span><span data-i18n="hero.sim_title">MOSBI Machine Identifier AI™ • Optical Inspection Simulator</span></span>
+                <span class="tech-tag">GEMINI MULTIMODAL AI</span>
+                <span><span data-i18n="hero.sim_title">Machine Identifier AI™ • Identificación Forense Multimodal</span></span>
               </div>
               <div class="console-engine-status">
                 <span class="status-indicator-active"></span>
-                <span data-i18n="hero.sim_status">EDGE SYNC ACTIVE</span>
+                <span data-i18n="hero.sim_status">MODO DUAL: APP MÓVIL Y PLUGIN CMMS</span>
               </div>
             </div>
 
-            <!-- Console Body -->
+            <!-- Console Body Grid -->
             <div class="console-body-grid">
-              <!-- Left: Interactive Scanner View -->
+              <!-- Left Column: Multi-Angle Visual Inspection & AI Inference -->
               <div class="interactive-viewport">
-                <!-- Machine Category Selector Bar -->
-                <div class="machine-switcher" role="tablist" aria-label="Select Machine Sample">
-                  <button class="machine-tab active" data-machine="turbine" role="tab" aria-selected="true">
-                    <span data-i18n="hero.tab_turbine">Centrifugal Pump #402</span>
+                <!-- Machine Test-Case Switcher Bar -->
+                <div class="machine-switcher" role="tablist" aria-label="Seleccionar caso de prueba industrial">
+                  <button class="machine-tab active" data-machine="goulds" role="tab" aria-selected="true">
+                    <span class="tab-dot dot-green"></span>
+                    <span data-i18n="hero.tab_goulds">Goulds 3196 (Silueta 3D)</span>
                   </button>
-                  <button class="machine-tab" data-machine="valve" role="tab" aria-selected="false">
-                    <span data-i18n="hero.tab_valve">Cryogenic Valve PV-94</span>
+                  <button class="machine-tab" data-machine="atlas" role="tab" aria-selected="false">
+                    <span class="tab-dot dot-green"></span>
+                    <span data-i18n="hero.tab_atlas">Atlas Copco GA 55 (OCR)</span>
                   </button>
-                  <button class="machine-tab" data-machine="motor" role="tab" aria-selected="false">
-                    <span data-i18n="hero.tab_motor">Induction Motor M-7</span>
+                  <button class="machine-tab" data-machine="siemens" role="tab" aria-selected="false">
+                    <span class="tab-dot dot-yellow"></span>
+                    <span data-i18n="hero.tab_siemens">Siemens 1LE1 (Híbrido)</span>
                   </button>
-                  <button class="machine-tab" data-machine="compressor" role="tab" aria-selected="false">
-                    <span data-i18n="hero.tab_compressor">Screw Compressor SC-12</span>
+                  <button class="machine-tab" data-machine="joy" role="tab" aria-selected="false">
+                    <span class="tab-dot dot-red"></span>
+                    <span data-i18n="hero.tab_joy">Joy Twistair (Descontinuada)</span>
                   </button>
+                </div>
+
+                <!-- Forensic Rules & Slot Indicator Header -->
+                <div class="forensic-subbar">
+                  <span class="active-slot-pill" id="activeSlotPill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    <span id="activeSlotLabel">Silueta 3D (Toma 1/4)</span>
+                  </span>
+                  <span class="forensic-rule-pill" title="Regla Crítica del Prompt Forense">
+                    <span data-i18n="hero.forensic_rule">⚡ Regla Forense: Ignora color de pintura (análisis estructural puro)</span>
+                  </span>
                 </div>
 
                 <!-- Visual Optical Target Display -->
@@ -234,109 +249,166 @@
                   <!-- HUD Reticle & Crosshairs -->
                   <div class="hud-center-cross"></div>
                   <div class="hud-grid-marks">
-                    <span class="hud-mark top-l">+0.00</span>
-                    <span class="hud-mark top-r">FPS 60</span>
-                    <span class="hud-mark bot-l">ISO 400</span>
-                    <span class="hud-mark bot-r">FOV 74°</span>
+                    <span class="hud-mark top-l" id="hudSlotCode">SLOT: ISO-3D</span>
+                    <span class="hud-mark top-r" id="hudGrounding">SEARCH GROUNDED</span>
+                    <span class="hud-mark bot-l" id="hudConditionBadge">COND: ACTIVE</span>
+                    <span class="hud-mark bot-r" id="hudMethodCode">METH: SILHOUETTE-3D</span>
                   </div>
 
                   <!-- Dynamic SVG Machinery Illustration -->
                   <div class="machinery-visual" id="machineryVisual">
                     <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="machine-schematic-svg" id="machineSvg">
-                      <!-- Base Machine Graphic will be injected by script.js dynamically -->
+                      <!-- Base Machine Graphic injected dynamically -->
                     </svg>
                   </div>
 
-                  <!-- Dynamic Bounding Boxes -->
+                  <!-- Dynamic Forensic Bounding Boxes -->
                   <div class="dynamic-bounding-box box-main" id="boxMain">
-                    <div class="box-tag-label" id="boxMainLabel">Turbine Pump #402 • 99.8% Match</div>
+                    <div class="box-tag-label" id="boxMainLabel">Morfología 3D • Voluta ANSI</div>
                     <div class="b-corner tl"></div><div class="b-corner tr"></div>
                     <div class="b-corner bl"></div><div class="b-corner br"></div>
                   </div>
 
                   <div class="dynamic-bounding-box box-sub" id="boxSub">
-                    <div class="box-tag-label label-sub" id="boxSubLabel">Flange Seal • PASS</div>
+                    <div class="box-tag-label label-sub" id="boxSubLabel">Brida Descarga • PASS</div>
                     <div class="b-corner tl"></div><div class="b-corner tr"></div>
                     <div class="b-corner bl"></div><div class="b-corner br"></div>
                   </div>
                 </div>
 
+                <!-- Multi-Photo Angle Selector Grid (4 slots) -->
+                <div class="photo-slots-grid" role="group" aria-label="Ángulos de inspección fotográfica">
+                  <button class="photo-slot-btn active" data-slot="0" type="button">
+                    <span class="slot-icon">📸</span>
+                    <div class="slot-meta">
+                      <span class="slot-name" data-i18n="hero.slot_general">Silueta 3D</span>
+                      <span class="slot-status">Capturada</span>
+                    </div>
+                  </button>
+                  <button class="photo-slot-btn" data-slot="1" type="button">
+                    <span class="slot-icon">🏷️</span>
+                    <div class="slot-meta">
+                      <span class="slot-name" data-i18n="hero.slot_plate">Placa de Datos</span>
+                      <span class="slot-status">Capturada</span>
+                    </div>
+                  </button>
+                  <button class="photo-slot-btn" data-slot="2" type="button">
+                    <span class="slot-icon">🎛️</span>
+                    <div class="slot-meta">
+                      <span class="slot-name" data-i18n="hero.slot_panel">Panel de Control</span>
+                      <span class="slot-status">Capturada</span>
+                    </div>
+                  </button>
+                  <button class="photo-slot-btn" data-slot="3" type="button">
+                    <span class="slot-icon">⚙️</span>
+                    <div class="slot-meta">
+                      <span class="slot-name" data-i18n="hero.slot_conn">Conexiones</span>
+                      <span class="slot-status">Capturada</span>
+                    </div>
+                  </button>
+                </div>
+
                 <!-- Bottom Viewport Footer -->
                 <div class="viewport-footer">
                   <div class="vf-stat">
-                    <span class="vf-label" data-i18n="hero.vf_latency">Inference:</span>
-                    <span class="vf-val" id="valLatency">14.2 ms</span>
+                    <span class="vf-label" data-i18n="hero.vf_method">Método Forense:</span>
+                    <span class="vf-val val-accent" id="valMethod">Silueta Morfológica 3D</span>
                   </div>
                   <div class="vf-stat">
-                    <span class="vf-label" data-i18n="hero.vf_model">Model:</span>
-                    <span class="vf-val">MOSBI-Vision-4.2-Edge</span>
+                    <span class="vf-label" data-i18n="hero.vf_engine">Motor IA:</span>
+                    <span class="vf-val" id="valEngine">Gemini 2.5 + Grounding</span>
                   </div>
                   <div class="vf-stat">
-                    <span class="vf-label" data-i18n="hero.vf_confidence">Confidence:</span>
-                    <span class="vf-val val-green" id="valConfidence">99.8%</span>
+                    <span class="vf-label" data-i18n="hero.vf_confidence">Confianza:</span>
+                    <span class="vf-val val-green" id="valConfidence">94.8%</span>
                   </div>
                 </div>
               </div>
 
-              <!-- Right: Real-Time Diagnostic Feed & Asset Metadata -->
+              <!-- Right Column: Structured Engineering Datasheet -->
               <div class="telemetry-panel">
                 <div class="telemetry-tabs">
-                  <span class="t-tab active" data-i18n="hero.dossier_tab">Asset Intelligence Sheet</span>
+                  <span class="t-tab active" data-i18n="hero.dossier_tab">Ficha Técnica Estructurada de Ingeniería</span>
                 </div>
 
                 <!-- Dynamic Machine Specification Details -->
                 <div class="asset-spec-card" id="assetSpecCard">
+                  <!-- Header: Brand, Model, Category, Market Condition Badge -->
                   <div class="spec-header">
                     <div class="spec-id-group">
-                      <span class="spec-type-badge" id="specBadge" data-i18n="hero.dossier_type">ROTARY EQUIPMENT</span>
-                      <h4 class="spec-title" id="specTitle" data-i18n="hero.dossier_title">Centrifugal Slurry Pump</h4>
+                      <span class="spec-type-badge" id="specCategory">BOMBA CENTRÍFUGA DE PROCESO QUÍMICO</span>
+                      <h4 class="spec-title" id="specTitle">ITT Goulds Pumps 3196 ANSI</h4>
                     </div>
-                    <span class="health-pill good" id="specHealth" data-i18n="hero.dossier_health">Healthy • 98%</span>
+                    <span class="health-pill condition-active" id="specCondition">● Activa (Soporte Oficial OEM)</span>
                   </div>
 
+                  <!-- Forensic Evidence Box (Dictamen Forense de Gemini) -->
+                  <div class="forensic-evidence-box">
+                    <div class="evidence-header">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                      <span data-i18n="hero.evidence_title">Evidencia Forense y Dictamen IA</span>
+                    </div>
+                    <p class="evidence-text" id="specEvidence">
+                      Placa metálica corroída e ilegible por capas de pintura epóxica. Identificación positiva lograda mediante análisis de silueta 3D: dimensiones de bridas ANSI B73.1, curvatura de voluta y cámara de sellado i-FRAME.
+                    </p>
+                  </div>
+
+                  <!-- Structured Technical Specs Grid (6 Key Metric Boxes) -->
                   <div class="spec-props-grid">
                     <div class="prop-item">
-                      <span class="p-label" data-i18n="hero.prop_tag">Asset Tag:</span>
-                      <span class="p-val" id="specTag">PUMP-CPX-800-MD</span>
+                      <span class="p-label" data-i18n="hero.spec_power">Potencia Nominal:</span>
+                      <span class="p-val" id="specPower">30 kW (40 HP)</span>
                     </div>
                     <div class="prop-item">
-                      <span class="p-label" data-i18n="hero.prop_serial">Serial OCR:</span>
-                      <span class="p-val" id="specSerial">SN-8849-01B</span>
+                      <span class="p-label" data-i18n="hero.spec_pressure">Presión / Altura:</span>
+                      <span class="p-val" id="specPressure">160 m (525 ft Altura)</span>
                     </div>
                     <div class="prop-item">
-                      <span class="p-label" data-i18n="hero.prop_vendor">OEM Vendor:</span>
-                      <span class="p-val" id="specVendor">FlowMax Dynamics</span>
+                      <span class="p-label" data-i18n="hero.spec_flow">Caudal Nominal:</span>
+                      <span class="p-val" id="specFlow">1,020 m³/h (4,500 GPM)</span>
                     </div>
                     <div class="prop-item">
-                      <span class="p-label" data-i18n="hero.prop_temp">Operating Temp:</span>
-                      <span class="p-val" id="specTemp">48.2 °C (Normal)</span>
+                      <span class="p-label" data-i18n="hero.spec_voltage">Tensión / Frecuencia:</span>
+                      <span class="p-val" id="specVoltage">460V / 3F / 60Hz</span>
                     </div>
                     <div class="prop-item">
-                      <span class="p-label" data-i18n="hero.prop_service">Next Service:</span>
-                      <span class="p-val val-accent" id="specService">14 Days (Routine)</span>
+                      <span class="p-label" data-i18n="hero.spec_weight">Bastidor / Peso:</span>
+                      <span class="p-val" id="specWeight">ANSI Grupo II • 385 kg</span>
                     </div>
                     <div class="prop-item">
-                      <span class="p-label" data-i18n="hero.prop_sync">CMMS Sync:</span>
-                      <span class="p-val val-green" id="specSync">Synced • ID #9481</span>
+                      <span class="p-label" data-i18n="hero.spec_year">Año Estimado:</span>
+                      <span class="p-val val-accent" id="specYear">2018 - 2022</span>
                     </div>
                   </div>
 
+                  <!-- OEM Manufacturer & Documentation Links -->
+                  <div class="spec-oem-row">
+                    <div class="oem-link-item">
+                      <span class="oem-label" data-i18n="hero.lbl_oem">Fabricante OEM:</span>
+                      <a href="https://www.gouldspumps.com" target="_blank" rel="noopener noreferrer" class="oem-link" id="specOemLink">
+                        <span id="specOemName">ITT Goulds Pumps</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                      </a>
+                    </div>
+                    <div class="oem-link-item">
+                      <span class="oem-label" data-i18n="hero.lbl_manual">Manual de Servicio:</span>
+                      <a href="https://www.gouldspumps.com" target="_blank" rel="noopener noreferrer" class="oem-link manual-link" id="specManualLink">
+                        <span id="specManualName">Manual Goulds 3196 [PDF]</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Primary Actions: PDF Export & CMMS Integration -->
                   <div class="spec-actions">
-                    <a href="#contact" class="btn btn-primary-compact btn-full">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                      <span data-i18n="hero.dossier_btn">Access Complete Machine Dossier</span>
+                    <button class="btn btn-primary-compact btn-full btn-export-pdf" id="openPdfModalBtn" type="button">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                      <span data-i18n="hero.btn_pdf">Exportar Ficha Técnica en PDF (10 Secciones)</span>
+                    </button>
+                    <a href="#contact" class="btn btn-ghost-compact btn-full" id="syncCmmsBtn">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                      <span data-i18n="hero.btn_cmms">Sincronizar con FieldOps Pro / CMMS</span>
                     </a>
-                  </div>
-                </div>
-
-                <!-- Live Terminal Stream Logs -->
-                <div class="live-stream-box">
-                  <div class="stream-title">
-                    <span data-i18n="hero.stream_title">LIVE INFERENCE STREAM</span>
-                    <span class="stream-dot"></span>
-                  </div>
-                  <div class="stream-log-container" id="streamLogContainer">
-                    <!-- Logs populated via JS -->
                   </div>
                 </div>
               </div>
@@ -379,7 +451,7 @@
         <div class="section-intro text-center reveal">
           <span class="sub-badge" data-i18n="mission.strategic_badge">Strategic Purpose</span>
           <h2 class="section-heading"><span data-i18n="mission.h2_pre">Transforming Complex Operations Into</span> <span class="gradient-shimmer" data-i18n="mission.h2_highlight">Intelligent Experiences</span></h2>
-          <p class="section-lead" data-i18n="cap.lead">
+          <p class="section-lead" data-i18n="mission.secondary">
             We bridge physical industrial hardware with advanced neural software architectures to eliminate downtime and empower frontline workforces.
           </p>
         </div>
@@ -393,10 +465,10 @@
             </div>
             <span class="card-kicker" data-i18n="mission.kicker_mission">OUR MISSION</span>
             <h3 class="card-headline" data-i18n="mission.headline_mission">Identify, Manage, and Maintain Critical Assets</h3>
-            <p class="card-paragraph">
+            <p class="card-paragraph" data-i18n="mission.para1">
               MOSBI Systems develops innovative software products that help organizations identify, manage, and maintain critical assets through modern technologies such as <strong>Artificial Intelligence, Computer Vision, Mobile Applications, and Cloud Services</strong>.
             </p>
-            <p class="card-paragraph muted">
+            <p class="card-paragraph muted" data-i18n="mission.para2">
               Our goal is to transform complex operational processes into intelligent, efficient, and scalable digital experiences that deliver immediate operational clarity.
             </p>
             <div class="pillar-tags">
@@ -415,7 +487,7 @@
             </div>
             <span class="card-kicker" data-i18n="mission.kicker_vision">OUR VISION</span>
             <h3 class="card-headline" data-i18n="mission.headline_vision">Global Leadership in Industrial Intelligence</h3>
-            <p class="card-paragraph">
+            <p class="card-paragraph" data-i18n="mission.vision_para">
               To become a leading provider of intelligent software solutions that help organizations understand, manage, and optimize their physical assets and operational environments worldwide.
             </p>
             <div class="vision-feature-list">
@@ -461,13 +533,13 @@
               <span class="cap-badge" data-i18n="cap.card1_badge">Intelligence</span>
             </div>
             <h3 class="cap-title" data-i18n="cap.card1_title">Artificial Intelligence</h3>
-            <p class="cap-description">
+            <p class="cap-description" data-i18n="cap.card1_desc">
               Building practical AI solutions that automate workflows, improve operational decision-making, and increase frontline productivity.
             </p>
             <ul class="cap-bullets">
-              <li><span class="b-check">✓</span> Workflow Automation & Scheduling</li>
-              <li><span class="b-check">✓</span> Intelligent Predictive Diagnostics</li>
-              <li><span class="b-check">✓</span> Machine Anomaly Detection</li>
+              <li><span class="b-check">✓</span> <span data-i18n="cap.card1_b1">Workflow Automation & Scheduling</span></li>
+              <li><span class="b-check">✓</span> <span data-i18n="cap.card1_b2">Intelligent Predictive Diagnostics</span></li>
+              <li><span class="b-check">✓</span> <span data-i18n="cap.card1_b3">Machine Anomaly Detection</span></li>
             </ul>
           </div>
 
@@ -481,13 +553,13 @@
               <span class="cap-badge badge-glow" data-i18n="cap.card2_badge_pillar">Core Pillar</span>
             </div>
             <h3 class="cap-title" data-i18n="cap.card2_title">Computer Vision</h3>
-            <p class="cap-description">
+            <p class="cap-description" data-i18n="cap.card2_desc_cv">
               Developing visual recognition systems capable of identifying, classifying, and understanding real-world assets, parts, and equipment.
             </p>
             <ul class="cap-bullets">
-              <li><span class="b-check">✓</span> Zero-Barcode Visual Asset Identification</li>
-              <li><span class="b-check">✓</span> Optical Serial Number & Nameplate OCR</li>
-              <li><span class="b-check">✓</span> Spatial Component Localization</li>
+              <li><span class="b-check">✓</span> <span data-i18n="cap.card2_b1">Zero-Barcode Visual Asset Identification</span></li>
+              <li><span class="b-check">✓</span> <span data-i18n="cap.card2_b2">Optical Serial Number & Nameplate OCR</span></li>
+              <li><span class="b-check">✓</span> <span data-i18n="cap.card2_b3">Spatial Component Localization</span></li>
             </ul>
           </div>
 
@@ -501,13 +573,13 @@
               <span class="cap-badge" data-i18n="cap.card3_badge">Field Ergonomics</span>
             </div>
             <h3 class="cap-title" data-i18n="cap.card3_title">Mobile Applications</h3>
-            <p class="cap-description">
+            <p class="cap-description" data-i18n="cap.card3_desc">
               Creating modern and intuitive mobile experiences that enable field teams and organizations to operate efficiently from anywhere.
             </p>
             <ul class="cap-bullets">
-              <li><span class="b-check">✓</span> Offline-First Local Model Execution</li>
-              <li><span class="b-check">✓</span> Instant Field Data Capture & Tagging</li>
-              <li><span class="b-check">✓</span> Technician Guidance Workflows</li>
+              <li><span class="b-check">✓</span> <span data-i18n="cap.card3_b1">Offline-First Local Model Execution</span></li>
+              <li><span class="b-check">✓</span> <span data-i18n="cap.card3_b2">Instant Field Data Capture & Tagging</span></li>
+              <li><span class="b-check">✓</span> <span data-i18n="cap.card3_b3">Technician Guidance Workflows</span></li>
             </ul>
           </div>
 
@@ -521,13 +593,13 @@
               <span class="cap-badge" data-i18n="cap.card4_badge">Enterprise Scale</span>
             </div>
             <h3 class="cap-title" data-i18n="cap.card4_title">Cloud Software</h3>
-            <p class="cap-description">
+            <p class="cap-description" data-i18n="cap.card4_desc">
               Designing scalable SaaS platforms and distributed cloud systems that support sustainable organizational growth and digital transformation.
             </p>
             <ul class="cap-bullets">
-              <li><span class="b-check">✓</span> Enterprise Asset Registry & Digital Twins</li>
-              <li><span class="b-check">✓</span> Real-Time Multi-Plant Fleet Analytics</li>
-              <li><span class="b-check">✓</span> Secure API Integrations with CMMS & ERP</li>
+              <li><span class="b-check">✓</span> <span data-i18n="cap.card4_b1">Enterprise Asset Registry & Digital Twins</span></li>
+              <li><span class="b-check">✓</span> <span data-i18n="cap.card4_b2">Real-Time Multi-Plant Fleet Analytics</span></li>
+              <li><span class="b-check">✓</span> <span data-i18n="cap.card4_b3">Secure API Integrations with CMMS & ERP</span></li>
             </ul>
           </div>
         </div>
@@ -636,33 +708,33 @@
                 <div class="benefit-box">
                   <div class="b-icon-check">✅</div>
                   <div class="b-text">
-                    <strong>Increased maintenance efficiency</strong>
-                    <p>Provide technicians with immediate repair context right when they stand in front of the machine.</p>
+                    <strong data-i18n="prod.b3_title">Increased maintenance efficiency</strong>
+                    <p data-i18n="prod.b3_desc">Provide technicians with immediate repair context right when they stand in front of the machine.</p>
                   </div>
                 </div>
 
                 <div class="benefit-box">
                   <div class="b-icon-check">✅</div>
                   <div class="b-text">
-                    <strong>Better asset visibility</strong>
-                    <p>Real-time auditability of fleet location, health status, and lifecycle stage.</p>
+                    <strong data-i18n="prod.b4_title">Better asset visibility</strong>
+                    <p data-i18n="prod.b4_desc">Real-time auditability of fleet location, health status, and lifecycle stage.</p>
                   </div>
                 </div>
 
                 <div class="benefit-box">
                   <div class="b-icon-check">✅</div>
                   <div class="b-text">
-                    <strong>Improved operational decision-making</strong>
-                    <p>Data-driven prioritization of capital repairs and planned maintenance windows.</p>
+                    <strong data-i18n="prod.b5_title">Improved operational decision-making</strong>
+                    <p data-i18n="prod.b5_desc">Data-driven prioritization of capital repairs and planned maintenance windows.</p>
                   </div>
                 </div>
               </div>
 
               <div class="benefits-cta-box">
                 <div class="cta-callout">
-                  <span>Ready to deploy Machine Identifier AI™?</span>
+                  <span data-i18n="prod.cta_ready">Ready to deploy Machine Identifier AI™?</span>
                   <a href="#contact" class="btn btn-primary btn-block">
-                    <span>Request Enterprise Pilot</span>
+                    <span data-i18n="prod.cta_btn">Request Enterprise Pilot</span>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                   </a>
                 </div>
@@ -776,9 +848,9 @@
     <section class="section industries-section" id="industries">
       <div class="container">
         <div class="section-intro text-center reveal">
-          <span class="sub-badge">Target Sectors</span>
+          <span class="sub-badge" data-i18n="ind.subbadge">Target Sectors</span>
           <h2 class="section-heading"><span data-i18n="ind.heading_pre">Industries We</span> <span class="gradient-shimmer" data-i18n="ind.heading_highlight">Empower</span></h2>
-          <p class="section-lead" data-i18n="cap.lead">
+          <p class="section-lead">
             <span data-i18n="ind.lead">MOSBI Systems solutions are purpose-built for organizations operating in demanding, asset-heavy industrial environments.</span>
           </p>
         </div>
@@ -842,7 +914,7 @@
         <div class="section-intro text-center reveal">
           <span class="sub-badge" data-i18n="arch.subbadge">Architectural Flow</span>
           <h2 class="section-heading"><span data-i18n="arch.heading_pre">Edge to Cloud</span> <span class="gradient-shimmer" data-i18n="arch.heading_highlight">Pipeline</span></h2>
-          <p class="section-lead" data-i18n="cap.lead">
+          <p class="section-lead">
             <span data-i18n="arch.lead">How MOSBI Systems connects frontline visual capture with enterprise cloud synchronization.</span>
           </p>
         </div>
@@ -912,7 +984,7 @@
           <div class="calc-intro text-center">
             <span class="sub-badge" data-i18n="roi.subbadge">Value Estimation</span>
             <h2 class="section-heading"><span data-i18n="roi.heading_pre">Calculate Your</span> <span class="gradient-shimmer" data-i18n="roi.heading_highlight">Operational Savings</span></h2>
-            <p class="section-lead" data-i18n="cap.lead">
+            <p class="section-lead">
               <span data-i18n="roi.lead">See how much time and budget MOSBI Machine Identifier AI™ can save your facilities.</span>
             </p>
           </div>
@@ -933,7 +1005,7 @@
               <!-- Slider 2 -->
               <div class="calc-control-group">
                 <div class="control-header">
-                  <label for="inspectionsPerMonth">Machine Lookups / Inspections per Month</label>
+                  <label for="inspectionsPerMonth" data-i18n="roi.lbl_inspections">Machine Lookups / Inspections per Month</label>
                   <span class="control-val" id="valInspections">600</span>
                 </div>
                 <input type="range" id="inspectionsPerMonth" min="50" max="5000" value="600" step="50" class="calc-slider" />
@@ -943,7 +1015,7 @@
               <!-- Slider 3 -->
               <div class="calc-control-group">
                 <div class="control-header">
-                  <label for="laborRate">Average Hourly Labor Rate ($/hr)</label>
+                  <label for="laborRate" data-i18n="roi.lbl_rate">Average Hourly Labor Rate ($/hr)</label>
                   <span class="control-val" id="valLaborRate">$55</span>
                 </div>
                 <input type="range" id="laborRate" min="20" max="150" value="55" step="5" class="calc-slider" />
@@ -954,31 +1026,31 @@
             <!-- Right: Dynamic Results Box -->
             <div class="calc-results-panel">
               <div class="results-top">
-                <span class="res-kicker">PROJECTED ANNUAL IMPACT</span>
+                <span class="res-kicker" data-i18n="roi.kicker_impact">PROJECTED ANNUAL IMPACT</span>
                 <div class="annual-savings-display">
                   <span class="currency">$</span>
                   <span class="savings-amount" id="resAnnualSavings">198,000</span>
                 </div>
-                <span class="savings-sub">Estimated Annual Labor & Downtime Savings</span>
+                <span class="savings-sub" data-i18n="roi.res_annual_label">Estimated Annual Labor & Downtime Savings</span>
               </div>
 
               <div class="results-breakdown">
                 <div class="res-stat-row">
-                  <span>Hours Saved Monthly:</span>
+                  <span data-i18n="roi.res_hours_label">Hours Saved Monthly:</span>
                   <strong id="resHoursMonthly">300 hrs</strong>
                 </div>
                 <div class="res-stat-row">
-                  <span>Documentation Reduction:</span>
-                  <strong class="val-green">80% Less Paperwork</strong>
+                  <span data-i18n="roi.lbl_doc_red">Documentation Reduction:</span>
+                  <strong class="val-green" data-i18n="roi.val_doc_red">80% Less Paperwork</strong>
                 </div>
                 <div class="res-stat-row">
-                  <span>Inspection Speedup:</span>
-                  <strong class="val-accent">4.5x Faster Lookups</strong>
+                  <span data-i18n="roi.lbl_speedup">Inspection Speedup:</span>
+                  <strong class="val-accent" data-i18n="roi.val_speedup">4.5x Faster Lookups</strong>
                 </div>
               </div>
 
               <a href="#contact" class="btn btn-primary btn-block">
-                <span>Lock In Your Enterprise Pilot</span>
+                <span data-i18n="roi.btn_pilot">Lock In Your Enterprise Pilot</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
@@ -1107,7 +1179,7 @@
 
           <div class="profile-grid">
             <div class="profile-col">
-              <span class="p-col-label">Legal Name</span>
+              <span class="p-col-label" data-i18n="comp.lbl_legal">Legal Name</span>
               <span class="p-col-value">MOSBI Systems LLC</span>
             </div>
             <div class="profile-col">
@@ -1115,7 +1187,7 @@
               <span class="p-col-value">Maryland, USA</span>
             </div>
             <div class="profile-col">
-              <span class="p-col-label">Official Website</span>
+              <span class="p-col-label" data-i18n="comp.lbl_domain">Official Website</span>
               <a href="https://mosbisystems.com" target="_blank" rel="noopener noreferrer" class="p-col-link">
                 https://mosbisystems.com
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -1136,7 +1208,7 @@
         <div class="section-intro text-center reveal">
           <span class="sub-badge" data-i18n="contact.subbadge">Direct Communication</span>
           <h2 class="section-heading"><span data-i18n="contact.heading_pre">Get in</span> <span class="gradient-shimmer" data-i18n="contact.heading_highlight">Touch</span></h2>
-          <p class="section-lead" data-i18n="cap.lead">
+          <p class="section-lead">
             <span data-i18n="contact.lead">Connect directly with our engineering, sales, or leadership teams for pilot inquiries, enterprise demos, or partnerships.</span>
           </p>
         </div>
@@ -1262,6 +1334,199 @@
   </main>
 
   <!-- SITE FOOTER -->
+  <!-- MODAL: EXECUTIVE 10-SECTION PDF DATASHEET PREVIEW -->
+  <div class="pdf-modal-backdrop" id="machinePdfModal" aria-hidden="true" role="dialog" aria-labelledby="pdfModalHeading">
+    <div class="pdf-modal-container">
+      <!-- Modal Top Bar -->
+      <div class="pdf-modal-header">
+        <div class="pdf-modal-title-wrap">
+          <span class="pdf-doc-badge">FICHA TÉCNICA OFICIAL</span>
+          <h3 id="pdfModalHeading" data-i18n="pdf_modal.title">Ficha Técnica Ejecutiva — Auditoría Forense de 10 Secciones</h3>
+        </div>
+        <div class="pdf-modal-actions">
+          <button class="btn btn-primary-compact" id="printPdfBtn" type="button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            <span data-i18n="pdf_modal.print">Imprimir / Guardar PDF</span>
+          </button>
+          <button class="pdf-modal-close" id="closePdfModalBtn" aria-label="Cerrar modal" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Rendered PDF Sheet (10 formal sections) -->
+      <div class="pdf-sheet-scroll">
+        <div class="pdf-formal-sheet" id="pdfFormalSheet">
+          <!-- Official Document Header -->
+          <div class="pdf-sec pdf-header-sec">
+            <div class="pdf-brand-id">
+              <div class="pdf-brand-logo-row">
+                <div class="pdf-logo-badge">
+                  <svg viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="pdf-logo-svg">
+                    <defs>
+                      <linearGradient id="pdfInfGradMain" x1="25" y1="100" x2="215" y2="100" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#00f7ff" />
+                        <stop offset="45%" stop-color="#00b8ff" />
+                        <stop offset="100%" stop-color="#2563eb" />
+                      </linearGradient>
+                      <linearGradient id="pdfInfGradLight" x1="30" y1="35" x2="205" y2="175" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#67ffff" />
+                        <stop offset="50%" stop-color="#00d4ff" />
+                        <stop offset="100%" stop-color="#3b82f6" />
+                      </linearGradient>
+                      <linearGradient id="pdfInfGradDepth" x1="40" y1="160" x2="200" y2="50" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#0099cc" />
+                        <stop offset="50%" stop-color="#0052d4" />
+                        <stop offset="100%" stop-color="#1e3a8a" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M 88 158 C 65 174, 38 164, 38 135 L 38 62 C 38 34, 68 26, 86 46 L 120 82 L 154 46 C 172 26, 202 34, 202 62 L 202 135 C 202 164, 175 174, 152 158 L 136 144"
+                      stroke="url(#pdfInfGradDepth)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 88 158 C 65 174, 38 164, 38 135 L 38 62 C 38 34, 68 26, 86 46 L 120 82 L 154 46 C 172 26, 202 34, 202 62 L 202 135 C 202 164, 175 174, 152 158"
+                      stroke="url(#pdfInfGradMain)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 152 158 C 138 148, 128 134, 120 124 C 106 106, 94 94, 78 94 C 60 94, 52 108, 52 118 C 52 130, 62 142, 78 142 C 92 142, 104 132, 120 116 C 136 100, 148 94, 162 94 C 178 94, 188 106, 188 118 C 188 130, 178 142, 162 142 C 148 142, 136 132, 124 120"
+                      stroke="url(#pdfInfGradDepth)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 88 158 C 102 146, 112 132, 120 120 C 136 100, 148 94, 162 94 C 178 94, 188 106, 188 118 C 188 132, 176 142, 162 142 C 146 142, 134 130, 120 114 C 106 98, 94 94, 78 94 C 62 94, 52 106, 52 118 C 52 132, 64 142, 78 142 C 92 142, 106 132, 120 116"
+                      stroke="url(#pdfInfGradLight)" stroke-width="13.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="pdf-brand-text-col">
+                  <span class="pdf-app-name">MACHINE IDENTIFIER AI™</span>
+                  <span class="pdf-report-type">REPORTE TÉCNICO FORENSE DE ACTIVO INDUSTRIAL (10 SECCIONES)</span>
+                </div>
+              </div>
+            </div>
+            <div class="pdf-audit-meta">
+              <div><strong>ID Auditoría:</strong> <span id="pdfAuditId">MOSBI-AI-2026-8941</span></div>
+              <div><strong>Fecha / Hora:</strong> <span id="pdfAuditTimestamp">25/10/2026 12:45:00 UTC</span></div>
+              <div><strong>Motor IA:</strong> Google Gemini 2.5 Flash + Search Grounding</div>
+            </div>
+          </div>
+
+          <!-- Section 1: Equipment Identification -->
+          <div class="pdf-sec">
+            <h4 class="pdf-sec-title">1. IDENTIFICACIÓN PRINCIPAL DEL EQUIPO</h4>
+            <div class="pdf-grid-2">
+              <div><strong>Marca Identificada:</strong> <span id="pdfBrand">ITT Goulds Pumps</span></div>
+              <div><strong>Modelo Exacto:</strong> <span id="pdfModel">3196 ANSI i-FRAME</span></div>
+              <div><strong>Categoría de Activo:</strong> <span id="pdfCategory">Bomba Centrífuga de Proceso Químico</span></div>
+              <div><strong>Número de Serie:</strong> <span id="pdfSerial">SN-ITT-ANSI-4412-B</span></div>
+              <div><strong>Año Estimado:</strong> <span id="pdfYear">2018 - 2022</span></div>
+              <div><strong>Código Sugerido:</strong> <span id="pdfAssetTag">PUMP-GLD-3196-01</span></div>
+            </div>
+          </div>
+
+          <!-- Section 2: Market Condition & Obsolescence -->
+          <div class="pdf-sec">
+            <h4 class="pdf-sec-title">2. CONDICIÓN DE MERCADO Y CICLO DE VIDA</h4>
+            <div class="pdf-condition-row">
+              <span class="pdf-condition-pill pill-active" id="pdfConditionPill">● Activa (Soporte Oficial OEM)</span>
+              <p class="pdf-condition-desc" id="pdfConditionDesc">
+                Modelo en producción continua activa. Disponibilidad inmediata de repuestos originales, rodamientos, impulsores y sellos mecánicos.
+              </p>
+            </div>
+          </div>
+
+          <!-- Section 3: Confidence Level & Forensic Method -->
+          <div class="pdf-sec">
+            <h4 class="pdf-sec-title">3. MÉTODO FORENSE Y NIVEL DE CONFIANZA</h4>
+            <div class="pdf-grid-2">
+              <div><strong>Método de Identificación:</strong> <span id="pdfMethod">Silueta Morfológica 3D (Repintada)</span></div>
+              <div><strong>Puntaje de Confianza IA:</strong> <span id="pdfConfidence">94.8% (Validado por Gemini Multimodal)</span></div>
+            </div>
+          </div>
+
+          <!-- Section 4: Technical Nominal Specifications -->
+          <div class="pdf-sec">
+            <h4 class="pdf-sec-title">4. ESPECIFICACIONES TÉCNICAS NOMINALES</h4>
+            <table class="pdf-specs-table">
+              <thead>
+                <tr>
+                  <th>Parámetro Técnico</th>
+                  <th>Valor Nominal del Catálogo</th>
+                  <th>Tolerancia / Notas</th>
+                </tr>
+              </thead>
+              <tbody id="pdfSpecsTableBody">
+                <!-- Injected dynamically via JavaScript -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Section 5: Manufacturer & Literature Links -->
+          <div class="pdf-sec">
+            <h4 class="pdf-sec-title">5. INFORMACIÓN DEL FABRICANTE Y DOCUMENTACIÓN</h4>
+            <div class="pdf-grid-2">
+              <div><strong>Fabricante OEM:</strong> <span id="pdfOem">ITT Goulds Pumps</span></div>
+              <div><strong>Portal Oficial:</strong> <span id="pdfOemUrl">https://www.gouldspumps.com</span></div>
+              <div class="pdf-col-span-2"><strong>Manual de Operación:</strong> <span id="pdfManualRef">Manual Instalación y Mantenimiento Goulds 3196 [PDF]</span></div>
+            </div>
+          </div>
+
+          <!-- Section 6: Photo Evidence Grid -->
+          <div class="pdf-sec">
+            <h4 class="pdf-sec-title">6. EVIDENCIA FOTOGRÁFICA DE CAMPO (4 ÁNGULOS)</h4>
+            <div class="pdf-photos-grid">
+              <div class="pdf-photo-box">
+                <div class="pdf-photo-canvas" id="pdfPhoto1">📸 Toma 1: Silueta 3D</div>
+                <span id="pdfPhotoSub1">Morfología 3D • Voluta ANSI</span>
+              </div>
+              <div class="pdf-photo-box">
+                <div class="pdf-photo-canvas" id="pdfPhoto2">🏷️ Toma 2: Placa OCR</div>
+                <span id="pdfPhotoSub2">Placa Corroída • Pintura Epóxica</span>
+              </div>
+              <div class="pdf-photo-box">
+                <div class="pdf-photo-canvas" id="pdfPhoto3">🎛️ Toma 3: Control</div>
+                <span id="pdfPhotoSub3">Sensor Vibración i-ALERT2</span>
+              </div>
+              <div class="pdf-photo-box">
+                <div class="pdf-photo-canvas" id="pdfPhoto4">⚙️ Toma 4: Conexiones</div>
+                <span id="pdfPhotoSub4">Brida Succión ANSI 150#</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 7: Forensic Analysis Reasoning -->
+          <div class="pdf-sec">
+            <h4 class="pdf-sec-title">7. DICTAMEN PERICIAL FORENSE DE LA IA</h4>
+            <p class="pdf-forensic-text" id="pdfForensicRationale">
+              Placa metálica corroída e ilegible por capas sucesivas de pintura epóxica. Identificación positiva lograda mediante análisis de silueta 3D: dimensiones de bridas ANSI B73.1, curvatura de voluta y cámara de sellado i-FRAME.
+            </p>
+          </div>
+
+          <!-- Section 8: Inspector Field Notes -->
+          <div class="pdf-sec">
+            <h4 class="pdf-sec-title">8. OBSERVACIONES DEL TÉCNICO DE CAMPO</h4>
+            <div class="pdf-inspector-notes">
+              <p id="pdfInspectorNotes">Inspección completada durante recorrido preventivo. Desgaste del impulsor dentro de tolerancias. Plan de sellado mecánico 11 verificado.</p>
+            </div>
+          </div>
+
+          <!-- Section 9: CMMS & FieldOps Integration Traceability -->
+          <div class="pdf-sec">
+            <h4 class="pdf-sec-title">9. TRAZABILIDAD Y SINCRONIZACIÓN CMMS / FIELDOPS PRO</h4>
+            <div class="pdf-grid-2">
+              <div><strong>Esquema Destino:</strong> <span>FieldOpsMachine (Firestore / ERP)</span></div>
+              <div><strong>Protocolo Forense:</strong> <span>Regla Anti-Pintura Activa (Morfología 3D)</span></div>
+            </div>
+          </div>
+
+          <!-- Section 10: Legal Disclaimer & Verification -->
+          <div class="pdf-sec pdf-footer-sec">
+            <h4 class="pdf-sec-title">10. CERTIFICADO DE CONFORMIDAD Y DESCARGO LEGAL</h4>
+            <div class="pdf-legal-text">
+              <strong>DESCARGO LEGAL Y CONFORMIDAD:</strong> Este documento fue generado automáticamente por Machine Identifier AI™ (v1.0.0). Las especificaciones nominales proceden de catálogos oficiales cruzados mediante IA multimodal y búsqueda web en tiempo real. No sustituye la verificación física de ingeniería en caso de modificaciones post-fabricación.
+            </div>
+            <div class="pdf-watermark-row">
+              <span>MOSBI SYSTEMS INC. · FIELD OPERATIONS & ARTIFICIAL INTELLIGENCE DIVISION</span>
+              <span>Página 1 de 1 · Autenticidad Criptográfica Verificada</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="container footer-container">
       <div class="footer-top-grid">
@@ -1342,8 +1607,8 @@
   </footer>
 
   <!-- Interactive JavaScript -->
-  <script src="assets/js/translations.js"></script>
-  <script src="assets/js/main.js?v=8"></script>
+  <script src="assets/js/translations.js?v=6"></script>
+  <script src="assets/js/main.js?v=11"></script>
 </body>
 </html>
 

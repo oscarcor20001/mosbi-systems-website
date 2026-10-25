@@ -12,6 +12,54 @@ Format: `[version] - YYYY-MM-DD` following [Keep a Changelog](https://keepachang
 
 ---
 
+## [0.8.0] - 2026-10-25
+
+### Added
+- **Machine Identifier AI™ Forensic Showcase Engine**:
+  - Rebuilt the Hero interactive showcase to reflect what **Machine Identifier AI™** actually does, based directly on the source code and documentation from `C:\Users\hogar\Desktop\plugin maquinas` (`MACHINE_IDENTIFIER_SPECS.md` and `DOCUMENTACION_EJECUTIVA.md`).
+  - Implemented multi-angle visual inspection slots (`PhotoRole`: 3D Silhouette Morphology, Nameplate OCR, Control Panel / Instrumentation, Connections & Flanges) with clickable switching and dynamic bounding box refocusing.
+  - Featured the core forensic principle: *"⚡ Regla Forense: Ignora color de pintura (análisis estructural puro en equipos repintados)"*.
+  - Configured 4 real-world test cases:
+    1. **Goulds 3196 ANSI i-FRAME (ITT)**: 40% unreadable/repainted plate identified by 3D volute morphology, ANSI B73.1 flange spacing, and i-FRAME bearing housing.
+    2. **Atlas Copco GA 55 VSD**: Direct OCR reading of rear stamped nameplate with Elektronikon controller and cyclonic separator match.
+    3. **Siemens SIMOTICS GP 1LE1**: Hybrid forensic matching combining partial terminal box OCR with aluminum cooling fins and IEC 132M standard.
+    4. **Joy Twistair TA-025**: Legacy 1980s unit with **Descontinuada (Obsolescente)** market condition warning, analog gauges, and downtime alert.
+  - Implemented the official **Market Condition (Obsolescence) Badges**: `Activa (Soporte Oficial OEM)`, `Soporte Limitado`, and `Descontinuada (Obsolescente)`.
+  - Added structured nominal technical specifications table (Power HP/kW, Pressure/Head, Nominal Flow, Voltage/RPM, Frame/Weight, Estimated Year).
+  - Integrated direct links to verified OEM manufacturers and official service manual PDFs.
+  - Created an interactive **Executive 10-Section PDF Datasheet Modal** (`#machinePdfModal`) with print/download simulation, formal audit header, photo evidence gallery, AI reasoning, inspector field notes, and cryptographic compliance watermark.
+
+### Changed
+- **Preserved & Archived Optical Scanner Simulator**:
+  - Extracted the complete legacy HUD console, laser animation styles, SVG wireframes, and live telemetry log stream into `docs/future-projects/optical-inspection-simulator.md` for future AR smart glasses, drone navigation, and fixed GigE camera projects.
+- **Localization (i18n) Engine**:
+  - Added new localized translation keys across English, Spanish, and French for the entire showcase, multi-angle slots, forensic rules, specs table, and PDF preview modal.
+  - Verified 100% dictionary coverage (253 of 253 keys resolved with 0 missing in EN, ES, and FR).
+  - Incremented asset cache-busting tokens to `styles.css?v=13`, `translations.js?v=6`, and `main.js?v=11`.
+  - Replaced the text prefix `MOSBI` in the PDF datasheet header with the official vector Mosbi infinity-M logo icon alongside `MACHINE IDENTIFIER AI™`.
+
+### Fixed
+- **Single-Page Executive PDF Print Layout (`@media print`)**:
+  - Replaced `body * { visibility: hidden }` with `body > *:not(#machinePdfModal) { display: none !important }` so all surrounding website sections are removed from the print layout flow, eliminating the 30 blank pages.
+  - Removed `max-height: 92vh` and `overflow: hidden` / `overflow-y: auto` clipping on `.pdf-modal-container` and `.pdf-sheet-scroll` during print so all 10 numbered sections render completely.
+  - Scoped responsive mobile grid collapse to `@media screen and (max-width: 900px)` so 2-column metadata and 4-column photo grids stay intact on US Letter paper (`816px`), fitting all 10 sections onto a single sheet of paper (`1 of 1`).
+
+---
+
+## [0.7.6] - 2026-10-25
+
+### Fixed
+- **Comprehensive Multi-Language (i18n) Audit & Gap Resolution**:
+  - Connected the Core Capabilities cards to the localization engine: added translations and `data-i18n` bindings for Card titles, descriptions, and all 12 capability bullet items across Artificial Intelligence, Computer Vision, Mobile Applications, and Cloud Software.
+  - Linked Mission and Vision descriptive paragraphs (`mission.para1`, `mission.para2`, `mission.vision_para`, `mission.secondary`) to localized dictionary keys.
+  - Bound ROI Calculator input labels, impact kickers, metrics, and CTA buttons to localized translation keys.
+  - Enhanced `setLanguage()` to support rich HTML rendering (`.innerHTML` when tags are present) so formatted elements display properly.
+  - Added real-time localization for the contact form department dropdown options.
+  - Refined technical phrasing: replaced anglicisms like "Latencia en el Edge" with "Tiempo de Respuesta", updated "Pares de apriete inmediatos" to "Información técnica inmediata", and naturalized on-device edge references.
+  - Incremented script cache-busting tokens to `translations.js?v=4` and `main.js?v=9`.
+
+---
+
 ## [0.7.5] - 2026-10-25
 
 ### Added
