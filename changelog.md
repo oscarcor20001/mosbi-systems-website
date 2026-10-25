@@ -12,6 +12,17 @@ Format: `[version] - YYYY-MM-DD` following [Keep a Changelog](https://keepachang
 
 ---
 
+## [0.7.4] - 2026-10-25
+
+### Added
+- **Silent Background Form Submission (Web3Forms API Integration)**:
+  - Replaced the browser `mailto:` prompt with asynchronous `fetch()` API submission to `https://api.web3forms.com/submit` using the official MOSBI Systems Access Key.
+  - Added native anti-spam honeypot botcheck field and structured JSON payload routing (`name`, `email`, `organization`, `department`, `message`).
+  - Added localized multi-lingual success and error notifications across English, Spanish, and French with inline feedback and toast alerts.
+  - Incremented script cache-busting version token to `v=7` in `index.html`.
+
+---
+
 ## [0.7.3] - 2026-10-25
 
 ### Fixed

@@ -1206,7 +1206,10 @@
           <!-- Interactive Contact Form -->
           <div class="contact-form-card spotlight-card reveal">
             <div class="bento-glow-spot"></div>
-            <form id="contactForm" class="contact-form-inner" novalidate>
+            <form id="contactForm" class="contact-form-inner" action="https://api.web3forms.com/submit" method="POST" novalidate>
+              <input type="hidden" name="access_key" value="a1ecd886-99f5-4eec-8044-e6a04d3f6553">
+              <input type="hidden" name="from_name" value="MOSBI Systems Web Portal">
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
               <h3 class="form-title" data-i18n="contact.form_title">Send a Direct Message</h3>
               <p class="form-desc" data-i18n="contact.form_desc">Inquiries are routed directly to the appropriate technical or executive lead within 24 hours.</p>
 
@@ -1340,7 +1343,7 @@
 
   <!-- Interactive JavaScript -->
   <script src="assets/js/translations.js"></script>
-  <script src="assets/js/main.js?v=6"></script>
+  <script src="assets/js/main.js?v=7"></script>
 </body>
 </html>
 

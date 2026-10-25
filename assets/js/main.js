@@ -1229,44 +1229,77 @@ function initContactForm() {
       }
     }
 
-    setTimeout(() => {
-      // Build mailto link so inquiry goes directly to the chosen department
-      const subject = encodeURIComponent(`[Inquiry] ${company ? company + ' - ' : ''}${name} - MOSBI Operations`);
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nOrganization: ${company || 'N/A'}\nTarget Department: ${dept}\n\nMessage:\n${message}`);
-      const mailto = `mailto:${dept}?subject=${subject}&body=${body}`;
+    const payload = {
+      access_key: 'a1ecd886-99f5-4eec-8044-e6a04d3f6553',
+      subject: `[MOSBI Lead] ${company ? company + ' - ' : ''}${name} (${dept})`,
+      name: name,
+      email: email,
+      organization: company || 'N/A',
+      department: dept,
+      message: message,
+      from_name: 'MOSBI Systems Web Portal'
+    };
 
-      if (submitBtn) {
-        submitBtn.disabled = false;
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    })
+    .then(async (response) => {
+      const data = await response.json();
+      if (response.status === 200 && data.success) {
+        if (feedback) {
+          feedback.className = 'form-feedback success';
+          feedback.innerHTML = currentLanguage === 'es'
+            ? `¡Gracias, <strong>${name}</strong>! Tu mensaje ha sido enviado exitosamente a <strong>${dept}</strong>. Nos comunicaremos contigo en menos de 24 horas.`
+            : (currentLanguage === 'fr' 
+               ? `Merci <strong>${name}</strong> ! Votre message a été envoyé avec succès à <strong>${dept}</strong>. Nous vous répondrons dans les 24 heures.`
+               : `Thank you, <strong>${name}</strong>! Your inquiry for <strong>${dept}</strong> has been transmitted successfully. Our team will contact you within 24 hours.`);
+          feedback.style.display = 'block';
+        }
+
+        form.reset();
+        showToast(
+          currentLanguage === 'es' ? '¡Mensaje enviado exitosamente!' : (currentLanguage === 'fr' ? 'Message envoyé avec succès !' : 'Inquiry dispatched successfully!'),
+          'success'
+        );
+
         if (submitBtnText) {
           submitBtnText.innerText = currentLanguage === 'es' ? 'Mensaje Enviado ✓' : (currentLanguage === 'fr' ? 'Message Envoyé ✓' : 'Message Sent ✓');
         }
+      } else {
+        throw new Error(data.message || 'Submission failed');
       }
-
+    })
+    .catch((error) => {
+      console.error('Contact Form Submission Error:', error);
       if (feedback) {
-        feedback.className = 'form-feedback success';
+        feedback.className = 'form-feedback error';
         feedback.innerHTML = currentLanguage === 'es'
-          ? `¡Gracias, <strong>${name}</strong>! Tu solicitud para <strong>${dept}</strong> ha sido preparada. Abriendo tu cliente de correo...`
-          : (currentLanguage === 'fr' 
-             ? `Merci <strong>${name}</strong> ! Votre demande pour <strong>${dept}</strong> est prête. Ouverture de votre messagerie...`
-             : `Thank you, <strong>${name}</strong>! Your inquiry for <strong>${dept}</strong> has been prepared. Opening your email client...`);
+          ? 'Hubo un error al enviar el mensaje. Por favor intenta de nuevo o escríbenos directamente a <a href="mailto:' + dept + '" style="color:var(--cyan-glow);text-decoration:underline;">' + dept + '</a>.'
+          : (currentLanguage === 'fr'
+             ? 'Une erreur est survenue lors de l\'envoi. Veuillez réessayer ou contacter directamente <a href="mailto:' + dept + '" style="color:var(--cyan-glow);text-decoration:underline;">' + dept + '</a>.'
+             : 'There was an issue dispatching your inquiry. Please try again or email us directly at <a href="mailto:' + dept + '" style="color:var(--cyan-glow);text-decoration:underline;">' + dept + '</a>.');
         feedback.style.display = 'block';
       }
-
-      try {
-        window.location.href = mailto;
-      } catch (err) {
-        console.warn('Mailto dispatch:', err);
+      showToast(
+        currentLanguage === 'es' ? 'Error al enviar el mensaje' : (currentLanguage === 'fr' ? 'Erreur lors de l\'envoi' : 'Failed to dispatch inquiry'),
+        'error'
+      );
+    })
+    .finally(() => {
+      if (submitBtn) {
+        submitBtn.disabled = false;
       }
-
-      form.reset();
-      showToast(currentLanguage === 'es' ? 'Mensaje preparado exitosamente' : (currentLanguage === 'fr' ? 'Message préparé avec succès' : 'Inquiry prepared successfully!'), 'success');
-
       setTimeout(() => {
         if (submitBtnText) {
           submitBtnText.innerText = originalText;
         }
-      }, 4000);
-    }, 600);
+      }, 5000);
+    });
   });
 }
 
