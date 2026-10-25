@@ -594,10 +594,9 @@
     });
 
     const langBtn = document.getElementById("langBtn");
-    langBtn.textContent = SUPPORTED.map(function (c) {
-      return c === currentLang ? "[" + c.toUpperCase() + "]" : c.toUpperCase();
-    }).join(" | ");
+    langBtn.textContent = currentLang.toUpperCase();
     langBtn.title = t("nav.lang_title");
+    langBtn.setAttribute("aria-label", t("nav.lang_title"));
   }
 
   function refreshAll() {

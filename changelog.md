@@ -20,6 +20,7 @@ Format: `[version] - YYYY-MM-DD` following [Keep a Changelog](https://keepachang
   - Aligned bounding boxes in `machid/data.js` for `compactor_chute_3.jpg` to accurately enclose the manufacturer & model title (`bbox1: top: 11%, left: 31%, width: 58%, height: 23%`) and the stamped serial number & electrical ratings (`bbox2: top: 34%, left: 31%, width: 58%, height: 15%`).
   - Updated Shot 3 role, HUD nodes, and forensic analysis across ES, EN, and FR: replaced "Unidad Hidráulica y Panel / Three-Phase HPU Motor" with "Placa OEM y Datos Eléctricos / OEM Nameplate & Electrical Specs", correctly attributing the photo to the riveted factory nameplate with direct industrial OCR.
   - Synchronized fallback HTML in `machid/index.html` and UI strings in `machid/app.js`.
+  - **Language switcher button styling (`machid/`)**: simplified the multi-language label string (`ES | [EN] | FR`) which caused awkward multiline wrapping to display only the single active language code (`ES`, `EN`, or `FR`), perfectly centered inside a dedicated button container with `white-space: nowrap` and responsive topbar spacing.
 
 ---
 
