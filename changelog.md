@@ -12,6 +12,13 @@ Format: `[version] - YYYY-MM-DD` following [Keep a Changelog](https://keepachang
 
 ---
 
+## [0.7.3] - 2026-10-25
+
+### Fixed
+- **Contact Form Submission**: Resolved form field ID mapping mismatch in initContactForm() (ullName, workEmail, message). Added real-time input error clearing, multi-language validation messages, department routing, and direct mailto: dispatch with confirmation feedback.
+
+---
+
 ## [0.7.2] - 2026-09-27
 
 ### Fixed

@@ -1136,17 +1136,77 @@ function initClipboardSystem() {
 function initContactForm() {
   const form = document.getElementById('contactForm');
   const feedback = document.getElementById('formFeedback');
+  const submitBtn = document.getElementById('submitBtn');
+  const submitBtnText = document.getElementById('submitBtnText');
+  const nameInput = document.getElementById('fullName');
+  const emailInput = document.getElementById('workEmail');
+  const companyInput = document.getElementById('companyName');
+  const deptSelect = document.getElementById('departmentSelect');
+  const msgInput = document.getElementById('message');
+
+  const nameError = document.getElementById('nameError');
+  const emailError = document.getElementById('emailError');
+  const msgError = document.getElementById('msgError');
+
   if (!form) return;
+
+  // Real-time input listener to clear error highlights
+  if (nameInput && nameError) {
+    nameInput.addEventListener('input', () => nameError.classList.remove('visible'));
+  }
+  if (emailInput && emailError) {
+    emailInput.addEventListener('input', () => emailError.classList.remove('visible'));
+  }
+  if (msgInput && msgError) {
+    msgInput.addEventListener('input', () => msgError.classList.remove('visible'));
+  }
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const org = form.organization ? form.organization.value.trim() : '';
-    const message = form.message.value.trim();
+    const name = nameInput ? nameInput.value.trim() : '';
+    const email = emailInput ? emailInput.value.trim() : '';
+    const company = companyInput ? companyInput.value.trim() : '';
+    const dept = deptSelect ? deptSelect.value : 'info@mosbisystems.com';
+    const message = msgInput ? msgInput.value.trim() : '';
 
-    if (!name || !email || !message) {
+    let isValid = true;
+
+    // Validate Name
+    if (!name) {
+      if (nameError) {
+        nameError.innerText = currentLanguage === 'es' ? 'Por favor ingresa tu nombre.' : (currentLanguage === 'fr' ? 'Veuillez entrer votre nom.' : 'Please provide your name.');
+        nameError.classList.add('visible');
+      }
+      isValid = false;
+    } else if (nameError) {
+      nameError.classList.remove('visible');
+    }
+
+    // Validate Email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+      if (emailError) {
+        emailError.innerText = currentLanguage === 'es' ? 'Ingresa un correo electrónico válido.' : (currentLanguage === 'fr' ? 'Veuillez fournir une adresse e-mail valide.' : 'Please provide a valid email address.');
+        emailError.classList.add('visible');
+      }
+      isValid = false;
+    } else if (emailError) {
+      emailError.classList.remove('visible');
+    }
+
+    // Validate Message
+    if (!message) {
+      if (msgError) {
+        msgError.innerText = currentLanguage === 'es' ? 'Por favor escribe tu mensaje.' : (currentLanguage === 'fr' ? 'Veuillez saisir votre message.' : 'Please enter your message.');
+        msgError.classList.add('visible');
+      }
+      isValid = false;
+    } else if (msgError) {
+      msgError.classList.remove('visible');
+    }
+
+    if (!isValid) {
       if (feedback) {
         feedback.className = 'form-feedback error';
         feedback.innerText = currentLanguage === 'es' 
@@ -1157,31 +1217,56 @@ function initContactForm() {
       return;
     }
 
-    const submitBtn = form.querySelector('button[type="submit"]');
+    if (feedback) feedback.style.display = 'none';
+
+    const btnTextEl = submitBtnText || submitBtn;
+    const originalText = btnTextEl ? btnTextEl.innerText : 'Dispatch Message';
+
     if (submitBtn) {
       submitBtn.disabled = true;
-      submitBtn.innerHTML = `<span>${currentLanguage === 'es' ? 'Enviando...' : (currentLanguage === 'fr' ? 'Envoi en cours...' : 'Sending...')}</span>`;
+      if (submitBtnText) {
+        submitBtnText.innerText = currentLanguage === 'es' ? 'Enviando...' : (currentLanguage === 'fr' ? 'Envoi en cours...' : 'Sending...');
+      }
     }
 
     setTimeout(() => {
+      // Build mailto link so inquiry goes directly to the chosen department
+      const subject = encodeURIComponent(`[Inquiry] ${company ? company + ' - ' : ''}${name} - MOSBI Operations`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nOrganization: ${company || 'N/A'}\nTarget Department: ${dept}\n\nMessage:\n${message}`);
+      const mailto = `mailto:${dept}?subject=${subject}&body=${body}`;
+
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.innerHTML = `<span>${currentLanguage === 'es' ? 'Mensaje Enviado ✓' : (currentLanguage === 'fr' ? 'Message Envoyé ✓' : 'Message Sent ✓')}</span>`;
+        if (submitBtnText) {
+          submitBtnText.innerText = currentLanguage === 'es' ? 'Mensaje Enviado ✓' : (currentLanguage === 'fr' ? 'Message Envoyé ✓' : 'Message Sent ✓');
+        }
       }
 
       if (feedback) {
         feedback.className = 'form-feedback success';
-        feedback.innerText = currentLanguage === 'es'
-          ? `¡Gracias, ${name}! Tu solicitud ha sido recibida. Nos comunicaremos contigo en menos de 24 horas.`
+        feedback.innerHTML = currentLanguage === 'es'
+          ? `¡Gracias, <strong>${name}</strong>! Tu solicitud para <strong>${dept}</strong> ha sido preparada. Abriendo tu cliente de correo...`
           : (currentLanguage === 'fr' 
-             ? `Merci ${name} ! Votre demande a été reçue. Nous vous contacterons sous 24 heures.`
-             : `Thank you, ${name}! Your inquiry has been received. Our team will contact you within 24 hours.`);
+             ? `Merci <strong>${name}</strong> ! Votre demande pour <strong>${dept}</strong> est prête. Ouverture de votre messagerie...`
+             : `Thank you, <strong>${name}</strong>! Your inquiry for <strong>${dept}</strong> has been prepared. Opening your email client...`);
         feedback.style.display = 'block';
       }
 
+      try {
+        window.location.href = mailto;
+      } catch (err) {
+        console.warn('Mailto dispatch:', err);
+      }
+
       form.reset();
-      showToast(currentLanguage === 'es' ? 'Mensaje enviado exitosamente' : (currentLanguage === 'fr' ? 'Message envoyé avec succès' : 'Inquiry sent successfully!'), 'success');
-    }, 900);
+      showToast(currentLanguage === 'es' ? 'Mensaje preparado exitosamente' : (currentLanguage === 'fr' ? 'Message préparé avec succès' : 'Inquiry prepared successfully!'), 'success');
+
+      setTimeout(() => {
+        if (submitBtnText) {
+          submitBtnText.innerText = originalText;
+        }
+      }, 4000);
+    }, 600);
   });
 }
 

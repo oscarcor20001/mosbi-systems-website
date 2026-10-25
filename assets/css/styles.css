@@ -2347,6 +2347,12 @@ button, input, select, textarea {
   text-align: center;
 }
 
+.form-feedback.error {
+  background: rgba(244, 63, 94, 0.15);
+  color: var(--color-rose);
+  border: 1px solid rgba(244, 63, 94, 0.35);
+}
+
 .form-feedback.success {
   background: rgba(16, 185, 129, 0.15);
   color: var(--color-emerald);
