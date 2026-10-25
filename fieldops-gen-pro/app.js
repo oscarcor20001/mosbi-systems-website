@@ -327,6 +327,14 @@
     }
     renderPack(currentPack);
     computeRoi();
+
+    // Synchronize embedded FieldOps chat widget
+    if (typeof window !== 'undefined') {
+      if (window.FieldOpsChat && typeof window.FieldOpsChat.setLang === 'function') {
+        window.FieldOpsChat.setLang(currentLang);
+      }
+      window.dispatchEvent(new CustomEvent('mosbi_lang_change', {detail: currentLang}));
+    }
   }
 
   function init() {
@@ -335,6 +343,15 @@
     if (langBtn) {
       langBtn.addEventListener('click', () => {
         applyLanguage(currentLang === 'en' ? 'es' : 'en');
+      });
+    }
+
+    // Listen for language changes from embedded widgets (e.g. FieldOps chat header button)
+    if (typeof window !== 'undefined') {
+      window.addEventListener('mosbi_lang_change', (e) => {
+        if (e && e.detail && e.detail !== currentLang) {
+          applyLanguage(e.detail);
+        }
       });
     }
 

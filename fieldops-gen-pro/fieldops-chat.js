@@ -32,8 +32,8 @@
       humanSent: 'A dispatcher has been notified and will reply here shortly.',
       typing: 'Typing…',
       error: 'Something went wrong. Please try again.',
-      langToggle: 'Español',
-      langToggleLabel: 'Switch to Spanish',
+      langToggle: 'EN',
+      langToggleLabel: 'Switch to Spanish (ES)',
       formIntro: 'Our assistant is unavailable right now. Leave your details and we will call you back.',
       name: 'Your name',
       phone: 'Phone',
@@ -44,7 +44,9 @@
       formDone: 'Request received. Our team will contact you soon.',
       formInvalid: 'Please add your name, phone or email, address and a description.',
       staff: 'Team',
-      ai: 'Assistant'
+      ai: 'Assistant',
+      demoGreeting: 'Hello! I am the AI assistant for Cool Sky HVAC. How can we help?',
+      demoCompany: 'Cool Sky HVAC'
     },
     es: {
       title: 'Chatea con nosotros',
@@ -57,8 +59,8 @@
       humanSent: 'Se avisó a un despachador; responderá aquí en breve.',
       typing: 'Escribiendo…',
       error: 'Algo salió mal. Inténtelo de nuevo.',
-      langToggle: 'English',
-      langToggleLabel: 'Cambiar a inglés',
+      langToggle: 'ES',
+      langToggleLabel: 'Cambiar a Inglés (EN)',
       formIntro: 'Nuestro asistente no está disponible ahora. Deje sus datos y le devolvemos la llamada.',
       name: 'Su nombre',
       phone: 'Teléfono',
@@ -69,7 +71,9 @@
       formDone: 'Solicitud recibida. Nuestro equipo le contactará pronto.',
       formInvalid: 'Agregue su nombre, teléfono o correo, dirección y una descripción.',
       staff: 'Equipo',
-      ai: 'Asistente'
+      ai: 'Asistente',
+      demoGreeting: '¡Hola! Soy el asistente de IA de Cielo Frío HVAC. ¿En qué podemos ayudarle?',
+      demoCompany: 'Cielo Frío HVAC'
     }
   };
 
@@ -88,6 +92,8 @@
     'header img[hidden]{display:none}',
     'header .name{flex:1;font-weight:700;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}',
     'header button{background:rgba(255,255,255,.18);color:#fff;border:0;border-radius:8px;min-height:36px;min-width:36px;padding:0 10px;cursor:pointer;font-size:13px}',
+    'header .lang-btn{font-weight:700;letter-spacing:0.5px;min-width:40px;padding:0 8px;text-align:center;display:inline-flex;align-items:center;justify-content:center;transition:background .15s}',
+    'header .lang-btn:hover{background:rgba(255,255,255,.28)}',
     '.notice{padding:8px 14px;font-size:12px;background:rgba(14,165,233,.15);color:#38bdf8;border-bottom:1px solid rgba(148,163,184,.16)}',
     '.log{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px;background:#09101d}',
     '.msg{max-width:85%;padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.4;white-space:pre-wrap;word-break:break-word}',
@@ -112,6 +118,17 @@
 
   function detectLang(pref) {
     if (pref === 'en' || pref === 'es') return pref;
+    if (typeof document !== 'undefined' && document.documentElement && document.documentElement.lang) {
+      var d = String(document.documentElement.lang || '').toLowerCase();
+      if (d.indexOf('es') === 0) return 'es';
+      if (d.indexOf('en') === 0) return 'en';
+    }
+    try {
+      if (typeof localStorage !== 'undefined') {
+        var saved = localStorage.getItem('mosbi_lang') || localStorage.getItem('fop_lang');
+        if (saved === 'es' || saved === 'en') return saved;
+      }
+    } catch (e) {}
     var n = (global.navigator && (global.navigator.language || '')) || 'en';
     return n.toLowerCase().indexOf('es') === 0 ? 'es' : 'en';
   }
@@ -217,7 +234,7 @@
     var header = el('header');
     var logo = el('img', {alt: '', hidden: ''});
     var nameEl = el('span', {class: 'name'});
-    var langBtn = el('button', {type: 'button'});
+    var langBtn = el('button', {class: 'lang-btn', type: 'button'});
     var minBtn = el('button', {type: 'button'}, '–');
     header.appendChild(logo);
     header.appendChild(nameEl);
@@ -270,15 +287,27 @@
 
     function t(key) { return I18N[state.lang][key]; }
 
+    function setLang(lang) {
+      if (lang !== 'en' && lang !== 'es') return;
+      if (state.lang === lang) return;
+      state.lang = lang;
+      applyLang();
+    }
+
     function applyLang() {
       var s = I18N[state.lang];
-      var company = state.session && state.session.branding && state.session.branding.companyName;
+      var isDemo = !!options.demo;
+      var company = (isDemo ? s.demoCompany : (state.session && state.session.branding && state.session.branding.companyName)) || s.title;
+      if (state.session && state.session.branding && isDemo) {
+        state.session.branding.companyName = company;
+      }
       panel.setAttribute('aria-label', company || s.title);
       nameEl.textContent = company || s.title;
       launcher.setAttribute('aria-label', s.open);
       minBtn.setAttribute('aria-label', s.minimize);
       langBtn.textContent = s.langToggle;
       langBtn.setAttribute('aria-label', s.langToggleLabel);
+      langBtn.setAttribute('title', s.langToggleLabel);
       notice.textContent = s.aiNotice;
       humanBtn.textContent = s.human;
       input.setAttribute('aria-label', s.placeholder);
@@ -291,12 +320,28 @@
       fields.address.span.textContent = s.address;
       descSpan.textContent = s.description;
       submitBtn.textContent = s.submit;
+
+      // Dynamically update initial greeting message in the chat log if present
+      var greetingEl = log.querySelector('[data-msg-id="greeting"]');
+      if (greetingEl) {
+        var sm = greetingEl.querySelector('small');
+        if (sm) sm.textContent = s.ai;
+        var newGreeting = isDemo ? s.demoGreeting : (state.session && state.session.greeting ? state.session.greeting : s.demoGreeting);
+        for (var i = 0; i < greetingEl.childNodes.length; i++) {
+          var node = greetingEl.childNodes[i];
+          if (node.nodeType === 3) {
+            node.nodeValue = newGreeting;
+            break;
+          }
+        }
+      }
     }
 
     function addMessage(m) {
       if (m.id && state.seen[m.id]) return;
       if (m.id) state.seen[m.id] = true;
       var b = el('div', {class: 'msg ' + m.role});
+      if (m.id) b.setAttribute('data-msg-id', m.id);
       if (m.role !== 'visitor') b.appendChild(el('small', null, m.role === 'staff' ? t('staff') : t('ai')));
       b.appendChild(document.createTextNode(m.text));
       log.appendChild(b);
@@ -389,9 +434,29 @@
       if (e.key === 'Escape' && state.open) setOpen(false);
     });
     langBtn.addEventListener('click', function () {
-      state.lang = state.lang === 'en' ? 'es' : 'en';
-      applyLang();
+      var nextLang = state.lang === 'en' ? 'es' : 'en';
+      setLang(nextLang);
+      try {
+        if (typeof localStorage !== 'undefined') {
+          localStorage.setItem('mosbi_lang', nextLang);
+          localStorage.setItem('fop_lang', nextLang);
+        }
+      } catch (e) {}
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('mosbi_lang_change', {detail: nextLang}));
+      }
     });
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('mosbi_lang_change', function (e) {
+        if (e && e.detail) setLang(e.detail);
+      });
+      window.addEventListener('storage', function (e) {
+        if (e && (e.key === 'mosbi_lang' || e.key === 'fop_lang') && e.newValue) {
+          setLang(e.newValue);
+        }
+      });
+    }
 
     bar.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -455,17 +520,22 @@
 
     applyLang();
     (options.container || document.body).appendChild(host);
-    return {
+    var instance = {
       open: function () { setOpen(true); },
       close: function () { setOpen(false); },
+      setLang: setLang,
+      getLang: function () { return state.lang; },
       host: host
     };
+    if (!global.FieldOpsChat.instances) global.FieldOpsChat.instances = [];
+    global.FieldOpsChat.instances.push(instance);
+    return instance;
   }
 
   function autoStart() {
-    var script = document.currentScript || document.querySelector('script[data-widget-key]');
+    var script = document.currentScript || document.querySelector('script[data-widget-key],script[data-demo]');
     if (!script || script.getAttribute('data-manual') === 'true') return;
-    var key = script.getAttribute('data-widget-key');
+    var key = script.getAttribute('data-widget-key') || script.getAttribute('data-key');
     var demo = script.getAttribute('data-demo') === 'true';
     if (!key && !demo) return;
     var boot = function () {
@@ -481,6 +551,17 @@
     else boot();
   }
 
-  global.FieldOpsChat = {create: create, version: '1.0.0'};
+  global.FieldOpsChat = {
+    create: create,
+    instances: [],
+    setLang: function (lang) {
+      if (global.FieldOpsChat.instances) {
+        global.FieldOpsChat.instances.forEach(function (inst) {
+          if (inst && typeof inst.setLang === 'function') inst.setLang(lang);
+        });
+      }
+    },
+    version: '1.0.0'
+  };
   autoStart();
 })(typeof window !== 'undefined' ? window : this);

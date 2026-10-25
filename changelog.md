@@ -24,6 +24,11 @@ Format: `[version] - YYYY-MM-DD` following [Keep a Changelog](https://keepachang
   - **FieldOps Gen Pro Dark Industrial Theme (`fieldops-gen-pro/`)**: transformed the FieldOps Gen Pro landing page from its previous light theme (`#F1F6FC`) to MachId high-tech dark industrial theme (`#060b16` / `#0d1627` / `#132038` with radial teal/amber glow, glassmorphic cards, vibrant warranty/readiness badges, and dark-themed AI chatbox widget).
   - **FieldOps Gen Pro Header & Navigation Cleanup (`fieldops-gen-pro/`)**: removed the redundant "Abrir App Web" / "Launch Web App" link from the top navigation and elevated the language switcher button to the primary top-bar action, displaying only the single centered language code (`ES` or `EN`) with shared persistence via `mosbi_lang`.
   - **FieldOps Gen Pro Official Branding Assets (`fieldops-gen-pro/`)**: imported the official high-resolution `app_icon.png` from the Flutter codebase into `fieldops-gen-pro/assets/`, replacing the generic "FO" placeholder in the topbar with the official brand icon and configuring the favicon.
+  - **FieldOps Gen Pro AI Demo Chat Language Synchronization (`fieldops-gen-pro/`)**:
+    - Fixed initial language mismatch where the chat widget booted in English (`en`) even when viewing the Spanish page. Updated `detectLang` to inspect `document.documentElement.lang` and `localStorage.getItem('mosbi_lang')` / `fop_lang` before falling back to `navigator.language`.
+    - Harmonized chat header language toggle button to display the clean active language code (`ES` or `EN`) instead of the inverse full word ("Español" / "English"), matching the topbar style with tooltip and centered typography.
+    - Synchronized dynamic language switching between the page (`app.js`) and chat widget (`fieldops-chat.js`) via `mosbi_lang_change` event and `FieldOpsChat.setLang()`.
+    - Added dynamic message update in `applyLang()` so the demo greeting ("¡Hola! Soy el asistente de IA de Cielo Frío HVAC..." vs "Hello! I am the AI assistant for Cool Sky HVAC...") and branding title switch language instantly without page reloads.
 
 ---
 
