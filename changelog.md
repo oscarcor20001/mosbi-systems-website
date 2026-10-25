@@ -21,6 +21,7 @@ Format: `[version] - YYYY-MM-DD` following [Keep a Changelog](https://keepachang
   - Updated Shot 3 role, HUD nodes, and forensic analysis across ES, EN, and FR: replaced "Unidad Hidráulica y Panel / Three-Phase HPU Motor" with "Placa OEM y Datos Eléctricos / OEM Nameplate & Electrical Specs", correctly attributing the photo to the riveted factory nameplate with direct industrial OCR.
   - Synchronized fallback HTML in `machid/index.html` and UI strings in `machid/app.js`.
   - **Language switcher button styling (`machid/`)**: simplified the multi-language label string (`ES | [EN] | FR`) which caused awkward multiline wrapping to display only the single active language code (`ES`, `EN`, or `FR`), perfectly centered inside a dedicated button container with `white-space: nowrap` and responsive topbar spacing.
+  - **FieldOps Gen Pro Dark Industrial Theme (`fieldops-gen-pro/`)**: transformed the FieldOps Gen Pro landing page from its previous light theme (`#F1F6FC`) to MachId high-tech dark industrial theme (`#060b16` / `#0d1627` / `#132038` with radial teal/amber glow, glassmorphic cards, vibrant warranty/readiness badges, and dark-themed AI chatbox widget).
 
 ---
 
