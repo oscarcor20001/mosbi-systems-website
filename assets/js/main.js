@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initIndustryTabs();
   initRoiCalculator();
   initClipboardSystem();
+  initChannelSelection();
   initContactForm();
 });
 
@@ -1118,15 +1119,76 @@ function initClipboardSystem() {
   copyButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      e.stopPropagation();
       const textToCopy = btn.getAttribute('data-copy');
       if (!textToCopy) return;
 
       navigator.clipboard.writeText(textToCopy).then(() => {
-        showToast(`Copied: ${textToCopy}`, 'success');
+        const msg = currentLanguage === 'es' 
+          ? `Copiado: ${textToCopy}` 
+          : (currentLanguage === 'fr' ? `Copié : ${textToCopy}` : `Copied: ${textToCopy}`);
+        showToast(msg, 'success');
       }).catch(() => {
         showToast(`Copy manually: ${textToCopy}`, 'info');
       });
     });
+  });
+}
+
+/* ==========================================================================
+   10b. Interactive Department Channel Selector (Two-Way Sync)
+   ========================================================================== */
+function initChannelSelection() {
+  const channelBoxes = document.querySelectorAll('.channel-box');
+  const deptSelect = document.getElementById('departmentSelect');
+  const nameInput = document.getElementById('fullName');
+
+  if (!channelBoxes.length || !deptSelect) return;
+
+  const selectChannel = (deptEmail, focusInput = false) => {
+    deptSelect.value = deptEmail;
+
+    channelBoxes.forEach(box => {
+      const boxDept = box.getAttribute('data-department');
+      if (boxDept === deptEmail) {
+        box.classList.add('channel-active');
+      } else {
+        box.classList.remove('channel-active');
+      }
+    });
+
+    if (focusInput && nameInput) {
+      nameInput.focus();
+      const formCard = document.querySelector('.contact-form-card');
+      if (formCard) {
+        formCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  };
+
+  // Sync initial state with whatever department is currently selected
+  selectChannel(deptSelect.value, false);
+
+  channelBoxes.forEach(box => {
+    box.addEventListener('click', (e) => {
+      // Don't select if the copy button was clicked
+      if (e.target.closest('.ch-copy-btn')) return;
+
+      const dept = box.getAttribute('data-department');
+      if (!dept) return;
+
+      selectChannel(dept, true);
+
+      const deptLabel = box.querySelector('.ch-label')?.innerText || dept;
+      const toastMsg = currentLanguage === 'es'
+        ? `Destino seleccionado: ${deptLabel}`
+        : (currentLanguage === 'fr' ? `Département sélectionné : ${deptLabel}` : `Department selected: ${deptLabel}`);
+      showToast(toastMsg, 'info');
+    });
+  });
+
+  deptSelect.addEventListener('change', () => {
+    selectChannel(deptSelect.value, false);
   });
 }
 

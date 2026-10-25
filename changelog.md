@@ -12,6 +12,17 @@ Format: `[version] - YYYY-MM-DD` following [Keep a Changelog](https://keepachang
 
 ---
 
+## [0.7.5] - 2026-10-25
+
+### Added
+- **Two-Way Channel Routing & Form Synchronization**:
+  - Isolated copy-to-clipboard functionality strictly to the `.ch-copy-btn` element with `e.stopPropagation()`.
+  - Converted `.ch-send-btn` and `.channel-box` cards into interactive department selectors (`data-department` and `data-target-dept`) that dynamically select the chosen department in the contact form, display an informative toast, and smoothly focus the form.
+  - Added two-way state synchronization: changing the department in the form's `<select>` highlights the corresponding channel card with `.channel-active` glow styling.
+  - Incremented cache query versions to `styles.css?v=10` and `main.js?v=8`.
+
+---
+
 ## [0.7.4] - 2026-10-25
 
 ### Added
