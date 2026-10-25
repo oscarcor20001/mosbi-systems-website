@@ -12,6 +12,26 @@ Format: `[version] - YYYY-MM-DD` following [Keep a Changelog](https://keepachang
 
 ---
 
+## [0.9.0] - 2026-10-25
+
+### Added
+- **MachId™ Machine Identifier AI (v2.0) Interactive Demo Page (`machid/`)**:
+  - New standalone demo (`machid/index.html`, `machid/styles.css`, `machid/app.js`, `machid/assets/`) with a 3-step animated simulator (mode selection and capture, forensic AI scan, structured datasheet with printable PDF and FieldOps Gen Pro™ export).
+  - Four v2.0 operating modes: Distributed System (Multi-Node), Component / Spare Part (OEM Cross-Reference), Complete Machine, and Financial Audit & CAPEX.
+  - Back-link to `MOSBI Systems` and bridge to `fieldops-gen-pro/index.html`.
+- **Documentation**: Added `mach_update.md` (integration spec for the `machid/` page) with its checklist completed.
+
+### Changed
+- **Official Product Trademark Rebranding (`MachId™ Machine Identifier AI`)**:
+  - Updated all product brand references across `index.html`, `assets/js/translations.js` (EN, ES, FR), `assets/js/main.js`, and `docs/project.md`.
+  - `#hero` CTA, `#product` heading and a new `Launch Interactive MachId™ Simulator (v2.0)` button now link to `machid/index.html`.
+  - Added localized key `prod.cta_interactive` (EN, ES, FR); cache-busting tokens now `translations.js?v=8` and `main.js?v=12`.
+- `README.md` and `docs/project.md` updated with the new structure and product name.
+
+### Known Issues
+- Several language (i18n) errors remain in the `machid/` demo page; scheduled as the next fix.
+
+---
 ## [0.8.0] - 2026-10-25
 
 ### Added
@@ -36,7 +56,7 @@ Format: `[version] - YYYY-MM-DD` following [Keep a Changelog](https://keepachang
   - Added new localized translation keys across English, Spanish, and French for the entire showcase, multi-angle slots, forensic rules, specs table, and PDF preview modal.
   - Verified 100% dictionary coverage (253 of 253 keys resolved with 0 missing in EN, ES, and FR).
   - Incremented asset cache-busting tokens to `styles.css?v=13`, `translations.js?v=6`, and `main.js?v=11`.
-  - Replaced the text prefix `MOSBI` in the PDF datasheet header with the official vector Mosbi infinity-M logo icon alongside `MACHINE IDENTIFIER AI™`.
+  - Replaced the text prefix `MOSBI` in the PDF datasheet header with the official vector Mosbi infinity-M logo icon alongside `MachId™ MACHINE IDENTIFIER AI`.
 
 ### Fixed
 - **Single-Page Executive PDF Print Layout (`@media print`)**:

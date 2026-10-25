@@ -264,7 +264,7 @@ function initMetricCounters() {
 }
 
 /* ==========================================================================
-   7. Machine Identifier AI™ Forensic Showcase Engine (Multimodal Gemini AI)
+   7. MachId™ Machine Identifier AI Forensic Showcase Engine (Multimodal Gemini AI)
    ========================================================================== */
 
 const MACHINE_IDENTIFIER_DATABASE = {

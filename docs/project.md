@@ -38,9 +38,16 @@ Designing scalable platforms and SaaS products that support growth and digital t
 
 ## Featured Product
 
-# Machine Identifier AI™
+# MachId™ Machine Identifier AI
 
-An AI-powered platform designed to help identify industrial machinery and equipment quickly and accurately.
+An AI-powered platform designed to help identify industrial machinery and equipment quickly and accurately. Interactive demo: `machid/index.html` (`https://mosbisystems.com/machid/`).
+
+### v2.0 Operating Modes
+
+- Distributed System (Multi-Node)
+- Component / Spare Part (OEM Cross-Reference)
+- Complete Machine (3D silhouette, paint-color independent)
+- Financial Audit & CAPEX
 
 ### Core Capabilities
 

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MachId™ Machine Identifier AI (v2.0) — Interactive Demo | MOSBI Systems</title>
+  <meta name="description" content="Simulador interactivo de MachId™ Machine Identifier AI v2.0: Identificación forense multimodal, sistemas distribuidos Multi-Nodo, Cross-Reference OEM, Auditoría Financiera CAPEX y puente nativo con FieldOps Gen Pro™." />
+  <link rel="icon" href="./assets/app_icon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Sticky Topbar -->
+  <header class="topbar" role="banner">
+    <div class="container topbar-inner">
+      <div class="brand-group">
+        <a href="../index.html" class="btn btn-outline" id="backMosbiBtn">← MOSBI Systems</a>
+        <img src="./assets/app_icon.png" alt="MachId™ Icon" class="brand-icon" />
+        <div>
+          <span class="brand-title">MachId™ Machine Identifier AI</span>
+          <span class="brand-subtitle">v2.0 • MOSBI Systems LLC</span>
+        </div>
+      </div>
+
+      <nav aria-label="Secciones de demostración">
+        <ul class="nav-links">
+          <li><a href="#simulator" data-i18n="nav.sim">Simulador en Vivo</a></li>
+          <li><a href="#pillars" data-i18n="nav.pillars">Arquitectura v2.0</a></li>
+          <li><a href="../fieldops-gen-pro/index.html" data-i18n="nav.fieldops">FieldOps Gen Pro™</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" id="langBtn" class="btn btn-outline">ES | EN | FR</button>
+        <button type="button" id="topRunScanBtn" class="btn btn-primary" data-i18n="nav.run_demo">▶ Probar Escaneo Animado</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero & Interactive Simulator -->
+    <section class="hero" id="simulator">
+      <div class="container">
+        <div class="hero-header">
+          <div class="eyebrow">
+            <span class="pulse-dot"></span>
+            <span data-i18n="hero.eyebrow">DEMO INTERACTIVA EN VIVO • GEMINI 3.6 FLASH MULTIMODAL + GROUNDING</span>
+          </div>
+          <h1>
+            <span data-i18n="hero.title_1">De la Fotografía en Campo al</span>
+            <span class="text-gradient" data-i18n="hero.title_2">Dossier de Ingeniería en Segundos</span>
+          </h1>
+          <p class="lead" data-i18n="hero.lead">
+            Selecciona cualquiera de los 4 modos operativos de MachId™ v2.0, cambia entre las fotografías reales de inspección y ejecuta el escaneo forense animado para ver cómo la IA identifica equipos completos, sistemas multi-nodo, repuestos OEM y auditorías CAPEX.
+          </p>
+        </div>
+
+        <!-- 4 Operating Modes Selector (v2.0) -->
+        <div class="mode-selector-bar" role="tablist" aria-label="Modos Operativos de MachId v2.0">
+          <button type="button" class="mode-card-btn active" data-mode="distributedSystem">
+            <div class="mode-card-top">
+              <span class="mode-icon">🔗</span>
+              <span class="mode-tag" data-i18n="mode.tag_new">NUEVO v2.0</span>
+            </div>
+            <div class="mode-title" data-i18n="mode.m1_title">Sistema Distribuido (Multi-Nodo)</div>
+            <div class="mode-desc" data-i18n="mode.m1_desc">Compactador estacionario con chute multi-piso, unidad hidráulica y panel.</div>
+          </button>
+
+          <button type="button" class="mode-card-btn" data-mode="componentOrPart">
+            <div class="mode-card-top">
+              <span class="mode-icon">⚙️</span>
+              <span class="mode-tag" data-i18n="mode.tag_oem">CROSS-REF OEM</span>
+            </div>
+            <div class="mode-title" data-i18n="mode.m2_title">Componente / Repuesto</div>
+            <div class="mode-desc" data-i18n="mode.m2_desc">Bomba Cat Pumps 5CP2120W con tabla de equivalencias Aftermarket.</div>
+          </button>
+
+          <button type="button" class="mode-card-btn" data-mode="completeMachine">
+            <div class="mode-card-top">
+              <span class="mode-icon">🏭</span>
+              <span class="mode-tag" data-i18n="mode.tag_3d">SILUETA 3D</span>
+            </div>
+            <div class="mode-title" data-i18n="mode.m3_title">Máquina Completa</div>
+            <div class="mode-desc" data-i18n="mode.m3_desc">Reconocimiento estructural ignorando pintura superficial o placas dañadas.</div>
+          </button>
+
+          <button type="button" class="mode-card-btn" data-mode="financialAudit">
+            <div class="mode-card-top">
+              <span class="mode-icon">📊</span>
+              <span class="mode-tag" data-i18n="mode.tag_capex">CAPEX & VIDA ÚTIL</span>
+            </div>
+            <div class="mode-title" data-i18n="mode.m4_title">Auditoría Financiera</div>
+            <div class="mode-desc" data-i18n="mode.m4_desc">Dictamen de depreciación, vida útil remanente y Reemplazo vs. Overhaul.</div>
+          </button>
+        </div>
+
+        <!-- 3-Step Animated Workflow Bar -->
+        <div class="workflow-stepper" aria-label="Flujo de trabajo de 3 pasos">
+          <div class="step-pill completed" id="stepPill1" data-step="1">
+            <div class="step-num">1</div>
+            <div class="step-info">
+              <strong data-i18n="step.s1_title">Captura Guiada Multi-Ángulo</strong>
+              <span data-i18n="step.s1_sub">Fotos reales + Etiquetas de Nodo</span>
+            </div>
+          </div>
+
+          <div class="step-pill active" id="stepPill2" data-step="2">
+            <div class="step-num">2</div>
+            <div class="step-info">
+              <strong data-i18n="step.s2_title">Escaneo Forense IA Multimodal</strong>
+              <span data-i18n="step.s2_sub">Morfología 3D + OCR + Search Grounding</span>
+            </div>
+          </div>
+
+          <div class="step-pill completed" id="stepPill3" data-step="3">
+            <div class="step-num">3</div>
+            <div class="step-info">
+              <strong data-i18n="step.s3_title">Ficha Técnica v2.0 y Dossier PDF</strong>
+              <span data-i18n="step.s3_sub">Impresión 1 página + Puente FieldOps™</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Simulator Workspace -->
+        <div class="sim-workspace">
+          <!-- Left Column: Mobile Capture & Optical Scanner -->
+          <div class="phone-console">
+            <div class="phone-Statusbar">
+              <div class="phone-app-brand">
+                <img src="./assets/app_icon.png" alt="MachId" />
+                <span>MachId™ Inspector v2.0</span>
+              </div>
+              <span class="phone-mode-chip" id="phoneModeBadge">MODO: MULTI-NODO</span>
+            </div>
+
+            <div class="phone-body">
+              <!-- Optical Viewport -->
+              <div class="optical-viewport" id="opticalViewport">
+                <div class="camera-flash" id="cameraFlash"></div>
+                <div class="laser-beam" id="laserBeam"></div>
+
+                <div class="hud-top-bar">
+                  <span class="hud-badge node-badge" id="hudNodeTag">[NODO 1: TOLVA & CHUTE]</span>
+                  <span class="hud-badge" id="hudMethodTag">GEMINI 3.6 FLASH</span>
+                </div>
+
+                <img src="./assets/compactor_chute_1.jpg" alt="Inspección Industrial" class="viewport-img" id="viewportImg" />
+
+                <!-- Dynamic Forensic Bounding Boxes -->
+                <div class="bbox" id="bbox1" style="top: 12%; left: 28%; width: 46%; height: 32%;">
+                  <span class="bbox-label" id="bbox1Label">Ducto Descarga Chute • Acero Cal. 12</span>
+                </div>
+                <div class="bbox amber" id="bbox2" style="top: 48%; left: 24%; width: 52%; height: 42%;">
+                  <span class="bbox-label" id="bbox2Label">Cámara Hidráulica & Cilindro • ANSI Z245.2</span>
+                </div>
+              </div>
+
+              <!-- 3 Interactive Photo / Node Slots -->
+              <div class="slots-title">
+                <span data-i18n="sim.slots_label">Tomas Fotográficas Capturadas (Haz clic para cambiar ángulo):</span>
+                <span id="slotCounterText">3 / 3 Tomas</span>
+              </div>
+              <div class="photo-slots-row" id="photoSlotsContainer">
+                <button type="button" class="slot-card active" data-slot="0">
+                  <div class="slot-card-top">
+                    <span>📸 Toma 1</span>
+                    <span class="slot-node-tag" id="slotTag0">NODO 1</span>
+                  </div>
+                  <span class="slot-role-name" id="slotRole0">Tolva y Chute Superior</span>
+                </button>
+
+                <button type="button" class="slot-card" data-slot="1">
+                  <div class="slot-card-top">
+                    <span>🏷️ Toma 2</span>
+                    <span class="slot-node-tag" id="slotTag1">NODO 2</span>
+                  </div>
+                  <span class="slot-role-name" id="slotRole1">Cámara y Contenedor</span>
+                </button>
+
+                <button type="button" class="slot-card" data-slot="2">
+                  <div class="slot-card-top">
+                    <span>🎛️ Toma 3</span>
+                    <span class="slot-node-tag" id="slotTag2">NODO 3</span>
+                  </div>
+                  <span class="slot-role-name" id="slotRole2">Unidad Hidráulica y Panel</span>
+                </button>
+              </div>
+
+              <!-- Live AI Telemetry Box -->
+              <div class="scan-telemetry-box">
+                <div class="progress-header">
+                  <span id="scanStatusText">✔ Análisis Forense Completado (100%)</span>
+                  <span id="scanPercentText">100%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" id="scanProgressBar"></div>
+                </div>
+                <div class="telemetry-log" id="telemetryLog">
+                  <div class="log-item done">[OK] Regla Forense: ignorando pintura naranja/verde superficial; analizando geometría 3D.</div>
+                  <div class="log-item done">[OK] Correlacionando 3 nodos físicos con normativa ANSI Z245.2 / NFPA 82.</div>
+                  <div class="log-item done">[OK] Dossier técnico v2.0 y adaptador FieldOps Gen Pro™ listos.</div>
+                </div>
+              </div>
+
+              <button type="button" class="btn btn-primary" style="width:100%;" id="runScanBtn">
+                <span data-i18n="sim.btn_rescan">⚡ Simular Captura y Escaneo Forense IA en Vivo</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Structured Engineering Datasheet v2.0 -->
+          <div class="datasheet-panel" id="datasheetPanel">
+            <div class="ds-top-header">
+              <div>
+                <span class="ds-category-badge" id="dsCategory">SISTEMA DE COMPACTACIÓN DE RESIDUOS CON CHUTE VERTICAL</span>
+                <h2 class="ds-title" id="dsTitle">Compactador Hidráulico de Apartamentos (Tipo Chute-Fed)</h2>
+              </div>
+              <div class="ds-Badges-col">
+                <span class="market-badge market-active" id="dsMarketBadge">● Activa (Soporte OEM & Repuestos)</span>
+                <span class="confidence-pill" id="dsConfidence">Confianza IA: 96.4% • Silueta 3D + Multi-Nodo</span>
+              </div>
+            </div>
+
+            <!-- Forensic Dictamen -->
+            <div class="forensic-dictamen">
+              <strong data-i18n="ds.forensic_heading">Dictamen Forense Multimodal (Ignorando Pintura Superficial)</strong>
+              <p id="dsForensicText">
+                Identificación positiva mediante correlación morfológica de 3 nodos: (1) Cabezal de descarga de chute telescópico en acero galvanizado con compuerta cortafuego contrapesada (NFPA 82), (2) Tolva de transición y cámara de compactación de 0.5 yd³ en chapa de acero estructural con anclaje de trinquete lateral amarillo y contenedor rodante de 2 yd³, y (3) Unidad de potencia hidráulica (HPU) superior con motor trifásico TEFC y gabinete eléctrico NEMA 12.
+              </p>
+            </div>
+
+            <!-- 6 Nominal Technical Specifications -->
+            <div class="specs-grid" id="dsSpecsGrid">
+              <!-- Populated dynamically by app.js -->
+            </div>
+
+            <!-- Dynamic v2.0 Specialized Module (Multi-Node / OEM Cross-Ref / CAPEX Audit) -->
+            <div class="v2-specialized-box" id="v2ModuleBox">
+              <div class="v2-box-header">
+                <div class="v2-box-title" id="v2ModuleTitle">🔗 Topología de Nodos del Sistema Distribuido (v2.0)</div>
+                <span class="mode-tag" id="v2ModuleBadge">3 NODOS VINCULADOS</span>
+              </div>
+              <div class="v2-node-list" id="v2ModuleContent">
+                <!-- Populated dynamically by app.js -->
+              </div>
+            </div>
+
+            <!-- Primary Output Actions -->
+            <div class="ds-actions-row">
+              <button type="button" class="btn btn-primary" id="openPdfBtn">
+                <span>📄</span>
+                <span data-i18n="ds.btn_pdf">Ver / Imprimir Dossier PDF (1 Página)</span>
+              </button>
+              <button type="button" class="btn btn-teal" id="openFieldOpsBtn">
+                <span>🔄</span>
+                <span data-i18n="ds.btn_fieldops">Exportar a FieldOps Gen Pro™ (JSON)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- v2.0 Architecture Pillars -->
+    <section class="section" id="pillars">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="pil.title">¿Por qué MachId™ v2.0 transforma la Ingeniería de Campo?</h2>
+          <p data-i18n="pil.sub">Diseñado por MOSBI Systems LLC para eliminar la pérdida de tiempo buscando placas ilegibles, manuales extraviados o repuestos descontinuados.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <div class="mode-icon">🧠</div>
+            <h3 data-i18n="pil.p1_t">1. Regla Forense Anti-Repintado</h3>
+            <p data-i18n="pil.p1_d">La IA ignora el color de pintura superficial (equipos repintados en planta) y clasifica exclusivamente por geometría 3D de fundición, bridas, nervaduras y silueta estructural.</p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="mode-icon">🔗</div>
+            <h3 data-i18n="pil.p2_t">2. Sistemas Distribuidos Multi-Nodo</h3>
+            <p data-i18n="pil.p2_d">Inspecciona activos que atraviesan múltiples pisos o salas (chutes, trenes de bombeo, HVAC, tableros PLC) consolidando cada nodo en un único expediente coherente.</p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="mode-icon">⚙️</div>
+            <h3 data-i18n="pil.p3_t">3. Cross-Reference OEM & Aftermarket</h3>
+            <p data-i18n="pil.p3_d">Identifica bombas, válvulas, sellos y resortes individuales entregando equivalencias directas en Parker, SKF, Grainger y McMaster-Carr cuando el OEM está obsoleto.</p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="mode-icon">🔄</div>
+            <h3 data-i18n="pil.p4_t">4. Puente Nativo FieldOps Gen Pro™</h3>
+            <p data-i18n="pil.p4_d">Exporta en 1 clic el activo identificado y sus hallazgos (`Findings → Proposals → Work Orders`) respetando la regla de oro de auditoría `SC ≠ WO`.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Printable 1-Page Executive PDF Modal -->
+  <div class="modal-backdrop" id="pdfModalBackdrop" role="dialog" aria-modal="true">
+    <div class="modal-window">
+      <div class="modal-topbar">
+        <strong>MachId™ v2.0 — Vista Previa del Dossier Ejecutivo en PDF (1 Página US Letter)</strong>
+        <div style="display:flex;gap:10px;">
+          <button type="button" class="btn btn-primary" id="printPdfNowBtn">🖨️ Imprimir / Guardar PDF</button>
+          <button type="button" class="btn btn-outline" id="closePdfModalBtn" style="color:#fff;">✕ Cerrar</button>
+        </div>
+      </div>
+      <div class="pdf-sheet" id="pdfSheetContent">
+        <!-- Populated dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FieldOps Gen Pro Adapter Modal -->
+  <div class="modal-backdrop" id="fieldopsModalBackdrop" role="dialog" aria-modal="true">
+    <div class="modal-window dark-modal">
+      <div class="modal-topbar">
+        <strong>FieldOpsMachineAdapter — Payload de Sincronización Directa (SC ≠ WO)</strong>
+        <button type="button" class="btn btn-outline" id="closeFieldOpsModalBtn" style="color:#fff;">✕ Cerrar</button>
+      </div>
+      <div style="padding:24px;">
+        <p style="font-size:14px;color:#cbd5e1;margin-bottom:14px;">
+          Este es el paquete JSON estructurado generado automáticamente por <code>FieldOpsMachineAdapter</code> en <strong>MachId™ v2.0</strong> para registrar el equipo y convertir anomalías visuales en <em>Findings</em> dentro de <strong>FieldOps Gen Pro™</strong>:
+        </p>
+        <pre class="code-pre" id="fieldopsJsonPre"></pre>
+        <div style="margin-top:18px;display:flex;justify-content:flex-end;gap:12px;">
+          <a href="../fieldops-gen-pro/index.html" class="btn btn-primary">Ir al Simulador de FieldOps Gen Pro™ →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;">
+      <div>
+        <strong>MachId™ Machine Identifier AI (v2.0)</strong> — Un producto insignia de <a href="../index.html">MOSBI Systems LLC</a>.
+      </div>
+      <div>
+        <span>info@mosbisystems.com • Maryland &amp; Florida, USA</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

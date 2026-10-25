@@ -23,7 +23,15 @@ Mosbi systems/
 ├── CNAME                   # GitHub Pages custom domain
 ├── changelog.md            # Version history
 ├── README.md               # This file
+├── mach_update.md          # Integration spec for the MachId™ demo page
 ├── .gitignore
+├── machid/                 # MachId™ Machine Identifier AI (v2.0) interactive demo
+│   ├── index.html
+│   ├── styles.css
+│   ├── app.js
+│   └── assets/
+├── fieldops-gen-pro/       # FieldOps Gen Pro demo page
+├── docs/                   # Project docs and archived future projects
 └── assets/
     ├── css/
     │   └── styles.css      # All CSS (2,700+ lines)
