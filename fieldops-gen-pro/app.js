@@ -120,6 +120,7 @@
       'hero.lead': 'Zero hard-coded trades. Equipment attributes, van inventory groups, predictive repair kits, carbonless digital receipts, 90 OSHA standards and a Gemini AI chat dispatcher adapt dynamically through Industry Packs.',
       'hero.cta_app': 'Open FieldOps Gen Pro App',
       'hero.cta_sim': 'Try Multi-Trade Simulator',
+      'hero.cta_pilot': 'Request Enterprise Pilot',
       'sim.title': 'Interactive Multi-Industry Dispatch & Van Readiness Simulator',
       'sim.sub': 'Select any Industry Pack below. See how FieldOps Gen Pro verifies van stock against the predicted Repair Kit before the technician leaves the shop.',
       'sim.select_label': 'Active Industry Pack:',
@@ -171,6 +172,7 @@
       'hero.lead': 'Sin oficios fijos en el código. Atributos de activos, grupos de inventario de van, kits predictivos, recibos digitales autocopiativos, 90 estándares OSHA y un despachador IA con Gemini se adaptan dinámicamente mediante Industry Packs.',
       'hero.cta_app': 'Abrir App FieldOps Gen Pro',
       'hero.cta_sim': 'Probar Simulador Multi-Oficio',
+      'hero.cta_pilot': 'Solicitar Piloto Enterprise',
       'sim.title': 'Simulador Interactivo de Despacho y Preparación de Van',
       'sim.sub': 'Seleccione cualquier Industry Pack. Vea cómo FieldOps Gen Pro verifica el stock de la van frente al Kit de Reparación antes de que el técnico salga.',
       'sim.select_label': 'Industry Pack Activo:',
@@ -211,7 +213,7 @@
     }
   };
 
-  let currentLang = (typeof localStorage !== 'undefined' && localStorage.getItem('fop_lang')) || 'en';
+  let currentLang = (typeof localStorage !== 'undefined' && (localStorage.getItem('mosbi_lang') || localStorage.getItem('fop_lang'))) || 'en';
   if (currentLang !== 'en' && currentLang !== 'es') currentLang = 'en';
   let currentPack = 'hvac';
 
@@ -305,7 +307,10 @@
   function applyLanguage(lang) {
     currentLang = lang === 'es' ? 'es' : 'en';
     if (typeof localStorage !== 'undefined') {
-      localStorage.setItem('fop_lang', currentLang);
+      try {
+        localStorage.setItem('mosbi_lang', currentLang);
+        localStorage.setItem('fop_lang', currentLang);
+      } catch (e) {}
     }
     if (typeof document === 'undefined') return;
     document.documentElement.lang = currentLang;
@@ -315,7 +320,11 @@
       if (dict[key]) node.textContent = dict[key];
     });
     const langBtn = document.getElementById('langSwitchBtn');
-    if (langBtn) langBtn.textContent = currentLang === 'en' ? 'ES | Español' : 'EN | English';
+    if (langBtn) {
+      langBtn.textContent = currentLang.toUpperCase();
+      langBtn.title = currentLang === 'es' ? 'Cambiar a Inglés (EN)' : 'Switch to Spanish (ES)';
+      langBtn.setAttribute('aria-label', langBtn.title);
+    }
     renderPack(currentPack);
     computeRoi();
   }

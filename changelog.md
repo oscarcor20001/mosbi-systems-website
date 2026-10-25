@@ -22,6 +22,7 @@ Format: `[version] - YYYY-MM-DD` following [Keep a Changelog](https://keepachang
   - Synchronized fallback HTML in `machid/index.html` and UI strings in `machid/app.js`.
   - **Language switcher button styling (`machid/`)**: simplified the multi-language label string (`ES | [EN] | FR`) which caused awkward multiline wrapping to display only the single active language code (`ES`, `EN`, or `FR`), perfectly centered inside a dedicated button container with `white-space: nowrap` and responsive topbar spacing.
   - **FieldOps Gen Pro Dark Industrial Theme (`fieldops-gen-pro/`)**: transformed the FieldOps Gen Pro landing page from its previous light theme (`#F1F6FC`) to MachId high-tech dark industrial theme (`#060b16` / `#0d1627` / `#132038` with radial teal/amber glow, glassmorphic cards, vibrant warranty/readiness badges, and dark-themed AI chatbox widget).
+  - **FieldOps Gen Pro Header & Navigation Cleanup (`fieldops-gen-pro/`)**: removed the redundant "Abrir App Web" / "Launch Web App" link from the top navigation and elevated the language switcher button to the primary top-bar action, displaying only the single centered language code (`ES` or `EN`) with shared persistence via `mosbi_lang`.
 
 ---
 

@@ -193,14 +193,20 @@ select:focus-visible {
 
 #langSwitchBtn {
   min-width: 52px;
-  height: 44px;
+  height: 40px;
   padding: 0 14px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   white-space: nowrap;
+  font-family: var(--font-sans);
   font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  user-select: none;
+  box-sizing: border-box;
 }
 
 /* Hero */
