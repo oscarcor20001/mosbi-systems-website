@@ -65,6 +65,20 @@ An AI-powered platform designed to help identify industrial machinery and equipm
 
 ---
 
+# FieldOps Gen Pro
+
+A multi-industry field service management SaaS platform (`fieldops-gen-pro/index.html` and `https://app.mosbisystems.com`) built with dynamic **Industry Packs** (HVAC, Commercial Roofing, Security & Access Control, Plumbing, Solar & Battery, Waste & Compaction, and custom packs).
+
+### Core Capabilities
+
+- Dynamic Van Inventory & Day Check with predictive `VanReadinessAnalyzer` and mandatory MPNs
+- Guided 2-Step Digital Receipt mirroring carbonless invoices with immutable warranty audit trails
+- Strict `Service Call ≠ Work Order` pipeline (`Finding → Proposal → Client Approval → Work Order`)
+- 90 Official OSHA Safety Standards (29 CFR 1910 & 1926) with arrival reminders and immutable acknowledgments
+- Turnkey Embeddable Gemini AI Chatbox (`fieldops-chat.js`) with live human handoff to `/chat-inbox` and 1-click lead conversion
+
+---
+
 ## Industries
 
 MOSBI Systems solutions are being designed for organizations operating in:

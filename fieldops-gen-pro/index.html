@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FieldOps Gen Pro — Multi-Industry Field Service Management | MOSBI Systems</title>
+  <meta name="description" content="One Field Service Platform. Every Trade. Dynamic Industry Packs, Van Readiness Analyzer, Guided 2-Step Digital Receipts, 90 OSHA Standards, and Turnkey Gemini AI Chatbox." />
+  <meta property="og:title" content="FieldOps Gen Pro | MOSBI Systems" />
+  <meta property="og:description" content="Dynamic multi-trade field service platform from 5-tech teams to enterprise fleets." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Sticky Topbar -->
+  <header class="topbar" role="banner">
+    <div class="container topbar-inner">
+      <div class="brand-group">
+        <a href="../index.html" class="btn btn-outline" data-i18n="nav.mosbi" aria-label="Back to MOSBI Systems">← MOSBI Systems</a>
+        <div class="brand-mark" aria-hidden="true">FO</div>
+        <div>
+          <span class="brand-title">FieldOps Gen Pro</span>
+          <span class="brand-subtitle">MOSBI Systems LLC</span>
+        </div>
+      </div>
+
+      <nav aria-label="Product sections">
+        <ul class="nav-links">
+          <li><a href="#simulator" data-i18n="nav.simulator">Simulator</a></li>
+          <li><a href="#pillars" data-i18n="nav.pillars">How It Works</a></li>
+          <li><a href="#editions" data-i18n="nav.editions">Team vs Enterprise</a></li>
+          <li><a href="#chatbox" data-i18n="nav.chat">AI Chatbox</a></li>
+          <li><a href="#roi" data-i18n="nav.roi">ROI Calculator</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" id="langSwitchBtn" class="btn btn-outline" aria-label="Switch language">ES | Español</button>
+        <a href="https://app.mosbisystems.com" class="btn btn-primary" data-i18n="nav.launch">Launch Web App</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="heroHeading">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow" data-i18n="hero.eyebrow">MOSBI SYSTEMS LLC • FIELD SERVICE PLATFORM</span>
+          <h1 id="heroHeading" data-i18n="hero.title">One Field Service Platform. Every Trade. From 5-Tech Teams to Enterprise Fleets.</h1>
+          <p class="lead" data-i18n="hero.lead">
+            Zero hard-coded trades. Equipment attributes, van inventory groups, predictive repair kits, carbonless digital receipts, 90 OSHA standards and a Gemini AI chat dispatcher adapt dynamically through Industry Packs.
+          </p>
+          <div class="hero-ctas">
+            <a href="https://app.mosbisystems.com" class="btn btn-primary" data-i18n="hero.cta_app">Open FieldOps Gen Pro App</a>
+            <a href="#simulator" class="btn btn-outline" data-i18n="hero.cta_sim">Try Multi-Trade Simulator</a>
+          </div>
+          <div class="trade-pills" role="group" aria-label="Select active Industry Pack">
+            <button type="button" class="trade-pill active" data-pack="hvac">HVAC &amp; Refrigeration</button>
+            <button type="button" class="trade-pill" data-pack="roofing">Commercial Roofing</button>
+            <button type="button" class="trade-pill" data-pack="security">Security &amp; Access</button>
+            <button type="button" class="trade-pill" data-pack="plumbing">Plumbing</button>
+            <button type="button" class="trade-pill" data-pack="solar">Solar &amp; Battery</button>
+            <button type="button" class="trade-pill" data-pack="compactors">Waste &amp; Compaction</button>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Live Industry Pack Preview">
+          <div class="hero-card-header">
+            <strong id="heroPackName">HVAC &amp; Refrigeration</strong>
+            <span id="heroWarrantyBadge" class="badge-warranty-ok">[IN WARRANTY]</span>
+          </div>
+          <p style="font-size:13px;font-weight:700;color:var(--navy-muted);margin-bottom:4px;">ASSET</p>
+          <p id="heroAssetTitle" style="font-size:16px;font-weight:800;margin-bottom:12px;">Split AC 24,000 BTU — Seven Springs Apt</p>
+          <p style="font-size:13px;font-weight:700;color:var(--navy-muted);margin-bottom:4px;" data-i18n="sim.call_label">Incoming Service Call:</p>
+          <p id="heroCallDesc" style="font-size:14px;margin-bottom:12px;">Unit not cooling; evaporator coil obstructed and possible refrigerant leak.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--steel);">
+            <div>
+              <span style="font-size:12px;font-weight:700;color:var(--navy-muted);display:block;" data-i18n="sim.kit_label">Matched Predictive Repair Kit:</span>
+              <strong id="heroKitName" style="font-size:14px;">Split Coil &amp; Brazing Kit</strong>
+            </div>
+            <div style="text-align:right;">
+              <span style="font-size:12px;font-weight:700;color:var(--navy-muted);display:block;" data-i18n="sim.readiness_label">Van Readiness Score:</span>
+              <span id="heroReadiness" style="font-size:22px;font-weight:800;color:var(--brand);">92%</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Multi-Industry Dispatch & Van Readiness Simulator -->
+    <section class="section" id="simulator" aria-labelledby="simHeading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="simHeading" data-i18n="sim.title">Interactive Multi-Industry Dispatch &amp; Van Readiness Simulator</h2>
+          <p data-i18n="sim.sub">Select any Industry Pack below. See how FieldOps Gen Pro verifies van stock against the predicted Repair Kit before the technician leaves the shop.</p>
+        </div>
+
+        <div class="sim-box">
+          <div>
+            <label for="packSelect" style="font-weight:800;font-size:14px;" data-i18n="sim.select_label">Active Industry Pack:</label>
+            <select id="packSelect" class="sim-select">
+              <option value="hvac">HVAC &amp; Refrigeration</option>
+              <option value="roofing">Commercial Roofing</option>
+              <option value="security">Security &amp; Access Control</option>
+              <option value="plumbing">Commercial Plumbing</option>
+              <option value="solar">Solar &amp; Energy Storage</option>
+              <option value="compactors">Waste &amp; Compaction</option>
+            </select>
+
+            <p style="font-weight:800;font-size:13px;color:var(--navy-muted);" data-i18n="sim.call_label">Incoming Service Call:</p>
+            <p id="simCallText" style="font-size:15px;font-weight:600;margin-bottom:14px;">Unit not cooling; evaporator coil obstructed and possible refrigerant leak.</p>
+
+            <p style="font-weight:800;font-size:13px;color:var(--navy-muted);" data-i18n="sim.kit_label">Matched Predictive Repair Kit:</p>
+            <p id="simKitText" style="font-size:15px;font-weight:700;color:var(--brand);margin-bottom:14px;">Split Coil &amp; Brazing Kit</p>
+
+            <p style="font-weight:800;font-size:13px;color:var(--navy-muted);" data-i18n="sim.readiness_label">Van Readiness Score:</p>
+            <div id="simReadinessVal" class="readiness-meter">92%</div>
+          </div>
+
+          <div>
+            <p style="font-weight:800;font-size:14px;color:var(--success);" data-i18n="sim.have_label">Verified in Van Inventory:</p>
+            <ul id="simHaveList" class="mpn-list" style="margin-bottom:18px;"></ul>
+
+            <p style="font-weight:800;font-size:14px;color:var(--warning);" data-i18n="sim.missing_label">Missing / Below Minimum Alert:</p>
+            <ul id="simMissingList" class="mpn-list"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Operational Pillars -->
+    <section class="section" id="pillars" aria-labelledby="pillarsHeading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="pillarsHeading" data-i18n="pillars.title">End-to-End Operational Discipline</h2>
+          <p data-i18n="pillars.sub">Built around strict field-service workflows that prevent lost parts, unauthorized work orders, and unverified warranty claims.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3 data-i18n="pillars.p1_t">1. Dynamic Van Inventory &amp; Day Check</h3>
+            <p data-i18n="pillars.p1_d">Tabs come from pack.vanGroups with mandatory MPNs, predictive VanReadinessAnalyzer, and 1-tap Restock.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="pillars.p2_t">2. Guided 2-Step Digital Receipt</h3>
+            <p data-i18n="pillars.p2_d">Mirrors the physical carbonless invoice with pack.receiptExtras, immutable audit trail, and supervisor warranty review.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="pillars.p3_t">3. Strict Rule: SC ≠ WO</h3>
+            <p data-i18n="pillars.p3_d">Service Calls never convert directly into Work Orders. Work Orders originate only from client-approved Proposals built from Findings.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="pillars.p4_t">4. 90 OSHA Standards &amp; AI Chat Gateway</h3>
+            <p data-i18n="pillars.p4_d">29 CFR 1910 &amp; 1926 arrival reminders with immutable acknowledgments, plus an embeddable Gemini AI chatbox with 1-click lead conversion.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team vs Enterprise Editions -->
+    <section class="section" id="editions" aria-labelledby="editionsHeading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="editionsHeading" data-i18n="ed.title">Team Edition vs Enterprise Edition</h2>
+          <p data-i18n="ed.sub">Identical Firestore data model — upgrade from Team (~5 employees) to Enterprise in one click with zero data migration.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3 data-i18n="ed.team_t">Team Edition (~5 Employees)</h3>
+            <p data-i18n="ed.team_d">Properties, Dispatch, Service Calls, Guided Receipts, Findings → Proposals → Work Orders, Single-Van Inventory, 90 OSHA Standards, and AI Chat Inbox (500 msg/mo).</p>
+          </article>
+          <article class="card" style="border-color:var(--brand);background:var(--brand-soft);">
+            <h3 data-i18n="ed.ent_t">Enterprise Edition (Multi-Crew &amp; Fleets)</h3>
+            <p data-i18n="ed.ent_d">Everything in Team plus Multi-Van Fleet Dashboard (/fleet), Formal Training Records (/training-records), Pluggable Webhook Connectors, and 5,000+ AI Chat messages/mo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Turnkey AI Chatbox Demo -->
+    <section class="section" id="chatbox" aria-labelledby="chatHeading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="chatHeading" data-i18n="chat.title">Turnkey Embeddable AI Chatbox (fieldops-chat.js)</h2>
+          <p data-i18n="chat.sub">Every tenant receives a 1-line Shadow DOM script for their website. Grounded in their active Industry Packs and Knowledge Base, with live human handoff to /chat-inbox.</p>
+        </div>
+
+        <div class="card">
+          <p style="font-weight:700;">1-Line Tenant Website Embed Snippet:</p>
+          <pre class="code-snippet"><code>&lt;script src="https://cdn.mosbisystems.com/widget/fieldops-chat.js" data-tenant="acme-hvac" data-key="pk_live_acme" async&gt;&lt;/script&gt;</code></pre>
+          <div style="margin-top:16px;">
+            <button type="button" id="openDemoChatBtn" class="btn btn-primary" data-i18n="chat.open_btn">Test Live AI Chat Widget</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="section" id="roi" aria-labelledby="roiHeading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="roiHeading" data-i18n="roi.title">Interactive Field Service ROI Calculator</h2>
+          <p data-i18n="roi.sub">Estimate monthly and annual savings from eliminating repeat trips for missing parts and capturing field findings as approved proposals.</p>
+        </div>
+
+        <div class="roi-grid">
+          <div>
+            <div class="slider-row">
+              <label for="roiTechs"><span data-i18n="roi.techs">Number of Technicians</span> <span id="roiTechsVal">8</span></label>
+              <input type="range" id="roiTechs" min="2" max="80" value="8" />
+            </div>
+            <div class="slider-row">
+              <label for="roiCalls"><span data-i18n="roi.calls">Service Calls / Tech / Day</span> <span id="roiCallsVal">4</span></label>
+              <input type="range" id="roiCalls" min="1" max="10" value="4" />
+            </div>
+            <div class="slider-row">
+              <label for="roiRepeat"><span data-i18n="roi.repeat">Repeat-Trip Rate for Missing Parts (%)</span> <span id="roiRepeatVal">18%</span></label>
+              <input type="range" id="roiRepeat" min="5" max="40" value="18" />
+            </div>
+            <div class="slider-row">
+              <label for="roiCost"><span data-i18n="roi.cost">Avg Cost per Repeat Trip (USD)</span> <span id="roiCostVal">$145</span></label>
+              <input type="range" id="roiCost" min="60" max="350" step="5" value="145" />
+            </div>
+          </div>
+
+          <div class="roi-output" aria-live="polite">
+            <div>
+              <span style="font-size:13px;font-weight:700;text-transform:uppercase;color:#93C5FD;" data-i18n="roi.monthly_label">Estimated Monthly Savings</span>
+              <div id="roiMonthlyOut" class="roi-number">$8,120</div>
+            </div>
+            <div>
+              <span style="font-size:13px;font-weight:700;text-transform:uppercase;color:#93C5FD;" data-i18n="roi.annual_label">Estimated Annual Savings</span>
+              <div id="roiAnnualOut" class="roi-number">$97,440</div>
+            </div>
+            <p style="font-size:14px;color:#E0F2FE;">
+              <span data-i18n="roi.trips_saved">Repeat trips eliminated / month:</span>
+              <strong id="roiTripsSaved">56</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <div>
+        <strong>FieldOps Gen Pro</strong> — A flagship product of <a href="https://mosbisystems.com">MOSBI Systems LLC</a>.
+      </div>
+      <div>
+        <span>Dania Beach, Florida • info@mosbisystems.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+  <script
+    src="./fieldops-chat.js"
+    data-tenant="demo-fieldops"
+    data-key="pk_demo_landing"
+    data-demo="true"
+    data-title="FieldOps Gen Pro AI Demo"
+    async
+  ></script>
+</body>
+</html>
+
