@@ -12,6 +12,92 @@ Format: `[version] - YYYY-MM-DD` following [Keep a Changelog](https://keepachang
 
 ---
 
+## [0.9.4] - 2026-10-25
+
+### Refactored & Enhanced
+- **Consultative Conversational Courtesy & Time-of-Day Greetings**:
+  - Implemented dynamic client-side getTimeGreeting(lang) detecting visitor local hour (Buenos días / Buenas tardes / Buenas noches).
+  - Polite greetings on casual hellos without aggressive sales pitches or premature lead forms.
+- **Incoherent & Ambiguous Query Clarification Loop**:
+  - Replaced immediate catalog dumping on filler words (e.g., "aja", "ok", "ah", "bueno") or vague/incoherent messages with a polite clarification inquiry: *"¿Podría ser más específico en su requerimiento o consulta? ¿O requiere alguna orientación para su empresa?"*
+  - Interactive choices provided: `[ ✅ Sí, deseo orientación ]` and `[ ❌ No, gracias ]`.
+  - Dynamic branching based on response:
+    - If user affirms ("sí", "claro", "por favor"): presents the three core SaaS areas with structured action buttons.
+    - If user declines ("no", "no gracias"): respectfully signs off wishing them a pleasant day/night without forcing sales pitches.
+- **Maximized Chat Viewport & Screen Space Architecture**:
+  - Re-architected quick chips into a single-row horizontally scrollable pill strip.
+  - Expanded chat panel viewport (440px x 720px max).
+
+---
+
+## [0.9.3] - 2026-10-25
+
+### Added
+- **Waste & Compaction Suite Agent Packaged (`fieldops-gen-pro/`)**:
+    - Packaged and isolated the specialized Waste Compactor & Chute Agent into `fieldops-gen-pro/waste-compactor-chat.js` and `fieldops-gen-pro/waste-compactor-chat.css`.
+    - Fully preserves all deep domain expertise for waste compactors, 24" chutes, AutoPak 1830-STD (Toronita Corp 115V 1HP), Precision 1830-2000 vs 1830-4000, Front vs Rear Load, and WasteCaddy (DJ Products 36V DC 550 lbs drawbar pull) user guide for client embedding and trade-specific deployment.
+  - **MOSBI Systems Core SaaS & Field Software Bot Architecture (`mosbisystems.com`)**:
+    - Re-aligned the main landing page AI assistant (`assets/js/mosbi-chat.js`) to reflect MOSBI Systems LLC's core commercial offerings:
+      - **MachId™ Machine Identifier AI (v2.0)**: Visual AI recognition for industrial assets, zero-barcode identification, forensic OCR, schematics retrieval, and live demos.
+      - **FieldOps Gen Pro (SaaS)**: Field service management across all trade packs (HVAC, Roofing, Plumbing, Electrical, Security, Solar, Waste Management) with van inventory, smart dispatch, Findings → Proposals → Work Orders, and 90 OSHA safety standards.
+      - **High-Converting Software & Web Portals for Trade Contractors**: Custom websites, web platforms, and mobile apps engineered for field service companies managing fleets, technicians, and continuous service calls.
+      - **Custom AI & Mobile Engineering**: Offline-first Flutter mobile apps and CMMS/ERP cloud integrations.
+    - Preserves autonomous robot mascot animations (floating, head-scratching, winking with OK sparkle, 28s inactivity sleep mode with floating Zzz, instant wake-up jolt).
+    - Preserves confidential lead qualification and human handoff: silently transmits complete structured dossiers and conversation logs to `oscar@mosbisys.com` while confirming a warm, professional follow-up on screen.
+  - **Consultative Lead Qualification & Human Handoff Architecture (To `oscar@mosbisys.com`)**:
+    - Defined the core operational role of the bot: it acts as a technical intake and qualification assistant (*Discovery & Triage Copilot*) rather than an encyclopedia. It uses its engineering knowledge to ask the right questions and extract key parameters (room size, sill height, load door dimensions, front vs rear load, ramps/distance for Waste Caddy, voltage, and building address).
+    - Guarantees the customer that **they will be attended to as soon as possible by a human representative from MOSBI Systems** to close the sale or conduct an on-site technical inspection to craft their formal Proposal.
+    - **Strict Commercial Confidentiality & Sales Engineering Protection**:
+      - Eliminated technical model capacity leakage (e.g., removed explicit mention of `~0.5 yd³` and specific factor counts) preventing prospective clients from price-shopping competing manufacturers.
+      - Standardized commercial positioning: affirms that **MOSBI Systems possesses machines and systems meeting the customer's exact requirements**.
+      - Enforced mandatory on-site inspection protocol: establishes that **it is indispensable to audit the technical characteristics of the site**, mandating an **on-site visit by a technical service representative** to determine equipment requirements and draft a formal proposal.
+      - **Confidential Backend Transmission**: suppressed any client-facing exposure of the internal recipient email (`oscar@mosbisys.com`). The dispatch button cleanly prompts `Solicitar Inspección Técnica / Enviar Información`.
+      - **Warm & Professional Client Handoff**: upon form submission, the bot warmly confirms that *their valuable interaction has been of great help and that their request will be attended to as soon as possible by technical service personnel to coordinate the on-site inspection and prepare their proposal*, while dispatching the complete dossier to `oscar@mosbisys.com` in the background.
+  - **Animated Vector Robot Character (Mascot)**:
+    - High-tech SVG robot with metallic head chassis, glowing cyan antenna pulse light, reactor core, and LED visor eyes.
+    - **Head-Scratch Animation (`.is-scratching`)**: tilts head quizzically, articulates right arm to the temple/antenna, and performs realistic scratching motions with kinetic motion lines while analyzing knowledge base queries or idling.
+    - **Wink & OK Animation (`.is-winking`)**: right LED eye winks into a cheerful digital arc (`;-)`) with head nod and glowing cyan OK sparkle pop whenever answers or confirmations are delivered.
+    - **Inactivity Sleep / Standby Mode (`.is-sleeping`)**: if the visitor pauses or takes too long to type (28 seconds of inactivity), the robot automatically droops its head, closes its eyes into relaxed horizontal resting lines, dims its antenna to low-power pulse, and emits floating animated cyan `Zzz` particles.
+    - **Instant Wake-up Jolt (`.is-waking`)**: as soon as the client starts typing, presses a key, or clicks the input area, the robot jolts awake immediately, expands its eyes, and winks in ready stance.
+  - **MOSBI Knowledge Base & Natural Engine**:
+    - Specialized conversational understanding covering **MachId™ Machine Identifier AI (v2.0)** (3D morphology, zero-barcode vision, schematics), **FieldOps Gen Pro** (van inventory, 90 OSHA standards, guided receipts), custom enterprise software/AI consulting, and ROI calculation.
+    - Interactive 1-click Quick Action Chips (Pills) for instant topic navigation.
+    - Embedded interactive demo links with smooth scrolling to `#contact` and direct links to `machid/index.html` and `fieldops-gen-pro/index.html`.
+    - In-chat lead capture card for rapid consultation/pilot booking.
+  - **Multi-Storey Compaction & Waste Chute Domain Knowledge**:
+    - Elevated waste compaction consultation from rigid model recommendation to an engineering survey checklist:
+      - Explains critical distinction between **Precision 1830-4000** (tight/restricted trash rooms) and **Precision 1830-2000** (standard/spacious rooms).
+      - **Datasheet Knowledge Ingestion (AutoPak 1830-STD by Toronita Corporation)**:
+        - Ingested official forensic datasheet (`Datasheet_AutoPak_1830-STD.pdf`, Ref ID: 8CC11EF7):
+          - OEM Manufacturer: AutoPak / Toronita Corporation (York, PA 17402).
+          - Model & Serial: MOD. NO. 1830-STD, S/N 793-6302, 1980–1995 vintage (Discontinued / Active Retrofit status).
+          - Electrical Ratings: 1.0 HP motor, 115V Single-Phase (1 Ph), 60 Hz, 15.2A current (dedicated 20A branch circuit).
+          - Forensic Context: Overhead gravity refuse chute application docking into a green mobile container with turnbuckle tensioners.
+          - Engineered response logic for 115V single-phase building inquiries, contrasting vintage 115V 1HP Toronita units with modern 208V/230V/460V 3Ph 2–3HP Precision 1830-2000 / 1830-4000 equipment.
+      - **Manual Knowledge Ingestion (WasteCaddy Standard User Guide by DJ Products, Inc.)**:
+        - Ingested official operating manual (`WasteCaddy-Standard-User-Guide.pdf`):
+          - Power Train: 36V DC electric motor (1.0 HP nominal / 2.0 HP peak) with 36V solid-state controller.
+          - Battery System: Three (3) 12V deep-cycle marine lead-acid batteries in series (36V system), with onboard 110V AC automatic charger (~8 hr charge, ~8 hr runtime).
+          - Drawbar Pull: 550 lbs (249 kg) max draw bar pull to safely haul loaded 2,000–3,000 lb commercial dumpsters.
+          - Ergonomics & Speed: Twist-grip handlebars (0–3 mph forward, 0–1.5 mph reverse) with instrument panel speed governor (1–3).
+          - Dimensions & Chassis: 44" L x 26.4" W x 41.1" H, 700 lbs total weight, dual 12" front foam-filled drive tires, 8" rear swivel caster.
+          - Safety Systems: 5th wheel pivoting dumpster arm (90° left/right) with locking pin, red belly-bumper emergency stop switch (auto halts and inches forward to unpin operator), and manual free-wheel lever at 7 o'clock position for unpowered pushing.
+          - Integrated PM protocols into **FieldOps Gen Pro** (monthly distilled water checks, quarterly caster grease & 80/90W transaxle gear oil checks).
+      - Added comprehensive hauler compatibility & handling logistics:
+        - Audits container mechanical pickup style: **Front Load** (fork pockets) vs **Rear Load** (trunnion bar/winch) to match the waste collection hauler fleet.
+        - Audits container tow hitch availability and transport logistics from compactor room to truck pickup point:
+          - Flat/single-level, no ramps -> recommends **Waste Caddy Light** for ergonomic zero-strain hauling.
+          - Ramp, incline, or long transfer distances -> mandates **Waste Caddy Heavy Duty** (electromagnetic braking and high-torque transaxle for 1,500+ lb containers under OSHA guidelines).
+      - Mandates surveying available building voltage (208V/230V/460V 3Ph vs 1Ph), floor-to-container sill height (so machine discharge snout penetrates inside container and prevents trash spillover), container load door width/height (preventing snout wider than container door opening disaster), and existing vs standard container reuse.
+      - Connects directly with **MachId™** for photographic asset measurement and OEM tag OCR.
+    - Accurately recommends **Chute-Fed Apartment Compactors** (specifically benchmarked to the **Precision Machinery Systems Auto-Pak 1830-4000** 2.0-3.0 HP unit), covering NFPA 82 165°F fusible-link fire dampers, 2 yd³ caster containers, photo-electric eye automatic gravity cycling, and cross-integration with **MachId™** and **FieldOps Gen Pro**.
+    - Added dedicated quick action chip `🏢 Compactadores & Chutes` across ES, EN, and FR.
+  - **Full Tri-lingual Synchronization (ES, EN, FR)**:
+    - Automatically syncs with `translations.js` via `mosbi_lang_change` event and `localStorage.getItem("mosbi_lang")`.
+    - In-chat language toggle button to seamlessly flip between Spanish, English, and French.
+
+---
+
 ## [0.9.2] - 2026-10-25
 
 ### Fixed

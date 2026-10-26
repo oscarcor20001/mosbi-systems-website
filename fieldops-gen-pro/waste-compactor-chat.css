@@ -1,0 +1,919 @@
+/* ==========================================================================
+   MOSBI Systems - Official AI Industrial Chatbot & Robot Mascot Styles
+   Theme: Cyber-Industrial Dark / High-Tech HUD (Deep Navy #050917 & Neon Cyan #00e5ff)
+   ========================================================================== */
+
+:root {
+  --mb-bg-deep: #050917;
+  --mb-bg-surface: #0a1329;
+  --mb-bg-surface-elevated: #0f1c3d;
+  --mb-border: rgba(14, 165, 233, 0.22);
+  --mb-border-glow: rgba(0, 229, 255, 0.45);
+  --mb-accent: #00e5ff;
+  --mb-accent-rgb: 0, 229, 255;
+  --mb-accent-blue: #0284c7;
+  --mb-text-main: #f1f5f9;
+  --mb-text-muted: #94a3b8;
+  --mb-font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --mb-font-mono: 'JetBrains Mono', monospace;
+  --mb-radius-lg: 20px;
+  --mb-radius-md: 14px;
+  --mb-radius-sm: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   1. Floating Launcher Button
+   -------------------------------------------------------------------------- */
+#mosbiChatLauncher {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(10, 19, 41, 0.95), rgba(15, 28, 61, 0.95));
+  border: 1px solid var(--mb-border-glow);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.65), 0 0 20px rgba(var(--mb-accent-rgb), 0.25);
+  border-radius: 40px;
+  padding: 6px 18px 6px 6px;
+  cursor: pointer;
+  user-select: none;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+#mosbiChatLauncher:hover {
+  transform: translateY(-3px) scale(1.02);
+  border-color: var(--mb-accent);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.75), 0 0 30px rgba(var(--mb-accent-rgb), 0.45);
+}
+
+#mosbiChatLauncher:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+.mb-launcher-avatar-wrap {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 40%, #13244d 0%, #060b18 100%);
+  border: 1.5px solid var(--mb-accent);
+  box-shadow: 0 0 12px rgba(var(--mb-accent-rgb), 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.mb-launcher-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.mb-launcher-title {
+  font-family: var(--mb-font-sans);
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mb-launcher-sub {
+  font-family: var(--mb-font-mono);
+  font-size: 11px;
+  color: var(--mb-accent);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mb-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: mbPulseDot 2s infinite ease-in-out;
+}
+
+@keyframes mbPulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.6; }
+}
+
+.mb-launcher-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #ef4444;
+  color: #fff;
+  font-family: var(--mb-font-mono);
+  font-size: 10px;
+  font-weight: 800;
+  border-radius: 10px;
+  padding: 1px 6px;
+  border: 1.5px solid var(--mb-bg-deep);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  animation: mbBadgePop 0.4s ease-out;
+}
+
+@keyframes mbBadgePop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* --------------------------------------------------------------------------
+   2. Robot Mascot SVG & Animations
+   -------------------------------------------------------------------------- */
+.mb-robot-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* Base floating animation */
+.mb-robot-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation: botFloat 3.8s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes botFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-3.5px); }
+}
+
+/* Antenna pulse light */
+.mb-robot-antenna-bulb {
+  transform-origin: 50px 12px;
+  animation: antennaPulse 2s infinite ease-in-out;
+}
+
+@keyframes antennaPulse {
+  0%, 100% { fill: #00e5ff; filter: drop-shadow(0 0 3px #00e5ff); }
+  50% { fill: #38bdf8; filter: drop-shadow(0 0 7px #00e5ff); }
+}
+
+/* Eyes default glow */
+.mb-bot-eye-open {
+  fill: #00e5ff;
+  filter: drop-shadow(0 0 4px #00e5ff);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Hidden elements by default */
+.mb-bot-eye-wink,
+.mb-bot-eye-sleep,
+.mb-bot-sleep-zzz,
+.mb-bot-ok-sparkle,
+.mb-bot-scratch-lines {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+/* NATURAL EYE BLINK (Occurs periodically) */
+.bot-blinking .mb-bot-eye-open {
+  transform-origin: 50px 43px;
+  transform: scaleY(0.1);
+}
+
+/* --------------------------------------------------------------------------
+   ANIMATION STATE: RASCARSE LA CABEZA (.is-scratching)
+   -------------------------------------------------------------------------- */
+.is-scratching .mb-robot-container {
+  animation: none;
+}
+
+.is-scratching .mb-bot-head {
+  transform-origin: 50px 60px;
+  animation: botScratchHead 2.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.is-scratching .mb-bot-arm-right {
+  transform-origin: 68px 70px;
+  animation: botScratchArm 2.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.is-scratching .mb-bot-scratch-lines {
+  animation: botScratchLines 2.2s ease forwards;
+}
+
+@keyframes botScratchHead {
+  0% { transform: rotate(0deg); }
+  18% { transform: rotate(8deg); }
+  35% { transform: rotate(6deg) translateY(-1px); }
+  50% { transform: rotate(8deg) translateY(0); }
+  65% { transform: rotate(6deg) translateY(-1px); }
+  82% { transform: rotate(8deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes botScratchArm {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-125deg) translate(-2px, -6px); }
+  35% { transform: rotate(-135deg) translate(-4px, -8px); }
+  45% { transform: rotate(-122deg) translate(-2px, -6px); }
+  55% { transform: rotate(-135deg) translate(-4px, -8px); }
+  65% { transform: rotate(-122deg) translate(-2px, -6px); }
+  80% { transform: rotate(-132deg) translate(-3px, -7px); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes botScratchLines {
+  0%, 20% { opacity: 0; transform: scale(0.6); }
+  30%, 75% { opacity: 0.9; transform: scale(1); }
+  90%, 100% { opacity: 0; transform: scale(0.7); }
+}
+
+/* --------------------------------------------------------------------------
+   ANIMATION STATE: GUIÑO DE OK (.is-winking)
+   -------------------------------------------------------------------------- */
+.is-winking .mb-bot-eye-right-open {
+  opacity: 0 !important;
+}
+
+.is-winking .mb-bot-eye-wink {
+  opacity: 1 !important;
+}
+
+.is-winking .mb-bot-head {
+  transform-origin: 50px 60px;
+  animation: botWinkNod 1.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.is-winking .mb-bot-ok-sparkle {
+  animation: botSparklePop 1.6s ease forwards;
+}
+
+@keyframes botWinkNod {
+  0% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(2.5px) rotate(-3deg); }
+  50% { transform: translateY(-1px) rotate(1deg); }
+  75% { transform: translateY(1px) rotate(0deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes botSparklePop {
+  0% { opacity: 0; transform: scale(0) rotate(-20deg); transform-origin: 75px 34px; }
+  25% { opacity: 1; transform: scale(1.3) rotate(15deg); transform-origin: 75px 34px; }
+  65% { opacity: 1; transform: scale(1) rotate(0deg); transform-origin: 75px 34px; }
+  100% { opacity: 0; transform: scale(0.5); transform-origin: 75px 34px; }
+}
+
+/* --------------------------------------------------------------------------
+   ANIMATION STATE: DORMIDO POR INACTIVIDAD (.is-sleeping)
+   -------------------------------------------------------------------------- */
+.is-sleeping .mb-robot-container {
+  animation: botSleepBreathe 4s ease-in-out infinite;
+}
+
+.is-sleeping .mb-bot-eye-open {
+  opacity: 0 !important;
+}
+
+.is-sleeping .mb-bot-eye-sleep {
+  opacity: 1 !important;
+}
+
+.is-sleeping .mb-bot-head {
+  transform-origin: 50px 60px;
+  transform: translateY(3.5px) rotate(4deg);
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.is-sleeping .mb-robot-antenna-bulb {
+  animation: none;
+  fill: #0ea5e9;
+  filter: drop-shadow(0 0 2px #0ea5e9);
+  opacity: 0.5;
+}
+
+.is-sleeping .mb-bot-sleep-zzz {
+  opacity: 1 !important;
+  animation: botZzzDrift 3s ease-in-out infinite;
+}
+
+@keyframes botSleepBreathe {
+  0%, 100% { transform: translateY(1px); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes botZzzDrift {
+  0% { opacity: 0; transform: translate(0, 0) scale(0.6); }
+  30% { opacity: 0.9; }
+  70% { opacity: 0.9; }
+  100% { opacity: 0; transform: translate(12px, -18px) scale(1.2); }
+}
+
+/* WAKING UP JOLT */
+.is-waking .mb-bot-head {
+  transform-origin: 50px 60px;
+  animation: botWakeJolt 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+}
+
+@keyframes botWakeJolt {
+  0% { transform: translateY(3.5px) rotate(4deg); }
+  50% { transform: translateY(-3px) rotate(-3deg) scale(1.08); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Chat Window Dialog Container
+   -------------------------------------------------------------------------- */
+#mosbiChatPanel {
+  position: fixed;
+  bottom: 96px;
+  right: 26px;
+  width: 410px;
+  max-width: calc(100vw - 36px);
+  height: 620px;
+  max-height: calc(100vh - 120px);
+  background: linear-gradient(180deg, rgba(8, 15, 34, 0.97) 0%, rgba(5, 9, 23, 0.98) 100%);
+  border: 1px solid var(--mb-border);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(var(--mb-accent-rgb), 0.15);
+  border-radius: var(--mb-radius-lg);
+  display: flex;
+  flex-direction: column;
+  z-index: 99999;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px) scale(0.96);
+  transform-origin: bottom right;
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#mosbiChatPanel.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+/* --------------------------------------------------------------------------
+   4. Chat Header
+   -------------------------------------------------------------------------- */
+.mb-chat-header {
+  padding: 14px 18px;
+  background: rgba(15, 28, 61, 0.6);
+  border-bottom: 1px solid var(--mb-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.mb-chat-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--mb-accent), var(--mb-accent-blue), transparent);
+}
+
+.mb-header-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mb-header-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 40%, #152650 0%, #060d1d 100%);
+  border: 1.5px solid var(--mb-accent);
+  box-shadow: 0 0 10px rgba(var(--mb-accent-rgb), 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.mb-header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.mb-header-name {
+  font-family: var(--mb-font-sans);
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mb-header-status {
+  font-family: var(--mb-font-mono);
+  font-size: 11px;
+  color: var(--mb-accent);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mb-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mb-btn-icon {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--mb-text-muted);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--mb-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--mb-font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 0;
+}
+
+.mb-btn-icon:hover {
+  background: rgba(var(--mb-accent-rgb), 0.15);
+  color: #fff;
+  border-color: var(--mb-accent);
+}
+
+/* --------------------------------------------------------------------------
+   5. Chat Conversation Body
+   -------------------------------------------------------------------------- */
+.mb-chat-body {
+  flex: 1;
+  padding: 18px 16px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  scroll-behavior: smooth;
+}
+
+.mb-chat-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.mb-chat-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mb-chat-body::-webkit-scrollbar-thumb {
+  background: rgba(14, 165, 233, 0.25);
+  border-radius: 4px;
+}
+
+.mb-chat-body::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 229, 255, 0.45);
+}
+
+.mb-system-notice {
+  font-family: var(--mb-font-mono);
+  font-size: 11px;
+  color: var(--mb-text-muted);
+  background: rgba(15, 28, 61, 0.5);
+  border: 1px dashed rgba(14, 165, 233, 0.3);
+  padding: 8px 12px;
+  border-radius: var(--mb-radius-sm);
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+/* Messages */
+.mb-msg-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  animation: mbMsgSlide 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes mbMsgSlide {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.mb-msg-row.user {
+  flex-direction: row-reverse;
+}
+
+.mb-msg-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #0f1c3d;
+  border: 1px solid var(--mb-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.mb-msg-bubble {
+  max-width: 82%;
+  padding: 12px 15px;
+  font-family: var(--mb-font-sans);
+  font-size: 13.5px;
+  line-height: 1.55;
+  border-radius: var(--mb-radius-md);
+  position: relative;
+  word-break: break-word;
+}
+
+.mb-msg-row.bot .mb-msg-bubble {
+  background: rgba(15, 28, 61, 0.85);
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  color: #e2e8f0;
+  border-top-left-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.mb-msg-row.user .mb-msg-bubble {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #ffffff;
+  border-top-right-radius: 4px;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.25);
+}
+
+.mb-msg-bubble p {
+  margin: 0 0 8px 0;
+}
+
+.mb-msg-bubble p:last-child {
+  margin-bottom: 0;
+}
+
+.mb-msg-bubble ul {
+  margin: 6px 0 6px 18px;
+  padding: 0;
+}
+
+.mb-msg-bubble li {
+  margin-bottom: 4px;
+}
+
+.mb-msg-bubble strong {
+  color: var(--mb-accent);
+  font-weight: 700;
+}
+
+.mb-msg-bubble a {
+  color: var(--mb-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+
+.mb-msg-bubble a:hover {
+  color: #ffffff;
+}
+
+/* Rich Action Buttons inside bot reply */
+.mb-msg-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.mb-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid var(--mb-accent);
+  color: var(--mb-accent);
+  padding: 8px 14px;
+  border-radius: var(--mb-radius-sm);
+  font-family: var(--mb-font-sans);
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mb-action-btn:hover {
+  background: var(--mb-accent);
+  color: #050917 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(var(--mb-accent-rgb), 0.35);
+}
+
+.mb-action-btn svg {
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   6. Quick Suggestion Chips (Pills)
+   -------------------------------------------------------------------------- */
+.mb-quick-chips-wrapper {
+  padding: 4px 16px 10px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.mb-chip {
+  background: rgba(15, 28, 61, 0.85);
+  border: 1px solid rgba(14, 165, 233, 0.35);
+  color: #cbd5e1;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-family: var(--mb-font-sans);
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.mb-chip:hover {
+  background: rgba(0, 229, 255, 0.15);
+  border-color: var(--mb-accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------------------------
+   7. Typing Indicator
+   -------------------------------------------------------------------------- */
+.mb-typing-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.mb-typing-bubble {
+  background: rgba(15, 28, 61, 0.7);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  padding: 10px 14px;
+  border-radius: var(--mb-radius-md);
+  border-top-left-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mb-typing-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mb-accent);
+  animation: mbTypingBounce 1.4s infinite ease-in-out;
+}
+
+.mb-typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.mb-typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes mbTypingBounce {
+  0%, 80%, 100% { transform: scale(0); opacity: 0.4; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* --------------------------------------------------------------------------
+   8. Chat Footer Input Area
+   -------------------------------------------------------------------------- */
+.mb-chat-footer {
+  padding: 12px 16px 14px 16px;
+  background: rgba(10, 19, 41, 0.95);
+  border-top: 1px solid var(--mb-border);
+  flex-shrink: 0;
+}
+
+.mb-input-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(5, 9, 23, 0.8);
+  border: 1px solid var(--mb-border);
+  border-radius: var(--mb-radius-md);
+  padding: 4px 6px 4px 14px;
+  transition: all 0.2s ease;
+}
+
+.mb-input-form:focus-within {
+  border-color: var(--mb-accent);
+  box-shadow: 0 0 15px rgba(var(--mb-accent-rgb), 0.25);
+}
+
+.mb-chat-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: var(--mb-font-sans);
+  font-size: 13.5px;
+  padding: 8px 0;
+}
+
+.mb-chat-input::placeholder {
+  color: #64748b;
+}
+
+.mb-send-btn {
+  background: var(--mb-accent);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--mb-radius-sm);
+  color: #050917;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.mb-send-btn:hover {
+  background: #38bdf8;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(var(--mb-accent-rgb), 0.45);
+}
+
+.mb-send-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.mb-footer-hint {
+  font-family: var(--mb-font-mono);
+  font-size: 10px;
+  color: #475569;
+  text-align: center;
+  margin-top: 6px;
+  letter-spacing: 0.3px;
+}
+
+/* --------------------------------------------------------------------------
+   9. Lead Capture Mini-Card (Within Chat)
+   -------------------------------------------------------------------------- */
+.mb-lead-card {
+  background: rgba(10, 19, 41, 0.95);
+  border: 1px solid var(--mb-border-glow);
+  border-radius: var(--mb-radius-md);
+  padding: 14px 16px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.mb-lead-card h5 {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  letter-spacing: 0.2px;
+}
+
+.mb-lead-card p.mb-lead-sub {
+  font-size: 11.5px;
+  color: var(--mb-text-muted);
+  margin: 0 0 6px 0;
+  line-height: 1.4;
+}
+
+.mb-lead-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+@media (max-width: 480px) {
+  .mb-lead-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mb-lead-input,
+.mb-lead-select,
+.mb-lead-textarea {
+  width: 100%;
+  background: rgba(5, 9, 23, 0.85);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  border-radius: var(--mb-radius-sm);
+  color: #fff;
+  font-family: var(--mb-font-sans);
+  font-size: 12px;
+  padding: 8px 10px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.mb-lead-input:focus,
+.mb-lead-select:focus,
+.mb-lead-textarea:focus {
+  border-color: var(--mb-accent);
+}
+
+.mb-lead-textarea {
+  resize: vertical;
+  min-height: 50px;
+}
+
+.mb-lead-submit {
+  background: linear-gradient(135deg, #0284c7, #0ea5e9);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--mb-radius-sm);
+  font-family: var(--mb-font-sans);
+  font-size: 12.5px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  margin-top: 4px;
+}
+
+.mb-lead-submit:hover {
+  background: linear-gradient(135deg, #0369a1, #0284c7);
+  box-shadow: 0 0 16px rgba(0, 229, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.mb-lead-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* --------------------------------------------------------------------------
+   10. Mobile Responsiveness
+   -------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  #mosbiChatLauncher {
+    bottom: 18px;
+    right: 18px;
+    padding: 6px;
+    border-radius: 50%;
+  }
+
+  .mb-launcher-info {
+    display: none;
+  }
+
+  #mosbiChatPanel {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100dvh;
+    max-height: 100dvh;
+    border-radius: 0;
+    border: none;
+  }
+
+  .mb-chat-header {
+    padding: 16px;
+  }
+}

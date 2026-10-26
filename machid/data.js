@@ -8,19 +8,19 @@
       marketClass: "market-active",
       slots: [
         {
-          img: "./assets/compactor_chute_1.jpg",
-          bbox1: { top: "8%", left: "28%", width: "44%", height: "24%" },
-          bbox2: { top: "33%", left: "26%", width: "46%", height: "54%" }
+          img: "./assets/compactor_chute_1.jpg?v=2",
+          bbox1: { top: "4%", left: "29%", width: "44%", height: "45%" },
+          bbox2: { top: "50%", left: "31%", width: "44%", height: "34%" }
         },
         {
-          img: "./assets/compactor_chute_2.jpg",
-          bbox1: { top: "27%", left: "31%", width: "43%", height: "45%" },
-          bbox2: { top: "42%", left: "16%", width: "31%", height: "26%" }
+          img: "./assets/compactor_chute_2.jpg?v=2",
+          bbox1: { top: "36%", left: "27%", width: "41%", height: "54%" },
+          bbox2: { top: "32%", left: "16%", width: "16%", height: "37%" }
         },
         {
-          img: "./assets/compactor_chute_3.jpg",
-          bbox1: { top: "11%", left: "31%", width: "58%", height: "23%" },
-          bbox2: { top: "34%", left: "31%", width: "58%", height: "15%" }
+          img: "./assets/compactor_chute_3.jpg?v=2",
+          bbox1: { top: "21%", left: "18%", width: "74%", height: "42%" },
+          bbox2: { top: "64%", left: "18%", width: "74%", height: "25%" }
         }
       ]
     },
@@ -38,9 +38,9 @@
           bbox2: { top: "35%", left: "32%", width: "36%", height: "30%" }
         },
         {
-          img: "./assets/compactor_chute_3.jpg",
-          bbox1: { top: "11%", left: "31%", width: "58%", height: "23%" },
-          bbox2: { top: "34%", left: "31%", width: "58%", height: "15%" }
+          img: "./assets/compactor_chute_3.jpg?v=2",
+          bbox1: { top: "21%", left: "18%", width: "74%", height: "42%" },
+          bbox2: { top: "64%", left: "18%", width: "74%", height: "25%" }
         }
       ]
     },
@@ -48,19 +48,19 @@
       marketClass: "market-active",
       slots: [
         {
-          img: "./assets/compactor_chute_2.jpg",
-          bbox1: { top: "26%", left: "30%", width: "44%", height: "46%" },
-          bbox2: { top: "55%", left: "43%", width: "16%", height: "16%" }
+          img: "./assets/compactor_chute_2.jpg?v=2",
+          bbox1: { top: "4%", left: "27%", width: "47%", height: "86%" },
+          bbox2: { top: "63%", left: "44%", width: "16%", height: "23%" }
         },
         {
-          img: "./assets/compactor_chute_1.jpg",
-          bbox1: { top: "33%", left: "34%", width: "10%", height: "8%" },
-          bbox2: { top: "28%", left: "26%", width: "48%", height: "58%" }
+          img: "./assets/compactor_chute_1.jpg?v=2",
+          bbox1: { top: "61%", left: "35%", width: "10%", height: "12%" },
+          bbox2: { top: "48%", left: "28%", width: "46%", height: "45%" }
         },
         {
-          img: "./assets/compactor_chute_3.jpg",
-          bbox1: { top: "11%", left: "31%", width: "58%", height: "23%" },
-          bbox2: { top: "34%", left: "31%", width: "58%", height: "15%" }
+          img: "./assets/compactor_chute_3.jpg?v=2",
+          bbox1: { top: "21%", left: "18%", width: "74%", height: "42%" },
+          bbox2: { top: "64%", left: "18%", width: "74%", height: "25%" }
         }
       ]
     },
@@ -68,19 +68,19 @@
       marketClass: "market-active",
       slots: [
         {
-          img: "./assets/compactor_chute_3.jpg",
-          bbox1: { top: "11%", left: "31%", width: "58%", height: "23%" },
-          bbox2: { top: "34%", left: "31%", width: "58%", height: "15%" }
+          img: "./assets/compactor_chute_3.jpg?v=2",
+          bbox1: { top: "21%", left: "18%", width: "74%", height: "42%" },
+          bbox2: { top: "64%", left: "18%", width: "74%", height: "25%" }
         },
         {
-          img: "./assets/compactor_chute_1.jpg",
-          bbox1: { top: "8%", left: "28%", width: "44%", height: "24%" },
-          bbox2: { top: "48%", left: "26%", width: "46%", height: "40%" }
+          img: "./assets/compactor_chute_1.jpg?v=2",
+          bbox1: { top: "4%", left: "29%", width: "44%", height: "45%" },
+          bbox2: { top: "50%", left: "31%", width: "44%", height: "44%" }
         },
         {
-          img: "./assets/compactor_chute_2.jpg",
-          bbox1: { top: "42%", left: "16%", width: "31%", height: "26%" },
-          bbox2: { top: "56%", left: "43%", width: "16%", height: "16%" }
+          img: "./assets/compactor_chute_2.jpg?v=2",
+          bbox1: { top: "32%", left: "16%", width: "31%", height: "45%" },
+          bbox2: { top: "63%", left: "44%", width: "16%", height: "23%" }
         }
       ]
     }

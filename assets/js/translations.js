@@ -1099,6 +1099,9 @@ function setLanguage(lang) {
     deptSelect.options[1].text = dict['contact.opt_info'] || deptSelect.options[1].text;
     deptSelect.options[2].text = dict['contact.opt_support'] || deptSelect.options[2].text;
   }
+
+  // Notify listeners of language change
+  try { window.dispatchEvent(new CustomEvent('mosbi_lang_change', { detail: { lang: lang } })); } catch (e) {}
 }
 
 function initLanguageSelector() {
