@@ -96,7 +96,7 @@ La carpeta `C:\Users\hogar\Desktop\Mosbi systems\machid\` contiene una experienc
 - `machid/index.html` — Estructura semántica con simulador interactivo de 3 pasos, selector de los 4 modos v2.0, visor de PDF ejecutivo imprimible en 1 página y puente de exportación a FieldOps Gen Pro™.
 - `machid/styles.css` — Diseño Industrial Dark & Amber/Teal (`#050917`, `#1E4D5C`, `#C84B0F`) con animaciones CSS3 de obturador de cámara, barrido láser forense, *bounding boxes* dinámicos, línea de tiempo de inferencia IA y reglas `@media print` de página única.
 - `machid/app.js` — Motor interactivo del simulador paso a paso, base de datos de casos reales en 3 idiomas (**ES / EN / FR**), animador de telemetría Gemini 3.6 Flash + Google Search Grounding, calculadora de ROI y generador de payload JSON para `FieldOpsMachineAdapter`.
-- `machid/assets/` — Ícono oficial (`app_icon.png`) y fotografías reales de inspección en campo (`compactor_chute_1.jpg`, `compactor_chute_2.jpg`, `compactor_chute_3.jpg`).
+- `machid/assets/` — Ícono oficial (`app_icon.png`) y fotografías reales de inspección en campo (`horizontal_baler_1.jpg`, `horizontal_baler_2.jpg`, `horizontal_baler_3.jpg`).
 
 ### 4.1. Flujo Animado del Simulador ("Cómo Funciona MachId™ en 3 Pasos")
 
@@ -104,10 +104,10 @@ El visitante puede ejecutar el recorrido guiado completo o saltar entre pasos co
 
 1. **PASO 1 — Selección de Modo v2.0 y Captura Fotográfica Guiada:**
    - El usuario elige uno de los **4 Modos Operativos de MachId™ v2.0**:
-     1. **`🔗 Sistema Distribuido (Multi-Nodo)` — Caso Real Destacado:** Compactador Hidráulico Estacionario con Sistema de Chute Vertical Multi-Piso (usando las 3 fotografías reales `compactor_chute_1.jpg`, `compactor_chute_2.jpg`, `compactor_chute_3.jpg` con etiquetas `[NODO 1: Descarga de Chute y Tolva]`, `[NODO 2: Cámara de Compactación y Contenedor]`, `[NODO 3: Unidad de Potencia Hidráulica y Panel]`).
-     2. **`🏭 Máquina Completa`:** Bomba Centrífuga Química **ITT Goulds 3196 ANSI i-FRAME** (placa 40% corroída/repintada identificada por silueta 3D).
+     1. **`🔗 Sistema Distribuido (Multi-Nodo)` — Caso Real Destacado:** Compactadora / Enfardadora Hidráulica Horizontal **Model 72 Closed End Baler** con transportador continuo in-feed (usando las 3 fotografías reales `horizontal_baler_1.jpg`, `horizontal_baler_2.jpg`, `horizontal_baler_3.jpg` con etiquetas `[NODO 1: Rampa In-Feed y Fosa]`, `[NODO 2: Cámara y Puerta Closed-End]`, `[NODO 3: Unidad Hidráulica y Gabinete NEMA]`).
+     2. **`🏭 Máquina Completa`:** Compactadora / Enfardadora Horizontal **Model 72 Closed End Baler** con cámara de 72 pulgadas, ranuras pasahilos de amarre y cilindro hidráulico de compuerta.
      3. **`⚙️ Componente / Repuesto (Cross-Ref OEM)`:** Bomba Triplex de Alta Presión **Cat Pumps 5CP2120W** con tabla de equivalencias Aftermarket (Parker, Grainger, McMaster-Carr, SKF).
-     4. **`📊 Auditoría Financiera & CAPEX`:** Compresor de Tornillo **Joy Twistair TA-025 (1984)** con dictamen de obsolescencia, valor residual, CAPEX de reemplazo vs. Overhaul y recomendación financiera.
+     4. **`📊 Auditoría Financiera & CAPEX`:** Dictamen de Valoración y Retorno de Inversión sobre **Model 72 Closed End Baler** con comparativa CAPEX de reemplazo nuevo ($75,000 USD) vs. Overhaul integral ($14,200 USD, 81% de ahorro).
    - Animación interactiva de captura: al hacer clic en cada tarjeta de ángulo fotográfico o en **"Simular Captura y Escaneo IA"**, se activa el flash de cámara, se marcan las fotos con su rol y etiqueta de nodo, y avanza al Paso 2.
 
 2. **PASO 2 — Escaneo Forense IA Multimodal en Vivo (Animación):**

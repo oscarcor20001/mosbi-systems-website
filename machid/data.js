@@ -8,19 +8,19 @@
       marketClass: "market-active",
       slots: [
         {
-          img: "./assets/compactor_chute_1.jpg?v=2",
-          bbox1: { top: "4%", left: "29%", width: "44%", height: "45%" },
-          bbox2: { top: "50%", left: "31%", width: "44%", height: "34%" }
+          img: "./assets/horizontal_baler_1.jpg",
+          bbox1: { top: "18%", left: "34%", width: "32%", height: "55%" },
+          bbox2: { top: "22%", left: "58%", width: "36%", height: "38%" }
         },
         {
-          img: "./assets/compactor_chute_2.jpg?v=2",
-          bbox1: { top: "36%", left: "27%", width: "41%", height: "54%" },
-          bbox2: { top: "32%", left: "16%", width: "16%", height: "37%" }
+          img: "./assets/horizontal_baler_2.jpg",
+          bbox1: { top: "34%", left: "33%", width: "48%", height: "42%" },
+          bbox2: { top: "54%", left: "64%", width: "12%", height: "6%" }
         },
         {
-          img: "./assets/compactor_chute_3.jpg?v=2",
-          bbox1: { top: "21%", left: "18%", width: "74%", height: "42%" },
-          bbox2: { top: "64%", left: "18%", width: "74%", height: "25%" }
+          img: "./assets/horizontal_baler_3.jpg",
+          bbox1: { top: "42%", left: "17%", width: "9%", height: "11%" },
+          bbox2: { top: "45%", left: "42%", width: "16%", height: "28%" }
         }
       ]
     },
@@ -38,9 +38,9 @@
           bbox2: { top: "35%", left: "32%", width: "36%", height: "30%" }
         },
         {
-          img: "./assets/compactor_chute_3.jpg?v=2",
-          bbox1: { top: "21%", left: "18%", width: "74%", height: "42%" },
-          bbox2: { top: "64%", left: "18%", width: "74%", height: "25%" }
+          img: "./assets/horizontal_baler_3.jpg",
+          bbox1: { top: "42%", left: "17%", width: "9%", height: "11%" },
+          bbox2: { top: "45%", left: "42%", width: "16%", height: "28%" }
         }
       ]
     },
@@ -48,19 +48,19 @@
       marketClass: "market-active",
       slots: [
         {
-          img: "./assets/compactor_chute_2.jpg?v=2",
-          bbox1: { top: "4%", left: "27%", width: "47%", height: "86%" },
-          bbox2: { top: "63%", left: "44%", width: "16%", height: "23%" }
+          img: "./assets/horizontal_baler_2.jpg",
+          bbox1: { top: "34%", left: "33%", width: "48%", height: "42%" },
+          bbox2: { top: "33%", left: "43%", width: "14%", height: "4%" }
         },
         {
-          img: "./assets/compactor_chute_1.jpg?v=2",
-          bbox1: { top: "61%", left: "35%", width: "10%", height: "12%" },
-          bbox2: { top: "48%", left: "28%", width: "46%", height: "45%" }
+          img: "./assets/horizontal_baler_3.jpg",
+          bbox1: { top: "41%", left: "26%", width: "52%", height: "39%" },
+          bbox2: { top: "42%", left: "17%", width: "9%", height: "11%" }
         },
         {
-          img: "./assets/compactor_chute_3.jpg?v=2",
-          bbox1: { top: "21%", left: "18%", width: "74%", height: "42%" },
-          bbox2: { top: "64%", left: "18%", width: "74%", height: "25%" }
+          img: "./assets/horizontal_baler_1.jpg",
+          bbox1: { top: "18%", left: "34%", width: "32%", height: "55%" },
+          bbox2: { top: "22%", left: "58%", width: "36%", height: "38%" }
         }
       ]
     },
@@ -68,19 +68,19 @@
       marketClass: "market-active",
       slots: [
         {
-          img: "./assets/compactor_chute_3.jpg?v=2",
-          bbox1: { top: "21%", left: "18%", width: "74%", height: "42%" },
-          bbox2: { top: "64%", left: "18%", width: "74%", height: "25%" }
+          img: "./assets/horizontal_baler_2.jpg",
+          bbox1: { top: "34%", left: "33%", width: "48%", height: "42%" },
+          bbox2: { top: "54%", left: "64%", width: "12%", height: "6%" }
         },
         {
-          img: "./assets/compactor_chute_1.jpg?v=2",
-          bbox1: { top: "4%", left: "29%", width: "44%", height: "45%" },
-          bbox2: { top: "50%", left: "31%", width: "44%", height: "44%" }
+          img: "./assets/horizontal_baler_3.jpg",
+          bbox1: { top: "42%", left: "17%", width: "9%", height: "11%" },
+          bbox2: { top: "45%", left: "42%", width: "16%", height: "28%" }
         },
         {
-          img: "./assets/compactor_chute_2.jpg?v=2",
-          bbox1: { top: "32%", left: "16%", width: "31%", height: "45%" },
-          bbox2: { top: "63%", left: "44%", width: "16%", height: "23%" }
+          img: "./assets/horizontal_baler_1.jpg",
+          bbox1: { top: "18%", left: "34%", width: "32%", height: "55%" },
+          bbox2: { top: "67%", left: "12%", width: "76%", height: "33%" }
         }
       ]
     }
@@ -91,38 +91,38 @@
     es: {
       distributedSystem: {
         chip: "MODO: MULTI-NODO (v2.0)",
-        category: "SISTEMA DISTRIBUIDO DE COMPACTACIÓN CON CHUTE VERTICAL MULTI-PISO",
-        title: "Compactador Hidráulico Chute-Fed Precision Machinery Systems Auto-Pak 1830-4000",
-        marketBadge: "● Activa (Soporte OEM y Repuestos Estándar ANSI)",
-        confidence: "Confianza IA: 98.7% • OCR de Placa Metal + Correlación Multi-Nodo 3D",
+        category: "SISTEMA DISTRIBUIDO DE COMPACTACIÓN INDUSTRIAL CON TRANSPORTADOR IN-FEED",
+        title: "Compactadora / Enfardadora Horizontal Model 72 Closed End Baler",
+        marketBadge: "● Activa (Soporte Estándar ANSI / Repuestos Industriales)",
+        confidence: "Confianza IA: 98.6% • Inferencia Morfológica Multi-Nodo + Cinemática de Prensa Horizontal",
         forensicText:
-          "Regla Forense aplicada: se descarta el color naranja repintado en campo. La IA correlaciona 3 nodos físicos conectados: (1) ducto vertical de chute con compuerta cortafuego fusible a 165°F (NFPA 82), (2) tolva receptora acampanada y cámara de prensado horizontal con tensor de trinquete lateral y contenedor rodante de 2 yd³, y (3) placa metálica OEM remachada al chasis. El OCR industrial extrae con 99.4% de precisión: Fabricante Precision Machinery Systems (York, PA), Modelo Auto-Pak 1830-4000, Serie 871344-015 y motor trifásico de 2 HP a 208V.",
+          "Regla Forense aplicada: se descarta el color verde industrial repintado en campo y la acumulación superficial de recortes de papel. La IA correlaciona 3 nodos físicos conectados: (1) rampa transportadora metálica de alimentación continua tipo in-feed desde fosa de carga, (2) cámara de compresión horizontal reforzada con puerta de extremo cerrado (Closed-End Door), traba con cilindro hidráulico y 5 ranuras pasahilos de amarre, y (3) unidad de potencia hidráulica remota con motor eléctrico TEFC trifásico de alto par, depósito de fluido y gabinete eléctrico NEMA con botonera de mando. Identificación positiva: Horizontal Closed-End Baler Model 72 para fardos mill-size de 72 pulgadas.",
         specs: [
-          { label: "Fabricante OEM", val: "Precision Machinery Systems (York, PA)" },
-          { label: "Modelo / Serie", val: "Auto-Pak 1830-4000 • S/N 871344-015" },
-          { label: "Motor Eléctrico", val: "2.0 HP • 208V 3F 7.1A (60 Hz)" },
-          { label: "Capacidad Cámara", val: "0.52 yd³ (Ciclo Automático)" },
-          { label: "Normativa Aplicable", val: "ANSI Z245.2 / NFPA 82" },
-          { label: "Contenedor Acoplado", val: "2.0 yd³ Carga Frontal/Trasera" }
+          { label: "Tipo de Maquinaria", val: "Enfardadora / Compactadora Horizontal" },
+          { label: "Modelo / Configuración", val: "Model 72 Closed End Baler" },
+          { label: "Dimensiones de Fardo", val: "72 in × 30 in × 44 in (Mill-Size)" },
+          { label: "Motor / Hidráulica", val: "20 - 30 HP TEFC • 230/460V 3F (60 Hz)" },
+          { label: "Cilindro / Presión", val: "Cilindro 6-7 in • 2,500 - 3,000 PSI" },
+          { label: "Sistema de Carga", val: "Transportador In-Feed Inclinado + Tolva" }
         ],
         slots: [
-          { tag: "NODO 1", role: "Descarga Chute y Tolva", hudNode: "[NODO 1: CHUTE Y COMPUERTA NFPA 82]", hudMethod: "SILUETA 3D + MULTI-NODO", bbox1Label: "Ducto Chute + Compuerta Cortafuego", bbox2Label: "Tolva Receptora + Tensor Lateral" },
-          { tag: "NODO 2", role: "Cámara y Contenedor 2 yd³", hudNode: "[NODO 2: CÁMARA Y CONTENEDOR]", hudMethod: "GEOMETRÍA ESTRUCTURAL", bbox1Label: "Cámara Compactadora + Tolva Naranja", bbox2Label: "Contenedor Rodante Verde 2 yd³" },
-          { tag: "NODO 3", role: "Placa OEM y Datos Eléctricos", hudNode: "[NODO 3: PLACA FABRICANTE AUTO-PAK]", hudMethod: "OCR DIRECTO + GROUNDING OEM", bbox1Label: "OCR: PRECISION MACHINERY • AUTO-PAK 1830-4000", bbox2Label: "Serial: 871344-015 • 208V / 3F / 7.1A / 2 HP" }
+          { tag: "NODO 1", role: "Rampa In-Feed y Fosa", hudNode: "[NODO 1: TRANSPORTADOR Y FOSA DE CARGA]", hudMethod: "CINEMÁTICA DE TRANSPORTE 3D", bbox1Label: "Transportador Metálico In-Feed", bbox2Label: "Prensa Horizontal y Sección Closed-End" },
+          { tag: "NODO 2", role: "Cámara y Puerta Closed-End", hudNode: "[NODO 2: CÁMARA Y PUERTA CLOSED-END]", hudMethod: "GEOMETRÍA ESTRUCTURAL DE PRENSADO", bbox1Label: "Cámara de Compresión + Ranuras Pasahilos", bbox2Label: "Cilindro Hidráulico de Traba de Compuerta" },
+          { tag: "NODO 3", role: "Unidad Hidráulica y Gabinete NEMA", hudNode: "[NODO 3: UNIDAD HIDRÁULICA Y CONTROL]", hudMethod: "TOPOLOGÍA ELECTROMECÁNICA", bbox1Label: "Motor Eléctrico TEFC + Bomba Hidráulica", bbox2Label: "Gabinete Eléctrico NEMA de Fuerza y Mando" }
         ],
         logs: [
-          "[01] Procesando 3 fotografías con etiquetas [NODO 1], [NODO 2] y [NODO 3]...",
-          "[02] Aplicando Regla Forense: ignorando pintura naranja/verde; aislando geometría 3D...",
-          "[03] Detectada transición vertical Chute → Compuerta Cortafuego (NFPA 82) → Tolva...",
-          "[04] OCR industrial sobre placa metálica confirma Precision Machinery Systems (York, PA), Auto-Pak 1830-4000...",
-          "[05] Topología Multi-Nodo consolidada y adaptador FieldOps Gen Pro™ generado."
+          "[01] Procesando 3 fotografías con etiquetas [NODO 1: Rampa In-Feed], [NODO 2: Cámara] y [NODO 3: HPU]...",
+          "[02] Aplicando Regla Forense: ignorando pintura verde superficial y recortes de papel; aislando geometría 3D...",
+          "[03] Correlacionando flujo continuo: Fosa de Carga → Rampa In-Feed → Tolva Superior → Cilindro Horizontal...",
+          "[04] Identificando puerta de extremo cerrado (Closed-End) de 72 pulgadas con traba hidráulica y ranuras de amarre...",
+          "[05] Topología Multi-Nodo consolidada y adaptador FieldOps Gen Pro™ generado para Model 72 Closed End Baler."
         ],
         v2Title: "🔗 Desglose de Topología Multi-Nodo (DistributedNodeAnalysis v2.0)",
         v2Badge: "3 NODOS CONECTADOS",
         v2Items: [
-          { head: "NODO 1 — Cabezal de Descarga de Chute y Compuerta Cortafuego", status: "Operativo • Verificar Eslabón Fusible", body: "Ducto cilíndrico superior aislado conectado a guillotina cortafuego inclinada con contrapeso. Conectividad hacia Nodo 2 mediante brida superior de tolva." },
-          { head: "NODO 2 — Tolva de Transición, Cámara de Prensado y Contenedor", status: "Atención • Desgaste Cosmético y Sellos", body: "Cámara de compactación estacionaria anclada al piso con tensor de trinquete amarillo acoplado a contenedor verde de 2 yd³. Presenta abrasión superficial sin deformación estructural." },
-          { head: "NODO 3 — Placa Metálica OEM Precision Machinery Systems Auto-Pak", status: "Identificación Positiva • S/N 871344-015", body: "Placa remachada confirma fabricante Precision Machinery Systems (York, PA, Tel 717-846-6800), modelo Auto-Pak 1830-4000, serie 871344-015, alimentación 208V trifásica, 7.1A, motor de 2 HP a 60 Hz." }
+          { head: "NODO 1 — Rampa Transportadora In-Feed y Fosa de Concreto", status: "Operativo • Verificar Tensión de Banda y Rodillos", body: "Rampa transportadora inclinada de placas de acero que traslada recortes de fibra y papel hacia la boca de carga de la prensa. Bancada y guías laterales en condición operativa sin deflexión estructural." },
+          { head: "NODO 2 — Cámara de Compresión y Puerta de Extremo Cerrado (Closed-End)", status: "Atención • Desgaste Mecánico Normal y Limpieza", body: "Cámara de prensado con vigas maestras y ranuras horizontales para paso de alambre calibre 13-14. Puerta de extremo cerrado operada por cilindro de traba hidráulico; requiere lubricación en bisagras." },
+          { head: "NODO 3 — Unidad de Potencia Hidráulica (HPU), Motor TEFC y Gabinete NEMA", status: "Identificación Positiva • Especificación Industrial", body: "Conjunto motor trifásico de alto rendimiento montado sobre depósito de fluido hidráulico. Gabinete eléctrico NEMA con contactores, relés de protección y estación de pulsadores industriales." }
         ]
       },
 
@@ -165,73 +165,73 @@
 
       completeMachine: {
         chip: "MODO: MÁQUINA COMPLETA",
-        category: "MAQUINARIA DE MANEJO Y COMPACTACIÓN DE RESIDUOS SÓLIDOS",
-        title: "Compactador Estacionario Precision Machinery Systems Auto-Pak 1830-4000",
-        marketBadge: "● Activa (Soporte Oficial y Repuestos)",
-        confidence: "Confianza IA: 98.2% • OCR Placa + Silueta Morfológica 3D",
+        category: "MAQUINARIA PESADA DE RECICLAJE Y MANEJO DE RESIDUOS SÓLIDOS",
+        title: "Compactadora / Enfardadora Horizontal Model 72 Closed End Baler",
+        marketBadge: "● Activa (Soporte Técnico y Repuestos Industriales)",
+        confidence: "Confianza IA: 98.4% • Silueta Morfológica 3D + Arquitectura de Prensa Horizontal",
         forensicText:
-          "Aunque la unidad presenta desgaste de pintura naranja en la cámara frontal y fatiga superficial por uso continuo, el motor forense de MachId™ combina la lectura directa de placa OEM (Auto-Pak 1830-4000) con la arquitectura del bastidor en U de acero laminado, tolva receptora trapezoidal y mecanismo de trinquete lateral hacia el contenedor.",
+          "Aunque la unidad presenta desgaste de pintura verde por operación continua en planta de recuperación de fibras, el motor forense de MachId™ analiza la disposición del bastidor en acero estructural A36, la carrera del ariete horizontal, la compuerta de extremo cerrado con cilindro de traba y las 5 ranuras guía para atado manual de fardos mill-size de 72 pulgadas.",
         specs: [
-          { label: "Fabricante OEM", val: "Precision Machinery Systems (York, PA)" },
-          { label: "Modelo / Serie", val: "Auto-Pak 1830-4000 • S/N 871344-015" },
-          { label: "Motor Eléctrico", val: "2.0 HP • 208V Trifásico (60 Hz, 7.1A)" },
-          { label: "Tipo de Equipo", val: "Compactador Estacionario Chute-Fed" },
-          { label: "Estructura Principal", val: "Acero A36 Soldadura Continua" },
-          { label: "Año Estimado Fab.", val: "Placa OEM Verificada" }
+          { label: "Tipo de Equipo", val: "Enfardadora Horizontal Closed-End" },
+          { label: "Modelo / Serie", val: "Model 72 Closed End Baler" },
+          { label: "Tamaño de Fardo", val: "72 in × 30 in × 44 in (~1,200 lbs OCC)" },
+          { label: "Fuerza de Empuje", val: "~70,000 - 95,000 lbs (Cilindro 6-7 in)" },
+          { label: "Estructura Principal", val: "Acero Laminado A36 Soldado Continuo" },
+          { label: "Normativa Aplicable", val: "ANSI Z245.5 / OSHA 1910" }
         ],
         slots: [
-          { tag: "VISTA 3D", role: "Perspectiva Diagonal 3D", hudNode: "[TOMA 1: SILUETA 3D COMPLETA]", hudMethod: "MORFOLOGÍA 3D PURA", bbox1Label: "Cuerpo Principal + Tolva Trapezoidal", bbox2Label: "Tensor de Acoplamiento de Alta Carga" },
-          { tag: "FRONTAL", role: "Frente y Señalización OSHA", hudNode: "[TOMA 2: FRENTE Y ETIQUETAS ANSI]", hudMethod: "OCR DE SEGURIDAD OSHA", bbox1Label: "Rótulo DANGER • Riesgo de Aplastamiento", bbox2Label: "Bastidor Frontal + Compuerta Lateral" },
-          { tag: "PLACA OEM", role: "Placa Precision Auto-Pak", hudNode: "[TOMA 3: PLACA FABRICANTE AUTO-PAK]", hudMethod: "OCR METÁLICO INDUSTRIAL", bbox1Label: "OCR: Precision Machinery Systems • 1830-4000", bbox2Label: "Serial: 871344-015 • 208V 3F 2 HP" }
+          { tag: "FRONTAL", role: "Cámara y Puerta Closed-End", hudNode: "[TOMA 1: CÁMARA Y PUERTA CLOSED-END]", hudMethod: "MORFOLOGÍA 3D DE PRENSA", bbox1Label: "Cámara de Compresión + Ranuras de Amarre", bbox2Label: "Botonera de Control y Parada de Emergencia" },
+          { tag: "BASTIDOR", role: "Unidad Hidráulica y Motor", hudNode: "[TOMA 2: BASTIDOR Y POTENCIA HIDRÁULICA]", hudMethod: "INSPECCIÓN ELECTROMECÁNICA", bbox1Label: "Chasis A36 + Cilindro de Prensado", bbox2Label: "Motor Eléctrico TEFC de Alto Par" },
+          { tag: "CONJUNTO", role: "Rampa In-Feed y Alimentación", hudNode: "[TOMA 3: VISTA PANORÁMICA DE CONJUNTO]", hudMethod: "INTEGRACIÓN DE LÍNEA DE PROCESO", bbox1Label: "Rampa Transportadora In-Feed", bbox2Label: "Prensa Horizontal y Descarga" }
         ],
         logs: [
-          "[01] Descartando color de pintura superficial (Regla Forense Anti-Repintado)...",
-          "[02] Midiendo proporciones geométricas de tolva, cámara y contenedor acoplado...",
-          "[03] OCR positivo sobre placa del fabricante: Precision Machinery Systems Auto-Pak 1830-4000...",
-          "[04] Verificando especificaciones nominales de placa (208V, 3F, 7.1A, 2 HP)...",
-          "[05] Expediente de Máquina Completa generado con éxito."
+          "[01] Descartando color de pintura verde envejecida y residuos de papel (Regla Forense Anti-Repintado)...",
+          "[02] Midiendo dimensiones cinemáticas del bastidor horizontal y carrera de compactación de 72 pulgadas...",
+          "[03] Identificando compuerta frontal cerrada (Closed-End) con cilindro de pestillo hidráulico y ranuras pasahilos...",
+          "[04] Verificando especificaciones nominales de potencia hidráulica y normas de seguridad ANSI Z245.5...",
+          "[05] Expediente de Máquina Completa generado con éxito para Model 72 Closed End Baler."
         ],
-        v2Title: "🛡️ Diagnóstico de Seguridad Industrial y Mantenimiento Preventivo",
-        v2Badge: "CUMPLIMIENTO OSHA / ANSI",
+        v2Title: "🛡️ Diagnóstico de Seguridad Industrial y Mantenimiento Mecánico (OSHA / ANSI Z245.5)",
+        v2Badge: "CUMPLIMIENTO ANSI Z245.5 / OSHA",
         v2Items: [
-          { head: "Seguridad de Bloqueo y Etiquetado (OSHA 29 CFR 1910.147 — LOTO)", status: "Desconectador Visible en Pared", body: "Se verifica caja de desconexión eléctrica metálica en el muro para aplicar candado LOTO antes de intervenir la cámara o el chute." },
-          { head: "Integridad Mecánica y Sellado Perimetral", status: "Requiere Limpieza y Ajuste", body: "Se recomienda reemplazo del empaque inferior de la puerta de acceso y verificación de torque en los pernos de anclaje al piso de concreto." }
+          { head: "Procedimiento de Bloqueo y Etiquetado (OSHA 29 CFR 1910.147 — LOTO)", status: "Desconectador Visible en Gabinete NEMA", body: "Interruptor de desconexión principal con traba de seguridad ubicado en el lateral del gabinete eléctrico. Obligatorio aplicar candado LOTO antes de ingresar a la tolva o destrabar la compuerta de fardos." },
+          { head: "Integridad del Cilindro de Traba y Guías de Ranura de Amarre", status: "Requiere Lubricación y Ajuste Preventivo", body: "Se recomienda inspección de sellos en el cilindro hidráulico de compuerta, lubricación de pasadores de pivote y limpieza de restos de fleje/alambre en las 5 ranuras de expulsión." }
         ]
       },
 
       financialAudit: {
         chip: "MODO: AUDITORÍA CAPEX (v2.0)",
         category: "AUDITORÍA TÉCNICO-FINANCIERA Y VALORACIÓN DE ACTIVOS (CAPEX / OPEX)",
-        title: "Dictamen CAPEX — Precision Auto-Pak 1830-4000 Chute-Fed",
-        marketBadge: "● Soporte Activo (Overhaul Viable)",
-        confidence: "Confianza IA: 96.8% • OCR Placa + Tasación de Mercado",
+        title: "Dictamen CAPEX — Model 72 Closed End Baler",
+        marketBadge: "● Soporte Activo (Overhaul Altamente Rentable)",
+        confidence: "Confianza IA: 97.4% • Tasación Industrial + Resistencia Estructural de Chasis",
         forensicText:
-          "El módulo de Auditoría Financiera v2.0 vincula la placa OEM verificada (Precision Machinery Systems Auto-Pak 1830-4000, Serie 871344-015) con el historial de durabilidad de chasis A36. El costo de reemplazo CAPEX nuevo asciende a ~$21,000 USD, mientras que un reacondicionamiento (overhaul) de componentes de desgaste cuesta ~$4,200 USD, logrando un ahorro del 76%.",
+          "El módulo de Auditoría Financiera v2.0 evalúa el estado del bastidor de acero estructural A36 de la enfardadora horizontal Model 72 Closed End Baler. Adquirir un equipo nuevo equivalente con transportador in-feed representa un desembolso CAPEX de ~$75,000 USD, mientras que un reacondicionamiento integral (Overhaul de cilindros, bomba hidráulica, mangueras y tablero eléctrico) cuesta ~$14,200 USD, generando un ahorro directo del 81% y extendiendo su vida útil entre 10 y 15 años.",
         specs: [
-          { label: "Fabricante / Modelo", val: "Precision Auto-Pak 1830-4000" },
-          { label: "CAPEX Equipo Nuevo", val: "$18,500 - $24,000 USD" },
-          { label: "Valor Actual (As-Is)", val: "$5,800 - $7,200 USD" },
-          { label: "Costo Estimado Overhaul", val: "$4,200 - $5,600 USD" },
-          { label: "Vida Útil Remanente", val: "4 - 6 Años (+8 con Overhaul)" },
-          { label: "Veredicto Financiero", val: "REPARAR / OVERHAUL (ROI 3.4x)" }
+          { label: "Tipo / Modelo", val: "Model 72 Closed End Baler" },
+          { label: "CAPEX Equipo Nuevo", val: "$68,000 - $85,000 USD" },
+          { label: "Valor Actual (As-Is)", val: "$15,000 - $19,500 USD" },
+          { label: "Costo Estimado Overhaul", val: "$13,500 - $15,800 USD" },
+          { label: "Vida Útil Remanente", val: "6 - 8 Años (+12 con Overhaul)" },
+          { label: "Veredicto Financiero", val: "REACONDICIONAR / OVERHAUL (ROI 4.8x)" }
         ],
         slots: [
-          { tag: "TASACIÓN 1", role: "Placa y Chasis Auto-Pak", hudNode: "[AUDITORÍA: PLACA Y CHASIS AUTO-PAK]", hudMethod: "TASACIÓN OEM Y EDAD", bbox1Label: "Precision Auto-Pak 1830-4000 (York, PA)", bbox2Label: "Serial 871344-015 • Chasis A36 Recuperable" },
-          { tag: "TASACIÓN 2", role: "Infraestructura Fija de Chute", hudNode: "[AUDITORÍA: DUCTO Y COMPUERTA]", hudMethod: "EVALUACIÓN VIDA ÚTIL", bbox1Label: "Chute y Compuerta: Vida Remanente >10 años", bbox2Label: "Cámara: Requiere Sandblasting + Epóxico" },
-          { tag: "TASACIÓN 3", role: "Contenedor Rodante Acoplado", hudNode: "[AUDITORÍA: CONTENEDOR 2 YD³]", hudMethod: "VALOR RESIDUAL", bbox1Label: "Contenedor 2 yd³: Buen Estado Operativo", bbox2Label: "Tensor Mecánico: Operativo" }
+          { tag: "TASACIÓN 1", role: "Cámara y Puerta Closed-End", hudNode: "[AUDITORÍA: CÁMARA Y PUERTA CLOSED-END]", hudMethod: "INTEGRIDAD ESTRUCTURAL A36", bbox1Label: "Cámara Closed-End 72: Estructura A36 Recuperable", bbox2Label: "Cilindro de Traba Operativo" },
+          { tag: "TASACIÓN 2", role: "Unidad Hidráulica y Control", hudNode: "[AUDITORÍA: UNIDAD DE POTENCIA Y NEMA]", hudMethod: "EVALUACIÓN ELECTROMECÁNICA", bbox1Label: "Motor TEFC y Tanque Hidráulico", bbox2Label: "Gabinete Eléctrico: Reemplazo Preventivo Contactores" },
+          { tag: "TASACIÓN 3", role: "Rampa In-Feed y Fosa", hudNode: "[AUDITORÍA: INFRAESTRUCTURA DE ALIMENTACIÓN]", hudMethod: "VALOR RESIDUAL DE LÍNEA", bbox1Label: "Transportador In-Feed: Vida Remanente >10 años", bbox2Label: "Fosa de Carga: Estructura Sólida" }
         ],
         logs: [
-          "[01] Vinculando placa de fabricante Precision Machinery Systems Auto-Pak 1830-4000...",
-          "[02] Consultando base de datos de precios en EE. UU. para compactadores chute-fed 0.5 yd³...",
-          "[03] Calculando depreciación acumulada (68%) y vida útil remanente estimada (4-6 años)...",
-          "[04] Comparando CAPEX de reemplazo total ($21,000) vs. overhaul hidráulico/eléctrico ($4,900)...",
-          "[05] Dictamen CAPEX completado: RECOMENDACIÓN DE OVERHAUL (ahorro neto ~$16,100 USD)."
+          "[01] Vinculando tipología de activo industrial: Horizontal Closed End Baler Model 72 en planta de reciclaje...",
+          "[02] Consultando base de precios de maquinaria pesada en EE. UU. para prensas horizontales de fardo 72 pulgadas...",
+          "[03] Calculando depreciación contable acumulada y valor residual de chasis reforzado en vigas de acero A36...",
+          "[04] Comparando CAPEX de reemplazo completo ($75,000 USD) vs. overhaul hidráulico y electromecánico ($14,200 USD)...",
+          "[05] Dictamen CAPEX completado: RECOMENDACIÓN DE REACONDICIONAMIENTO (ahorro neto ~$60,800 USD)."
         ],
         v2Title: "📊 Dictamen de Auditoría Financiera y Recomendación CAPEX (FinancialAuditInfo v2.0)",
-        v2Badge: "VEREDICTO: OVERHAUL / REACONDICIONAR",
+        v2Badge: "VEREDICTO: REACONDICIONAR / OVERHAUL",
         v2Items: [
-          { head: "Comparativa CAPEX Reemplazo ($21,000 USD) vs. Overhaul Integral ($4,900 USD)", status: "Ahorro Directo de Capital: 76%", body: "El bastidor estructural Precision Auto-Pak y el chute vertical tienen más de 10 años de vida remanente. No se justifica el desembolso CAPEX de reemplazo completo." },
-          { head: "Alcance Recomendado del Overhaul ($4,900 USD Estimado)", status: "Extensión de Vida Útil: +8 Años", body: "1) Reempaque de cilindro hidráulico y cambio de aceite AW-46 + filtro, 2) reemplazo de 2 mangueras SAE 100R2, 3) actualización de contactores y relé térmico, 4) limpieza mecánica y recubrimiento epóxico anticorrosivo." }
+          { head: "Comparativa CAPEX: Reemplazo Nuevo ($75,000 USD) vs. Overhaul Integral ($14,200 USD)", status: "Ahorro Directo de Capital: 81%", body: "El chasis pesado de vigas de acero laminado A36 no presenta fatiga plástica ni fisuras. Un reemplazo total por equipo nuevo no se justifica financieramente frente a un reacondicionamiento." },
+          { head: "Alcance Recomendado del Overhaul ($14,200 USD Estimado)", status: "Extensión de Vida Útil: +12 a 15 Años", body: "1) Reempaque de sellos de poliuretano en cilindro principal y cilindro de puerta, 2) cambio total de fluido hidráulico ISO VG 46 y filtros de succión/retorno, 3) reemplazo de mangueras de alta presión SAE 100R2, 4) actualización de contactores y relevador térmico en gabinete NEMA, 5) limpieza por chorro de arena y pintura epóxica anticorrosiva." }
         ]
       }
     },
@@ -240,38 +240,38 @@
     en: {
       distributedSystem: {
         chip: "MODE: MULTI-NODE (v2.0)",
-        category: "DISTRIBUTED COMPACTION SYSTEM WITH MULTI-FLOOR VERTICAL CHUTE",
-        title: "Precision Machinery Systems Auto-Pak 1830-4000 Chute-Fed Compactor",
-        marketBadge: "● Active (OEM Support & Standard ANSI Spare Parts)",
-        confidence: "AI Confidence: 98.7% • Metal Nameplate OCR + 3D Multi-Node Correlation",
+        category: "DISTRIBUTED INDUSTRIAL BALING SYSTEM WITH IN-FEED CONVEYOR",
+        title: "Model 72 Closed End Baler Horizontal Hydraulic Compactor",
+        marketBadge: "● Active (Standard ANSI Support & Industrial Spares)",
+        confidence: "AI Confidence: 98.6% • Multi-Node Morphological Inference + Horizontal Ram Kinematics",
         forensicText:
-          "Forensic Rule applied: orange field repaint is discarded. The AI correlates 3 connected physical nodes: (1) vertical gravity-drop chute duct with a 165°F fusible fire damper (NFPA 82), (2) flared transition hopper and horizontal compaction chamber with side ratchet latch and 2 yd³ rolling container, and (3) stamped OEM metal nameplate riveted to the chassis. Industrial OCR extracts with 99.4% precision: Manufacturer Precision Machinery Systems (York, PA), Model Auto-Pak 1830-4000, Serial 871344-015, and a 2 HP 208V 3-phase powertrain.",
+          "Forensic Rule applied: field green repaint and paper scrap accumulations are discarded. The AI correlates 3 connected physical nodes: (1) steel slat/belt in-feed conveyor ramp rising from a pit feed hopper, (2) reinforced horizontal compaction chamber with a closed-end discharge door, hydraulic door latch cylinder, and 5 wire tie-through slots, and (3) remote chassis-mounted hydraulic power unit (HPU) with a high-torque TEFC 3-phase electric motor, fluid reservoir, and NEMA control enclosure. Positive engineering ID: Model 72 Closed End Baler for 72-inch mill-size bales.",
         specs: [
-          { label: "OEM Manufacturer", val: "Precision Machinery Systems (York, PA)" },
-          { label: "Model / Serial", val: "Auto-Pak 1830-4000 • S/N 871344-015" },
-          { label: "Electric Motor", val: "2.0 HP • 208V 3Ph 7.1A (60 Hz)" },
-          { label: "Chamber Capacity", val: "0.52 yd³ (Automatic Cycle)" },
-          { label: "Applicable Standards", val: "ANSI Z245.2 / NFPA 82" },
-          { label: "Attached Container", val: "2.0 yd³ Front/Rear Load" }
+          { label: "Machinery Type", val: "Horizontal Closed-End Baler" },
+          { label: "Model / Config", val: "Model 72 Closed End Baler" },
+          { label: "Bale Dimensions", val: "72 in × 30 in × 44 in (Mill-Size)" },
+          { label: "Motor / Powertrain", val: "20 - 30 HP TEFC • 230/460V 3Ph (60 Hz)" },
+          { label: "Cylinder / Pressure", val: "6 - 7 in Bore • 2,500 - 3,000 PSI" },
+          { label: "Feed System", val: "Inclined In-Feed Conveyor + Top Hopper" }
         ],
         slots: [
-          { tag: "NODE 1", role: "Chute Discharge & Hopper", hudNode: "[NODE 1: CHUTE & NFPA 82 DAMPER]", hudMethod: "3D SILHOUETTE + MULTI-NODE", bbox1Label: "Chute Duct + Fire Damper", bbox2Label: "Receiving Hopper + Side Latch" },
-          { tag: "NODE 2", role: "Chamber & 2 yd³ Container", hudNode: "[NODE 2: CHAMBER & CONTAINER]", hudMethod: "STRUCTURAL GEOMETRY", bbox1Label: "Compaction Chamber + Orange Hopper", bbox2Label: "Green Rolling Container 2 yd³" },
-          { tag: "NODE 3", role: "OEM Nameplate & Electrical Specs", hudNode: "[NODE 3: AUTO-PAK OEM NAMEPLATE]", hudMethod: "DIRECT OCR + OEM GROUNDING", bbox1Label: "OCR: PRECISION MACHINERY • AUTO-PAK 1830-4000", bbox2Label: "Serial: 871344-015 • 208V / 3Ph / 7.1A / 2 HP" }
+          { tag: "NODE 1", role: "In-Feed Ramp & Pit", hudNode: "[NODE 1: IN-FEED CONVEYOR & FEED PIT]", hudMethod: "3D TRANSPORT KINEMATICS", bbox1Label: "In-Feed Steel Slat Conveyor", bbox2Label: "Horizontal Baler & Closed-End Section" },
+          { tag: "NODE 2", role: "Chamber & Closed-End Door", hudNode: "[NODE 2: CHAMBER & CLOSED-END DOOR]", hudMethod: "STRUCTURAL PRESS GEOMETRY", bbox1Label: "Compaction Chamber + Tie Slots", bbox2Label: "Hydraulic Door Latch Cylinder" },
+          { tag: "NODE 3", role: "Hydraulic Power Unit & NEMA Panel", hudNode: "[NODE 3: HPU & NEMA CONTROL]", hudMethod: "ELECTROMECHANICAL TOPOLOGY", bbox1Label: "TEFC Motor + Hydraulic Pump", bbox2Label: "NEMA Control & Power Enclosure" }
         ],
         logs: [
-          "[01] Processing 3 photographs tagged [NODE 1], [NODE 2] and [NODE 3]...",
-          "[02] Applying Forensic Rule: ignoring orange/green paint; isolating 3D geometry...",
-          "[03] Vertical transition detected: Chute → Fire Damper (NFPA 82) → Hopper...",
-          "[04] Industrial OCR on metal nameplate confirms Precision Machinery Systems (York, PA), Auto-Pak 1830-4000...",
-          "[05] Multi-Node topology consolidated and FieldOps Gen Pro™ adapter generated."
+          "[01] Processing 3 photographs tagged [NODE 1: In-Feed], [NODE 2: Chamber] and [NODE 3: HPU]...",
+          "[02] Applying Forensic Rule: ignoring green surface paint and paper trimmings; isolating 3D geometry...",
+          "[03] Correlating process flow: Feed Pit → In-Feed Conveyor → Top Hopper → Horizontal Ram Chamber...",
+          "[04] Verifying 72-inch closed-end discharge door geometry with hydraulic latch and manual tie slots...",
+          "[05] Multi-Node topology consolidated and FieldOps Gen Pro™ adapter generated for Model 72 Closed End Baler."
         ],
         v2Title: "🔗 Multi-Node Topology Breakdown (DistributedNodeAnalysis v2.0)",
         v2Badge: "3 CONNECTED NODES",
         v2Items: [
-          { head: "NODE 1 — Chute Discharge Head & Fire Damper", status: "Operational • Verify Fusible Link", body: "Insulated upper cylindrical duct connected to an inclined, counterweighted fire guillotine. Connects to Node 2 through the hopper's upper flange." },
-          { head: "NODE 2 — Transition Hopper, Compaction Chamber & Container", status: "Attention • Cosmetic Wear & Seals", body: "Floor-anchored stationary compaction chamber with a yellow ratchet latch coupled to a green 2 yd³ container. Shows surface abrasion with no structural deformation." },
-          { head: "NODE 3 — OEM Metal Nameplate Precision Machinery Systems Auto-Pak", status: "Positive ID • S/N 871344-015", body: "Riveted nameplate confirms manufacturer Precision Machinery Systems (York, PA, Ph 717-846-6800), model Auto-Pak 1830-4000, serial 871344-015, electrical rating 208V 3-phase, 7.1A, 2 HP motor at 60 Hz." }
+          { head: "NODE 1 — In-Feed Conveyor Ramp & Concrete Pit", status: "Operational • Verify Belt Tension & Rollers", body: "Inclined steel-plate conveyor delivering scrap paper and cardboard into the baler's feed throat. Side guides and structural bed in operational condition without beam sagging." },
+          { head: "NODE 2 — Compaction Chamber & Closed-End Discharge Door", status: "Attention • Normal Mechanical Wear & Cleaning", body: "Horizontal compression chamber with channel stiffeners and 5 slots for 13-14 gauge wire tying. Closed-end door operated by a hydraulic latch cylinder; hinge pin lubrication recommended." },
+          { head: "NODE 3 — Hydraulic Power Unit (HPU), TEFC Motor & NEMA Panel", status: "Positive ID • Heavy Industrial Spec", body: "High-torque 3-phase electric motor mounted over a heavy-duty hydraulic fluid reservoir. NEMA electrical panel with industrial contactors, thermal overloads, and operator pushbuttons." }
         ]
       },
 
@@ -314,73 +314,73 @@
 
       completeMachine: {
         chip: "MODE: COMPLETE MACHINE",
-        category: "SOLID WASTE HANDLING & COMPACTION MACHINERY",
-        title: "Precision Machinery Systems Auto-Pak 1830-4000 Compactor Unit",
-        marketBadge: "● Active (Official Support & Spare Parts)",
-        confidence: "AI Confidence: 98.2% • Nameplate OCR + 3D Morphology",
+        category: "HEAVY INDUSTRIAL RECYCLING & BALING MACHINERY",
+        title: "Model 72 Closed End Baler Horizontal Hydraulic Baler",
+        marketBadge: "● Active (Technical Support & Industrial Parts)",
+        confidence: "AI Confidence: 98.4% • 3D Morphology + Horizontal Ram Architecture",
         forensicText:
-          "Although the unit shows orange paint wear on the front chamber and surface fatigue from heavy use, the MachId™ forensic engine cross-references the direct OEM nameplate reading (Auto-Pak 1830-4000) with rolled-steel U-beam frame architecture, 45° trapezoidal hopper geometry, and side-mounted ratchet latch to the container.",
+          "Although the unit displays green paint wear from continuous operation in a fiber recycling plant, the MachId™ forensic engine cross-references the A36 structural steel frame, the horizontal ram cylinder stroke, the closed-end door with hydraulic latch, and the 5 tie slots for 72-inch mill-size bales.",
         specs: [
-          { label: "OEM Manufacturer", val: "Precision Machinery Systems (York, PA)" },
-          { label: "Model / Serial", val: "Auto-Pak 1830-4000 • S/N 871344-015" },
-          { label: "Electric Motor", val: "2.0 HP • 208V 3-Phase (60 Hz, 7.1A)" },
-          { label: "Equipment Type", val: "Stationary Chute-Fed Compactor" },
-          { label: "Main Structure", val: "A36 Steel, Continuous Weld" },
-          { label: "Est. Year of Manufacture", val: "Verified OEM Nameplate" }
+          { label: "Equipment Type", val: "Horizontal Closed-End Baler" },
+          { label: "Model / Series", val: "Model 72 Closed End Baler" },
+          { label: "Bale Size", val: "72 in × 30 in × 44 in (~1,200 lbs OCC)" },
+          { label: "Ram Force", val: "~70,000 - 95,000 lbs (6-7 in Cylinder)" },
+          { label: "Main Structure", val: "A36 Rolled Steel, Continuously Welded" },
+          { label: "Standard Compliance", val: "ANSI Z245.5 / OSHA 1910" }
         ],
         slots: [
-          { tag: "3D VIEW", role: "3D Diagonal Perspective", hudNode: "[SHOT 1: FULL 3D SILHOUETTE]", hudMethod: "PURE 3D MORPHOLOGY", bbox1Label: "Main Body + Trapezoidal Hopper", bbox2Label: "Heavy-Duty Coupling Latch" },
-          { tag: "FRONT", role: "Front & OSHA Signage", hudNode: "[SHOT 2: FRONT & ANSI LABELS]", hudMethod: "OSHA SAFETY OCR", bbox1Label: "DANGER Label • Crush Hazard", bbox2Label: "Front Frame + Side Door" },
-          { tag: "OEM PLATE", role: "Precision Auto-Pak Nameplate", hudNode: "[SHOT 3: AUTO-PAK OEM NAMEPLATE]", hudMethod: "INDUSTRIAL METAL OCR", bbox1Label: "OCR: Precision Machinery Systems • 1830-4000", bbox2Label: "Serial: 871344-015 • 208V 3Ph 2 HP" }
+          { tag: "FRONT", role: "Chamber & Closed-End Door", hudNode: "[SHOT 1: CHAMBER & CLOSED-END DOOR]", hudMethod: "3D BALER MORPHOLOGY", bbox1Label: "Compaction Chamber + 5 Tie Slots", bbox2Label: "Operator Control & Emergency Stop" },
+          { tag: "CHASSIS", role: "HPU & Drive Motor", hudNode: "[SHOT 2: CHASSIS & HYDRAULIC POWER]", hudMethod: "ELECTROMECHANICAL INSPECTION", bbox1Label: "A36 Frame + Main Ram Housing", bbox2Label: "High-Torque TEFC Electric Motor" },
+          { tag: "OVERALL", role: "In-Feed Conveyor & Feed Area", hudNode: "[SHOT 3: OVERVIEW & IN-FEED]", hudMethod: "PROCESS LINE INTEGRATION", bbox1Label: "In-Feed Conveyor Ramp", bbox2Label: "Horizontal Baler & Discharge" }
         ],
         logs: [
-          "[01] Discarding surface paint color (Anti-Repaint Forensic Rule)...",
-          "[02] Measuring geometric proportions of hopper, chamber and coupled container...",
-          "[03] Positive OCR on manufacturer nameplate: Precision Machinery Systems Auto-Pak 1830-4000...",
-          "[04] Verifying nominal nameplate ratings (208V, 3Ph, 7.1A, 2 HP)...",
-          "[05] Complete Machine dossier generated successfully."
+          "[01] Discarding weathered green paint and fiber dust (Anti-Repaint Forensic Rule)...",
+          "[02] Measuring kinematic proportions of horizontal frame and 72-inch compaction stroke...",
+          "[03] Identifying closed-end discharge door with hydraulic latch cylinder and wire channels...",
+          "[04] Verifying nominal hydraulic ratings and ANSI Z245.5 safety guidelines...",
+          "[05] Complete Machine dossier generated successfully for Model 72 Closed End Baler."
         ],
-        v2Title: "🛡️ Industrial Safety Diagnosis & Preventive Maintenance",
-        v2Badge: "OSHA / ANSI COMPLIANCE",
+        v2Title: "🛡️ Industrial Safety Diagnosis & Mechanical Maintenance (OSHA / ANSI Z245.5)",
+        v2Badge: "ANSI Z245.5 / OSHA COMPLIANT",
         v2Items: [
-          { head: "Lockout/Tagout Safety (OSHA 29 CFR 1910.147 — LOTO)", status: "Disconnect Visible on Wall", body: "A metal electrical disconnect box is verified on the wall, allowing a LOTO padlock to be applied before servicing the chamber or the chute." },
-          { head: "Mechanical Integrity & Perimeter Sealing", status: "Needs Cleaning & Adjustment", body: "Replacing the lower access-door gasket and checking the torque on the concrete floor anchor bolts is recommended." }
+          { head: "Lockout/Tagout Safety Procedure (OSHA 29 CFR 1910.147 — LOTO)", status: "Main Disconnect Visible on NEMA Panel", body: "Lockable power disconnect switch located on the side of the electrical cabinet. Mandatory LOTO padlock application required prior to clearing hopper jams or opening the door." },
+          { head: "Hydraulic Latch Cylinder & Wire Slot Integrity", status: "Lubrication & Adjustment Recommended", body: "Check rod seals on the door latch cylinder, grease pivot pins, and clear wire/strap debris from the 5 horizontal tie channels." }
         ]
       },
 
       financialAudit: {
         chip: "MODE: CAPEX AUDIT (v2.0)",
         category: "TECHNICAL-FINANCIAL AUDIT & ASSET VALUATION (CAPEX / OPEX)",
-        title: "CAPEX Audit Verdict — Precision Auto-Pak 1830-4000 Chute-Fed",
-        marketBadge: "● Active Support (Overhaul Viable)",
-        confidence: "AI Confidence: 96.8% • Nameplate OCR + Market Valuation",
+        title: "CAPEX Audit Verdict — Model 72 Closed End Baler",
+        marketBadge: "● Active Support (Overhaul Highly Profitable)",
+        confidence: "AI Confidence: 97.4% • Industrial Valuation + Structural Steel Integrity",
         forensicText:
-          "The v2.0 Financial Audit module links the verified OEM nameplate (Precision Machinery Systems Auto-Pak 1830-4000, Serial 871344-015) with historical durability data for A36 structural steel. Replacing with a brand-new unit requires ~$21,000 USD CAPEX, while an overhaul of wearable components costs ~$4,200 USD, delivering a 76% direct capital saving.",
+          "The v2.0 Financial Audit module assesses the condition of the A36 structural steel frame on the Model 72 Closed End Baler. Procuring a brand-new equivalent 72-inch horizontal baler with an in-feed conveyor requires ~$75,000 USD CAPEX, whereas a complete mechanical and hydraulic overhaul (re-sealing cylinders, replacing hydraulic pump, hoses, and panel components) costs ~$14,200 USD, delivering direct capital savings of 81% and adding 10-15 years of useful life.",
         specs: [
-          { label: "Manufacturer / Model", val: "Precision Auto-Pak 1830-4000" },
-          { label: "New Equipment CAPEX", val: "$18,500 - $24,000 USD" },
-          { label: "Current Value (As-Is)", val: "$5,800 - $7,200 USD" },
-          { label: "Estimated Overhaul Cost", val: "$4,200 - $5,600 USD" },
-          { label: "Remaining Useful Life", val: "4 - 6 Years (+8 with Overhaul)" },
-          { label: "Financial Verdict", val: "REPAIR / OVERHAUL (ROI 3.4x)" }
+          { label: "Equipment / Model", val: "Model 72 Closed End Baler" },
+          { label: "New Equipment CAPEX", val: "$68,000 - $85,000 USD" },
+          { label: "Current Value (As-Is)", val: "$15,000 - $19,500 USD" },
+          { label: "Estimated Overhaul Cost", val: "$13,500 - $15,800 USD" },
+          { label: "Remaining Useful Life", val: "6 - 8 Years (+12 with Overhaul)" },
+          { label: "Financial Verdict", val: "REFURBISH / OVERHAUL (ROI 4.8x)" }
         ],
         slots: [
-          { tag: "APPRAISAL 1", role: "Auto-Pak Plate & Chassis", hudNode: "[AUDIT: AUTO-PAK PLATE & CHASSIS]", hudMethod: "OEM & VINTAGE APPRAISAL", bbox1Label: "Precision Auto-Pak 1830-4000 (York, PA)", bbox2Label: "Serial 871344-015 • Salvageable A36 Chassis" },
-          { tag: "APPRAISAL 2", role: "Fixed Chute Infrastructure", hudNode: "[AUDIT: DUCT & DAMPER]", hudMethod: "USEFUL LIFE ASSESSMENT", bbox1Label: "Chute & Damper: Remaining Life >10 years", bbox2Label: "Chamber: Needs Sandblasting + Epoxy" },
-          { tag: "APPRAISAL 3", role: "Coupled Rolling Container", hudNode: "[AUDIT: 2 YD³ CONTAINER]", hudMethod: "RESIDUAL VALUE", bbox1Label: "2 yd³ Container: Good Operating Condition", bbox2Label: "Mechanical Latch: Operational" }
+          { tag: "APPRAISAL 1", role: "Chamber & Closed-End Door", hudNode: "[AUDIT: CHAMBER & CLOSED-END DOOR]", hudMethod: "A36 STRUCTURAL INTEGRITY", bbox1Label: "72 Closed-End Chamber: Salvageable A36 Frame", bbox2Label: "Hydraulic Latch Cylinder: Operational" },
+          { tag: "APPRAISAL 2", role: "Hydraulic Power Unit & Panel", hudNode: "[AUDIT: HPU & NEMA ENCLOSURE]", hudMethod: "ELECTROMECHANICAL APPRAISAL", bbox1Label: "TEFC Motor & Hydraulic Tank", bbox2Label: "NEMA Panel: Proactive Contactor Refresh" },
+          { tag: "APPRAISAL 3", role: "In-Feed Conveyor & Pit", hudNode: "[AUDIT: INFEED INFRASTRUCTURE]", hudMethod: "LINE RESIDUAL VALUE", bbox1Label: "In-Feed Conveyor: Remaining Life >10 yrs", bbox2Label: "Feed Pit: Solid Concrete Bed" }
         ],
         logs: [
-          "[01] Linking manufacturer nameplate Precision Machinery Systems Auto-Pak 1830-4000...",
-          "[02] Querying U.S. pricing database for 0.5 yd³ chute-fed compactors...",
-          "[03] Calculating accumulated depreciation (68%) and estimated remaining useful life (4-6 years)...",
-          "[04] Comparing full replacement CAPEX ($21,000) vs. hydraulic/electrical overhaul ($4,900)...",
-          "[05] CAPEX verdict completed: OVERHAUL RECOMMENDED (net savings ~$16,100 USD)."
+          "[01] Linking industrial asset class: Horizontal Closed End Baler Model 72 in recycling facility...",
+          "[02] Querying U.S. industrial machinery database for 72-inch closed-end horizontal balers...",
+          "[03] Calculating accumulated depreciation and residual value of heavy A36 beam frame...",
+          "[04] Comparing full replacement CAPEX ($75,000 USD) vs. electromechanical overhaul ($14,200 USD)...",
+          "[05] CAPEX verdict completed: OVERHAUL RECOMMENDED (net capital savings ~$60,800 USD)."
         ],
         v2Title: "📊 Financial Audit Verdict & CAPEX Recommendation (FinancialAuditInfo v2.0)",
         v2Badge: "VERDICT: OVERHAUL / REFURBISH",
         v2Items: [
-          { head: "CAPEX Comparison: Replacement ($21,000 USD) vs. Full Overhaul ($4,900 USD)", status: "Direct Capital Savings: 76%", body: "The Precision Auto-Pak structural frame and vertical chute have more than 10 years of remaining life. A full-replacement CAPEX outlay is not justified." },
-          { head: "Recommended Overhaul Scope ($4,900 USD Estimated)", status: "Useful Life Extension: +8 Years", body: "1) Hydraulic cylinder reseal and AW-46 oil + filter change, 2) replacement of 2 SAE 100R2 hoses, 3) contactor and thermal overload relay update, 4) mechanical cleaning and anticorrosive epoxy coating." }
+          { head: "CAPEX Comparison: New Replacement ($75,000 USD) vs. Comprehensive Overhaul ($14,200 USD)", status: "Direct Capital Savings: 81%", body: "The heavy rolled A36 steel channel and beam chassis shows no plastic fatigue or mainframe cracking. A full replacement is financially unviable compared to an overhaul." },
+          { head: "Recommended Overhaul Scope ($14,200 USD Estimated)", status: "Useful Life Extension: +12 to 15 Years", body: "1) Re-pack polyurethane seals on main ram and door latch cylinders, 2) complete flush and refill of ISO VG 46 hydraulic oil + suction/return filters, 3) replace high-pressure SAE 100R2 hoses, 4) update motor starter contactors and overload relays in NEMA cabinet, 5) sandblast and recoat with industrial anticorrosive epoxy." }
         ]
       }
     },
@@ -389,38 +389,38 @@
     fr: {
       distributedSystem: {
         chip: "MODE : MULTI-NŒUDS (v2.0)",
-        category: "SYSTÈME DE COMPACTION DISTRIBUÉ AVEC VIDE-ORDURES VERTICAL MULTI-ÉTAGES",
-        title: "Compacteur Hydraulique à Vide-Ordures Precision Machinery Systems Auto-Pak 1830-4000",
-        marketBadge: "● Actif (Support OEM et Pièces Standard ANSI)",
-        confidence: "Confiance IA : 98.7 % • OCR Plaque Métallique + Corrélation Multi-Nœuds 3D",
+        category: "SYSTÈME DE COMPACTAGE INDUSTRIEL DISTRIBUÉ AVEC CONVOYEUR D'ALIMENTATION",
+        title: "Compacteur / Presse Horizontale Model 72 Closed End Baler",
+        marketBadge: "● Actif (Support Standard ANSI et Pièces Industrielles)",
+        confidence: "Confiance IA : 98.6 % • Inférence Morphologique Multi-Nœuds + Cinématique de Presse Horizontale",
         forensicText:
-          "Règle Forensique appliquée : la peinture orange refaite sur site est ignorée. L'IA corrèle 3 nœuds physiques connectés : (1) gaine verticale de vide-ordures avec trappe coupe-feu fusible à 165 °F (NFPA 82), (2) trémie de transition et chambre de compactage avec verrou à cliquet latéral vers conteneur de 2 yd³, et (3) plaque métallique constructeur rivetée au châssis. L'OCR industriel extrait avec 99,4 % de précision : Fabricant Precision Machinery Systems (York, PA), Modèle Auto-Pak 1830-4000, N° Série 871344-015 et groupe de 2 HP sous 208 V triphasé.",
+          "Règle Forensique appliquée : la peinture verte industrielle refaite sur site et les accumulations de rognures de papier sont ignorées. L'IA corrèle 3 nœuds physiques connectés : (1) rampe métallique d'alimentation continue par convoyeur depuis la fosse de déchargement, (2) chambre de compactage horizontale renforcée avec porte d'extrémité fermée (Closed-End Door), verrouillage par vérin hydraulique et 5 fentes horizontales de passage de fil d'attache, et (3) groupe hydraulique déporté sur châssis avec moteur électrique TEFC triphasé à fort couple, réservoir de fluide et coffret électrique NEMA avec pupitre de commande. Identification positive : Presse horizontale Closed-End Baler Model 72 pour balles standard mill-size de 72 pouces.",
         specs: [
-          { label: "Fabricant OEM", val: "Precision Machinery Systems (York, PA)" },
-          { label: "Modèle / Série", val: "Auto-Pak 1830-4000 • N° S/N 871344-015" },
-          { label: "Moteur Électrique", val: "2,0 HP • 208V 3Ph 7,1A (60 Hz)" },
-          { label: "Capacité de Chambre", val: "0,52 yd³ (Cycle Automatique)" },
-          { label: "Normes Applicables", val: "ANSI Z245.2 / NFPA 82" },
-          { label: "Conteneur Attelé", val: "2,0 yd³ Chargement Avant/Arrière" }
+          { label: "Type d'Équipement", val: "Presse Horizontale à Extrémité Fermée" },
+          { label: "Modèle / Config", val: "Model 72 Closed End Baler" },
+          { label: "Dimensions de Balle", val: "72 in × 30 in × 44 in (Mill-Size)" },
+          { label: "Moteur / Hydraulique", val: "20 - 30 HP TEFC • 230/460V 3Ph (60 Hz)" },
+          { label: "Vérin / Pression", val: "Vérin 6-7 in • 2 500 - 3 000 PSI" },
+          { label: "Système de Charge", val: "Convoyeur Incliné In-Feed + Trémie" }
         ],
         slots: [
-          { tag: "NŒUD 1", role: "Décharge du Vide-Ordures et Trémie", hudNode: "[NŒUD 1 : VIDE-ORDURES ET TRAPPE NFPA 82]", hudMethod: "SILHOUETTE 3D + MULTI-NŒUDS", bbox1Label: "Gaine de Chute + Trappe Coupe-Feu", bbox2Label: "Trémie de Réception + Verrou Latéral" },
-          { tag: "NŒUD 2", role: "Chambre et Conteneur 2 yd³", hudNode: "[NŒUD 2 : CHAMBRE ET CONTENEUR]", hudMethod: "GÉOMÉTRIE STRUCTURELLE", bbox1Label: "Chambre de Compactage + Trémie Orange", bbox2Label: "Conteneur Roulant Vert 2 yd³" },
-          { tag: "NŒUD 3", role: "Plaque OEM et Données Électriques", hudNode: "[NŒUD 3 : PLAQUE FABRICANT AUTO-PAK]", hudMethod: "OCR DIRECT + CROISEMENT OEM", bbox1Label: "OCR : PRECISION MACHINERY • AUTO-PAK 1830-4000", bbox2Label: "Série : 871344-015 • 208V / 3Ph / 7,1A / 2 HP" }
+          { tag: "NŒUD 1", role: "Rampe In-Feed et Fosse", hudNode: "[NŒUD 1 : CONVOYEUR ET FOSSE DE CHARGE]", hudMethod: "CINÉMATIQUE DE TRANSPORT 3D", bbox1Label: "Convoyeur Métallique In-Feed", bbox2Label: "Presse Horizontale et Section Closed-End" },
+          { tag: "NŒUD 2", role: "Chambre et Porte Closed-End", hudNode: "[NŒUD 2 : CHAMBRE ET PORTE CLOSED-END]", hudMethod: "GÉOMÉTRIE STRUCTURELLE DE PRESSE", bbox1Label: "Chambre de Compression + Fentes de Ligature", bbox2Label: "Vérin Hydraulique de Verrouillage" },
+          { tag: "NŒUD 3", role: "Groupe Hydraulique et NEMA", hudNode: "[NŒUD 3 : GROUPE HYDRAULIQUE ET NEMA]", hudMethod: "TOPOLOGIE ÉLECTROMÉCANIQUE", bbox1Label: "Moteur Électrique TEFC + Pompe Hydraulique", bbox2Label: "Armoire Électrique NEMA Puissance & Commande" }
         ],
         logs: [
-          "[01] Traitement de 3 photographies étiquetées [NŒUD 1], [NŒUD 2] et [NŒUD 3]...",
-          "[02] Application de la Règle Forensique : peinture orange/verte ignorée ; isolation de la géométrie 3D...",
-          "[03] Transition verticale détectée : Vide-ordures → Trappe coupe-feu (NFPA 82) → Trémie...",
-          "[04] L'OCR industriel sur plaque métallique confirme Precision Machinery Systems (York, PA), Auto-Pak 1830-4000...",
-          "[05] Topologie Multi-Nœuds consolidée et adaptateur FieldOps Gen Pro™ généré."
+          "[01] Traitement de 3 photographies étiquetées [NŒUD 1 : Convoyeur], [NŒUD 2 : Chambre] et [NŒUD 3 : HPU]...",
+          "[02] Application de la Règle Forensique : peinture verte et résidus de papier ignorés ; isolation de la géométrie 3D...",
+          "[03] Corrélation du flux continu : Fosse de charge → Convoyeur In-Feed → Trémie supérieure → Vérin horizontal...",
+          "[04] Vérification de la porte fermée (Closed-End) de 72 pouces avec verrou hydraulique et fentes de ligature...",
+          "[05] Topologie Multi-Nœuds consolidée et adaptateur FieldOps Gen Pro™ généré pour Model 72 Closed End Baler."
         ],
         v2Title: "🔗 Détail de la Topologie Multi-Nœuds (DistributedNodeAnalysis v2.0)",
         v2Badge: "3 NŒUDS CONNECTÉS",
         v2Items: [
-          { head: "NŒUD 1 — Tête de Décharge du Vide-Ordures et Trappe Coupe-Feu", status: "Opérationnel • Vérifier le Fusible", body: "Gaine cylindrique supérieure isolée reliée à une guillotine coupe-feu inclinée à contrepoids. Liaison avec le Nœud 2 par la bride supérieure de la trémie." },
-          { head: "NŒUD 2 — Trémie de Transition, Chambre de Compactage et Conteneur", status: "Attention • Usure Esthétique et Joints", body: "Chambre de compactage stationnaire ancrée au sol avec verrou à cliquet jaune relié à un conteneur vert de 2 yd³. Abrasion superficielle sans déformation structurelle." },
-          { head: "NŒUD 3 — Plaque Métallique OEM Precision Machinery Systems Auto-Pak", status: "Identification Positive • N° S/N 871344-015", body: "La plaque rivetée confirme le fabricant Precision Machinery Systems (York, PA, Tél. 717-846-6800), modèle Auto-Pak 1830-4000, série 871344-015, alimentation 208V triphasée, 7,1A, moteur de 2 HP à 60 Hz." }
+          { head: "NŒUD 1 — Rampe de Convoyeur In-Feed et Fosse Béton", status: "Opérationnel • Vérifier la Tension de Bande et Rouleaux", body: "Convoyeur incliné à tablier métallique élevant les chutes de papier et carton vers la trémie d'alimentation. Châssis et guides latéraux en bon état opérationnel sans flèche structurelle." },
+          { head: "NŒUD 2 — Chambre de Compactage et Porte Fermée (Closed-End)", status: "Attention • Usure Mécanique Normale et Nettoyage", body: "Chambre de compression avec longerons de renfort et 5 rainures pour fil de ligature calibre 13-14. Porte d'extrémité fermée manœuvrée par un vérin de verrouillage hydraulique ; graissage des charnières requis." },
+          { head: "NŒUD 3 — Groupe Hydraulique (HPU), Moteur TEFC et Armoire NEMA", status: "Identification Positive • Spécification Lourde", body: "Moteur triphasé haute performance monté sur réservoir d'huile grande capacité. Armoire électrique NEMA avec contacteurs industriels, relais thermiques et poste de boutons-poussoirs." }
         ]
       },
 
@@ -463,73 +463,73 @@
 
       completeMachine: {
         chip: "MODE : MACHINE COMPLÈTE",
-        category: "MACHINES DE MANUTENTION ET DE COMPACTAGE DE DÉCHETS SOLIDES",
-        title: "Compacteur Stationnaire Precision Machinery Systems Auto-Pak 1830-4000",
-        marketBadge: "● Actif (Support Officiel et Pièces de Rechange)",
-        confidence: "Confiance IA : 98.2 % • OCR Plaque + Silhouette Morphologique 3D",
+        category: "MACHINES LOURDES DE RECYCLAGE ET DE MISE EN BALLES",
+        title: "Presse / Compacteur Horizontal Model 72 Closed End Baler",
+        marketBadge: "● Actif (Support Technique et Pièces Industrielles)",
+        confidence: "Confiance IA : 98.4 % • Morphologie 3D + Architecture de Vérin Horizontal",
         forensicText:
-          "Bien que l'unité présente une usure de peinture orange sur la chambre avant et une fatigue superficielle due à un usage intensif, le moteur forensique de MachId™ associe la lecture directe de la plaque constructeur (Auto-Pak 1830-4000) à l'architecture en profilés U d'acier laminé, la trémie trapézoïdale et le système de verrouillage à cliquet sur le conteneur.",
+          "Bien que l'unité présente une usure de la peinture verte suite à un fonctionnement continu en usine de recyclage, le moteur forensique de MachId™ corrèle le châssis en profilés d'acier laminé A36, la course du vérin horizontal, la porte fermée avec verrou hydraulique et les 5 fentes de passage de fil pour balles de 72 pouces.",
         specs: [
-          { label: "Fabricant OEM", val: "Precision Machinery Systems (York, PA)" },
-          { label: "Modèle / Série", val: "Auto-Pak 1830-4000 • N° S/N 871344-015" },
-          { label: "Moteur Électrique", val: "2,0 HP • 208V Triphasé (60 Hz, 7,1A)" },
-          { label: "Type d'Équipement", val: "Compacteur Stationnaire à Vide-Ordures" },
-          { label: "Structure Principale", val: "Acier A36, Soudure Continue" },
-          { label: "Année de Fabrication Est.", val: "Plaque Constructeur Vérifiée" }
+          { label: "Type d'Équipement", val: "Presse Horizontale Closed-End" },
+          { label: "Modèle / Série", val: "Model 72 Closed End Baler" },
+          { label: "Taille de Balle", val: "72 in × 30 in × 44 in (~1 200 lbs OCC)" },
+          { label: "Force de Poussée", val: "~70 000 - 95 000 lbs (Vérin 6-7 in)" },
+          { label: "Structure Principale", val: "Acier Laminé A36, Soudure Continue" },
+          { label: "Conformité Normes", val: "ANSI Z245.5 / OSHA 1910" }
         ],
         slots: [
-          { tag: "VUE 3D", role: "Perspective Diagonale 3D", hudNode: "[PRISE 1 : SILHOUETTE 3D COMPLÈTE]", hudMethod: "MORPHOLOGIE 3D PURE", bbox1Label: "Corps Principal + Trémie Trapézoïdale", bbox2Label: "Verrou d'Attelage Haute Charge" },
-          { tag: "FACE AVANT", role: "Face Avant et Signalisation OSHA", hudNode: "[PRISE 2 : FACE AVANT ET ÉTIQUETTES ANSI]", hudMethod: "OCR DE SÉCURITÉ OSHA", bbox1Label: "Étiquette DANGER • Risque d'Écrasement", bbox2Label: "Châssis Avant + Porte Latérale" },
-          { tag: "PLAQUE OEM", role: "Plaque Precision Auto-Pak", hudNode: "[PRISE 3 : PLAQUE FABRICANT AUTO-PAK]", hudMethod: "OCR MÉTALLIQUE INDUSTRIEL", bbox1Label: "OCR : Precision Machinery Systems • 1830-4000", bbox2Label: "Série : 871344-015 • 208V 3Ph 2 HP" }
+          { tag: "FACE AVANT", role: "Chambre et Porte Closed-End", hudNode: "[PRISE 1 : CHAMBRE ET PORTE CLOSED-END]", hudMethod: "MORPHOLOGIE 3D DE PRESSE", bbox1Label: "Chambre de Compression + 5 Fentes de Ligature", bbox2Label: "Pupitre de Commande et Arrêt d'Urgence" },
+          { tag: "CHÂSSIS", role: "Groupe Hydraulique et Moteur", hudNode: "[PRISE 2 : CHÂSSIS ET PUISSANCE HYDRAULIQUE]", hudMethod: "INSPECTION ÉLECTROMÉCANIQUE", bbox1Label: "Châssis A36 + Logement de Vérin", bbox2Label: "Moteur Électrique TEFC à Fort Couple" },
+          { tag: "ENSEMBLE", role: "Convoyeur In-Feed et Chargement", hudNode: "[PRISE 3 : VUE D'ENSEMBLE DU SYSTÈME]", hudMethod: "INTÉGRATION DE LIGNE INDUSTRIELLE", bbox1Label: "Rampe Inclinée de Convoyeur", bbox2Label: "Presse Horizontale et Éjection" }
         ],
         logs: [
-          "[01] Rejet de la couleur de peinture superficielle (Règle Forensique Anti-Repeinture)...",
-          "[02] Mesure des proportions géométriques de la trémie, de la chambre et du conteneur attelé...",
-          "[03] OCR positif sur la plaque constructeur : Precision Machinery Systems Auto-Pak 1830-4000...",
-          "[04] Vérification des spécifications nominales de la plaque (208V, 3Ph, 7,1A, 2 HP)...",
-          "[05] Dossier de Machine Complète généré avec succès."
+          "[01] Rejet de la peinture verte vieillie et de la poussière cellulosique (Règle Forensique Anti-Repeinture)...",
+          "[02] Mesure des proportions cinématiques du châssis horizontal et de la course de 72 pouces...",
+          "[03] Détection de la porte frontale d'extrémité fermée (Closed-End) avec vérin hydraulique et fentes de guidage...",
+          "[04] Vérification des spécifications hydrauliques et de conformité aux normes ANSI Z245.5...",
+          "[05] Dossier Machine Complète généré avec succès pour Model 72 Closed End Baler."
         ],
-        v2Title: "🛡️ Diagnostic de Sécurité Industrielle et Maintenance Préventive",
-        v2Badge: "CONFORMITÉ OSHA / ANSI",
+        v2Title: "🛡️ Diagnostic de Sécurité Industrielle et Maintenance Mécanique (OSHA / ANSI Z245.5)",
+        v2Badge: "CONFORMITÉ ANSI Z245.5 / OSHA",
         v2Items: [
-          { head: "Sécurité de Consignation (OSHA 29 CFR 1910.147 — LOTO)", status: "Sectionneur Visible au Mur", body: "Un coffret de sectionnement électrique métallique est vérifié sur le mur pour appliquer un cadenas LOTO avant toute intervention sur la chambre ou le vide-ordures." },
-          { head: "Intégrité Mécanique et Étanchéité Périmétrique", status: "Nettoyage et Réglage Requis", body: "Il est recommandé de remplacer le joint inférieur de la porte d'accès et de vérifier le couple de serrage des boulons d'ancrage au sol en béton." }
+          { head: "Procédure de Consignation LOTO (OSHA 29 CFR 1910.147)", status: "Sectionneur Principal Visible sur Armoire NEMA", body: "Interrupteur de coupure cadenassable situé sur le côté du coffret électrique. Pose obligatoire du cadenas LOTO avant d'accéder à la trémie ou d'intervenir sur la porte de balle." },
+          { head: "Intégrité du Vérin de Verrouillage et Fentes de Ligature", status: "Graissage et Réglage Recommandés", body: "Contrôler l'étanchéité des joints du vérin de porte, graisser les axes de rotation et éliminer les débris de feuillard dans les 5 canaux horizontaux d'éjection." }
         ]
       },
 
       financialAudit: {
         chip: "MODE : AUDIT CAPEX (v2.0)",
         category: "AUDIT TECHNICO-FINANCIER ET ÉVALUATION D'ACTIFS (CAPEX / OPEX)",
-        title: "Avis d'Audit CAPEX — Precision Auto-Pak 1830-4000 à Vide-Ordures",
-        marketBadge: "● Support Actif (Révision Viable)",
-        confidence: "Confiance IA : 96.8 % • OCR Plaque + Évaluation du Marché",
+        title: "Avis d'Audit CAPEX — Model 72 Closed End Baler",
+        marketBadge: "● Support Actif (Remise à Neuf Fortement Rentable)",
+        confidence: "Confiance IA : 97.4 % • Évaluation Industrielle + Intégrité Structurale A36",
         forensicText:
-          "Le module d'Audit Financier v2.0 associe la plaque constructeur vérifiée (Precision Machinery Systems Auto-Pak 1830-4000, N° Série 871344-015) à l'historique de durabilité de l'acier structural A36. Le remplacement par un équipement neuf équivaut à un CAPEX de ~21 000 USD, tandis qu'une révision (overhaul) des composants d'usure s'élève à ~4 200 USD, réalisant 76 % d'économie immédiate.",
+          "Le module d'Audit Financier v2.0 évalue l'intégrité du châssis en acier structural A36 de la presse horizontale Model 72 Closed End Baler. L'acquisition d'un équipement neuf équivalent avec convoyeur représente un CAPEX de ~75 000 USD, tandis qu'une révision électromécanique et hydraulique intégrale (remplacement des joints de vérins, pompe, flexibles et appareillage) s'élève à ~14 200 USD, réalisant 81 % d'économie directe de capital et ajoutant 10 à 15 ans de vie utile.",
         specs: [
-          { label: "Fabricant / Modèle", val: "Precision Auto-Pak 1830-4000" },
-          { label: "CAPEX Équipement Neuf", val: "18 500 - 24 000 USD" },
-          { label: "Valeur Actuelle (En l'État)", val: "5 800 - 7 200 USD" },
-          { label: "Coût Estimé de la Révision", val: "4 200 - 5 600 USD" },
-          { label: "Durée de Vie Restante", val: "4 - 6 Ans (+8 avec Révision)" },
-          { label: "Verdict Financier", val: "RÉPARER / RÉVISION (ROI 3,4x)" }
+          { label: "Type / Modèle", val: "Model 72 Closed End Baler" },
+          { label: "CAPEX Équipement Neuf", val: "68 000 - 85 000 USD" },
+          { label: "Valeur Actuelle (En l'État)", val: "15 000 - 19 500 USD" },
+          { label: "Coût Estimé de la Révision", val: "13 500 - 15 800 USD" },
+          { label: "Durée de Vie Restante", val: "6 - 8 Ans (+12 avec Révision)" },
+          { label: "Verdict Financier", val: "RÉVISION / OVERHAUL (ROI 4,8x)" }
         ],
         slots: [
-          { tag: "ÉVALUATION 1", role: "Plaque et Châssis Auto-Pak", hudNode: "[AUDIT : PLAQUE ET CHÂSSIS AUTO-PAK]", hudMethod: "ÉVALUATION FABRICANT ET ÂGE", bbox1Label: "Precision Auto-Pak 1830-4000 (York, PA)", bbox2Label: "Série 871344-015 • Châssis A36 Récupérable" },
-          { tag: "ÉVALUATION 2", role: "Infrastructure Fixe du Vide-Ordures", hudNode: "[AUDIT : GAINE ET TRAPPE]", hudMethod: "ÉVALUATION DE LA DURÉE DE VIE", bbox1Label: "Vide-Ordures et Trappe : Durée Restante > 10 ans", bbox2Label: "Chambre : Sablage + Époxy Requis" },
-          { tag: "ÉVALUATION 3", role: "Conteneur Roulant Attelé", hudNode: "[AUDIT : CONTENEUR 2 YD³]", hudMethod: "VALEUR RÉSIDUELLE", bbox1Label: "Conteneur 2 yd³ : Bon État de Fonctionnement", bbox2Label: "Verrou Mécanique : Opérationnel" }
+          { tag: "ÉVALUATION 1", role: "Chambre et Porte Closed-End", hudNode: "[AUDIT : CHAMBRE ET PORTE CLOSED-END]", hudMethod: "INTÉGRITÉ STRUCTURALE A36", bbox1Label: "Chambre Closed-End 72 : Structure A36 Récupérable", bbox2Label: "Vérin de Verrouillage Opérationnel" },
+          { tag: "ÉVALUATION 2", role: "Groupe Hydraulique et NEMA", hudNode: "[AUDIT : GROUPE HYDRAULIQUE ET NEMA]", hudMethod: "ÉVALUATION ÉLECTROMÉCANIQUE", bbox1Label: "Moteur TEFC et Réservoir Hydraulique", bbox2Label: "Armoire NEMA : Remplacement Préventif Contacteurs" },
+          { tag: "ÉVALUATION 3", role: "Convoyeur In-Feed et Fosse", hudNode: "[AUDIT : INFRASTRUCTURE D'ALIMENTATION]", hudMethod: "VALEUR RÉSIDUELLE DE LIGNE", bbox1Label: "Convoyeur In-Feed : Durée Restante > 10 ans", bbox2Label: "Fosse de Charge : Béton Intègre" }
         ],
         logs: [
-          "[01] Liaison de la plaque constructeur Precision Machinery Systems Auto-Pak 1830-4000...",
-          "[02] Consultation de la base de prix aux États-Unis pour compacteurs à vide-ordures de 0,5 yd³...",
-          "[03] Calcul de l'amortissement cumulé (68 %) et de la durée de vie restante estimée (4-6 ans)...",
-          "[04] Comparaison du CAPEX de remplacement total (21 000 $) vs. révision hydraulique/électrique (4 900 $)...",
-          "[05] Avis CAPEX terminé : RÉVISION RECOMMANDÉE (économie nette ~16 100 USD)."
+          "[01] Liaison de la typologie d'actif industriel : Horizontal Closed End Baler Model 72 en centre de recyclage...",
+          "[02] Consultation de la base de prix de machines industrielles aux États-Unis pour presses horizontales de 72 pouces...",
+          "[03] Calcul de l'amortissement comptable cumulé et de la valeur résiduelle du châssis en profilés d'acier A36...",
+          "[04] Comparaison du CAPEX de remplacement total (75 000 USD) vs. révision électromécanique et hydraulique (14 200 USD)...",
+          "[05] Avis CAPEX terminé : RECOMMANDATION DE REMISE À NEUF (gain net en capital ~60 800 USD)."
         ],
         v2Title: "📊 Avis d'Audit Financier et Recommandation CAPEX (FinancialAuditInfo v2.0)",
         v2Badge: "VERDICT : RÉVISION / REMISE À NEUF",
         v2Items: [
-          { head: "Comparatif CAPEX : Remplacement (21 000 USD) vs. Révision Complète (4 900 USD)", status: "Économie Directe de Capital : 76 %", body: "Le châssis Precision Auto-Pak et le vide-ordures vertical ont plus de 10 ans de durée de vie restante. Un investissement CAPEX de remplacement complet n'est pas justifié." },
-          { head: "Périmètre Recommandé de la Révision (4 900 USD Estimés)", status: "Prolongation de la Durée de Vie : +8 Ans", body: "1) Remplacement des joints du vérin hydraulique et vidange huile AW-46 + filtre, 2) remplacement de 2 flexibles SAE 100R2, 3) mise à jour des contacteurs et du relais thermique, 4) nettoyage mécanique et revêtement époxy anticorrosion." }
+          { head: "Comparatif CAPEX : Remplacement Neuf (75 000 USD) vs. Révision Complète (14 200 USD)", status: "Économie Directe de Capital : 81 %", body: "Le châssis lourd en poutrelles d'acier laminé A36 ne présente aucune fissure ni déformation plastique. Un remplacement complet par une machine neuve n'est pas justifié financièrement." },
+          { head: "Périmètre Recommandé de la Révision (14 200 USD Estimés)", status: "Prolongation de la Durée de Vie : +12 à 15 Ans", body: "1) Remplacement des joints polyuréthane du vérin principal et du vérin de porte, 2) vidange complète de l'huile hydraulique ISO VG 46 et filtres d'aspiration/retour, 3) remplacement des flexibles haute pression SAE 100R2, 4) rénovation des contacteurs et relais thermiques dans l'armoire NEMA, 5) décapage mécanique par sablage et application de peinture époxy anticorrosion." }
         ]
       }
     }

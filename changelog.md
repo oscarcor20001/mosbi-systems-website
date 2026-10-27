@@ -8,7 +8,12 @@ Format: `[version] - YYYY-MM-DD` following [Keep a Changelog](https://keepachang
 
 ## [Unreleased]
 
-> Changes approved but not yet in a versioned release.
+- **MachId™ Compactor Equipment Upgrade (`machid/`)**:
+  - Replaced previous apartment chute compactor with the real industrial heavy-duty recycling asset: **Model 72 Closed End Baler (Enfardadora / Compactadora Hidráulica Horizontal de Extremo Cerrado)** from American Recovery inspection files.
+  - Added new real field assets: `horizontal_baler_1.jpg` (in-feed conveyor ramp & feed pit), `horizontal_baler_2.jpg` (closed-end compaction chamber, 5 wire tie slots, hydraulic door latch cylinder), and `horizontal_baler_3.jpg` (hydraulic power unit, TEFC motor, fluid tank, NEMA control panel).
+  - Recalibrated all AI bounding box coordinates (`bbox1`, `bbox2`), HUD tags, and telemetry logs in `machid/data.js` across **ES**, **EN**, and **FR**.
+  - Synchronized across all 3 relevant operational modes: **Sistema Distribuido (Multi-Nodo)**, **Máquina Completa**, and **Auditoría Financiera & CAPEX** ($75k replacement CAPEX vs $14.2k overhaul, 81% capital savings).
+  - Updated fallback HTML in `machid/index.html` and UI selectors in `machid/app.js`.
 
 ---
 

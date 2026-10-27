@@ -65,7 +65,7 @@
               <span class="mode-tag" data-i18n="mode.tag_new">NUEVO v2.0</span>
             </div>
             <div class="mode-title" data-i18n="mode.m1_title">Sistema Distribuido (Multi-Nodo)</div>
-            <div class="mode-desc" data-i18n="mode.m1_desc">Compactador Precision Auto-Pak 1830-4000 con chute vertical, cámara y contenedor.</div>
+            <div class="mode-desc" data-i18n="mode.m1_desc">Compactadora / Enfardadora Horizontal Model 72 Closed End Baler con rampa in-feed, cámara y unidad hidráulica.</div>
           </button>
 
           <button type="button" class="mode-card-btn" data-mode="componentOrPart">
@@ -142,18 +142,18 @@
                 <div class="laser-beam" id="laserBeam"></div>
 
                 <div class="hud-top-bar">
-                  <span class="hud-badge node-badge" id="hudNodeTag">[NODO 1: TOLVA & CHUTE]</span>
+                  <span class="hud-badge node-badge" id="hudNodeTag">[NODO 1: RAMPA IN-FEED Y FOSA]</span>
                   <span class="hud-badge" id="hudMethodTag">GEMINI 3.6 FLASH</span>
                 </div>
 
-                <img src="./assets/compactor_chute_1.jpg" alt="Inspección Industrial" class="viewport-img" id="viewportImg" />
+                <img src="./assets/horizontal_baler_1.jpg" alt="Inspección Industrial" class="viewport-img" id="viewportImg" />
 
                 <!-- Dynamic Forensic Bounding Boxes -->
-                <div class="bbox" id="bbox1" style="top: 12%; left: 28%; width: 46%; height: 32%;">
-                  <span class="bbox-label" id="bbox1Label">Ducto Descarga Chute • Acero Cal. 12</span>
+                <div class="bbox" id="bbox1" style="top: 18%; left: 34%; width: 32%; height: 55%;">
+                  <span class="bbox-label" id="bbox1Label">Transportador Metálico In-Feed</span>
                 </div>
-                <div class="bbox amber" id="bbox2" style="top: 48%; left: 24%; width: 52%; height: 42%;">
-                  <span class="bbox-label" id="bbox2Label">Cámara Hidráulica & Cilindro • ANSI Z245.2</span>
+                <div class="bbox amber" id="bbox2" style="top: 22%; left: 58%; width: 36%; height: 38%;">
+                  <span class="bbox-label" id="bbox2Label">Prensa Horizontal y Sección Closed-End</span>
                 </div>
               </div>
 
@@ -168,7 +168,7 @@
                     <span data-i18n="sim.shot1">📸 Toma 1</span>
                     <span class="slot-node-tag" id="slotTag0">NODO 1</span>
                   </div>
-                  <span class="slot-role-name" id="slotRole0">Tolva y Chute Superior</span>
+                  <span class="slot-role-name" id="slotRole0">Rampa In-Feed y Fosa</span>
                 </button>
 
                 <button type="button" class="slot-card" data-slot="1">
@@ -176,7 +176,7 @@
                     <span data-i18n="sim.shot2">🏷️ Toma 2</span>
                     <span class="slot-node-tag" id="slotTag1">NODO 2</span>
                   </div>
-                  <span class="slot-role-name" id="slotRole1">Cámara y Contenedor</span>
+                  <span class="slot-role-name" id="slotRole1">Cámara y Puerta Closed-End</span>
                 </button>
 
                 <button type="button" class="slot-card" data-slot="2">
@@ -184,7 +184,7 @@
                     <span data-i18n="sim.shot3">🎛️ Toma 3</span>
                     <span class="slot-node-tag" id="slotTag2">NODO 3</span>
                   </div>
-                  <span class="slot-role-name" id="slotRole2">Placa OEM y Datos Eléctricos</span>
+                  <span class="slot-role-name" id="slotRole2">Unidad Hidráulica y Gabinete NEMA</span>
                 </button>
               </div>
 
@@ -198,9 +198,9 @@
                   <div class="progress-fill" id="scanProgressBar"></div>
                 </div>
                 <div class="telemetry-log" id="telemetryLog">
-                  <div class="log-item done">[OK] Regla Forense: ignorando pintura naranja/verde superficial; analizando geometría 3D.</div>
-                  <div class="log-item done">[OK] Correlacionando 3 nodos físicos con normativa ANSI Z245.2 / NFPA 82.</div>
-                  <div class="log-item done">[OK] Dossier técnico v2.0 y adaptador FieldOps Gen Pro™ listos.</div>
+                  <div class="log-item done">[OK] Regla Forense: ignorando pintura verde superficial y recortes de papel; analizando cinemática 3D.</div>
+                  <div class="log-item done">[OK] Correlacionando 3 nodos físicos de alimentación, prensado y potencia hidráulica.</div>
+                  <div class="log-item done">[OK] Dossier técnico v2.0 y adaptador FieldOps Gen Pro™ listos para Model 72 Closed End Baler.</div>
                 </div>
               </div>
 
@@ -214,12 +214,12 @@
           <div class="datasheet-panel" id="datasheetPanel">
             <div class="ds-top-header">
               <div>
-                <span class="ds-category-badge" id="dsCategory">SISTEMA DE COMPACTACIÓN DE RESIDUOS CON CHUTE VERTICAL</span>
-                <h2 class="ds-title" id="dsTitle">Compactador Hidráulico Chute-Fed Precision Machinery Systems Auto-Pak 1830-4000</h2>
+                <span class="ds-category-badge" id="dsCategory">SISTEMA DISTRIBUIDO DE COMPACTACIÓN INDUSTRIAL CON TRANSPORTADOR IN-FEED</span>
+                <h2 class="ds-title" id="dsTitle">Compactadora / Enfardadora Horizontal Model 72 Closed End Baler</h2>
               </div>
               <div class="ds-Badges-col">
-                <span class="market-badge market-active" id="dsMarketBadge">● Activa (Soporte OEM & Repuestos)</span>
-                <span class="confidence-pill" id="dsConfidence">Confianza IA: 98.7% • OCR de Placa Metal + Correlación Multi-Nodo 3D</span>
+                <span class="market-badge market-active" id="dsMarketBadge">● Activa (Soporte Estándar ANSI / Repuestos Industriales)</span>
+                <span class="confidence-pill" id="dsConfidence">Confianza IA: 98.6% • Inferencia Morfológica Multi-Nodo + Cinemática de Prensa Horizontal</span>
               </div>
             </div>
 
@@ -227,7 +227,7 @@
             <div class="forensic-dictamen">
               <strong data-i18n="ds.forensic_heading">Dictamen Forense Multimodal (Ignorando Pintura Superficial)</strong>
               <p id="dsForensicText">
-                Identificación positiva mediante correlación de 3 nodos físicos: (1) Cabezal de descarga de chute telescópico en acero galvanizado con compuerta cortafuego fusible (NFPA 82), (2) Tolva de transición y cámara de compactación de 0.5 yd³ con anclaje de trinquete lateral a contenedor de 2 yd³, y (3) Placa metálica remachada al chasis confirmando fabricante Precision Machinery Systems (York, PA), modelo Auto-Pak 1830-4000, serie 871344-015 y motor de 2 HP a 208V trifásico.
+                Identificación positiva mediante correlación de 3 nodos físicos conectados: (1) Rampa transportadora metálica de alimentación continua tipo in-feed desde fosa de carga, (2) Cámara de compresión horizontal reforzada con puerta de extremo cerrado (Closed-End Door), traba con cilindro hidráulico y 5 ranuras pasahilos de amarre para fardos mill-size de 72", y (3) Unidad de potencia hidráulica remota con motor eléctrico TEFC trifásico de alto par, depósito de fluido y gabinete eléctrico NEMA con botonera de mando.
               </p>
             </div>
 
